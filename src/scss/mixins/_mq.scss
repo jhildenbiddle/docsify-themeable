@@ -1,0 +1,73 @@
+/// Default breakpoint map for mq() mixin
+$breakpoints: (
+    xsmall : 26em, // 416px / phone @ portrait
+    small  : 30em, // 480px / phone @ landscape / small tablet (portrait)
+    medium : 48em, // 768px / small tablet (landscape) / large tablet (portrait)
+    large  : 64em, // 1024px / large tablet (landscape) / small desktop
+    xlarge : 80em, // 1280px / standard desktop
+    xxlarge: 100em // 1600px / large desktop
+) !default;
+
+
+/// Generate media query statement based on breakpoint map key/values.
+///
+/// @author John Hildenbiddle (@jhildenbiddle)
+///
+/// @param {List}   $mq-list The breakpoint feature and/or name in $mq-map
+/// @param {String} $mq-map  The map containing breakpoint name:value pairs.
+///
+/// @example scss
+/// /* Defaults */
+/// $breakpoints: (
+///     xsmall : 26em,
+///     small  : 30em,
+///     medium : 48em,
+///     large  : 64em,
+///     xlarge : 80em,
+///     xxlarge: 100em
+/// ) !default;
+///
+/// body {
+///   color: black;
+///
+///   /* Defaults to min-width query */
+///   @include mq(small) {
+///     color: red;
+///   }
+///
+///   /* Specifying query feature and value as a list */
+///   @include mq(max-width medium) {
+///     color: green;
+///   }
+///
+///   /* Nested mq() instances used to create multi-condition queries */
+///   @include mq(small) {
+///     @include mq(landscape) {
+///       color: red;
+///     }
+///     @include mq(portrait) {
+///       color: blue;
+///     }
+///   }
+/// }
+@mixin mq($mq-list, $mq-map: $breakpoints) {
+    $mq-feature   : if(length($mq-list) == 2, nth($mq-list, 1), min-width);
+    $mq-breakpoint: if(length($mq-list) == 2, nth($mq-list, 2), $mq-list);
+    $mq           : false;
+
+    @if $mq-breakpoint == landscape or $mq-breakpoint == portrait {
+        $mq: "(orientation: #{$mq-breakpoint})";
+    }
+    @else if map-has-key($mq-map, $mq-breakpoint) {
+        $mq: "(#{$mq-feature}: #{map-get($mq-map, $mq-breakpoint)})";
+    }
+
+    @if $mq {
+        @media screen and #{$mq} {
+            @content;
+        }
+    }
+    @else {
+        @warn 'A breakpoint named "#{$mq-breakpoint}" is not available in the breakpoint map';
+    }
+}

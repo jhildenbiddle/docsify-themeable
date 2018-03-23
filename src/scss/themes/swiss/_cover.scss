@@ -1,0 +1,26 @@
+// Cover: Swiss
+// =============================================================================
+:root {
+    --cover-text-align             : left;
+    --cover-color                  : rgba(255, 255, 255, 0.8);
+
+    // Background
+    --cover-background-color       : #329af0;
+    --cover-background-image       : linear-gradient(45deg, #397ae9 15%, #4789e1 24%, #adf2ab 140%);
+    // --cover-background-image       : url(https://images.unsplash.com/photo-1486180939859-b2fe47b8037d);
+    // --cover-background-mask-color  : #fff;
+    // --cover-background-mask-color  : #000;
+    // --cover-background-mask-opacity: 0.5;
+
+    // Blockquote (Subtitle)
+    --cover-blockquote-color       : #ffd43b;
+
+    // Border
+    --cover-border-inset           : 15px;
+    --cover-border-color           : rgba(255, 255, 255, 0.5);
+    --cover-border-width           : 3px;
+
+    // Heading
+    --cover-heading-color          : #fff;
+    --cover-heading-font-weight    : 200;
+}

@@ -1,0 +1,44 @@
+// Content: Readme
+// =============================================================================
+:root {
+    // Blockquote
+    --blockquote-border-color      : var(--theme-color);
+    --blockquote-border-style      : solid;
+    --blockquote-border-width      : 0 0 0 4px;
+    --blockquote-border-radius     : 0 3px 3px 0;
+
+    // Links
+    --link-border-bottom           : 1px dashed currentColor;
+    --link-border-bottom--hover    : 1px solid currentColor;
+    --link-color                   : var(--theme-color);
+
+    // Notices (Tip & Warning)
+    --notice-before-border-radius  : 100%;
+    --notice-before-font-weight    : bold;
+    --notice-before-height         : 1.5em;
+    --notice-before-left           : calc(-0.75em - 2px);
+    --notice-before-line-height    : 1.5;
+    --notice-before-position       : absolute;
+    --notice-before-top            : calc(50% - 0.75em);
+    --notice-before-width          : var(--notice-before-height);
+    --notice-border-radius         : 0 3px 3px 0;
+    --notice-border-style          : solid;
+    --notice-border-width          : 0 0 0 4px;
+
+    // Notice - Tip
+    --notice-tip-background        : var(--color-gray-lightest);
+    --notice-tip-before-background : #4c6ef5;
+    --notice-tip-before-color      : #fff;
+    --notice-tip-before-content    : "?";
+    // --notice-tip-before-content    : svg-uri('<svg version="1.1" viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><circle fill="#fff" cx="17.97" cy="10.45" r="1.4"></circle><path fill="#fff" d="M21,25H19V14.1H16a1,1,0,0,0,0,2h1V25H15a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z"></path><path fill="#fff" d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34ZM18,4A14,14,0,1,0,32,18,14,14,0,0,0,18,4Z"></path></svg>');
+    --notice-tip-border-color      : var(--notice-tip-before-background);
+
+    // Notice - Warning
+    --notice-warn-background       : var(--color-gray-lightest);
+    --notice-warn-before-background: #fa5252;
+    --notice-warn-before-color     : #fff;
+    --notice-warn-before-content   : "!";
+    // --notice-warn-before-content   : svg-uri('<svg viewBox="0 0 36 36" preserveAspectRatio="xMidYMid meet" class="has-solid" xmlns="http://www.w3.org/2000/svg"><circle fill="#fff" cx="18" cy="26.06" r="1.33"></circle><path fill="#fff" d="M18,22.61a1,1,0,0,1-1-1v-12a1,1,0,1,1,2,0v12A1,1,0,0,1,18,22.61Z"></path><path fill="#fff" d="M18,34A16,16,0,1,1,34,18,16,16,0,0,1,18,34ZM18,4A14,14,0,1,0,32,18,14,14,0,0,0,18,4Z"></path></svg>');
+    --notice-warn-border-color     : var(--notice-warn-before-background);
+}
+

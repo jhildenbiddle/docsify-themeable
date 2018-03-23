@@ -1,0 +1,193 @@
+// Cover
+// =============================================================================
+.cover {
+    display: none;
+    position: relative;
+    z-index: map-get($z-index, coverpage);
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: calc(var(--cover-border-inset, 0px) + var(--cover-border-width, 0px));
+    color: var(--cover-color);
+    text-align: var(--cover-text-align);
+
+    // Bug (IE 10/11): column & min-height
+    @media screen and (-ms-high-contrast: active), screen and (-ms-high-contrast: none) {
+        height: 100vh;
+    }
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+    }
+
+    &:before {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--cover-background-color);
+        background-image: var(--cover-background-image);
+        background-position: var(--cover-background-position);
+        background-repeat: var(--cover-background-repeat);
+        background-size: var(--cover-background-size);
+    }
+
+    &:after {
+        top: var(--cover-border-inset, 0);
+        bottom: var(--cover-border-inset, 0);
+        left: var(--cover-border-inset, 0);
+        right: var(--cover-border-inset, 0);
+        border-width: var(--cover-border-width, 0);
+        border-style: solid;
+        border-color: var(--cover-border-color);
+    }
+
+    a {
+        border-bottom: var(--cover-link-border-bottom);
+        color: var(--cover-link-color);
+        text-decoration: var(--cover-link-text-decoration);
+        text-decoration-color: var(--cover-link-text-decoration-color);
+
+        &:hover {
+            border-bottom: var(--cover-link-border-bottom--hover, var(--cover-link-border-bottom));
+            color: var(--cover-link-color--hover, var(--cover-link-color));
+            text-decoration: var(--cover-link-text-decoration--hover, var(--cover-link-text-decoration));
+            text-decoration-color: var(--cover-link-text-decoration-color--hover, var(--cover-link-text-decoration-color));
+        }
+    }
+
+    h1 {
+        color: var(--cover-heading-color);
+        position: relative;
+        margin: 0;
+        font-size: var(--cover-heading-font-size);
+        font-weight: var(--cover-heading-font-weight);
+
+        a,
+        a:hover {
+            display: block;
+            border-bottom: none;
+            color: inherit;
+        }
+
+        small {
+            position: absolute;
+            bottom: 0;
+            margin-left: 0.5em;
+        }
+
+        // Fluid
+        span {
+            font-size: calc(var(--cover-heading-font-size-min) * 1px);
+
+            @include mq(xsmall) {
+                font-size: calc((var(--cover-heading-font-size-min) * 1px) + (var(--cover-heading-font-size-max) - var(--cover-heading-font-size-min)) * ((100vw - 420px) / (1024 - 420)));
+            }
+
+            @include mq(large) {
+                font-size: calc(var(--cover-heading-font-size-max) * 1px);
+            }
+        }
+    }
+
+    blockquote {
+        margin: 1em 0;
+        color: var(--cover-blockquote-color);
+        font-size: var(--cover-blockquote-font-size);
+
+        a {
+            color: inherit;
+        }
+    }
+
+    ul {
+        display: inline-block;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    .cover-main {
+        z-index: 1;
+        max-width: var(--cover-max-width);
+        margin: var(--cover-margin);
+        padding: 0 45px;
+
+        // Buttons
+        > p:last-child {
+            a {
+                display: inline-block;
+                margin: 0.25em;
+                padding: var(--cover-button-padding);
+                border: var(--cover-button-border);
+                border-radius: var(--cover-button-border-radius);
+                box-shadow: var(--cover-button-box-shadow);
+                background: var(--cover-button-background);
+                text-decoration: var(--cover-button-text-decoration);
+                text-decoration-color: var(--cover-button-text-decoration-color);
+                color: var(--cover-button-color);
+                transition: var(--cover-button-transition);
+
+                &:hover {
+                    border: var(--cover-button-border--hover, var(--cover-button-border));
+                    box-shadow: var(--cover-button-box-shadow--hover, var(--cover-button-box-shadow));
+                    background: var(--cover-button-background--hover, var(--cover-button-background));
+                    text-decoration: var(--cover-button-text-decoration--hover, var(--cover-button-text-decoration));
+                    text-decoration-color: var(--cover-button-text-decoration-color--hover, var(--cover-button-text-decoration-color));
+                    color: var(--cover-button-color--hover, var(--cover-button-color));
+                }
+
+                // Primary
+                &:first-child {
+                    margin-left: 0;
+                    border: var(--cover-button-primary-border, var(--cover-button-border));
+                    box-shadow: var(--cover-button-primary-box-shadow, var(--cover-button-box-shadow));
+                    background: var(--cover-button-primary-background, var(--cover-button-background));
+                    text-decoration: var(--cover-button-primary-text-decoration, var(--cover-button-text-decoration));
+                    text-decoration-color: var(--cover-button-primary-text-decoration-color, var(--cover-button-text-decoration-color));
+                    color: var(--cover-button-primary-color, var(--cover-button-color));
+
+                    &:hover {
+                        border: var(--cover-button-primary-border--hover, var(--cover-button-border--hover, var(--cover-button-primary-border, var(--cover-button-border))));
+                        box-shadow: var(--cover-button-primary-box-shadow--hover, var(--cover-button-box-shadow--hover, var(--cover-button-primary-box-shadow, var(--cover-button-box-shadow))));
+                        background: var(--cover-button-primary-background--hover, var(--cover-button-background--hover, var(--cover-button-primary-background, var(--cover-button-background))));
+                        text-decoration: var(--cover-button-primary-text-decoration--hover, var(--cover-button-text-decoration--hover, var(--cover-button-primary-text-decoration, var(--cover-button-text-decoration))));
+                        text-decoration-color: var(--cover-button-primary-text-decoration-color--hover, var(--cover-button-text-decoration-color--hover, var(--cover-button-primary-text-decoration-color, var(--cover-button-text-decoration-color))));
+                        color: var(--cover-button-primary-color--hover, var(--cover-button-color--hover, var(--cover-button-primary-color, var(--cover-button-color))));
+                    }
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .mask {
+        visibility: var(--cover-background-mask-visibility, hidden);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--cover-background-mask-color);
+        opacity: var(--cover-background-mask-opacity);
+    }
+
+
+    // State
+    // =========================================================================
+    // Display mask with markdown background image
+    &.has-mask {
+        .mask {
+            visibility: visible;
+        }
+    }
+
+    &.show {
+        display: flex;
+    }
+}

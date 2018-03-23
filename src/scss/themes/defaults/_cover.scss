@@ -1,0 +1,75 @@
+// Cover
+// =============================================================================
+:root {
+    --cover-color                                      : null;
+    --cover-margin                                     : 5em auto 3em auto;
+    --cover-max-width                                  : 40em;
+    --cover-text-align                                 : center;
+
+    // Background
+    --cover-background-color                           : null;
+    --cover-background-image                           : null;
+    --cover-background-mask-color                      : #fff;
+    --cover-background-mask-opacity                    : 0.8;
+    --cover-background-mask-visibility                 : null;
+    --cover-background-position                        : center center;
+    --cover-background-repeat                          : no-repeat;
+    --cover-background-size                            : cover;
+
+    // Blockquote (Subtitle)
+    --cover-blockquote-color                           : null;
+    --cover-blockquote-font-size                       : var(--font-size-l);
+
+    // Border
+    --cover-border-inset                               : null;
+    --cover-border-color                               : var(--theme-color);
+    --cover-border-width                               : null;
+
+    // Buttons
+    --cover-button-background                          : null;
+    --cover-button-background--hover                   : null;
+    --cover-button-border                              : 1px solid var(--theme-color);
+    --cover-button-border--hover                       : null;
+    --cover-button-border-radius                       : var(--border-radius-m);
+    --cover-button-box-shadow                          : null;
+    --cover-button-box-shadow--hover                   : null;
+    --cover-button-color                               : var(--theme-color);
+    --cover-button-color--hover                        : null;
+    --cover-button-padding                             : 0.5em 2rem;
+    --cover-button-text-decoration                     : none;
+    --cover-button-text-decoration--hover              : null;
+    --cover-button-text-decoration-color               : null;
+    --cover-button-text-decoration-color--hover        : null;
+    --cover-button-transition                          : all var(--duration-fast) ease-in-out;
+
+    // Buttons - Primary
+    --cover-button-primary-background                  : var(--theme-color);
+    --cover-button-primary-background--hover           : null;
+    --cover-button-primary-border                      : null;
+    --cover-button-primary-border--hover               : null;
+    --cover-button-primary-box-shadow                  : null;
+    --cover-button-primary-box-shadow--hover           : null;
+    --cover-button-primary-color                       : #fff;
+    --cover-button-primary-color--hover                : null;
+    --cover-button-primary-text-decoration             : none;
+    --cover-button-primary-text-decoration--hover      : null;
+    --cover-button-primary-text-decoration-color       : null;
+    --cover-button-primary-text-decoration-color--hover: null;
+
+    // Heading
+    --cover-heading-color                              : var(--theme-color);
+    --cover-heading-font-size                          : var(--font-size-xxl);
+    --cover-heading-font-size-min                      : null;
+    --cover-heading-font-size-max                      : null;
+    --cover-heading-font-weight                        : null;
+
+    // Links
+    --cover-link-border-bottom                         : null;
+    --cover-link-border-bottom--hover                  : null;
+    --cover-link-color                                 : null;
+    --cover-link-color--hover                          : null;
+    --cover-link-text-decoration                       : underline;
+    --cover-link-text-decoration--hover                : null;
+    --cover-link-text-decoration-color                 : null;
+    --cover-link-text-decoration-color--hover          : null;
+}

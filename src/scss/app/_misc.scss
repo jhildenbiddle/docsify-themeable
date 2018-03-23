@@ -1,0 +1,116 @@
+// Github Icon
+// =============================================================================
+.github-corner {
+    position: absolute;
+    z-index: map-get($z-index, githubcorner);
+    top: 0;
+    right: 0;
+    border-bottom: 0;
+    text-decoration: none;
+
+    svg {
+        height: 70px;
+        width: 70px;
+        fill: var(--theme-color);
+        color: var(--body-background-color);
+    }
+
+    &:hover {
+        .octo-arm {
+            animation: octocat-wave 560ms ease-in-out;
+        }
+    }
+}
+
+@keyframes octocat-wave {
+    0%, 100% {
+        transform: rotate(0);
+    }
+    20%, 60% {
+        transform: rotate(-25deg);
+    }
+    40%, 80% {
+        transform: rotate(10deg);
+    }
+}
+
+
+// Progress Bar
+// =============================================================================
+.progress {
+    position: fixed;
+    z-index: map-get($z-index, progress);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    width: 0;
+    background-color: var(--theme-color);
+    transition: width var(--duration-fast), opacity calc(var(--duration-fast) * 2);
+}
+
+// Spinner
+// =============================================================================
+body {
+    &:before,
+    &:after {
+        content: '';
+        transition: all var(--spinner-transition-duration);
+    }
+
+    // Fade overlay
+    &:before {
+        position: fixed;
+        z-index: map-get($z-index, overlay);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: var(--body-background-color);
+    }
+
+    // Spinner
+    &:after {
+        position: absolute;
+        z-index: 1000;
+        top: calc(50% - (var(--spinner-size) / 2));
+        left: calc(50% - (var(--spinner-size) / 2));
+        height: var(--spinner-size);
+        width: var(--spinner-size);
+        border: var(--spinner-track-width, 0) solid var(--spinner-track-color);
+        border-left-color: var(--theme-color);
+        border-left-color: var(--theme-color);
+        border-radius: 50%;
+        animation: spinner var(--duration-slow) infinite linear;
+    }
+
+    nav,
+    main,
+    .cover-main {
+        opacity: 0;
+        transition: opacity var(--spinner-transition-duration) var(--spinner-transition-duration);
+    }
+
+    &.loaded {
+        &:before,
+        &:after {
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        nav,
+        main,
+        .cover-main {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

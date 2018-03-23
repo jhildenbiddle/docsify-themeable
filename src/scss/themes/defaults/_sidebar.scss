@@ -1,0 +1,130 @@
+// Sidebar
+// =============================================================================
+:root {
+    --sidebar-background                          : var(--body-background-color);
+    --sidebar-border-color                        : null;
+    --sidebar-border-width                        : 0;
+    --sidebar-padding                             : 0 25px;
+    --sidebar-transition-duration                 : var(--duration-fast);
+    --sidebar-width                               : 16rem;
+
+    // Heading
+    --sidebar-heading-background                  : null;
+    --sidebar-heading-color                       : null;
+    --sidebar-heading-font-family                 : null;
+    --sidebar-heading-font-size                   : var(--font-size-l);
+    --sidebar-heading-font-weight                 : null;
+    --sidebar-heading-margin                      : 1.5rem 0 0;
+    --sidebar-heading-padding                     : null;
+    --sidebar-heading-text-align                  : center;
+
+    // Nav Container
+    --sidebar-nav-background                      : null;
+    --sidebar-nav-indent                          : 1em;
+    --sidebar-nav-margin                          : 1.5rem 0 0;
+    --sidebar-nav-padding                         : null;
+
+    // Nav Links
+    --sidebar-nav-link-background-color           : null;
+    --sidebar-nav-link-background-color--active   : null;
+    --sidebar-nav-link-background-color--hover    : null;
+    --sidebar-nav-link-background-image           : null;
+    --sidebar-nav-link-background-image--active   : null;
+    --sidebar-nav-link-background-image--hover    : null;
+    --sidebar-nav-link-background-position        : null;
+    --sidebar-nav-link-background-position--active: null;
+    --sidebar-nav-link-background-position--hover : null;
+    --sidebar-nav-link-background-repeat          : null;
+    --sidebar-nav-link-background-size            : null;
+    --sidebar-nav-link-background-size--active    : null;
+    --sidebar-nav-link-background-size--hover     : null;
+    --sidebar-nav-link-border-color               : null;
+    --sidebar-nav-link-border-color--active       : null;
+    --sidebar-nav-link-border-color--hover        : null;
+    --sidebar-nav-link-border-radius              : null;
+    --sidebar-nav-link-border-style               : null;
+    --sidebar-nav-link-border-style--active       : null;
+    --sidebar-nav-link-border-style--hover        : null;
+    --sidebar-nav-link-border-width               : null;
+    --sidebar-nav-link-border-width--active       : null;
+    --sidebar-nav-link-border-width--hover        : null;
+    --sidebar-nav-link-color                      : currentColor;
+    --sidebar-nav-link-color--active              : null;
+    --sidebar-nav-link-color--hover               : null;
+    --sidebar-nav-link-font-weight                : null;
+    --sidebar-nav-link-font-weight--active        : null;
+    --sidebar-nav-link-font-weight--hover         : null;
+    --sidebar-nav-link-margin                     : null;
+    --sidebar-nav-link-padding                    : 0.15em 0;
+    --sidebar-nav-link-text-decoration            : null;
+    --sidebar-nav-link-text-decoration--active    : underline;
+    --sidebar-nav-link-text-decoration--hover     : underline;
+    --sidebar-nav-link-text-decoration-color      : null;
+    --sidebar-nav-link-transition                 : all var(--sidebar-transition-duration);
+
+    // Nav Links - Pseudo Content
+    --sidebar-nav-link-before-content             : null;
+    --sidebar-nav-link-before-content--active     : null;
+    --sidebar-nav-link-before-content-l1          : null;
+    --sidebar-nav-link-before-content-l1--active  : null;
+    --sidebar-nav-link-before-content-l2          : null;
+    --sidebar-nav-link-before-content-l2--active  : null;
+    --sidebar-nav-link-before-content-l3          : null;
+    --sidebar-nav-link-before-content-l3--active  : null;
+    --sidebar-nav-link-before-content-l4          : null;
+    --sidebar-nav-link-before-content-l4--active  : null;
+
+    // Nav Links - Pseudo Style
+    --sidebar-nav-link-before-color               : null;
+    --sidebar-nav-link-before-color--active       : null;
+    --sidebar-nav-link-before-color-l1            : null;
+    --sidebar-nav-link-before-color-l1--active    : null;
+    --sidebar-nav-link-before-color-l2            : null;
+    --sidebar-nav-link-before-color-l2--active    : null;
+    --sidebar-nav-link-before-color-l3            : null;
+    --sidebar-nav-link-before-color-l3--active    : null;
+    --sidebar-nav-link-before-color-l4            : null;
+    --sidebar-nav-link-before-color-l4--active    : null;
+    --sidebar-nav-link-before-margin              : 0 0.35em 0 0;
+    --sidebar-nav-link-before-margin-l1           : null;
+    --sidebar-nav-link-before-margin-l2           : null;
+    --sidebar-nav-link-before-margin-l3           : null;
+    --sidebar-nav-link-before-margin-l4           : null;
+
+    // Nav - Page Links
+    --sidebar-nav-pagelink-background-image--loaded             : null;
+    --sidebar-nav-pagelink-background-image--loaded-active      : null;
+    --sidebar-nav-pagelink-background-image--loaded-hover       : null;
+    --sidebar-nav-pagelink-background-image--notloaded          : null;
+    --sidebar-nav-pagelink-background-image--notloaded-active   : null;
+    --sidebar-nav-pagelink-background-image--notloaded-hover    : null;
+    --sidebar-nav-pagelink-background-position--loaded          : null;
+    --sidebar-nav-pagelink-background-position--loaded-active   : null;
+    --sidebar-nav-pagelink-background-position--loaded-hover    : null;
+    --sidebar-nav-pagelink-background-position--notloaded       : null;
+    --sidebar-nav-pagelink-background-position--notloaded-active: null;
+    --sidebar-nav-pagelink-background-position--notloaded-hover : null;
+    --sidebar-nav-pagelink-background-repeat                    : no-repeat;
+    --sidebar-nav-pagelink-background-size--loaded              : null;
+    --sidebar-nav-pagelink-background-size--loaded-active       : null;
+    --sidebar-nav-pagelink-background-size--loaded-hover        : null;
+    --sidebar-nav-pagelink-background-size--notloaded           : null;
+    --sidebar-nav-pagelink-background-size--notloaded-active    : null;
+    --sidebar-nav-pagelink-background-size--notloaded-hover     : null;
+    --sidebar-nav-pagelink-transition                           : var(--sidebar-nav-link-transition);
+
+    // Nav Headings
+    --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
+    --sidebar-nav-strong-border-width             : null;
+    --sidebar-nav-strong-color                    : null;
+    --sidebar-nav-strong-font-size                : null;
+    --sidebar-nav-strong-font-weight              : var(--strong-font-weight);
+    --sidebar-nav-strong-margin                   : 1.5em 0 0.5em;
+    --sidebar-nav-strong-padding                  : null;
+    --sidebar-nav-strong-text-transform           : null;
+
+    // Order
+    --sidebar-order-heading                       : -1;
+    --sidebar-order-search                        : null;
+    --sidebar-order-nav                           : null;
+}

@@ -1,0 +1,143 @@
+// Code
+// =============================================================================
+// Fixed (will override PrismJS theme declarations)
+.markdown-section {
+    code[class*="lang-"],
+    pre[data-lang] {
+        font-family: var(--code-font-family);
+        font-size: var(--code-font-size);
+        font-weight: var(--code-font-weight);
+        letter-spacing: normal;
+        line-height: var(--code-block-line-height);
+        tab-size: var(--code-tab-size);
+        text-align: left;
+        white-space: pre;
+        word-spacing: normal;
+        word-wrap: normal;
+        word-break: normal;
+        hyphens: none;
+    }
+
+    pre[data-lang] {
+        position: relative;
+        overflow: hidden;
+        margin: var(--code-block-margin);
+        padding: 0;
+        border-radius: var(--code-block-border-radius);
+
+        &::after {
+            content: attr(data-lang);
+            position: absolute;
+            top: 0.75em;
+            right: 0.75em;
+            opacity: 0.6;
+            color: inherit;
+            font-size: var(--font-size-s);
+            line-height: 1;
+        }
+
+        code {
+            display: block;
+            overflow: auto;
+            padding: var(--code-block-padding);
+        }
+    }
+}
+
+// Theme
+code[class*="lang-"],
+pre[data-lang] {
+    color: var(--code-theme-text);
+}
+
+pre[data-lang]::-moz-selection,
+pre[data-lang] ::-moz-selection,
+code[class*="lang-"]::-moz-selection,
+code[class*="lang-"] ::-moz-selection {
+    background: var(--code-theme-selection, var(--selection-color));
+}
+
+pre[data-lang]::selection,
+pre[data-lang] ::selection,
+code[class*="lang-"]::selection,
+code[class*="lang-"] ::selection {
+    background: var(--code-theme-selection, var(--selection-color));
+}
+
+:not(pre) > code[class*="lang-"],
+pre[data-lang] {
+    background: var(--code-theme-background, var(--code-block-background));
+}
+
+.namespace {
+    opacity: 0.7;
+}
+
+.token {
+    &.comment,
+    &.prolog,
+    &.doctype,
+    &.cdata {
+        color: var(--code-theme-comment);
+    }
+
+    &.punctuation {
+        color: var(--code-theme-punctuation);
+    }
+
+    &.property,
+    &.tag,
+    &.boolean,
+    &.number,
+    &.constant,
+    &.symbol,
+    &.deleted {
+        color: var(--code-theme-tag);
+    }
+
+    &.selector,
+    &.attr-name,
+    &.string,
+    &.char,
+    &.builtin,
+    &.inserted {
+        color: var(--code-theme-selector);
+    }
+
+    &.operator,
+    &.entity,
+    &.url,
+    .language-css &.string,
+    .style &.string {
+        color: var(--code-theme-operator);
+    }
+
+    &.atrule,
+    &.attr-value,
+    &.keyword {
+        color: var(--code-theme-keyword);
+    }
+
+    &.function {
+        color: var(--code-theme-function);
+    }
+
+    &.regex,
+    &.important,
+    &.variable {
+        color: var(--code-theme-variable);
+    }
+
+    &.important,
+    &.bold {
+        font-weight: bold;
+    }
+
+    &.italic {
+        font-style: italic;
+    }
+
+    &.entity {
+        cursor: help;
+    }
+}

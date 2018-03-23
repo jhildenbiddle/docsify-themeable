@@ -1,0 +1,142 @@
+// Nav bar
+// =============================================================================
+.app-nav {
+    position: absolute;
+    z-index: map-get($z-index, navbar);
+    top: calc(35px - (0.5em * var(--root-line-height)));
+    left: 0;
+    right: 80px;
+    text-align: right;
+
+    &.no-badge {
+        right: 45px;
+    }
+
+    a {
+        display: block;
+        line-height: 1;
+        transition: var(--navbar-link-transition);
+
+        img {
+            margin-top: -0.25em;
+            vertical-align: middle;
+
+            &:first-child {
+                margin-right: 0.5em;
+            }
+        }
+    }
+
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
+        position: relative;
+    }
+
+    > ul {
+        > li {
+            display: inline-block;
+            margin: var(--navbar-link-margin);
+
+            > a {
+                padding: var(--navbar-link-padding);
+                border-width: var(--navbar-link-border-width, 0);
+                border-style: var(--navbar-link-border-style);
+                border-color: var(--navbar-link-border-color);
+                border-radius: var(--navbar-link-border-radius);
+                background: var(--navbar-link-background);
+                color: var(--navbar-link-color);
+                text-decoration: var(--navbar-link-text-decoration);
+                text-decoration-color: var(--navbar-link-text-decoration-color);
+
+                &:hover {
+                    background: var(--navbar-link-background--hover, var(--navbar-link-background));
+                    border-style: var(--navbar-link-border-style--hover, var(--navbar-link-border-style));
+                    border-color: var(--navbar-link-border-color--hover, var(--navbar-link-border-color));
+                    color: var(--navbar-link-color--hover, var(--navbar-link-color));
+                    text-decoration: var(--navbar-link-text-decoration--hover, var(--navbar-link-text-decoration));
+                    text-decoration-color: var(--navbar-link-text-decoration-color--hover, var(--navbar-link-text-decoration-color));
+                }
+
+                &.active {
+                    background: var(--navbar-link-background--active, var(--navbar-link-background));
+                    border-style: var(--navbar-link-border-style--active, var(--navbar-link-border-style));
+                    border-color: var(--navbar-link-border-color--active, var(--navbar-link-border-color));
+                    color: var(--navbar-link-color--active, var(--navbar-link-color));
+                    text-decoration: var(--navbar-link-text-decoration--active, var(--navbar-link-text-decoration));
+                    text-decoration-color: var(--navbar-link-text-decoration-color--active, var(--navbar-link-text-decoration-color));
+                }
+            }
+
+            ul {
+                visibility: hidden;
+                position: absolute;
+                top: 100%;
+                right: 50%;
+                overflow-y: auto;
+                box-sizing: border-box;
+                max-height: calc(50vh);
+                padding: var(--navbar-menu-padding);
+                border-width: var(--navbar-menu-border-width, 0);
+                border-style: solid;
+                border-color: var(--navbar-menu-border-color);
+                border-radius: var(--navbar-menu-border-radius);
+                background: var(--navbar-menu-background);
+                box-shadow: var(--navbar-menu-box-shadow);
+                text-align: left;
+                white-space: nowrap;
+                opacity: 0;
+                transform: translate(50%, -0.35em);
+                transition: var(--navbar-menu-transition);
+
+                li {
+                    white-space: nowrap;
+                }
+
+                a {
+                    margin: var(--navbar-menu-link-margin);
+                    padding: var(--navbar-menu-link-padding);
+                    border-width: var(--navbar-menu-link-border-width, 0);
+                    border-style: var(--navbar-menu-link-border-style);
+                    border-color: var(--navbar-menu-link-border-color);
+                    border-radius: var(--navbar-menu-link-border-radius);
+                    background: var(--navbar-menu-link-background);
+                    color: var(--navbar-menu-link-color);
+                    text-decoration: var(--navbar-menu-link-text-decoration);
+                    text-decoration-color: var(--navbar-menu-link-text-decoration-color);
+
+                    &:hover {
+                        background: var(--navbar-menu-link-background--hover, var(--navbar-menu-link-background));
+                        border-style: var(--navbar-menu-link-border-style--hover, var(--navbar-menu-link-border-style));
+                        border-color: var(--navbar-menu-link-border-color--hover, var(--navbar-menu-link-border-color));
+                        color: var(--navbar-menu-link-color--hover, var(--navbar-menu-link-color));
+                        text-decoration: var(--navbar-menu-link-text-decoration--hover, var(--navbar-menu-link-text-decoration));
+                        text-decoration-color: var(--navbar-menu-link-text-decoration-color--hover, var(--navbar-menu-link-text-decoration-color));
+                    }
+
+                    &.active {
+                        background: var(--navbar-menu-link-background--active, var(--navbar-menu-link-background));
+                        border-style: var(--navbar-menu-link-border-style--active, var(--navbar-menu-link-border-style));
+                        border-color: var(--navbar-menu-link-border-color--active, var(--navbar-menu-link-border-color));
+                        color: var(--navbar-menu-link-color--active, var(--navbar-menu-link-color));
+                        text-decoration: var(--navbar-menu-link-text-decoration--active, var(--navbar-menu-link-text-decoration));
+                        text-decoration-color: var(--navbar-menu-link-text-decoration-color--active, var(--navbar-menu-link-text-decoration-color));
+                    }
+                }
+            }
+
+            &:hover {
+                ul {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: translate(50%, 0);
+                }
+            }
+        }
+    }
+}

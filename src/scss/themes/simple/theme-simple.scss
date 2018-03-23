@@ -1,0 +1,21 @@
+// Defaults
+// =============================================================================
+@import "../defaults/theme-defaults";
+
+
+// Theme
+// =============================================================================
+@import "base";
+@import "../defaults/code-light";
+@import "content";
+@import "cover";
+@import "navbar";
+@import "plugin-search";
+@import "sidebar";
+
+
+// Customization
+// =============================================================================
+:root {
+    --theme-color: #1b84cc;
+}

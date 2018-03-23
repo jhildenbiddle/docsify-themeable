@@ -1,0 +1,447 @@
+// Sidebar
+// =============================================================================
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: map-get($z-index, sidebar);
+    top: 0;
+    bottom: 0;
+    left: calc(0px - var(--sidebar-width));
+    overflow-y: auto;
+    width: var(--sidebar-width);
+    padding: var(--sidebar-padding);
+    border-width: var(--sidebar-border-width);
+    border-style: solid;
+    border-color: var(--sidebar-border-color);
+    background: var(--sidebar-background);
+
+    > h1 {
+        order: var(--sidebar-order-heading);
+        margin: 0;
+        margin: var(--sidebar-heading-margin);
+        padding: var(--sidebar-heading-padding);
+        background: var(--sidebar-heading-background);
+        color: var(--sidebar-heading-color);
+        font-family: var(--sidebar-heading-font-family);
+        font-size: var(--sidebar-heading-font-size);
+        font-weight: var(--sidebar-heading-font-weight);
+        text-align: var(--sidebar-heading-text-align);
+
+        img {
+            max-width: 100%;
+        }
+
+        .app-name-link {
+            color: var(--sidebar-heading-color);
+        }
+    }
+
+    @include mq(medium) {
+        position: absolute;
+        left: 0;
+        overflow-y: hidden;
+    }
+
+    @media print {
+        display: none;
+    }
+}
+
+// Nav
+// -----------------------------------------------------------------------------
+.sidebar nav,  // 1. Merged nav bar in sidebar via 'mergeNavbar' option
+.sidebar-nav { // 2. Standard sidebar navigation
+    order: var(--sidebar-order-nav);
+    margin: var(--sidebar-nav-margin);
+    padding: var(--sidebar-nav-padding);
+    background: var(--sidebar-nav-background);
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        ul {
+            margin-left: var(--sidebar-nav-indent);
+        }
+    }
+
+    a {
+        display: block;
+        overflow: hidden;
+        margin: var(--sidebar-nav-link-margin);
+        padding: var(--sidebar-nav-link-padding);
+        border-width: var(--sidebar-nav-link-border-width, 0);
+        border-style: var(--sidebar-nav-link-border-style);
+        border-color: var(--sidebar-nav-link-border-color);
+        border-radius: var(--sidebar-nav-link-border-radius);
+        background-color: var(--sidebar-nav-link-background-color);
+        background-image: var(--sidebar-nav-link-background-image);
+        background-position: var(--sidebar-nav-link-background-position);
+        background-repeat: var(--sidebar-nav-link-background-repeat);
+        background-size: var(--sidebar-nav-link-background-size);
+        color: var(--sidebar-nav-link-color);
+        font-weight: var(--sidebar-nav-link-font-weight);
+        white-space: nowrap;
+        text-decoration: var(--sidebar-nav-link-text-decoration);
+        text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+        text-overflow: ellipsis;
+        transition: var(--sidebar-nav-link-transition);
+
+        img {
+            margin-top: -0.25em;
+            vertical-align: middle;
+
+            &:first-child {
+                margin-right: 0.5em;
+            }
+        }
+
+        &:hover {
+            border-width: var(--sidebar-nav-link-border-width--hover, var(--sidebar-nav-link-border-width, 0));
+            border-style: var(--sidebar-nav-link-border-style--hover, var(--sidebar-nav-link-border-style));
+            border-color: var(--sidebar-nav-link-border-color--hover, var(--sidebar-nav-link-border-color));
+            background-color: var(--sidebar-nav-link-background-color--hover, var(--sidebar-nav-link-background-color));
+            background-image: var(--sidebar-nav-link-background-image--hover, var(--sidebar-nav-link-background-image));
+            background-position: var(--sidebar-nav-link-background-position--hover, var(--sidebar-nav-link-background-position));
+            background-size: var(--sidebar-nav-link-background-size--hover, var(--sidebar-nav-link-background-size));
+            color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
+            font-weight: var(--sidebar-nav-link-font-weight--hover, var(--sidebar-nav-link-font-weight));
+            text-decoration: var(--sidebar-nav-link-text-decoration--hover, var(--sidebar-nav-link-text-decoration));
+            text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+        }
+    }
+
+    strong {
+        display: block;
+        margin: var(--sidebar-nav-strong-margin);
+        padding: var(--sidebar-nav-strong-padding);
+        border-width: var(--sidebar-nav-strong-border-width, 0);
+        border-style: solid;
+        border-color: var(--sidebar-nav-strong-border-color);
+        color: var(--sidebar-nav-strong-color);
+        font-size: var(--sidebar-nav-strong-font-size);
+        font-weight: var(--sidebar-nav-strong-font-weight);
+        text-transform: var(--sidebar-nav-strong-text-transform);
+
+        + ul {
+            margin-left: 0;
+        }
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+
+.sidebar-nav {
+    > ul {
+        // Prevent toggle from obscuring nav content
+        margin-bottom: 35px;
+    }
+
+    li {
+        > a,
+        > strong {
+            &:before {
+                display: inline-block;
+
+                // Images
+                // line-height: 1;
+                // vertical-align: middle;
+            }
+        }
+
+        a {
+            background-repeat: var(--sidebar-nav-pagelink-background-repeat);
+
+            // Page links
+            &[href^="#/"]:not([href*="?id="]) {
+                transition: var(--sidebar-nav-pagelink-transition);
+
+                // Not loaded (w/o subnav)
+                &:only-child {
+                    background-image: var(--sidebar-nav-pagelink-background-image--notloaded);
+                    background-position: var(--sidebar-nav-pagelink-background-position--notloaded);
+                    background-size: var(--sidebar-nav-pagelink-background-size--notloaded);
+                }
+
+                // Loaded (w/ subnav)
+                &:not(:only-child) {
+                    background-image: var(--sidebar-nav-pagelink-background-image--loaded);
+                    background-position: var(--sidebar-nav-pagelink-background-position--loaded);
+                    background-size: var(--sidebar-nav-pagelink-background-size--loaded);
+                }
+            }
+        }
+
+        &:hover {
+            > a {
+                // Page links
+                &[href^="#/"]:not([href*="?id="]) {
+                    // Not loaded (w/o subnav)
+                    &:only-child {
+                        background-image: var(--sidebar-nav-pagelink-background-image--notloaded-hover, var(--sidebar-nav-pagelink-background-image--notloaded));
+                        background-position: var(--sidebar-nav-pagelink-background-position--notloaded-hover, var(--sidebar-nav-pagelink-background-position--notloaded));
+                        background-size: var(--sidebar-nav-pagelink-background-size--notloaded-hover, var(--sidebar-nav-pagelink-background-size--notloaded));
+                    }
+
+                    // Loaded (w/ subnav)
+                    &:not(:only-child) {
+                        background-image: var(--sidebar-nav-pagelink-background-image--loaded-hover, var(--sidebar-nav-pagelink-background-image--loaded));
+                        background-position: var(--sidebar-nav-pagelink-background-position--loaded-hover, var(--sidebar-nav-pagelink-background-position--loaded));
+                        background-size: var(--sidebar-nav-pagelink-background-size--loaded-hover, var(--sidebar-nav-pagelink-background-size--loaded));
+                    }
+                }
+            }
+        }
+
+        &.active {
+            > a {
+                border-width: var(--sidebar-nav-link-border-width--active, var(--sidebar-nav-link-border-width));
+                border-style: var(--sidebar-nav-link-border-style--active, var(--sidebar-nav-link-border-style));
+                border-color: var(--sidebar-nav-link-border-color--active, var(--sidebar-nav-link-border-color));
+                background-color: var(--sidebar-nav-link-background-color--active, var(--sidebar-nav-link-background-color));
+                background-image: var(--sidebar-nav-link-background-image--active, var(--sidebar-nav-link-background-image));
+                background-position: var(--sidebar-nav-link-background-position--active, var(--sidebar-nav-link-background-position));
+                background-size: var(--sidebar-nav-link-background-size--active, var(--sidebar-nav-link-background-size));
+                color: var(--sidebar-nav-link-color--active, var(--sidebar-nav-link-color));
+                font-weight: var(--sidebar-nav-link-font-weight--active, var(--sidebar-nav-link-font-weight));
+                text-decoration: var(--sidebar-nav-link-text-decoration--active, var(--sidebar-nav-link-text-decoration));
+                text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+
+                // Page links
+                &[href^="#/"]:not([href*="?id="]) {
+                    // Loaded (w/ subnav)
+                    &:not(:only-child) {
+                        background-image: var(--sidebar-nav-pagelink-background-image--loaded-active, var(--sidebar-nav-pagelink-background-image--loaded));
+                        background-position: var(--sidebar-nav-pagelink-background-position--loaded-active, var(--sidebar-nav-pagelink-background-position--loaded));
+                        background-size: var(--sidebar-nav-pagelink-background-size--loaded-active, var(--sidebar-nav-pagelink-background-size--loaded));
+                    }
+                }
+            }
+        }
+
+        &:first-child {
+            strong {
+                margin-top :0;
+            }
+        }
+    }
+
+    // Pseudo-content bullets
+    $level-selector: '> ul > li';
+
+    @for $i from 1 through 4 {
+        #{$level-selector} {
+            > a,
+            > strong {
+                &:before {
+                    content: var(--sidebar-nav-link-before-content-l#{$i}, var(--sidebar-nav-link-before-content));
+                    margin: var(--sidebar-nav-link-before-margin-l#{$i}, var(--sidebar-nav-link-before-margin));
+                    color: var(--sidebar-nav-link-before-color-l#{$i}, var(--sidebar-nav-link-before-color));
+                }
+            }
+
+            &.active {
+                > a,
+                > strong {
+                    &:before {
+                        content: var(--sidebar-nav-link-before-content-l#{$i}--active, var(--sidebar-nav-link-before-content--active, var(--sidebar-nav-link-before-content-l#{$i}, var(--sidebar-nav-link-before-content))));
+                        color: var(--sidebar-nav-link-before-color-l#{$i}--active, var(--sidebar-nav-link-before-color--active, var(--sidebar-nav-link-before-color-l#{$i}, var(--sidebar-nav-link-before-color))));
+                    }
+                }
+            }
+        }
+
+        $level-selector: $level-selector + '> ul > li';
+    }
+}
+
+// Toggle
+// -----------------------------------------------------------------------------
+.sidebar-toggle,
+.sidebar-toggle-toggle {
+    outline: none;
+}
+
+.sidebar-toggle {
+    position: fixed;
+    z-index: (map-get($z-index, sidebar) + 1);
+    top: 10px;
+    left: 5px;
+    margin: 0;
+    padding: 10px;
+    border: 0;
+    background: transparent;
+    color: var(--body-color);
+    cursor: pointer;
+
+    .sidebar-toggle-button {
+        position: relative;
+        height: 14px;
+        width: 15px;
+    }
+
+    span {
+        position: absolute;
+        left: 0;
+        height: 2px;
+        width: 15px;
+        background-color: currentColor;
+        transition: top calc(var(--sidebar-transition-duration) / 2) ease-out calc(var(--sidebar-transition-duration) / 2),
+                    opacity 0s ease-out calc(var(--sidebar-transition-duration) / 2),
+                    transform calc(var(--sidebar-transition-duration) / 2);
+
+        &:nth-of-type(1) {
+            top: 0;
+        }
+
+        &:nth-of-type(2) {
+            top: 5px;
+        }
+
+        &:nth-of-type(3) {
+            top: 10px;
+        }
+    }
+
+    @include mq(medium) {
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        min-width: calc(var(--sidebar-width) - 1px);
+        transition-delay: var(--sidebar-transition-duration);
+
+        // Background color (using pseudo to mimic RGBA value of sidebar bg)
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--sidebar-background);
+            opacity: 0.8;
+        }
+
+        span {
+            background-color: var(--sidebar-nav-link-color);
+        }
+    }
+
+    @media print {
+        display: none;
+    }
+}
+
+
+// States
+// -----------------------------------------------------------------------------
+.cover,
+.github-corner,
+.sidebar,
+.sidebar-toggle,
+main > .content {
+    transition: all var(--sidebar-transition-duration) ease-out;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main > .content {
+    @include mq(medium) {
+        width: calc(100% - var(--sidebar-width));
+        transform: translateX(var(--sidebar-width));
+    }
+}
+
+body.close {
+    .cover,
+    .github-corner,
+    .sidebar,
+    .sidebar-toggle,
+    main > .content {
+        transform: translateX(var(--sidebar-width));
+    }
+
+    .cover,
+    .github-corner {
+        @include mq(medium) {
+            transform: translateX(0);
+        }
+    }
+
+    .sidebar {
+        @include mq(medium) {
+            transform: translateX(calc(0px - var(--sidebar-width)));
+        }
+    }
+
+    .sidebar-toggle {
+        @include mq(max-width medium) {
+            span {
+                transition: top calc(var(--sidebar-transition-duration) / 2),
+                            opacity 0s ease-out calc(var(--sidebar-transition-duration) / 2),
+                            transform calc(var(--sidebar-transition-duration) / 2) ease-out calc(var(--sidebar-transition-duration) / 2);
+
+                &:nth-child(1) {
+                    top: 6px;
+                    transform: rotate(45deg);
+                }
+                &:nth-child(2) {
+                    opacity: 0;
+                }
+                &:nth-child(3) {
+                    top: 6px;
+                    transform: rotate(-45deg);
+                }
+            }
+        }
+
+        @include mq(medium) {
+            min-width: 0;
+            border-color: transparent;
+            background: transparent;
+            transform: translateX(0);
+
+            span {
+                background-color: currentColor;
+            }
+        }
+    }
+
+    .cover,
+    .github-corner {
+        transform: translateX(var(--sidebar-width));
+
+        @include mq(medium) {
+            transform: translateX(0);
+        }
+    }
+
+    main > .content {
+        @include mq(medium) {
+            width: auto;
+            transform: translateX(0);
+        }
+    }
+}
+
+body.sticky {
+    .sidebar,
+    .sidebar-toggle {
+        @include mq(medium) {
+            position: fixed;
+        }
+    }
+
+    .sidebar {
+        @include mq(medium) {
+            overflow-y: auto;
+        }
+    }
+}

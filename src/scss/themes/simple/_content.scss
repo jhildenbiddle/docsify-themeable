@@ -1,0 +1,52 @@
+// Content: Simple
+// =============================================================================
+:root {
+    // Blockquote
+    --blockquote-background        : var(--color-gray-lightest);
+    --blockquote-border-radius     : var(--border-radius-m);
+    --blockquote-quotes-close      : close-quote;
+    --blockquote-quotes-color      : rgba(0, 0, 0, 0.2);
+    --blockquote-quotes-font-family: Georgia, serif;
+    --blockquote-quotes-font-size  : 4em;
+    --blockquote-quotes-open       : open-quote;
+
+    // Headings
+    --heading-h2-border-bottom     : 1px solid var(--color-gray-lighter);
+    --heading-margin               : 2.5rem 0 1.5rem;
+    --heading-h2-padding           : 0 0 1rem 0;
+
+    // Keyboard
+    --kbd-background               : var(--color-gray-lightest);
+    --kbd-border                   : 1px solid var(--color-gray-light);
+    --kbd-border-radius            : var(--border-radius-m);
+
+    // Notices (Tip & Warning)
+    --notice-before-border-radius  : var(--border-radius-m);
+    --notice-before-font-size      : var(--font-size-s);
+    --notice-before-font-weight    : 600;
+    --notice-before-left           : 0;
+    --notice-before-line-height    : 1.5;
+    --notice-before-padding        : 0 0.6em;
+    --notice-before-position       : absolute;
+    --notice-before-top            : -0.75em;
+    --notice-border-radius         : 0 0 var(--border-radius-m) var(--border-radius-m);
+    --notice-border-style          : solid;
+    --notice-border-width          : 1px 0 0;
+
+    // Notice - Tip
+    --notice-tip-background        : #edf2ff;
+    --notice-tip-before-background : #5c7cfa;
+    --notice-tip-before-color      : #fff;
+    --notice-tip-before-content    : "Tip";
+    --notice-tip-border-color      : var(--notice-tip-before-background);
+
+    // Notice - Warning
+    --notice-warn-background       : #fff5f5;
+    --notice-warn-before-background: #ff6b6b;
+    --notice-warn-before-color     : #fff;
+    --notice-warn-before-content   : "Important";
+    --notice-warn-border-color     : var(--notice-warn-before-background);
+
+    // Strong
+    --strong-font-weight           : 600;
+}

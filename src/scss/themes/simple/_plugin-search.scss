@@ -1,0 +1,16 @@
+// Search (Plugin): Simple
+// https://docsify.js.org/#/plugins?id=full-text-search
+// =============================================================================
+:root {
+    // Input
+    --search-input-background-color      : #fff;
+    --search-input-background-image      : svg-data-uri("<svg fill='#b5b5b5' height='18' width='18' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'><path d='M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33-1.42 1.42-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z'/></svg>");
+    --search-input-background-position   : 1em center;
+    --search-input-border-color          : var(--sidebar-border-color);
+    --search-input-border-width          : 1px 0;
+    --search-input-padding               : 0.65em 1em 0.65em calc(18px + 1.5em);
+
+    // Results
+    --search-result-item-border-color    : var(--sidebar-border-color);
+    --search-result-keyword-border-radius: var(--border-radius-s);
+}

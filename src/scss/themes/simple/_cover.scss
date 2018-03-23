@@ -1,0 +1,23 @@
+// Cover: Simple
+// =============================================================================
+:root {
+    --cover-color                         : rgba(0,0,0,0.65);
+
+    // Buttons
+    --cover-button-border-radius          : 100vw;
+    --cover-button-box-shadow             : 0 0 0 4px transparent;
+    --cover-button-box-shadow--hover      : 0 0 0 4px rgba(0, 0, 0, 0.1);
+
+    // Buttons - Primary
+    --cover-button-primary-background     : var(--theme-color);
+    --cover-button-primary-color          : #fff;
+
+    // Heading
+    --cover-heading-font-size-min         : 34; // Unitless px
+    --cover-heading-font-size-max         : 56; // Unitless px
+    --cover-heading-font-weight           : 200;
+
+    // Links
+    // --cover-link-border-bottom            : 1px dashed currentColor;
+    // --cover-link-border-bottom--hover     : 1px solid currentColor;
+}

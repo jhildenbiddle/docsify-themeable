@@ -1,0 +1,79 @@
+// Base
+// =============================================================================
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    font-size: inherit;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -webkit-touch-callout: none;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: var(--root-font-family);
+    font-size: var(--root-font-size);
+    font-weight: var(--root-font-weight);
+    letter-spacing: var(--root-letter-spacing);
+    line-height: var(--root-line-height);
+
+    // Normalize font weights across browsers and operating systems
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+}
+
+body {
+    margin: 0;
+    background-color: var(--body-background-color);
+    color: var(--body-color);
+}
+
+::selection {
+    background: var(--selection-color);
+}
+
+
+// Elements
+// -----------------------------------------------------------------------------
+b,
+strong {
+    font-weight: var(--strong-font-weight);
+}
+
+a {
+    text-decoration: none;
+    text-decoration-skip: ink;
+    text-decoration-skip-ink: auto;
+}
+
+hr {
+    height: 0;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+}
+
+small {
+    font-size: var(--small-font-size);
+}
+
+sub,
+sup {
+    font-size: var(--subsup-font-size);
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+	bottom: -0.25em;
+}
+
+sup {
+	top: -0.5em;
+}

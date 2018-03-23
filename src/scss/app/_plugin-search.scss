@@ -1,0 +1,228 @@
+// Search Plugin - Reference & Overrides
+// https://github.com/QingWei-Li/docsify/blob/master/docs/plugins.md#full-text-search
+// =============================================================================
+// This plugin injects a <style> tag with default styles. These styles have been
+// copied below for referenece with overrides marked.
+body {
+    .sidebar {
+        // padding-top: 0;
+
+        // OVERRIDE
+        padding: var(--sidebar-padding);
+    }
+}
+
+.sidebar {
+    .search {
+        // margin-bottom: 20px;
+        // padding: 6px;
+        // border-bottom: 1px solid #eee;
+
+        // OVERRIDE
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+        .input-wrap {
+            // display: flex;
+            // align-items: center;
+        }
+
+        .results-panel {
+            // display: none;
+
+            &.show {
+                // display: block;
+            }
+        }
+
+        input {
+            // outline: none;
+            // border: none;
+            // width: 100%;
+            // padding: 7px;
+            // line-height: 22px;
+            // font-size: 14px;
+
+            // OVERRIDE
+            padding: 0;
+            line-height: 1;
+            font-size: inherit;
+        }
+
+        input,
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+
+        .clear-button {
+            width: 36px;
+            text-align: right;
+            display: none;
+
+            &.show {
+                display: block;
+            }
+
+            svg {
+                transform: scale(.5);
+            }
+        }
+
+        h2 {
+            // margin: 10px 0;
+            // font-size: 17px;
+
+            // OVERRIDE
+            margin: 0;
+            font-size: inherit;
+        }
+
+        a {
+            // text-decoration: none;
+            // color: inherit;
+        }
+
+        p {
+            // font-size: 14px;
+            // overflow: hidden;
+            // text-overflow: ellipsis;
+            // display: -webkit-box;
+            // -webkit-line-clamp: 2;
+            // -webkit-box-orient: vertical;
+
+            // OVERRIDE
+            font-size: inherit;
+
+            &.empty {
+                // text-align: center;
+            }
+        }
+
+        .matching-post {
+            // border-bottom: 1px solid #eee;
+
+            // OVERRIDE
+            border: none;
+
+            &:last-child {
+                // border-bottom: 0;
+                // border-bottom: unset;
+            }
+        }
+    }
+}
+
+
+// Search Plugin
+// - Properties set via injected <style> tag or directly on element will require
+//   the use of !important due to specificity.
+// =============================================================================
+.sidebar {
+    .search {
+        order: var(--sidebar-order-search);
+        margin: var(--search-margin);
+        padding: var(--search-padding);
+        background: var(--search-background);
+
+        a {
+            color: inherit;
+        }
+
+        h2 {
+            margin: var(--search-result-heading-margin);
+            font-size: var(--search-result-heading-font-size);
+        }
+
+        .input-wrap,
+        :not(.input-wrap) > input[type="search"] {
+            background-color: var(--search-input-background-color);
+            border-width: var(--search-input-border-width, 0);
+            border-style: solid;
+            border-color: var(--search-input-border-color);
+            border-radius: var(--search-input-border-radius);
+        }
+
+        input[type="search"] {
+            width: 100%;
+            padding: var(--search-input-padding);
+            background-color: transparent;
+            background-image: var(--search-input-background-image);
+            background-position: var(--search-input-background-position);
+            background-repeat: var(--search-input-background-repeat);
+            background-size: var(--search-input-background-size);
+            font-size: var(--search-input-font-size);
+            transition: var(--search-input-transition);
+            appearance: none;
+
+            &:focus {
+                background-color: var(--search-input-background-color--focus, var(--search-input-background-color));
+                background-image: var(--search-input-background-image--focus, var(--search-input-background-image));
+                background-position: var(--search-input-background-position--focus, var(--search-input-background-position));
+                background-size: var(--search-input-background-size--focus, var(--search-input-background-size));
+            }
+        }
+
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+
+            &:empty {
+                text-align: center;
+            }
+        }
+
+        .clear-button {
+            cursor: pointer;
+        }
+
+        &.show {
+            ~ .sidebar-nav {
+                display: none;
+            }
+        }
+
+        // Results
+        // ---------------------------------------------------------------------
+        .results-panel {
+            display: none;
+            font-size: var(--search-result-item-font-size);
+
+            &.show {
+                display: block;
+            }
+        }
+
+        .matching-post {
+            margin: var(--search-result-item-margin);
+            padding: var(--search-result-item-padding);
+
+            // :last-child selector required to override :last-child ruleset
+            // specified in <style> tag added by search plugin.
+            &,
+            &:last-child {
+                border-width: var(--search-result-item-border-width, 0) !important;
+                border-style: var(--search-result-item-border-style);
+                border-color: var(--search-result-item-border-color);
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .search-keyword {
+            margin: var(--search-result-keyword-margin);
+            padding: var(--search-result-keyword-padding);
+            border-radius: var(--search-result-keyword-border-radius);
+            background-color: var(--search-result-keyword-background);
+            color: var(--search-result-keyword-color);
+            font-style: normal;
+        }
+    }
+}
