@@ -1,0 +1,75 @@
+/* Cover
+============================================================================= */
+:root {
+    --cover-color                                      : ;
+    --cover-margin                                     : 5em auto 3em auto;
+    --cover-max-width                                  : 40em;
+    --cover-text-align                                 : center;
+
+    /* Background */
+    --cover-background-color                           : ;
+    --cover-background-image                           : ;
+    --cover-background-mask-color                      : #fff;
+    --cover-background-mask-opacity                    : 0.8;
+    --cover-background-mask-visibility                 : ;
+    --cover-background-position                        : center center;
+    --cover-background-repeat                          : no-repeat;
+    --cover-background-size                            : cover;
+
+    /* Blockquote (Subtitle) */
+    --cover-blockquote-color                           : ;
+    --cover-blockquote-font-size                       : var(--font-size-l);
+
+    /* Border */
+    --cover-border-inset                               : ;
+    --cover-border-color                               : var(--theme-color);
+    --cover-border-width                               : ;
+
+    /* Buttons */
+    --cover-button-background                          : ;
+    --cover-button-background--hover                   : ;
+    --cover-button-border                              : 1px solid var(--theme-color);
+    --cover-button-border--hover                       : ;
+    --cover-button-border-radius                       : var(--border-radius-m);
+    --cover-button-box-shadow                          : ;
+    --cover-button-box-shadow--hover                   : ;
+    --cover-button-color                               : var(--theme-color);
+    --cover-button-color--hover                        : ;
+    --cover-button-padding                             : 0.5em 2rem;
+    --cover-button-text-decoration                     : none;
+    --cover-button-text-decoration--hover              : ;
+    --cover-button-text-decoration-color               : ;
+    --cover-button-text-decoration-color--hover        : ;
+    --cover-button-transition                          : all var(--duration-fast) ease-in-out;
+
+    /* Buttons - Primary */
+    --cover-button-primary-background                  : var(--theme-color);
+    --cover-button-primary-background--hover           : ;
+    --cover-button-primary-border                      : ;
+    --cover-button-primary-border--hover               : ;
+    --cover-button-primary-box-shadow                  : ;
+    --cover-button-primary-box-shadow--hover           : ;
+    --cover-button-primary-color                       : #fff;
+    --cover-button-primary-color--hover                : ;
+    --cover-button-primary-text-decoration             : none;
+    --cover-button-primary-text-decoration--hover      : ;
+    --cover-button-primary-text-decoration-color       : ;
+    --cover-button-primary-text-decoration-color--hover: ;
+
+    /* Heading */
+    --cover-heading-color                              : var(--theme-color);
+    --cover-heading-font-size                          : var(--font-size-xxl);
+    --cover-heading-font-size-min                      : ;
+    --cover-heading-font-size-max                      : ;
+    --cover-heading-font-weight                        : ;
+
+    /* Links */
+    --cover-link-border-bottom                         : ;
+    --cover-link-border-bottom--hover                  : ;
+    --cover-link-color                                 : ;
+    --cover-link-color--hover                          : ;
+    --cover-link-text-decoration                       : underline;
+    --cover-link-text-decoration--hover                : ;
+    --cover-link-text-decoration-color                 : ;
+    --cover-link-text-decoration-color--hover          : ;
+}

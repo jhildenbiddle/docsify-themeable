@@ -1,0 +1,61 @@
+/* Navbar
+============================================================================= */
+:root {
+    /* Links */
+    --navbar-link-background                        : ;
+    --navbar-link-background--active                : ;
+    --navbar-link-background--hover                 : ;
+    --navbar-link-border-color                      : ;
+    --navbar-link-border-color--active              : ;
+    --navbar-link-border-color--hover               : ;
+    --navbar-link-border-radius                     : ;
+    --navbar-link-border-style                      : solid;
+    --navbar-link-border-style--active              : ;
+    --navbar-link-border-style--hover               : ;
+    --navbar-link-border-width                      : ;
+    --navbar-link-color                             : ;
+    --navbar-link-color--active                     : ;
+    --navbar-link-color--hover                      : ;
+    --navbar-link-margin                            : 0 0 0 1.5em;
+    --navbar-link-padding                           : ;
+    --navbar-link-transition                        : all var(--duration-fast);
+    --navbar-link-text-decoration                   : ;
+    --navbar-link-text-decoration--active           : ;
+    --navbar-link-text-decoration--hover            : ;
+    --navbar-link-text-decoration-color             : ;
+    --navbar-link-text-decoration-color--active     : ;
+    --navbar-link-text-decoration-color--hover      : ;
+
+    /* Menus */
+    --navbar-menu-background                        : var(--body-background-color);
+    --navbar-menu-border-color                      : ;
+    --navbar-menu-border-radius                     : var(--border-radius-m);
+    --navbar-menu-border-width                      : ;
+    --navbar-menu-box-shadow                        : rgba(45,45,45,0.05) 0px 0px 1px, rgba(49,49,49,0.05) 0px 1px 2px, rgba(42,42,42,0.05) 0px 2px 4px, rgba(32,32,32,0.05) 0px 4px 8px, rgba(49,49,49,0.05) 0px 8px 16px, rgba(35,35,35,0.05) 0px 16px 32px;
+    --navbar-menu-padding                           : 0.5em;
+    --navbar-menu-transition                        : all var(--duration-fast);
+
+    /* Menu Links */
+    --navbar-menu-link-background                   : ;
+    --navbar-menu-link-background--active           : ;
+    --navbar-menu-link-background--hover            : ;
+    --navbar-menu-link-border-color                 : ;
+    --navbar-menu-link-border-color--active         : ;
+    --navbar-menu-link-border-color--hover          : ;
+    --navbar-menu-link-border-radius                : ;
+    --navbar-menu-link-border-style                 : ;
+    --navbar-menu-link-border-style--active         : ;
+    --navbar-menu-link-border-style--hover          : ;
+    --navbar-menu-link-border-width                 : ;
+    --navbar-menu-link-color                        : ;
+    --navbar-menu-link-color--active                : ;
+    --navbar-menu-link-color--hover                 : ;
+    --navbar-menu-link-margin                       : 0.75em 0.5em;
+    --navbar-menu-link-padding                      : ;
+    --navbar-menu-link-text-decoration              : ;
+    --navbar-menu-link-text-decoration--active      : ;
+    --navbar-menu-link-text-decoration--hover       : ;
+    --navbar-menu-link-text-decoration-color        : ;
+    --navbar-menu-link-text-decoration-color--active: ;
+    --navbar-menu-link-text-decoration-color--hover : ;
+}

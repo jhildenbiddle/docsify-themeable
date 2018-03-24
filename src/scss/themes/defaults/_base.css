@@ -1,9 +1,9 @@
-// Base
-// =============================================================================
+/* Base
+============================================================================= */
 :root {
-    // Color
-    // -------------------------------------------------------------------------
-    // Grayscale
+    /* Color
+    ------------------------------------------------------------------------- */
+    /* Grayscale */
     --color-gray-darkest         : #222;
     --color-gray-darker          : #363636;
     --color-gray-dark            : #4a4a4a;
@@ -12,28 +12,29 @@
     --color-gray-lighter         : #e3e3e3;
     --color-gray-lightest        : #f7f7f7;
 
-    // Selection
+    /* Selection */
     --selection-color            : #b4d5fe;
 
-    // Theme
+    /* Theme */
     --theme-color                : #546e7a;
 
-    // Typography
-    // -------------------------------------------------------------------------
-    // Modular Scale
-    // - minor-second     = 1.067 (15:16)
-    // - major-second     = 1.125 (8:9)
-    // - minor-third      = 1.2   (5:6)
-    // - major-third      = 1.25  (4:5)
-    // - perfect-fourth   = 1.333 (3:4)
-    // - augmented-fourth = 1.414 (1:√2)
-    // - perfect-fifth    = 1.5   (2:3)
-    // - minor-sixth      = 1.6   (5:8)
-    // - golden           = 1.618 (1:1.618)
-    // - major-sixth      = 1.667 (3:5)
-    // - minor-seventh    = 1.778 (9:16)
-    // - major-seventh    = 1.875 (8:15)
-    // - octave           = 2     (1:2)
+    /* Typography
+    ------------------------------------------------------------------------- */
+    /* Modular Scale
+       - minor-second     = 1.067 (15:16)
+       - major-second     = 1.125 (8:9)
+       - minor-third      = 1.2   (5:6)
+       - major-third      = 1.25  (4:5)
+       - perfect-fourth   = 1.333 (3:4)
+       - augmented-fourth = 1.414 (1:√2)
+       - perfect-fifth    = 1.5   (2:3)
+       - minor-sixth      = 1.6   (5:8)
+       - golden           = 1.618 (1:1.618)
+       - major-sixth      = 1.667 (3:5)
+       - minor-seventh    = 1.778 (9:16)
+       - major-seventh    = 1.875 (8:15)
+       - octave           = 2     (1:2)
+     */
     --modular-scale              : 1.333;
 	--modular-scale--2           : calc(var(--modular-scale-2) / var(--modular-scale));
 	--modular-scale--1           : calc(var(--modular-scale-1) / var(--modular-scale));
@@ -44,7 +45,7 @@
 	--modular-scale-5            : calc(var(--modular-scale-4) * var(--modular-scale));
 	--modular-scale-6            : calc(var(--modular-scale-5) * var(--modular-scale));
 
-    // Font size (perfect fourth modular scale)
+    /* Font size */
     --font-size-xxl              : var(--modular-scale-4);
     --font-size-xl               : var(--modular-scale-3);
     --font-size-l                : var(--modular-scale-2);
@@ -52,30 +53,30 @@
     --font-size-s                : var(--modular-scale--1);
     --font-size-xs               : var(--modular-scale--2);
 
-    // Root
+    /* Root */
     --root-font-family           : -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --root-font-size             : 15px;
-    --root-font-weight           : null;
-    --root-letter-spacing        : null;
+    --root-font-weight           : ;
+    --root-letter-spacing        : ;
     --root-line-height           : 1.6;
 
-    // Other
-    // -------------------------------------------------------------------------
-    // Body
+    /* Other
+    ------------------------------------------------------------------------- */
+    /* Body */
     --body-background-color      : #fff;
     --body-color                 : var(--color-gray-dark);
 
-    // Borders
-    --border-radius-s            : null;
-    --border-radius-m            : null;
-    --border-radius-l            : null;
+    /* Borders */
+    --border-radius-s            : ;
+    --border-radius-m            : ;
+    --border-radius-l            : ;
 
-    // Duration
+    /* Duration */
     --duration-slow              : 1s;
     --duration-medium            : 0.5s;
     --duration-fast              : 0.25s;
 
-    // Spinner
+    /* Spinner */
     --spinner-size               : 60px;
     --spinner-track-width        : 4px;
     --spinner-track-color        : rgba(0, 0, 0, 0.15);

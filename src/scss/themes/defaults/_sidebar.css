@@ -1,0 +1,130 @@
+/* Sidebar
+============================================================================= */
+:root {
+    --sidebar-background                          : var(--body-background-color);
+    --sidebar-border-color                        : ;
+    --sidebar-border-width                        : 0;
+    --sidebar-padding                             : 0 25px;
+    --sidebar-transition-duration                 : var(--duration-fast);
+    --sidebar-width                               : 16rem;
+
+    /* Heading */
+    --sidebar-heading-background                  : ;
+    --sidebar-heading-color                       : ;
+    --sidebar-heading-font-family                 : ;
+    --sidebar-heading-font-size                   : var(--font-size-l);
+    --sidebar-heading-font-weight                 : ;
+    --sidebar-heading-margin                      : 1.5rem 0 0;
+    --sidebar-heading-padding                     : ;
+    --sidebar-heading-text-align                  : center;
+
+    /* Nav Container */
+    --sidebar-nav-background                      : ;
+    --sidebar-nav-indent                          : 1em;
+    --sidebar-nav-margin                          : 1.5rem 0 0;
+    --sidebar-nav-padding                         : ;
+
+    /* Nav Links */
+    --sidebar-nav-link-background-color           : ;
+    --sidebar-nav-link-background-color--active   : ;
+    --sidebar-nav-link-background-color--hover    : ;
+    --sidebar-nav-link-background-image           : ;
+    --sidebar-nav-link-background-image--active   : ;
+    --sidebar-nav-link-background-image--hover    : ;
+    --sidebar-nav-link-background-position        : ;
+    --sidebar-nav-link-background-position--active: ;
+    --sidebar-nav-link-background-position--hover : ;
+    --sidebar-nav-link-background-repeat          : ;
+    --sidebar-nav-link-background-size            : ;
+    --sidebar-nav-link-background-size--active    : ;
+    --sidebar-nav-link-background-size--hover     : ;
+    --sidebar-nav-link-border-color               : ;
+    --sidebar-nav-link-border-color--active       : ;
+    --sidebar-nav-link-border-color--hover        : ;
+    --sidebar-nav-link-border-radius              : ;
+    --sidebar-nav-link-border-style               : ;
+    --sidebar-nav-link-border-style--active       : ;
+    --sidebar-nav-link-border-style--hover        : ;
+    --sidebar-nav-link-border-width               : ;
+    --sidebar-nav-link-border-width--active       : ;
+    --sidebar-nav-link-border-width--hover        : ;
+    --sidebar-nav-link-color                      : currentColor;
+    --sidebar-nav-link-color--active              : ;
+    --sidebar-nav-link-color--hover               : ;
+    --sidebar-nav-link-font-weight                : ;
+    --sidebar-nav-link-font-weight--active        : ;
+    --sidebar-nav-link-font-weight--hover         : ;
+    --sidebar-nav-link-margin                     : ;
+    --sidebar-nav-link-padding                    : 0.15em 0;
+    --sidebar-nav-link-text-decoration            : ;
+    --sidebar-nav-link-text-decoration--active    : underline;
+    --sidebar-nav-link-text-decoration--hover     : underline;
+    --sidebar-nav-link-text-decoration-color      : ;
+    --sidebar-nav-link-transition                 : all var(--sidebar-transition-duration);
+
+    /* Nav Links - Pseudo Content */
+    --sidebar-nav-link-before-content             : ;
+    --sidebar-nav-link-before-content--active     : ;
+    --sidebar-nav-link-before-content-l1          : ;
+    --sidebar-nav-link-before-content-l1--active  : ;
+    --sidebar-nav-link-before-content-l2          : ;
+    --sidebar-nav-link-before-content-l2--active  : ;
+    --sidebar-nav-link-before-content-l3          : ;
+    --sidebar-nav-link-before-content-l3--active  : ;
+    --sidebar-nav-link-before-content-l4          : ;
+    --sidebar-nav-link-before-content-l4--active  : ;
+
+    /* Nav Links - Pseudo Style */
+    --sidebar-nav-link-before-color               : ;
+    --sidebar-nav-link-before-color--active       : ;
+    --sidebar-nav-link-before-color-l1            : ;
+    --sidebar-nav-link-before-color-l1--active    : ;
+    --sidebar-nav-link-before-color-l2            : ;
+    --sidebar-nav-link-before-color-l2--active    : ;
+    --sidebar-nav-link-before-color-l3            : ;
+    --sidebar-nav-link-before-color-l3--active    : ;
+    --sidebar-nav-link-before-color-l4            : ;
+    --sidebar-nav-link-before-color-l4--active    : ;
+    --sidebar-nav-link-before-margin              : 0 0.35em 0 0;
+    --sidebar-nav-link-before-margin-l1           : ;
+    --sidebar-nav-link-before-margin-l2           : ;
+    --sidebar-nav-link-before-margin-l3           : ;
+    --sidebar-nav-link-before-margin-l4           : ;
+
+    /* Nav - Page Links */
+    --sidebar-nav-pagelink-background-image--loaded             : ;
+    --sidebar-nav-pagelink-background-image--loaded-active      : ;
+    --sidebar-nav-pagelink-background-image--loaded-hover       : ;
+    --sidebar-nav-pagelink-background-image--notloaded          : ;
+    --sidebar-nav-pagelink-background-image--notloaded-active   : ;
+    --sidebar-nav-pagelink-background-image--notloaded-hover    : ;
+    --sidebar-nav-pagelink-background-position--loaded          : ;
+    --sidebar-nav-pagelink-background-position--loaded-active   : ;
+    --sidebar-nav-pagelink-background-position--loaded-hover    : ;
+    --sidebar-nav-pagelink-background-position--notloaded       : ;
+    --sidebar-nav-pagelink-background-position--notloaded-active: ;
+    --sidebar-nav-pagelink-background-position--notloaded-hover : ;
+    --sidebar-nav-pagelink-background-repeat                    : no-repeat;
+    --sidebar-nav-pagelink-background-size--loaded              : ;
+    --sidebar-nav-pagelink-background-size--loaded-active       : ;
+    --sidebar-nav-pagelink-background-size--loaded-hover        : ;
+    --sidebar-nav-pagelink-background-size--notloaded           : ;
+    --sidebar-nav-pagelink-background-size--notloaded-active    : ;
+    --sidebar-nav-pagelink-background-size--notloaded-hover     : ;
+    --sidebar-nav-pagelink-transition                           : var(--sidebar-nav-link-transition);
+
+    /* Nav Headings */
+    --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
+    --sidebar-nav-strong-border-width             : ;
+    --sidebar-nav-strong-color                    : ;
+    --sidebar-nav-strong-font-size                : ;
+    --sidebar-nav-strong-font-weight              : var(--strong-font-weight);
+    --sidebar-nav-strong-margin                   : 1.5em 0 0.5em;
+    --sidebar-nav-strong-padding                  : ;
+    --sidebar-nav-strong-text-transform           : ;
+
+    /* Order */
+    --sidebar-order-heading                       : -1;
+    --sidebar-order-search                        : ;
+    --sidebar-order-nav                           : ;
+}

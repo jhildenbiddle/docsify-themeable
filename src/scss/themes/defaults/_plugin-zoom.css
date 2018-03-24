@@ -1,0 +1,6 @@
+/* Zoom (Plugin)
+   https://docsify.js.org/#/plugins?id=zoom-image
+============================================================================= */
+:root {
+    --zoom-overlay-background: var(--body-background-color);
+}

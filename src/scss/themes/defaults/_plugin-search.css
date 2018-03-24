@@ -1,36 +1,36 @@
-// Search (Plugin)
-// https://docsify.js.org/#/plugins?id=full-text-search
-// =============================================================================
+/* Search (Plugin)
+   https://docsify.js.org/#/plugins?id=full-text-search
+============================================================================= */
 :root {
-    --search-background                      : null;
+    --search-background                      : ;
     --search-margin                          : 1.5rem 0 0;
-    --search-padding                         : null;
+    --search-padding                         : ;
 
-    // Input
-    --search-input-background-color          : null;
-    --search-input-background-color--focus   : null;
-    --search-input-background-image          : null;
-    --search-input-background-image--focus   : null;
-    --search-input-background-position       : null;
-    --search-input-background-position--focus: null;
+    /* Input */
+    --search-input-background-color          : ;
+    --search-input-background-color--focus   : ;
+    --search-input-background-image          : ;
+    --search-input-background-image--focus   : ;
+    --search-input-background-position       : ;
+    --search-input-background-position--focus: ;
     --search-input-background-repeat         : no-repeat;
-    --search-input-background-size           : null;
-    --search-input-background-size--focus    : null;
-    --search-input-border-color              : null;
+    --search-input-background-size           : ;
+    --search-input-background-size--focus    : ;
+    --search-input-border-color              : ;
     --search-input-border-radius             : var(--border-radius-s);
     --search-input-border-width              : 1px;
-    --search-input-font-size                 : null;
+    --search-input-font-size                 : ;
     --search-input-padding                   : 0.5em;
     --search-input-transition                : all var(--duration-fast);
 
-    // Results
-    --search-result-heading-font-size        : null;
+    /* Results */
+    --search-result-heading-font-size        : ;
     --search-result-heading-margin           : 0 0 0.5em;
     --search-result-item-border-color        : var(--color-gray-lighter);
     --search-result-item-border-style        : solid;
     --search-result-item-border-width        : 0 0 1px 0;
-    --search-result-item-font-size           : null;
-    --search-result-item-margin              : null;
+    --search-result-item-font-size           : ;
+    --search-result-item-margin              : ;
     --search-result-item-padding             : 1em 0;
     --search-result-keyword-border-radius    : var(--border-radius-s);
     --search-result-keyword-background       : var(--theme-color);
