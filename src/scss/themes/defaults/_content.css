@@ -1,184 +1,184 @@
 /* Content
 ============================================================================= */
 :root {
-    --content-max-width                : 55em;
+    --content-max-width                 : 55em;
 
     /* Blockquote */
-    --blockquote-background            : var(--color-gray-lightest);
-    --blockquote-border-color          : ;
-    --blockquote-border-style          : ;
-    --blockquote-border-width          : ;
-    --blockquote-border-radius         : var(--border-radius-m);
-    --blockquote-color                 : ;
-    --blockquote-em-font-family        : ;
-    --blockquote-em-font-size          : ;
-    --blockquote-em-font-style         : ;
-    --blockquote-em-font-weight        : ;
-    --blockquote-font-family           : ;
-    --blockquote-font-size             : ;
-    --blockquote-font-style            : ;
-    --blockquote-font-weight           : ;
-    --blockquote-quotes-close          : ;
-    --blockquote-quotes-color          : ;
-    --blockquote-quotes-font-family    : ;
-    --blockquote-quotes-font-size      : ;
-    --blockquote-quotes-open           : ;
+    --blockquote-background             : var(--color-gray-lightest);
+    --blockquote-border-color           : ;
+    --blockquote-border-style           : ;
+    --blockquote-border-width           : ;
+    --blockquote-border-radius          : var(--border-radius-m);
+    --blockquote-color                  : ;
+    --blockquote-em-font-family         : ;
+    --blockquote-em-font-size           : ;
+    --blockquote-em-font-style          : ;
+    --blockquote-em-font-weight         : ;
+    --blockquote-font-family            : ;
+    --blockquote-font-size              : ;
+    --blockquote-font-style             : ;
+    --blockquote-font-weight            : ;
+    --blockquote-quotes-close           : ;
+    --blockquote-quotes-color           : ;
+    --blockquote-quotes-font-family     : ;
+    --blockquote-quotes-font-size       : ;
+    --blockquote-quotes-open            : ;
 
     /* Code */
-    --code-font-family                 : Inconsolata, Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
-    --code-font-size                   : calc(var(--font-size-m) * 0.95);
-    --code-font-weight                 : ;
-    --code-tab-size                    : 4;
+    --code-font-family                  : Inconsolata, Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+    --code-font-size                    : calc(var(--font-size-m) * 0.95);
+    --code-font-weight                  : ;
+    --code-tab-size                     : 4;
 
-    --code-block-background            : var(--color-gray-lightest);
-    --code-block-border-radius         : var(--border-radius-m);
-    --code-block-line-height           : ;
-    --code-block-margin                : 1em 0;
-    --code-block-padding               : 1.75em 1.5em 1.5em 1.5em;
+    --code-block-background             : var(--color-gray-lightest);
+    --code-block-border-radius          : var(--border-radius-m);
+    --code-block-line-height            : ;
+    --code-block-margin                 : 1em 0;
+    --code-block-padding                : 1.75em 1.5em 1.5em 1.5em;
 
-    --code-inline-background           : var(--color-gray-lighter);
-    --code-inline-border-radius        : var(--border-radius-s);
-    --code-inline-margin               : 0 0.15em;
-    --code-inline-padding              : 0.125em 0.4em;
+    --code-inline-background            : var(--color-gray-lighter);
+    --code-inline-border-radius         : var(--border-radius-s);
+    --code-inline-margin                : 0 0.15em;
+    --code-inline-padding               : 0.125em 0.4em;
 
     /* Emoji */
-    --emoji-size                       : calc(var(--root-line-height) * 1em);
+    --emoji-size                        : calc(var(--root-line-height) * 1em);
 
     /* Headings */
-    --heading-color                    : var(--color-gray-darkest);
-    --heading-font-family              : ;
-    --heading-font-weight              : ;
-    --heading-margin                   : 2.5rem 0 0;
-    --heading-padding                  : ;
-    --heading-h1-border-color          : ;
-    --heading-h1-border-style          : ;
-    --heading-h1-border-width          : ;
-    --heading-h1-color                 : ;
-    --heading-h1-font-family           : ;
-    --heading-h1-font-size             : var(--font-size-xxl);
-    --heading-h1-font-weight           : ;
-    --heading-h1-margin                : ;
-    --heading-h1-padding               : ;
-    --heading-h2-border-color          : ;
-    --heading-h2-border-style          : ;
-    --heading-h2-border-width          : ;
-    --heading-h2-color                 : ;
-    --heading-h2-font-family           : ;
-    --heading-h2-font-size             : var(--font-size-xl);
-    --heading-h2-font-weight           : ;
-    --heading-h2-margin                : ;
-    --heading-h2-padding               : ;
-    --heading-h3-border-color          : ;
-    --heading-h3-border-style          : ;
-    --heading-h3-border-width          : ;
-    --heading-h3-color                 : ;
-    --heading-h3-font-family           : ;
-    --heading-h3-font-size             : var(--font-size-l);
-    --heading-h3-font-weight           : ;
-    --heading-h3-margin                : ;
-    --heading-h3-padding               : ;
-    --heading-h4-border-color          : ;
-    --heading-h4-border-style          : ;
-    --heading-h4-border-width          : ;
-    --heading-h4-color                 : ;
-    --heading-h4-font-family           : ;
-    --heading-h4-font-size             : var(--font-size-m);
-    --heading-h4-font-weight           : ;
-    --heading-h4-margin                : ;
-    --heading-h4-padding               : ;
-    --heading-h5-border-color          : ;
-    --heading-h5-border-style          : ;
-    --heading-h5-border-width          : ;
-    --heading-h5-color                 : ;
-    --heading-h5-font-family           : ;
-    --heading-h5-font-size             : var(--font-size-s);
-    --heading-h5-font-weight           : ;
-    --heading-h5-margin                : ;
-    --heading-h5-padding               : ;
+    --heading-color                     : var(--color-gray-darkest);
+    --heading-font-family               : ;
+    --heading-font-weight               : ;
+    --heading-margin                    : 2.5rem 0 0;
+    --heading-padding                   : ;
+    --heading-h1-border-color           : ;
+    --heading-h1-border-style           : ;
+    --heading-h1-border-width           : ;
+    --heading-h1-color                  : ;
+    --heading-h1-font-family            : ;
+    --heading-h1-font-size              : var(--font-size-xxl);
+    --heading-h1-font-weight            : ;
+    --heading-h1-margin                 : ;
+    --heading-h1-padding                : ;
+    --heading-h2-border-color           : ;
+    --heading-h2-border-style           : ;
+    --heading-h2-border-width           : ;
+    --heading-h2-color                  : ;
+    --heading-h2-font-family            : ;
+    --heading-h2-font-size              : var(--font-size-xl);
+    --heading-h2-font-weight            : ;
+    --heading-h2-margin                 : ;
+    --heading-h2-padding                : ;
+    --heading-h3-border-color           : ;
+    --heading-h3-border-style           : ;
+    --heading-h3-border-width           : ;
+    --heading-h3-color                  : ;
+    --heading-h3-font-family            : ;
+    --heading-h3-font-size              : var(--font-size-l);
+    --heading-h3-font-weight            : ;
+    --heading-h3-margin                 : ;
+    --heading-h3-padding                : ;
+    --heading-h4-border-color           : ;
+    --heading-h4-border-style           : ;
+    --heading-h4-border-width           : ;
+    --heading-h4-color                  : ;
+    --heading-h4-font-family            : ;
+    --heading-h4-font-size              : var(--font-size-m);
+    --heading-h4-font-weight            : ;
+    --heading-h4-margin                 : ;
+    --heading-h4-padding                : ;
+    --heading-h5-border-color           : ;
+    --heading-h5-border-style           : ;
+    --heading-h5-border-width           : ;
+    --heading-h5-color                  : ;
+    --heading-h5-font-family            : ;
+    --heading-h5-font-size              : var(--font-size-s);
+    --heading-h5-font-weight            : ;
+    --heading-h5-margin                 : ;
+    --heading-h5-padding                : ;
 
     /* Horizontal Rule */
-    --hr-border                        : 1px solid var(--color-gray-lighter);
+    --hr-border                         : 1px solid var(--color-gray-lighter);
 
     /* Keyboard */
-    --kbd-background                   : ;
-    --kbd-border                       : 1px solid currentColor;
-    --kbd-border-radius                : var(--border-radius-s);
-    --kbd-font-size                    : ;
-    --kbd-margin                       : 0 0.3em;
-    --kbd-min-width                    : 2.5em;
-    --kbd-padding                      : 0.65em 0.5em;
+    --kbd-background                    : ;
+    --kbd-border                        : 1px solid currentColor;
+    --kbd-border-radius                 : var(--border-radius-s);
+    --kbd-font-size                     : ;
+    --kbd-margin                        : 0 0.3em;
+    --kbd-min-width                     : 2.5em;
+    --kbd-padding                       : 0.65em 0.5em;
 
     /* Links */
-    --link-border-bottom               : ;
-    --link-border-bottom--hover        : ;
-    --link-color                       : ;
-    --link-color--hover                : ;
-    --link-text-decoration             : underline;
-    --link-text-decoration--hover      : ;
-    --link-text-decoration-color       : ;
-    --link-text-decoration-color--hover: ;
+    --link-border-bottom                : ;
+    --link-border-bottom--hover         : ;
+    --link-color                        : ;
+    --link-color--hover                 : ;
+    --link-text-decoration              : underline;
+    --link-text-decoration--hover       : ;
+    --link-text-decoration-color        : ;
+    --link-text-decoration-color--hover : ;
 
     /* Notices (Tip & Warning) */
-    --notice-before-border-radius      : ;
-    --notice-before-font-family        : ;
-    --notice-before-font-size          : ;
-    --notice-before-font-weight        : ;
-    --notice-before-height             : ;
-    --notice-before-left               : ;
-    --notice-before-line-height        : ;
-    --notice-before-padding            : ;
-    --notice-before-position           : ;
-    --notice-before-top                : ;
-    --notice-before-width              : ;
-    --notice-border-radius             : var(--border-radius-m);
-    --notice-font-family               : ;
-    --notice-font-weight               : ;
+    --notice-before-border-radius       : ;
+    --notice-before-font-family         : ;
+    --notice-before-font-size           : ;
+    --notice-before-font-weight         : ;
+    --notice-before-height              : ;
+    --notice-before-left                : ;
+    --notice-before-line-height         : ;
+    --notice-before-padding             : ;
+    --notice-before-position            : ;
+    --notice-before-top                 : ;
+    --notice-before-width               : ;
+    --notice-border-radius              : var(--border-radius-m);
+    --notice-font-family                : ;
+    --notice-font-weight                : ;
+
+    /* Notice - Important */
+    --notice-important-background       : var(--color-gray-lightest);
+    --notice-important-before-background: ;
+    --notice-important-before-color     : ;
+    --notice-important-before-content   : ;
+    --notice-important-border-style     : ;
+    --notice-important-border-width     : ;
+    --notice-important-border-color     : ;
+    --notice-important-color            : ;
 
     /* Notice - Tip */
-    --notice-tip-background            : var(--color-gray-lightest);
-    --notice-tip-before-background     : ;
-    --notice-tip-before-color          : ;
-    --notice-tip-before-content        : ;
-    --notice-tip-border-style          : ;
-    --notice-tip-border-width          : ;
-    --notice-tip-border-color          : ;
-    --notice-tip-color                 : ;
-
-    /* Notice - Warning */
-    --notice-warn-background           : var(--color-gray-lightest);
-    --notice-warn-before-background    : ;
-    --notice-warn-before-color         : ;
-    --notice-warn-before-content       : ;
-    --notice-warn-border-style         : ;
-    --notice-warn-border-width         : ;
-    --notice-warn-border-color         : ;
-    --notice-warn-color                : ;
+    --notice-tip-background             : var(--color-gray-lightest);
+    --notice-tip-before-background      : ;
+    --notice-tip-before-color           : ;
+    --notice-tip-before-content         : ;
+    --notice-tip-border-style           : ;
+    --notice-tip-border-width           : ;
+    --notice-tip-border-color           : ;
+    --notice-tip-color                  : ;
 
     /* Preformatted */
-    --pre-font-family                  : var(--code-font-family);
-    --pre-font-size                    : var(--code-font-size);
-    --pre-font-weight                  : ;
-    --pre-line-height                  : ;
+    --pre-font-family                   : var(--code-font-family);
+    --pre-font-size                     : var(--code-font-size);
+    --pre-font-weight                   : ;
+    --pre-line-height                   : ;
 
     /* Small */
-    --small-font-size                  : var(--font-size-s);
+    --small-font-size                   : var(--font-size-s);
 
     /* Strong */
-    --strong-font-weight               : bolder;
+    --strong-font-weight                : bolder;
 
     /* Sub/Sup */
-    --subsup-font-size                 : var(--font-size-s);
+    --subsup-font-size                  : var(--font-size-s);
 
     /* Tables */
-    --table-body-border-color          : var(--color-gray-lighter);
-    --table-body-border-width          : 0 0 1px 0;
-    --table-cell-border-color          : var(--color-gray-lighter);
-    --table-cell-border-width          : 1px 0;
-    --table-cell-padding               : 0.75em 0.5em;
-    --table-head-background            : ;
-    --table-head-border-color          : var(--color-gray-lighter);
-    --table-head-border-width          : ;
-    --table-head-font-weight           : var(--strong-font-weight);
-    --table-row-even-background        : ;
-    --table-row-odd-background         : var(--color-gray-lightest);
+    --table-body-border-color           : var(--color-gray-lighter);
+    --table-body-border-width           : 0 0 1px 0;
+    --table-cell-border-color           : var(--color-gray-lighter);
+    --table-cell-border-width           : 1px 0;
+    --table-cell-padding                : 0.75em 0.5em;
+    --table-head-background             : ;
+    --table-head-border-color           : var(--color-gray-lighter);
+    --table-head-border-width           : ;
+    --table-head-font-weight            : var(--strong-font-weight);
+    --table-row-even-background         : ;
+    --table-row-odd-background          : var(--color-gray-lightest);
 }

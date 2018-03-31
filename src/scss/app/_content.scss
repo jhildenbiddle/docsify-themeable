@@ -19,7 +19,7 @@
 
     ol,
     ul {
-        padding-left: 2.25rem;
+        padding-left: 2rem;
 
         ol,
         ul {
@@ -376,6 +376,20 @@
     }
 
     .tip {
+        border-width: var(--notice-important-border-width, 0);
+        border-style: var(--notice-important-border-style);
+        border-color: var(--notice-important-border-color);
+        background: var(--notice-important-background);
+        color: var(--notice-important-color);
+
+        &:before {
+            content: var(--notice-important-before-content);
+            background: var(--notice-important-before-background);
+            color: var(--notice-important-before-color);
+        }
+    }
+
+    .warn {
         border-width: var(--notice-tip-border-width, 0);
         border-style: var(--notice-tip-border-style);
         border-color: var(--notice-tip-border-color);
@@ -386,20 +400,6 @@
             content: var(--notice-tip-before-content);
             background: var(--notice-tip-before-background);
             color: var(--notice-tip-before-color);
-        }
-    }
-
-    .warn {
-        border-width: var(--notice-warn-border-width, 0);
-        border-style: var(--notice-warn-border-style);
-        border-color: var(--notice-warn-border-color);
-        background: var(--notice-warn-background);
-        color: var(--notice-warn-color);
-
-        &:before {
-            content: var(--notice-warn-before-content);
-            background: var(--notice-warn-before-background);
-            color: var(--notice-warn-before-color);
         }
     }
 }

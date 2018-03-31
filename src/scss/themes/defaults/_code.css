@@ -1,0 +1,15 @@
+/* Code: Dark
+============================================================================= */
+:root {
+    --code-theme-background : var(--color-gray-lightest);
+    --code-theme-comment    : ;
+    --code-theme-function   : ;
+    --code-theme-keyword    : ;
+    --code-theme-operator   : ;
+    --code-theme-punctuation: ;
+    --code-theme-selection  : ;
+    --code-theme-selector   : ;
+    --code-theme-tag        : ;
+    --code-theme-text       : ;
+    --code-theme-variable   : ;
+}

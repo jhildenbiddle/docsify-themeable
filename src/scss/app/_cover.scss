@@ -65,6 +65,7 @@
         margin: 0;
         font-size: var(--cover-heading-font-size);
         font-weight: var(--cover-heading-font-weight);
+        line-height: 1.2;
 
         a,
         a:hover {
@@ -94,7 +95,7 @@
     }
 
     blockquote {
-        margin: 1em 0;
+        margin: 0;
         color: var(--cover-blockquote-color);
         font-size: var(--cover-blockquote-font-size);
 
@@ -104,7 +105,6 @@
     }
 
     ul {
-        display: inline-block;
         padding: 0;
         list-style-type: none;
     }
@@ -117,6 +117,8 @@
 
         // Buttons
         > p:last-child {
+            margin: 2em 0 0;
+
             a {
                 display: inline-block;
                 margin: 0.25em;
