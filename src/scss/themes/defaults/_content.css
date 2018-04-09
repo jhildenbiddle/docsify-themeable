@@ -32,7 +32,7 @@
 
     --code-block-background             : var(--color-gray-lightest);
     --code-block-border-radius          : var(--border-radius-m);
-    --code-block-line-height            : ;
+    --code-block-line-height            : var(--root-line-height);
     --code-block-margin                 : 1em 0;
     --code-block-padding                : 1.75em 1.5em 1.5em 1.5em;
 

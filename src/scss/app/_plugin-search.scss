@@ -1,8 +1,8 @@
-// Search Plugin - Reference & Overrides
-// https://github.com/QingWei-Li/docsify/blob/master/docs/plugins.md#full-text-search
+// Plugin: Search
+// https://docsify.js.org/#/plugins?id=full-text-search
 // =============================================================================
-// This plugin injects a <style> tag with default styles. These styles have been
-// copied below for referenece with overrides marked.
+// This plugin injects default styles via by generating a <style> element
+// These styles have been copied below for referenece with overrides marked.
 body {
     .sidebar {
         // padding-top: 0;
@@ -117,9 +117,9 @@ body {
 }
 
 
-// Search Plugin
-// - Properties set via injected <style> tag or directly on element will require
-//   the use of !important due to specificity.
+// Overriding injected styles requires higher specificity.
+// - For <style> declaration, add parent element to selector (e.g. body)
+// - For inline declarations, add !important to selector
 // =============================================================================
 .sidebar {
     .search {

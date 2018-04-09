@@ -52,7 +52,7 @@
 
 // Spinner
 // =============================================================================
-body {
+body.is-loading {
     &:before,
     &:after {
         content: '';
@@ -92,7 +92,7 @@ body {
         transition: opacity var(--spinner-transition-duration) var(--spinner-transition-duration);
     }
 
-    &.loaded {
+    &:not(.is-loading) {
         &:before,
         &:after {
             visibility: hidden;

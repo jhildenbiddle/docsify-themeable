@@ -51,7 +51,7 @@
     --navbar-menu-link-color--active                : ;
     --navbar-menu-link-color--hover                 : ;
     --navbar-menu-link-margin                       : 0.75em 0.5em;
-    --navbar-menu-link-padding                      : ;
+    --navbar-menu-link-padding                      : 0.2em 0;
     --navbar-menu-link-text-decoration              : ;
     --navbar-menu-link-text-decoration--active      : ;
     --navbar-menu-link-text-decoration--hover       : ;

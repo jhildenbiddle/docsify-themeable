@@ -12,19 +12,20 @@
         right: 45px;
     }
 
+    li > img,
+    li > a > img {
+        margin-top: -0.25em;
+        vertical-align: middle;
+
+        &:first-child {
+            margin-right: 0.5em;
+        }
+    }
+
     a {
         display: block;
         line-height: 1;
         transition: var(--navbar-link-transition);
-
-        img {
-            margin-top: -0.25em;
-            vertical-align: middle;
-
-            &:first-child {
-                margin-right: 0.5em;
-            }
-        }
     }
 
     ul,

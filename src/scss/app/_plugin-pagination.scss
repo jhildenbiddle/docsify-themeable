@@ -1,0 +1,100 @@
+// Plugin: Pagination
+// https://github.com/imyelo/docsify-pagination
+// =============================================================================
+// This plugin injects default styles via by generating a <style> element
+// These styles have been copied below for referenece with overrides marked.
+.pagination {
+    // margin: 72px 0 48px;
+    // border-top: 1px solid hsl(0, 0%, 93%);
+    display: flex;
+    justify-content: space-between;
+    // color: #354a5f;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.pagination-item {
+    margin-top: 36px;
+
+    a {
+        text-decoration: none;
+        color: #354a5f;
+
+        &:hover {
+            .pagination-item-title {
+                opacity: 1;
+                transition: all 200ms ease;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.pagination-item--previous {
+    .pagination-item-label {
+        .iconfont-docsify-pagination{
+            right: -1em;
+        }
+    }
+}
+
+.pagination-item--next {
+    text-align: right;
+
+    .pagination-item-label {
+        .iconfont-docsify-pagination {
+            left: -1em;
+        }
+    }
+
+    .pagination-item-title {
+        opacity: 0.8;
+    }
+}
+
+.pagination-item-label {
+    // font-size: 12px;
+    opacity: 0.2;
+    position: relative;
+    line-height: 1em;
+    display: inline-block;
+
+    .iconfont-docsify-pagination {
+        position: absolute;
+        top: 0;
+    }
+}
+
+.pagination-item-title {
+    // font-size: 24px;
+    opacity: 0.4;
+    transition: all 200ms ease;
+    text-decoration: none;
+}
+
+
+// Overriding injected styles requires higher specificity.
+// - For <style> declaration, add parent element to selector (e.g. body)
+// - For inline declarations, add !important to selector
+// =============================================================================
+body {
+    .pagination {
+        margin: 4rem 0 2rem;
+        border-top: var(--pagination-border-top);
+        color: var(--pagination-color);
+    }
+
+    .pagination-item-label {
+        font-size: var(--pagination-label-font-size);
+        opacity: 1;
+    }
+
+    .pagination-item-title {
+        font-size: var(--pagination-title-font-size);
+        opacity: 1;
+    }
+
+    .pagination-item--previous {
+        opacity: 0.5;
+    }
+}

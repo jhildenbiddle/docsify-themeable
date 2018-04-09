@@ -1,0 +1,9 @@
+/* Plugin: Pagination
+   https://github.com/imyelo/docsify-pagination
+============================================================================= */
+:root {
+    --pagination-border-top     : 1px solid var(--color-gray-lighter);
+    --pagination-color          : ;
+    --pagination-label-font-size: var(--font-size-s);
+    --pagination-title-font-size: var(--font-size-l);
+}
