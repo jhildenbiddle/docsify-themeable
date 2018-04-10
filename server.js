@@ -16,6 +16,7 @@ browserSync.init({
     open: false,
     notify: false,
     cors: true,
+    reloadDebounce: 1000,
     reloadOnRestart: true,
     server: {
         baseDir: [
