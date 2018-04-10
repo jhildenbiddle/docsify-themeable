@@ -52,26 +52,16 @@
 
 // Spinner
 // =============================================================================
-body.is-loading {
-    &:before,
-    &:after {
-        content: '';
-        transition: all var(--spinner-transition-duration);
-    }
-
-    // Fade overlay
-    &:before {
-        position: fixed;
-        z-index: map-get($z-index, overlay);
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: var(--body-background-color);
+body.ready-transition {
+    &:after,
+    > *:not(.progress) {
+        opacity: 0;
+        transition: opacity var(--spinner-transition-duration);
     }
 
     // Spinner
     &:after {
+        content: '';
         position: absolute;
         z-index: 1000;
         top: calc(50% - (var(--spinner-size) / 2));
@@ -85,24 +75,21 @@ body.is-loading {
         animation: spinner var(--duration-slow) infinite linear;
     }
 
-    nav,
-    main,
-    .cover-main {
-        opacity: 0;
-        transition: opacity var(--spinner-transition-duration) var(--spinner-transition-duration);
+    // Separate class required for spinner fade-in
+    &.ready-spinner {
+        &:after {
+            opacity: 1;
+        }
     }
 
-    &:not(.is-loading) {
-        &:before,
+    &.ready-fix {
         &:after {
-            visibility: hidden;
             opacity: 0;
         }
 
-        nav,
-        main,
-        .cover-main {
+        > *:not(.progress) {
             opacity: 1;
+            transition-delay: var(--spinner-transition-duration);
         }
     }
 }

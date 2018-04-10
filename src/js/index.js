@@ -3,8 +3,9 @@
 import cssVars                   from 'css-vars-ponyfill';
 import pluginFixCoverHeaderLink  from './plugin-fix-cover-header-link';
 import pluginFixPrismThemes      from './plugin-fix-prism-themes';
+import pluginFixReadyState       from './plugin-fix-ready-state';
 import pluginFixSearchResults    from './plugin-fix-search-results';
-import pluginLoadedState         from './plugin-loaded-state';
+import pluginReadyTransition     from './plugin-ready-transition';
 import pluginResponsiveTables    from './plugin-responsive-tables';
 import { version as pkgVersion } from '../../package.json';
 
@@ -26,9 +27,10 @@ if (window) {
 
     // Add plugins
     window.$docsify.plugins = [
-        pluginLoadedState,
+        pluginReadyTransition,
         pluginFixCoverHeaderLink,
         pluginFixPrismThemes,
+        pluginFixReadyState,
         pluginFixSearchResults,
         pluginResponsiveTables
     ].concat(window.$docsify.plugins || []);
