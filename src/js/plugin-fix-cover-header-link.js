@@ -1,6 +1,6 @@
 // Plugin
 // =============================================================================
-// Removes cover auto-generated anchor link wrapper around <h1> content
+// Removes link wrapper around <h1> content in coverpage
 export default function(hook, vm) {
     hook.doneEach(function() {
         const coverHeaderLink = document.querySelector('.cover h1 > a');

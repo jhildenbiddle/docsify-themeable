@@ -1,11 +1,12 @@
 // Plugin
 // =============================================================================
-// Handles state-related class names
+// Displays a loading indicator while waiting for the site to initialize and a
+// fade transition after initialization is complete
 export default function(hook, vm) {
     hook.init(function() {
-        const hasSpinner = ((window.$docsify || {}).themeable || {}).spinner !== false;
+        const isEnabled = ((window.$docsify || {}).themeable || {}).spinner !== false;
 
-        if (hasSpinner) {
+        if (isEnabled) {
             document.body.classList.add('ready-transition');
 
             // Timeout required for spinner fade-in
