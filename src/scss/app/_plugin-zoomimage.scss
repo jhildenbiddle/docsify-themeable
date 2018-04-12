@@ -1,8 +1,10 @@
 // Plugin: Zoom Image
 // https://docsify.js.org/#/plugins?id=zoom-image
+//
+// Default styles are applied via a dynamically-generated <style> element.
+// Injected styles are copied below for reference only.
 // =============================================================================
-// This plugin injects default styles via by generating a <style> element
-// These styles have been copied below for referenece with overrides marked.
+// v4.6.10
 .medium-zoom-overlay {
     // position: fixed;
     // top: 0;
@@ -34,7 +36,8 @@
     }
 }
 
-// Overriding injected styles requires higher specificity.
+
+// Overriding injected styles (above) requires higher specificity:
 // - For <style> declaration, add parent element to selector (e.g. body)
 // - For inline declarations, add !important to selector
 // =============================================================================

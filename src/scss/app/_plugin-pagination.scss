@@ -1,100 +1,113 @@
 // Plugin: Pagination
 // https://github.com/imyelo/docsify-pagination
+//
+// Default styles are applied via a dynamically-generated <style> element.
+// Injected styles are copied below for reference only.
 // =============================================================================
-// This plugin injects default styles via by generating a <style> element
-// These styles have been copied below for referenece with overrides marked.
-.pagination {
-    // margin: 72px 0 48px;
-    // border-top: 1px solid hsl(0, 0%, 93%);
-    display: flex;
-    justify-content: space-between;
-    // color: #354a5f;
-    overflow: hidden;
-    flex-wrap: wrap;
+// v2.3.0
+.docsify-pagination-container {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+    // overflow: hidden;
+    // margin: 5em 0 1em;
+    // border-top: 1px solid rgba(0,0,0,.07);
 }
 
 .pagination-item {
-    margin-top: 36px;
+    // margin-top: 2.5em;
+
+    a,
+    a:hover {
+        // text-decoration: none;
+    }
 
     a {
-        text-decoration: none;
-        color: #354a5f;
+        // color: currentColor;
 
-        &:hover {
-            .pagination-item-title {
-                opacity: 1;
-                transition: all 200ms ease;
-                text-decoration: underline;
-            }
-        }
-    }
-}
-
-.pagination-item--previous {
-    .pagination-item-label {
-        .iconfont-docsify-pagination{
-            right: -1em;
-        }
-    }
-}
-
-.pagination-item--next {
-    text-align: right;
-
-    .pagination-item-label {
-        .iconfont-docsify-pagination {
-            left: -1em;
+        &:hover .pagination-item-title {
+            // text-decoration: underline;
         }
     }
 
-    .pagination-item-title {
-        opacity: 0.8;
+    &:not(:last-child) a .pagination-item-label,
+    &:not(:last-child) a .pagination-item-title {
+        // opacity: .3;
+        // transition: all .2s;
+    }
+
+    &:last-child .pagination-item-label,
+    &:not(:last-child) a:hover .pagination-item-label {
+        // opacity: .6;
+    }
+
+    &:not(:last-child) a:hover .pagination-item-title {
+        // opacity: 1;
     }
 }
 
 .pagination-item-label {
-    // font-size: 12px;
-    opacity: 0.2;
-    position: relative;
-    line-height: 1em;
-    display: inline-block;
+    // margin-bottom: .35em;
+    // font-size: .8em;
 
-    .iconfont-docsify-pagination {
-        position: absolute;
-        top: 0;
+    > * {
+        // line-height: 1;
+        // vertical-align: middle;
+    }
+
+    svg {
+        // height: .8em;
+        // width: auto;
+        // stroke: currentColor;
+        // stroke-linecap: round;
+        // stroke-linejoin: round;
+        // stroke-width: 1px;
     }
 }
 
+.pagination-item--next {
+    // margin-left: auto;
+    // text-align: right;
+}
+
+.pagination-item--next svg {
+    // margin-left: .5em;
+}
+
+.pagination-item--previous svg {
+    // margin-right: .5em;
+}
+
 .pagination-item-title {
-    // font-size: 24px;
-    opacity: 0.4;
-    transition: all 200ms ease;
-    text-decoration: none;
+    // font-size: 1.6em;
 }
 
 
-// Overriding injected styles requires higher specificity.
+// Overriding injected styles (above) requires higher specificity:
 // - For <style> declaration, add parent element to selector (e.g. body)
 // - For inline declarations, add !important to selector
 // =============================================================================
 body {
-    .pagination {
-        margin: 4rem 0 2rem;
+    .docsify-pagination-container {
         border-top: var(--pagination-border-top);
         color: var(--pagination-color);
     }
 
     .pagination-item-label {
         font-size: var(--pagination-label-font-size);
-        opacity: 1;
+    }
+
+    .pagination-item-label svg {
+        color: var(--pagination-label-color);
+        height: var(--pagination-chevron-height);
+        stroke: var(--pagination-chevron-stroke);
+        stroke-linecap: var(--pagination-chevron-stroke-linecap);
+        stroke-linejoin: var(--pagination-chevron-stroke-linecap);
+        stroke-width: var(--pagination-chevron-stroke-width);
     }
 
     .pagination-item-title {
+        color: var(--pagination-title-color);
         font-size: var(--pagination-title-font-size);
-        opacity: 1;
-    }
-
-    .pagination-item--previous {
-        opacity: 0.5;
     }
 }

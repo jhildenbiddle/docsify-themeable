@@ -28,26 +28,25 @@
     }
 
     a {
+        border-bottom: var(--link-border-bottom);
+        color: var(--link-color);
+        text-decoration: var(--link-text-decoration);
+        text-decoration-color: var(--link-text-decoration-color);
+
+        &:hover {
+            border-bottom: var(--link-border-bottom--hover, var(--link-border-bottom, 0));
+            color: var(--link-color--hover, var(--link-color));
+            text-decoration: var(--link-text-decoration--hover, var(--link-text-decoration));
+            text-decoration-color: var(--link-text-decoration-color--hover, var(--link-text-decoration-color));
+        }
+
         &.anchor {
+            border-bottom: 0;
             color: inherit;
             text-decoration: none;
 
             &:hover {
                 text-decoration: underline;
-            }
-        }
-
-        &:not(.anchor) {
-            border-bottom: var(--link-border-bottom);
-            color: var(--link-color);
-            text-decoration: var(--link-text-decoration);
-            text-decoration-color: var(--link-text-decoration-color);
-
-            &:hover {
-                border-bottom: var(--link-border-bottom--hover, var(--link-border-bottom, 0));
-                color: var(--link-color--hover, var(--link-color));
-                text-decoration: var(--link-text-decoration--hover, var(--link-text-decoration));
-                text-decoration-color: var(--link-text-decoration-color--hover, var(--link-text-decoration-color));
             }
         }
     }
