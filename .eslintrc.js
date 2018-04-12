@@ -1,19 +1,17 @@
 module.exports = {
     "env": {
-        "browser": true,
+        "browser" : true,
         "commonjs": true,
-        "es6": true,
-        // "mocha": true,
-        "node": true
+        "es6"     : true,
+        "node"    : true
     },
     "extends": "eslint:recommended",
     "parserOptions": {
-        "sourceType": "module"
+        "ecmaVersion": 6,
+        "sourceType" : "module"
     },
     "plugins": [
-        // "chai-expect",
-        // "html",
-        // "mocha"
+        "html"
     ],
     "rules": {
         "array-bracket-spacing"      : ["error", "never"],
@@ -25,10 +23,6 @@ module.exports = {
         "eqeqeq"                     : ["error"],
         "indent"                     : ["error", 4],
         "linebreak-style"            : ["error", "unix"],
-        // "mocha/no-exclusive-tests"   : ["warn"],
-        // "mocha/no-global-tests"      : ["error"],
-        // "mocha/no-identical-title"   : ["error"],
-        // "mocha/no-mocha-arrows"      : ["error"],
         "no-console"                 : ["warn"],
         "no-floating-decimal"        : ["error"],
         "no-implicit-coercion"       : ["error"],
