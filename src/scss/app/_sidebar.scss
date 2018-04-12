@@ -223,6 +223,12 @@
             }
         }
 
+        &.collapse {
+            .app-sub-sidebar {
+                display: none;
+            }
+        }
+
         &:first-child {
             strong {
                 margin-top :0;
