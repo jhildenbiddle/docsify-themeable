@@ -420,18 +420,9 @@ body.close {
         }
     }
 
-    .cover,
-    .github-corner {
-        transform: translateX(var(--sidebar-width));
-
-        @include mq(medium) {
-            transform: translateX(0);
-        }
-    }
-
     main > .content {
         @include mq(medium) {
-            width: auto;
+            width: calc(100% - 0px);
             transform: translateX(0);
         }
     }
