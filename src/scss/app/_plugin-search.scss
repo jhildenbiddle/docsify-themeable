@@ -144,8 +144,8 @@ body {
             font-size: var(--search-result-heading-font-size);
         }
 
-        .input-wrap,
-        :not(.input-wrap) > input[type="search"] {
+        .input-wrap {
+            margin: var(--search-input-margin);
             background-color: var(--search-input-background-color);
             border-width: var(--search-input-border-width, 0);
             border-style: solid;
@@ -154,7 +154,7 @@ body {
         }
 
         input[type="search"] {
-            width: 100%;
+            min-width: 0; // Remove browser's default min-width
             padding: var(--search-input-padding);
             border: none;
             background-color: transparent;
@@ -164,7 +164,11 @@ body {
             background-size: var(--search-input-background-size);
             font-size: var(--search-input-font-size);
             transition: var(--search-input-transition);
-            appearance: none;
+
+            &::placeholder {
+                color: var(--search-input-placeholder-color);
+                opacity: 1;
+            }
 
             &:focus {
                 background-color: var(--search-input-background-color--focus, var(--search-input-background-color));

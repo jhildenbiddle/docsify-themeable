@@ -20,7 +20,9 @@
     --search-input-border-radius             : var(--border-radius-s);
     --search-input-border-width              : 1px;
     --search-input-font-size                 : ;
+    --search-input-margin                    : ;
     --search-input-padding                   : 0.5em;
+    --search-input-placeholder-color         : var(--color-gray);
     --search-input-transition                : all var(--duration-fast);
 
     /* Results */

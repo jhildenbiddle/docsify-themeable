@@ -6,7 +6,7 @@
     --sidebar-border-width                        : 0;
     --sidebar-padding                             : 0 25px;
     --sidebar-transition-duration                 : var(--duration-fast);
-    --sidebar-width                               : 16rem;
+    --sidebar-width                               : 17rem;
 
     /* Heading */
     --sidebar-heading-background                  : ;
@@ -55,7 +55,7 @@
     --sidebar-nav-link-font-weight--active        : ;
     --sidebar-nav-link-font-weight--hover         : ;
     --sidebar-nav-link-margin                     : ;
-    --sidebar-nav-link-padding                    : 0.15em 0;
+    --sidebar-nav-link-padding                    : 0.25em 0;
     --sidebar-nav-link-text-decoration            : ;
     --sidebar-nav-link-text-decoration--active    : underline;
     --sidebar-nav-link-text-decoration--hover     : underline;
