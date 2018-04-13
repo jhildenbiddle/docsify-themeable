@@ -55,22 +55,28 @@ body {
         input::-webkit-search-decoration,
         input::-webkit-search-cancel-button,
         input {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
+            // -webkit-appearance: none;
+            // -moz-appearance: none;
+            // appearance: none;
         }
 
         .clear-button {
-            width: 36px;
-            text-align: right;
-            display: none;
+            // width: 36px;
+            // text-align: right;
+            // display: none;
+
+            // OVERRIDE
+            width: auto;
 
             &.show {
-                display: block;
+                // display: block;
             }
 
             svg {
-                transform: scale(.5);
+                // transform: scale(.5);
+
+                // OVERRIDE
+                transform: scale(1);
             }
         }
 
@@ -180,7 +186,16 @@ body {
         }
 
         .clear-button {
+            line-height: 1;
             cursor: pointer;
+
+            svg {
+                margin-right: 15px;
+
+                circle {
+                    fill: #b5b5b5;
+                }
+            }
         }
 
         &.show {

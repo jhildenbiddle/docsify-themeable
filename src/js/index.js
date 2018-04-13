@@ -1,13 +1,14 @@
 // Dependencies
 // =============================================================================
-import cssVars                   from 'css-vars-ponyfill';
-import pluginFixCoverHeaderLink  from './plugin-fix-cover-header-link';
-import pluginFixPrismThemes      from './plugin-fix-prism-themes';
-import pluginFixReadyState       from './plugin-fix-ready-state';
-import pluginFixSearchResults    from './plugin-fix-search-results';
-import pluginReadyTransition     from './plugin-ready-transition';
-import pluginResponsiveTables    from './plugin-responsive-tables';
-import { version as pkgVersion } from '../../package.json';
+import cssVars                    from 'css-vars-ponyfill';
+import pluginFixCoverHeaderLink   from './plugin-fix-cover-header-link';
+import pluginFixPrismThemes       from './plugin-fix-prism-themes';
+import pluginFixReadyState        from './plugin-fix-ready-state';
+import pluginFixSearchCloseButton from './plugin-fix-search-close-button';
+import pluginFixSearchResults     from './plugin-fix-search-results';
+import pluginReadyTransition      from './plugin-ready-transition';
+import pluginResponsiveTables     from './plugin-responsive-tables';
+import { version as pkgVersion }  from '../../package.json';
 
 
 // Main
@@ -31,6 +32,7 @@ if (window) {
         pluginFixCoverHeaderLink,
         pluginFixPrismThemes,
         pluginFixReadyState,
+        pluginFixSearchCloseButton,
         pluginFixSearchResults,
         pluginResponsiveTables
     ].concat(window.$docsify.plugins || []);
