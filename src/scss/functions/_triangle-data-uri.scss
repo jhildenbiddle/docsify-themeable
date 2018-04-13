@@ -10,13 +10,13 @@
 ///
 /// @example scss
 /// .myclass {
-///   background-image: triangle-data-uri();
+///   background-image: triangle-data-uri(right);
 ///   background-repeat: no-repeat;
 ///   background-position: left center;
 /// }
 ///
 /// .myclass {
-///   background: triangle-data-uri() no-repeat left center;
+///   background: triangle-data-uri(right) no-repeat left center;
 /// }
 @function triangle-data-uri($direction, $width: null, $height: null, $color: black) {
     // Default size
@@ -34,8 +34,10 @@
     $width : $width / ($width * 0 + 1);
     $height: $height / ($height * 0 + 1);
 
-    // Convert color
-    $rgb: 'rgb%28#{red($color)}, #{green($color)}, #{blue($color)}%29';
+    // Convert color to RGB
+    @if type-of($color) == color {
+        $color: 'rgb%28#{red($color)}, #{green($color)}, #{blue($color)}%29';
+    }
 
     // Polygon points
     $polygon-points: '';
@@ -57,7 +59,7 @@
         @error "triangle-data-uri: #{$direction} is not a valid direction";
     }
     @else {
-        // Unencoded SVG: <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}'><polygon points='#{$polygon-points}' style='fill: #{$rgb}'></polygon></svg>
-        @return url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20version%3D%271.1%27%20width%3D%27#{$width}%27%20height%3D%27#{$height}%27%20viewBox%3D%270%200%20#{$width}%20#{$height}%27%3E%3Cpolygon%20points%3D%27#{$polygon-points}%27%20style%3D%27fill%3A#{$rgb}%27%3E%3C%2Fpolygon%3E%3C%2Fsvg%3E");
+        // Unencoded SVG: <svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}'><polygon points='#{$polygon-points}' style='fill: #{$color}'></polygon></svg>
+        @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}'%3E%3Cpolygon points='#{$polygon-points}' style='fill: #{$color}'%3E%3C/polygon%3E%3C/svg%3E");
     }
 }
