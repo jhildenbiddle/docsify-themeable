@@ -13,6 +13,13 @@
     --search-input-placeholder-color     : var(--color-gray-light);
 
     // Results
+    --search-result-heading-color        : var(--color-gray-darkest);
+    --search-result-heading-font-size    : ;
+    --search-result-heading-font-weight  : var(--strong-font-weight);
+    --search-result-heading-margin       : 0;
     --search-result-item-border-color    : var(--sidebar-border-color);
+    --search-result-keyword-background   : #ffecb3;
     --search-result-keyword-border-radius: var(--border-radius-s);
+    --search-result-keyword-color        : var(--color-gray-darkest);
+    --search-result-keyword-font-weight  : var(--strong-font-weight);
 }

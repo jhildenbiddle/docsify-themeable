@@ -164,7 +164,7 @@
     --small-font-size                   : var(--font-size-s);
 
     /* Strong */
-    --strong-font-weight                : bolder;
+    --strong-font-weight                : 600;
 
     /* Sub/Sup */
     --subsup-font-size                  : var(--font-size-s);

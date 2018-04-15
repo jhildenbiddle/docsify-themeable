@@ -11,6 +11,9 @@
     --blockquote-quotes-open       : open-quote;
 
     // Headings
+    --heading-font-weight          : var(--strong-font-weight);
+    --heading-h1-font-weight       : 400;
+    --heading-h2-font-weight       : 400;
     --heading-h2-border-color      : var(--color-gray-lighter);
     --heading-h2-border-style      : solid;
     --heading-h2-border-width      : 0 0 1px 0;

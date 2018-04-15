@@ -131,6 +131,8 @@
                 }
             }
 
+            &:focus,
+            &:focus-within,
             &:hover {
                 ul {
                     visibility: visible;

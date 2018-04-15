@@ -13,9 +13,9 @@
     --sidebar-nav-link-before-content             : null, null, null, '\2022';
 
     // Nav - Page Links
-    --sidebar-nav-pagelink-background-image--loaded       : svg-chevron-data(down, null, 8px, 1.25, currentColor);
-    --sidebar-nav-pagelink-background-image--loaded-active: svg-chevron-data(down, null, 8px, 1.25, currentColor);
-    --sidebar-nav-pagelink-background-image--notloaded    : svg-chevron-data(right, 8px, null, 1.25, currentColor);
+    --sidebar-nav-pagelink-background-image--loaded       : #{chevron-data-uri(down, null, 8px, 1.25, currentColor)};
+    --sidebar-nav-pagelink-background-image--loaded-active: #{chevron-data-uri(down, null, 8px, 1.25, white)};
+    --sidebar-nav-pagelink-background-image--notloaded    : #{chevron-data-uri(right, 8px, null, 1.25, currentColor)};
     --sidebar-nav-pagelink-background-position--loaded    : calc(100% - 1rem) center;
     --sidebar-nav-pagelink-background-position--notloaded : calc(100% - 1rem - 3px) center;
     --sidebar-nav-pagelink-background-repeat              : no-repeat;

@@ -48,7 +48,7 @@
     --sidebar-nav-link-border-width               : ;
     --sidebar-nav-link-border-width--active       : ;
     --sidebar-nav-link-border-width--hover        : ;
-    --sidebar-nav-link-color                      : currentColor;
+    --sidebar-nav-link-color                      : var(--body-color);
     --sidebar-nav-link-color--active              : ;
     --sidebar-nav-link-color--hover               : ;
     --sidebar-nav-link-font-weight                : ;

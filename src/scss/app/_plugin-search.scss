@@ -83,10 +83,6 @@ body {
         h2 {
             // font-size: 17px;
             // margin: 10px 0;
-
-            // OVERRIDE
-            font-size: inherit;
-            margin: 0;
         }
 
         a {
@@ -142,6 +138,8 @@ body {
         h2 {
             margin: var(--search-result-heading-margin);
             font-size: var(--search-result-heading-font-size);
+            font-weight: var(--search-result-heading-font-weight);
+            color: var(--search-result-heading-color);
         }
 
         .input-wrap {
@@ -164,6 +162,10 @@ body {
             background-size: var(--search-input-background-size);
             font-size: var(--search-input-font-size);
             transition: var(--search-input-transition);
+
+            &::-ms-clear {
+                display: none;
+            }
 
             &::placeholder {
                 color: var(--search-input-placeholder-color);
@@ -190,12 +192,14 @@ body {
         }
 
         .clear-button {
+            margin: 0 15px 0 0;
+            padding: 0;
+            border: none;
             line-height: 1;
+            appearance: none;
             cursor: pointer;
 
             svg {
-                margin-right: 15px;
-
                 circle {
                     fill: #b5b5b5;
                 }
@@ -244,6 +248,7 @@ body {
             background-color: var(--search-result-keyword-background);
             color: var(--search-result-keyword-color);
             font-style: normal;
+            font-weight: var(--search-result-keyword-font-weight);
         }
     }
 }
