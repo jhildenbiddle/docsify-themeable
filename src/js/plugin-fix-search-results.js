@@ -6,25 +6,29 @@ export default function(hook, vm) {
     hook.ready(function() {
         const searchElm      = document.querySelector('.sidebar .search');
         const searchInputElm = document.querySelector('.sidebar .search input[type=search]');
+        const searchClearElm = document.querySelector('.sidebar .search .clear-button');
 
-        function toggleSearchShowClass() {
-            if (searchInputElm.value.length) {
-                searchElm.classList.add('show');
-            }
-            else {
-                searchElm.classList.remove('show');
-            }
+        if (searchElm) {
+            // Remove "show" class on clear button click
+            searchElm.addEventListener('click', function(evt) {
+                const isClearButton = evt.target === searchClearElm || searchClearElm.contains(evt.target);
+
+                if (isClearButton) {
+                    searchElm.classList.remove('show');
+                    searchInputElm.focus();
+                }
+            });
         }
 
-        if (searchElm && searchInputElm) {
-            searchInputElm.addEventListener('input', toggleSearchShowClass);
-
-            // A timeout is required for the change event due to a 100ms timeout
-            // used in the search plugin. The timeout used here ensures that the
-            // input field has been updated before the class toggle occurs.
-            // https://github.com/QingWei-Li/docsify/blob/master/src/plugins/search/component.js#L157
-            searchInputElm.addEventListener('change', function() {
-                setTimeout(() => toggleSearchShowClass(), 120);
+        if (searchInputElm) {
+            // Toggle "show" class on input
+            searchInputElm.addEventListener('input', function(evt) {
+                if (searchInputElm.value.length) {
+                    searchElm.classList.add('show');
+                }
+                else {
+                    searchElm.classList.remove('show');
+                }
             });
         }
     });

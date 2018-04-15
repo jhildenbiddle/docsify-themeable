@@ -1,6 +1,6 @@
 // Plugin
 // =============================================================================
-// Removes link wrapper around <h1> content in coverpage
+// Removes unnecessary <a> wrapper around <h1> content in coverpage
 export default function(hook, vm) {
     hook.doneEach(function() {
         const coverHeaderLink = document.querySelector('.cover h1 > a');
