@@ -36,27 +36,31 @@ browserSync.init({
                 // Force enable stylesheet (required for some browsers)
                 const styleSwitchFix = `
                     <script>
-                        var browsersyncObserver = new MutationObserver(function(mutationsList) {
-                            for (var mutation of mutationsList) {
-                                for (var node of mutation.addedNodes) {
-                                    var isStylesheet = node.tagName === 'LINK' && node.hasAttribute('rel') && node.getAttribute('rel').indexOf('stylesheet') !== -1;
+                        (function() {
+                            if (window.MutationObserver) {
+                                var browsersyncObserver = new MutationObserver(function(mutationsList) {
+                                    mutationsList.forEach(function(mutation) {
+                                        Array.apply(null, mutation.addedNodes).forEach(function(node) {
+                                            var isStylesheet = node.tagName === 'LINK' && node.hasAttribute('rel') && node.getAttribute('rel').indexOf('stylesheet') !== -1;
 
-                                    if (isStylesheet) {
-                                        var isAlternate = node.getAttribute('rel').indexOf('alternate') !== -1;
-                                        var isEnabled   = !node.disabled || node.getAttribute('rel').indexOf('alternate') === -1;
+                                            if (isStylesheet) {
+                                                var isAlternate = node.getAttribute('rel').indexOf('alternate') !== -1;
+                                                var isEnabled   = !node.disabled || node.getAttribute('rel').indexOf('alternate') === -1;
 
-                                        if (!isAlternate && isEnabled) {
-                                            node.disabled = true;
-                                            node.disabled = false;
-                                        }
-                                    }
-                                }
+                                                if (!isAlternate && isEnabled) {
+                                                    node.disabled = true;
+                                                    node.disabled = false;
+                                                }
+                                            }
+                                        });
+                                    });
+                                });
                             }
-                        });
 
-                        browsersyncObserver.observe(document.documentElement, {
-                            childList: true,
-                            subtree: true
+                            browsersyncObserver.observe(document.documentElement, {
+                                childList: true,
+                                subtree: true
+                            });
                         });
                     </script>
                 `;
