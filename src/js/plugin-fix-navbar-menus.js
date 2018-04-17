@@ -10,8 +10,24 @@ export default function(hook, vm) {
             const hasLink = Array.apply(null, item.children).filter(child => child.tagName.toLowerCase() === 'a').length;
             const hasMenu = Array.apply(null, item.children).filter(child => child.tagName.toLowerCase() === 'ul').length;
 
-            if (!hasLink && hasMenu) {
-                item.setAttribute('tabindex', 0);
+            if (hasMenu) {
+                const focusWithinClassName = 'focus-within';
+
+                if (!hasLink) {
+                    item.setAttribute('tabindex', 0);
+                }
+
+                item.addEventListener('focusin', evt => {
+                    if (item.contains(document.activeElement)) {
+                        item.classList.add(focusWithinClassName);
+                    }
+                });
+
+                item.addEventListener('focusout', evt => {
+                    if (!item.contains(document.activeElement)) {
+                        item.classList.remove(focusWithinClassName);
+                    }
+                });
             }
         });
     });
