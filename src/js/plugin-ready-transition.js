@@ -18,7 +18,9 @@ export default function(hook, vm) {
                 const mainElm = document.querySelector('main');
 
                 mainElm.addEventListener('transitionend', function cb(evt) {
-                    document.body.classList.remove('ready-transition', 'ready-spinner');
+                    // IE classList only handles one class per call
+                    document.body.classList.remove('ready-transition');
+                    document.body.classList.remove('ready-spinner');
                     mainElm.removeEventListener('transitionend', cb);
                 });
             });
