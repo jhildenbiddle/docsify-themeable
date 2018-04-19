@@ -1,3 +1,37 @@
+// Supporting Elements
+// =============================================================================
+html,
+body {
+    @include mq(max-width medium) {
+        // overflow-x: hidden;
+    }
+}
+
+.cover,
+.sidebar,
+.sidebar-toggle,
+main > .content {
+    transition: all var(--sidebar-transition-duration) ease-out;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+
+    > .content {
+        position: absolute;
+        top: 0;
+        left: var(--iefix, 0);
+        right: 0;
+        min-height: 100vh;
+
+        @include mq(medium) {
+            left: var(--sidebar-width);
+        }
+    }
+}
+
+
 // Sidebar
 // =============================================================================
 .sidebar {
@@ -40,7 +74,6 @@
     @include mq(medium) {
         position: absolute;
         left: 0;
-        overflow-y: hidden;
     }
 
     @media print {
@@ -346,28 +379,8 @@
 
 // States
 // -----------------------------------------------------------------------------
-.cover,
-.github-corner,
-.sidebar,
-.sidebar-toggle,
-main > .content {
-    transition: all var(--sidebar-transition-duration) ease-out;
-}
-
-body {
-    overflow-x: hidden;
-}
-
-main > .content {
-    @include mq(medium) {
-        width: calc(100% - var(--sidebar-width));
-        transform: translateX(var(--sidebar-width));
-    }
-}
-
 body.close {
     .cover,
-    .github-corner,
     .sidebar,
     .sidebar-toggle,
     main > .content {
@@ -375,14 +388,24 @@ body.close {
     }
 
     .cover,
-    .github-corner {
+    .sidebar-toggle,
+    main > .content {
         @include mq(medium) {
             transform: translateX(0);
         }
     }
 
+    nav.app-nav,
+    .github-corner {
+        @include mq(max-width medium) {
+            display: none;
+        }
+    }
+
     .sidebar {
         @include mq(medium) {
+            // IE Fallback (does not transition calc values)
+            transform: translateX(-var(--sidebar-width));
             transform: translateX(calc(0px - var(--sidebar-width)));
         }
     }
@@ -412,7 +435,6 @@ body.close {
             min-width: 0;
             border-color: transparent;
             background: transparent;
-            transform: translateX(0);
 
             span {
                 background-color: currentColor;
@@ -422,8 +444,7 @@ body.close {
 
     main > .content {
         @include mq(medium) {
-            width: calc(100% - 0px);
-            transform: translateX(0);
+            left: 0;
         }
     }
 }
@@ -433,12 +454,6 @@ body.sticky {
     .sidebar-toggle {
         @include mq(medium) {
             position: fixed;
-        }
-    }
-
-    .sidebar {
-        @include mq(medium) {
-            overflow-y: auto;
         }
     }
 }
