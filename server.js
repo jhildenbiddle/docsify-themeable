@@ -33,7 +33,7 @@ browserSync.init({
         rule: {
             match: /<\/body>/i,
             fn: function (snippet, match) {
-                // Force enable stylesheet (required for some browsers)
+                // Fix CSS injection for alternate stylesheets
                 const styleSwitchFix = `
                     <script>
                         (function() {
@@ -41,16 +41,12 @@ browserSync.init({
                                 var browsersyncObserver = new MutationObserver(function(mutationsList) {
                                     mutationsList.forEach(function(mutation) {
                                         Array.apply(null, mutation.addedNodes).forEach(function(node) {
-                                            var isStylesheet = node.tagName === 'LINK' && node.hasAttribute('rel') && node.getAttribute('rel').indexOf('stylesheet') !== -1;
+                                            var isLink       = node.tagName === 'LINK';
+                                            var isStylesheet = isLink && (node.getAttribute('rel') || '').indexOf('stylesheet') !== -1;
 
                                             if (isStylesheet) {
-                                                var isAlternate = node.getAttribute('rel').indexOf('alternate') !== -1;
-                                                var isEnabled   = !node.disabled || node.getAttribute('rel').indexOf('alternate') === -1;
-
-                                                if (!isAlternate && isEnabled) {
-                                                    node.disabled = true;
-                                                    node.disabled = false;
-                                                }
+                                                node.disabled = !node.disabled;
+                                                node.disabled = !node.disabled;
                                             }
                                         });
                                     });
@@ -61,7 +57,7 @@ browserSync.init({
                                 childList: true,
                                 subtree: true
                             });
-                        });
+                        })();
                     </script>
                 `;
 
