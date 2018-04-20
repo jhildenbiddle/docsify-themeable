@@ -302,7 +302,7 @@
             }
         }
 
-        @include mq(max-width small) {
+        @include media("<=small") {
             tbody,
             tr,
             td {

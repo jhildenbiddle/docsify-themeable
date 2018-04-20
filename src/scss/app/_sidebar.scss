@@ -1,15 +1,6 @@
 // Supporting Elements
 // =============================================================================
-html,
-body {
-    @include mq(max-width medium) {
-        // overflow-x: hidden;
-    }
-}
-
-.cover,
-.sidebar,
-.sidebar-toggle,
+.cover > *,
 main > .content {
     transition: all var(--sidebar-transition-duration) ease-out;
 }
@@ -25,7 +16,7 @@ main {
         right: 0;
         min-height: 100vh;
 
-        @include mq(medium) {
+        @include media(">=medium") {
             left: var(--sidebar-width);
         }
     }
@@ -49,6 +40,7 @@ main {
     border-style: solid;
     border-color: var(--sidebar-border-color);
     background: var(--sidebar-background);
+    transition: all var(--sidebar-transition-duration) ease-out;
 
     > h1 {
         order: var(--sidebar-order-heading);
@@ -71,7 +63,7 @@ main {
         }
     }
 
-    @include mq(medium) {
+    @include media(">=medium") {
         position: absolute;
         left: 0;
     }
@@ -301,74 +293,57 @@ main {
 // Toggle
 // -----------------------------------------------------------------------------
 .sidebar-toggle,
-.sidebar-toggle-toggle {
+.sidebar-toggle-button {
     outline: none;
+    transition: all var(--sidebar-transition-duration) ease-out, width 0s;
 }
 
 .sidebar-toggle {
     position: fixed;
     z-index: (map-get($z-index, sidebar) + 1);
-    top: 10px;
-    left: 5px;
+    top: 0;
+    bottom: 0;
+    left: var(--iefix, 0);
+    width: 40px;
     margin: 0;
-    padding: 10px;
+    padding: 0;
     border: 0;
     background: transparent;
-    color: var(--body-color);
+    appearance: none;
     cursor: pointer;
 
     .sidebar-toggle-button {
-        position: relative;
-        height: 14px;
-        width: 15px;
+        position: absolute;
+        top: var(--sidebar-toggle-offset-top);
+        left: var(--sidebar-toggle-offset-left);
+        padding: var(--sidebar-toggle-padding);
+        border-radius: var(--sidebar-toggle-border-radius);
+        border-width: var(--sidebar-toggle-border-width);
+        border-style: var(--sidebar-toggle-border-style);
+        border-color: var(--sidebar-toggle-border-color);
+        background: var(--sidebar-toggle-background, transparent);
+        color: var(--sidebar-toggle-color);
     }
 
     span {
-        position: absolute;
-        left: 0;
-        height: 2px;
-        width: 15px;
+        display: block;
+        height: var(--sidebar-toggle-stroke-width);
+        width: 16px;
         background-color: currentColor;
         transition: top calc(var(--sidebar-transition-duration) / 2) ease-out calc(var(--sidebar-transition-duration) / 2),
                     opacity 0s ease-out calc(var(--sidebar-transition-duration) / 2),
                     transform calc(var(--sidebar-transition-duration) / 2);
 
-        &:nth-of-type(1) {
-            top: 0;
-        }
-
-        &:nth-of-type(2) {
-            top: 5px;
-        }
-
-        &:nth-of-type(3) {
-            top: 10px;
+        &:not(:last-child) {
+            margin-bottom: 4px;
         }
     }
 
-    @include mq(medium) {
+    @include media(">=medium") {
         position: absolute;
-        top: auto;
-        bottom: 0;
-        left: 0;
-        min-width: calc(var(--sidebar-width) - 1px);
-        transition-delay: var(--sidebar-transition-duration);
-
-        // Background color (using pseudo to mimic RGBA value of sidebar bg)
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: var(--sidebar-background);
-            opacity: 0.8;
-        }
-
-        span {
-            background-color: var(--sidebar-nav-link-color);
-        }
+        overflow: visible;
+        width: 0;
+        left: var(--sidebar-width);
     }
 
     @media print {
@@ -380,7 +355,7 @@ main {
 // States
 // -----------------------------------------------------------------------------
 body.close {
-    .cover,
+    .cover > *,
     .sidebar,
     .sidebar-toggle,
     main > .content {
@@ -388,22 +363,27 @@ body.close {
     }
 
     .cover,
-    .sidebar-toggle,
+    main {
+        overflow-x: hidden;
+    }
+
+    .cover > *,
     main > .content {
-        @include mq(medium) {
+        @include media(">=medium") {
             transform: translateX(0);
         }
     }
 
     nav.app-nav,
     .github-corner {
-        @include mq(max-width medium) {
+        @include media("<medium") {
             display: none;
         }
     }
 
-    .sidebar {
-        @include mq(medium) {
+    .sidebar,
+    .sidebar-toggle {
+        @include media(">=medium") {
             // IE Fallback (does not transition calc values)
             transform: translateX(-var(--sidebar-width));
             transform: translateX(calc(0px - var(--sidebar-width)));
@@ -411,39 +391,29 @@ body.close {
     }
 
     .sidebar-toggle {
-        @include mq(max-width medium) {
+        @include media("<medium") {
+            width: 100%;
+
             span {
                 transition: top calc(var(--sidebar-transition-duration) / 2),
                             opacity 0s ease-out calc(var(--sidebar-transition-duration) / 2),
                             transform calc(var(--sidebar-transition-duration) / 2) ease-out calc(var(--sidebar-transition-duration) / 2);
 
                 &:nth-child(1) {
-                    top: 6px;
-                    transform: rotate(45deg);
+                    transform: translateY(5px) rotate(45deg);
                 }
                 &:nth-child(2) {
                     opacity: 0;
                 }
                 &:nth-child(3) {
-                    top: 6px;
-                    transform: rotate(-45deg);
+                    transform: translateY(-5px) rotate(-45deg);
                 }
-            }
-        }
-
-        @include mq(medium) {
-            min-width: 0;
-            border-color: transparent;
-            background: transparent;
-
-            span {
-                background-color: currentColor;
             }
         }
     }
 
     main > .content {
-        @include mq(medium) {
+        @include media(">=medium") {
             left: 0;
         }
     }
@@ -452,7 +422,7 @@ body.close {
 body.sticky {
     .sidebar,
     .sidebar-toggle {
-        @include mq(medium) {
+        @include media(">=medium") {
             position: fixed;
         }
     }

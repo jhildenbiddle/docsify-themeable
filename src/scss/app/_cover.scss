@@ -85,11 +85,11 @@
         span {
             font-size: calc(var(--cover-heading-font-size-min) * 1px);
 
-            @include mq(xsmall) {
+            @include media(">=xsmall") {
                 font-size: calc((var(--cover-heading-font-size-min) * 1px) + (var(--cover-heading-font-size-max) - var(--cover-heading-font-size-min)) * ((100vw - 420px) / (1024 - 420)));
             }
 
-            @include mq(large) {
+            @include media(">=large") {
                 font-size: calc(var(--cover-heading-font-size-max) * 1px);
             }
         }

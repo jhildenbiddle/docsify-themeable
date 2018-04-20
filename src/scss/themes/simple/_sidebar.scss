@@ -28,4 +28,11 @@
     --sidebar-nav-strong-margin         : 2em 0 0.65rem 0;
     --sidebar-nav-strong-padding        : 0 0 0.65rem 0;
     --sidebar-nav-strong-text-transform : uppercase;
+
+    // Toggle
+    --sidebar-toggle-background         : var(--color-gray-lighter);
+    --sidebar-toggle-border-radius      : 0 var(--border-radius-s) var(--border-radius-s) 0;
+    --sidebar-toggle-offset-left        : 0;
+    --sidebar-toggle-offset-top         : 19px;
+    --sidebar-toggle-padding            : 10px 8px;
 }

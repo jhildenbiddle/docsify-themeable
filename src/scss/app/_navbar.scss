@@ -40,9 +40,19 @@
     }
 
     > ul {
+        margin-left: 45px;
+
         > li {
             display: inline-block;
             margin: var(--navbar-link-margin);
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             > a {
                 padding: var(--navbar-link-padding);
