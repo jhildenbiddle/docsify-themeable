@@ -51,12 +51,12 @@ browserSync.init({
                                         });
                                     });
                                 });
-                            }
 
-                            browsersyncObserver.observe(document.documentElement, {
-                                childList: true,
-                                subtree: true
-                            });
+                                browsersyncObserver.observe(document.documentElement, {
+                                    childList: true,
+                                    subtree: true
+                                });
+                            }
                         })();
                     </script>
                 `;
