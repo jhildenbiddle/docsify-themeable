@@ -38,7 +38,7 @@ browserSync.init({
                     <script>
                         (function() {
                             if (window.MutationObserver) {
-                                var browsersyncObserver = new MutationObserver(function(mutationsList) {
+                                window.browsersyncObserver = new MutationObserver(function(mutationsList) {
                                     mutationsList.forEach(function(mutation) {
                                         Array.apply(null, mutation.addedNodes).forEach(function(node) {
                                             var isLink       = node.tagName === 'LINK';
