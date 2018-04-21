@@ -25,6 +25,10 @@ main {
 
 // Sidebar
 // =============================================================================
+// NOTE: The use of "right:100%" to push the sidebar off convas is required for
+// IE and Edge compatibilty. Using "left" and a negative value triggers bugs
+// in both browsers due to need to use a custom property and convert it to a
+// negative value using calc(0px - var(--sidebar-width)).
 .sidebar {
     display: flex;
     flex-direction: column;
@@ -32,7 +36,7 @@ main {
     z-index: map-get($z-index, sidebar);
     top: 0;
     bottom: 0;
-    left: calc(0px - var(--sidebar-width));
+    right: 100%;
     overflow-y: auto;
     width: var(--sidebar-width);
     padding: var(--sidebar-padding);
@@ -65,7 +69,7 @@ main {
 
     @include media(">=medium") {
         position: absolute;
-        left: 0;
+        transform: translateX(var(--sidebar-width));
     }
 
     @media print {
@@ -343,7 +347,8 @@ main {
         position: absolute;
         overflow: visible;
         width: 0;
-        left: var(--sidebar-width);
+        left: 0;
+        transform: translateX(var(--sidebar-width));
     }
 
     @media print {
@@ -384,9 +389,7 @@ body.close {
     .sidebar,
     .sidebar-toggle {
         @include media(">=medium") {
-            // IE Fallback (does not transition calc values)
-            transform: translateX(-var(--sidebar-width));
-            transform: translateX(calc(0px - var(--sidebar-width)));
+            transform: translateX(0);
         }
     }
 
