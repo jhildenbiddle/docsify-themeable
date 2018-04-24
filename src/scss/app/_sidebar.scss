@@ -160,9 +160,8 @@ main {
 }
 
 .sidebar-nav {
-    > ul {
-        // Prevent toggle from obscuring nav content
-        margin-bottom: 35px;
+    > :last-child {
+        margin-bottom: 2rem;
     }
 
     li {
@@ -299,7 +298,7 @@ main {
 
 .sidebar-toggle {
     position: fixed;
-    z-index: (map-get($z-index, coverpage) - 1);
+    z-index: (map-get($z-index, sidebar) + 1);
     top: 0;
     bottom: 0;
     left: 0;
@@ -315,26 +314,29 @@ main {
         position: absolute;
         top: var(--sidebar-toggle-offset-top);
         left: var(--sidebar-toggle-offset-left);
-        padding: var(--sidebar-toggle-padding);
+        height: var(--sidebar-toggle-height);
+        width: var(--sidebar-toggle-width);
         border-radius: var(--sidebar-toggle-border-radius);
         border-width: var(--sidebar-toggle-border-width);
         border-style: var(--sidebar-toggle-border-style);
         border-color: var(--sidebar-toggle-border-color);
         background: var(--sidebar-toggle-background, transparent);
-        color: var(--sidebar-toggle-color);
+        color: var(--sidebar-toggle-icon-color);
     }
 
     span {
-        display: block;
-        height: var(--sidebar-toggle-stroke-width);
-        width: 16px;
+        position: absolute;
+        top: calc(50% - (var(--sidebar-toggle-icon-stroke-width) / 2));
+        left: calc(50% - (var(--sidebar-toggle-icon-width) / 2));
+        height: var(--sidebar-toggle-icon-stroke-width);
+        width: var(--sidebar-toggle-icon-width);
         background-color: currentColor;
-        transition: top calc(var(--sidebar-transition-duration) / 2) ease-out calc(var(--sidebar-transition-duration) / 2),
-                    opacity 0s ease-out calc(var(--sidebar-transition-duration) / 2),
-                    transform calc(var(--sidebar-transition-duration) / 2);
 
-        &:not(:last-child) {
-            margin-bottom: 4px;
+        &:nth-child(1) {
+            margin-top: calc(0px - (var(--sidebar-toggle-icon-height) / 2));
+        }
+        &:nth-child(3) {
+            margin-top: calc((var(--sidebar-toggle-icon-height) / 2));
         }
     }
 
@@ -401,18 +403,16 @@ body.close {
             width: 100%;
 
             span {
-                transition: top calc(var(--sidebar-transition-duration) / 2),
-                            opacity 0s ease-out calc(var(--sidebar-transition-duration) / 2),
-                            transform calc(var(--sidebar-transition-duration) / 2) ease-out calc(var(--sidebar-transition-duration) / 2);
+                margin-top: 0;
 
                 &:nth-child(1) {
-                    transform: translateY(5px) rotate(45deg);
+                    transform: rotate(45deg);
                 }
                 &:nth-child(2) {
-                    opacity: 0;
+                    display: none;
                 }
                 &:nth-child(3) {
-                    transform: translateY(-5px) rotate(-45deg);
+                    transform: rotate(-45deg);
                 }
             }
         }

@@ -129,14 +129,17 @@
     --sidebar-order-nav                           : ;
 
     /* Toggle */
-    --sidebar-toggle-background                   : ;
+    --sidebar-toggle-background                   : transparent;
     --sidebar-toggle-border-color                 : ;
     --sidebar-toggle-border-radius                : var(--border-radius-s);
     --sidebar-toggle-border-style                 : solid;
     --sidebar-toggle-border-width                 : 0;
-    --sidebar-toggle-color                        : var(--body-color);
-    --sidebar-toggle-offset-left                  : 9px;
-    --sidebar-toggle-offset-top                   : calc(22px - ((3 * var(--sidebar-toggle-stroke-width)) / 2));
-    --sidebar-toggle-padding                      : 7px 5px;
-    --sidebar-toggle-stroke-width                 : 1px;
+    --sidebar-toggle-height                       : 40px;
+    --sidebar-toggle-icon-color                   : var(--body-color);
+    --sidebar-toggle-icon-height                  : 10px;
+    --sidebar-toggle-icon-stroke-width            : 1px;
+    --sidebar-toggle-icon-width                   : 16px;
+    --sidebar-toggle-offset-left                  : 0;
+    --sidebar-toggle-offset-top                   : calc(35px - (var(--sidebar-toggle-height) / 2));
+    --sidebar-toggle-width                        : 44px;
 }

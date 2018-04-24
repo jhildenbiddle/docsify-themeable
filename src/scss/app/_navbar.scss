@@ -4,7 +4,7 @@
     position: absolute;
     z-index: map-get($z-index, navbar);
     top: calc(35px - (0.5em * var(--root-line-height)));
-    left: 0;
+    left: 45px;
     right: 80px;
     text-align: right;
 
@@ -40,8 +40,6 @@
     }
 
     > ul {
-        margin-left: 45px;
-
         > li {
             display: inline-block;
             margin: var(--navbar-link-margin);
