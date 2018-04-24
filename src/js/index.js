@@ -16,7 +16,10 @@ import { version as pkgVersion }  from '../../package.json';
 // =============================================================================
 // CSS custom properties ponyfill
 cssVars({
-    silent: true
+    // Force ponyfill on Edge 15/16 due to numerous custom property bugs
+    // https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=%22custom%20property%22%20%22custom%20properties%22%20%22css%20variable%22%20%22css%20variables%22
+    onlyLegacy: !(/Edge\/15|Edge\/16./i.test(navigator.userAgent)),
+    silent    : true
 });
 
 // Docsify plugins

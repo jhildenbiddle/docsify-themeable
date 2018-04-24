@@ -7,17 +7,10 @@ main > .content {
 
 main {
     position: relative;
-    height: 100vh;
 
     > .content {
-        position: absolute;
-        top: 0;
-        left: var(--iefix, 0);
-        right: 0;
-        min-height: 100vh;
-
         @include media(">=medium") {
-            left: var(--sidebar-width);
+            margin-left: var(--sidebar-width);
         }
     }
 }
@@ -26,18 +19,20 @@ main {
 // Sidebar
 // =============================================================================
 // NOTE: The use of "right:100%" to push the sidebar off convas is required for
-// IE and Edge compatibilty. Using "left" and a negative value triggers bugs
-// in both browsers due to need to use a custom property and convert it to a
-// negative value using calc(0px - var(--sidebar-width)).
+// IE and Edge compatibilty. Pulling the sidebar using "left" would require a
+// negative value, and since we are using a CSS custom property this would be
+// accomplished using "left: calc(0px - var(--sidebar-width)". Unfortunately,
+// transitioning calc() values triggers bugs in IE and Edge, so we are forced
+// to set static values instead.
 .sidebar {
     display: flex;
     flex-direction: column;
     position: fixed;
     z-index: map-get($z-index, sidebar);
     top: 0;
-    bottom: 0;
     right: 100%;
     overflow-y: auto;
+    height: 100vh;
     width: var(--sidebar-width);
     padding: var(--sidebar-padding);
     border-width: var(--sidebar-border-width);
@@ -304,10 +299,10 @@ main {
 
 .sidebar-toggle {
     position: fixed;
-    z-index: (map-get($z-index, sidebar) + 1);
+    z-index: (map-get($z-index, coverpage) - 1);
     top: 0;
     bottom: 0;
-    left: var(--iefix, 0);
+    left: 0;
     width: 40px;
     margin: 0;
     padding: 0;
@@ -359,17 +354,25 @@ main {
 
 // States
 // -----------------------------------------------------------------------------
+// Note: Wrapping property changes in media queries is required for legacy
+// compatibility. Scoping property changes using media queries ensures that the
+// css-vars-ponyfill does not append transformed values that unintentinally
+// override non-transformed values.
 body.close {
     .cover > *,
     .sidebar,
     .sidebar-toggle,
     main > .content {
-        transform: translateX(var(--sidebar-width));
+        @include media("<medium") {
+            transform: translateX(var(--sidebar-width));
+        }
     }
 
     .cover,
     main {
-        overflow-x: hidden;
+        @include media("<medium") {
+            overflow-x: hidden;
+        }
     }
 
     .cover > *,
@@ -417,7 +420,7 @@ body.close {
 
     main > .content {
         @include media(">=medium") {
-            left: 0;
+            margin-left: 0;
         }
     }
 }
