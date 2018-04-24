@@ -7,6 +7,7 @@ main > .content {
 
 main {
     position: relative;
+    min-height: 100vh;
 
     > .content {
         @include media(">=medium") {
