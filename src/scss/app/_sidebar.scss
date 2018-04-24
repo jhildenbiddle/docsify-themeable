@@ -160,10 +160,6 @@ main {
 }
 
 .sidebar-nav {
-    > :last-child {
-        margin-bottom: 2rem;
-    }
-
     li {
         > a,
         > strong {
@@ -176,7 +172,7 @@ main {
             }
         }
 
-        a {
+        > a {
             background-repeat: var(--sidebar-nav-pagelink-background-repeat);
 
             // Page links
@@ -185,42 +181,20 @@ main {
 
                 // Not loaded (w/o subnav)
                 &:only-child {
-                    background-image: var(--sidebar-nav-pagelink-background-image--notloaded);
-                    background-position: var(--sidebar-nav-pagelink-background-position--notloaded);
-                    background-size: var(--sidebar-nav-pagelink-background-size--notloaded);
+                    background-image: var(--sidebar-nav-pagelink-background-image);
+                    background-position: var(--sidebar-nav-pagelink-background-position);
                 }
 
                 // Loaded (w/ subnav)
                 &:not(:only-child) {
-                    background-image: var(--sidebar-nav-pagelink-background-image--loaded);
-                    background-position: var(--sidebar-nav-pagelink-background-position--loaded);
-                    background-size: var(--sidebar-nav-pagelink-background-size--loaded);
+                    background-image: var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image));
+                    background-position: var(--sidebar-nav-pagelink-background-position--loaded, var(--sidebar-nav-pagelink-background-image));
                 }
             }
         }
 
-        &:hover {
-            > a {
-                // Page links
-                &[href^="#/"]:not([href*="?id="]) {
-                    // Not loaded (w/o subnav)
-                    &:only-child {
-                        background-image: var(--sidebar-nav-pagelink-background-image--notloaded-hover, var(--sidebar-nav-pagelink-background-image--notloaded));
-                        background-position: var(--sidebar-nav-pagelink-background-position--notloaded-hover, var(--sidebar-nav-pagelink-background-position--notloaded));
-                        background-size: var(--sidebar-nav-pagelink-background-size--notloaded-hover, var(--sidebar-nav-pagelink-background-size--notloaded));
-                    }
-
-                    // Loaded (w/ subnav)
-                    &:not(:only-child) {
-                        background-image: var(--sidebar-nav-pagelink-background-image--loaded-hover, var(--sidebar-nav-pagelink-background-image--loaded));
-                        background-position: var(--sidebar-nav-pagelink-background-position--loaded-hover, var(--sidebar-nav-pagelink-background-position--loaded));
-                        background-size: var(--sidebar-nav-pagelink-background-size--loaded-hover, var(--sidebar-nav-pagelink-background-size--loaded));
-                    }
-                }
-            }
-        }
-
-        &.active {
+        &.active,
+        &.collapse {
             > a {
                 border-width: var(--sidebar-nav-link-border-width--active, var(--sidebar-nav-link-border-width));
                 border-style: var(--sidebar-nav-link-border-style--active, var(--sidebar-nav-link-border-style));
@@ -233,28 +207,36 @@ main {
                 font-weight: var(--sidebar-nav-link-font-weight--active, var(--sidebar-nav-link-font-weight));
                 text-decoration: var(--sidebar-nav-link-text-decoration--active, var(--sidebar-nav-link-text-decoration));
                 text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+            }
+        }
 
+        &.active {
+            > a {
                 // Page links
                 &[href^="#/"]:not([href*="?id="]) {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
-                        background-image: var(--sidebar-nav-pagelink-background-image--loaded-active, var(--sidebar-nav-pagelink-background-image--loaded));
-                        background-position: var(--sidebar-nav-pagelink-background-position--loaded-active, var(--sidebar-nav-pagelink-background-position--loaded));
-                        background-size: var(--sidebar-nav-pagelink-background-size--loaded-active, var(--sidebar-nav-pagelink-background-size--loaded));
+                        background-image: var(--sidebar-nav-pagelink-background-image--active, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
+                        background-position: var(--sidebar-nav-pagelink-background-position--active, var(--sidebar-nav-pagelink-background-position--loaded, var(--sidebar-nav-pagelink-background-image)));
                     }
                 }
             }
         }
 
         &.collapse {
+            > a {
+                // Page links
+                &[href^="#/"]:not([href*="?id="]) {
+                    // Loaded (w/ subnav)
+                    &:not(:only-child) {
+                        background-image: var(--sidebar-nav-pagelink-background-image--collapse, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
+                        background-position: var(--sidebar-nav-pagelink-background-position--collapse, var(--sidebar-nav-pagelink-background-position--loaded, var(--sidebar-nav-pagelink-background-image)));
+                    }
+                }
+            }
+
             .app-sub-sidebar {
                 display: none;
-            }
-        }
-
-        &:first-child {
-            strong {
-                margin-top :0;
             }
         }
     }
@@ -285,6 +267,10 @@ main {
         }
 
         $level-selector: $level-selector + '> ul > li';
+    }
+
+    > :last-child {
+        margin-bottom: 2rem;
     }
 }
 

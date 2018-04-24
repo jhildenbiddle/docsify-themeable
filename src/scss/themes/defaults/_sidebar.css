@@ -92,26 +92,16 @@
     --sidebar-nav-link-before-margin-l4           : ;
 
     /* Nav - Page Links */
-    --sidebar-nav-pagelink-background-image--loaded             : ;
-    --sidebar-nav-pagelink-background-image--loaded-active      : ;
-    --sidebar-nav-pagelink-background-image--loaded-hover       : ;
-    --sidebar-nav-pagelink-background-image--notloaded          : ;
-    --sidebar-nav-pagelink-background-image--notloaded-active   : ;
-    --sidebar-nav-pagelink-background-image--notloaded-hover    : ;
-    --sidebar-nav-pagelink-background-position--loaded          : ;
-    --sidebar-nav-pagelink-background-position--loaded-active   : ;
-    --sidebar-nav-pagelink-background-position--loaded-hover    : ;
-    --sidebar-nav-pagelink-background-position--notloaded       : ;
-    --sidebar-nav-pagelink-background-position--notloaded-active: ;
-    --sidebar-nav-pagelink-background-position--notloaded-hover : ;
-    --sidebar-nav-pagelink-background-repeat                    : no-repeat;
-    --sidebar-nav-pagelink-background-size--loaded              : ;
-    --sidebar-nav-pagelink-background-size--loaded-active       : ;
-    --sidebar-nav-pagelink-background-size--loaded-hover        : ;
-    --sidebar-nav-pagelink-background-size--notloaded           : ;
-    --sidebar-nav-pagelink-background-size--notloaded-active    : ;
-    --sidebar-nav-pagelink-background-size--notloaded-hover     : ;
-    --sidebar-nav-pagelink-transition                           : var(--sidebar-nav-link-transition);
+    --sidebar-nav-pagelink-background-image             : ;
+    --sidebar-nav-pagelink-background-image--active     : ;
+    --sidebar-nav-pagelink-background-image--collapse   : ;
+    --sidebar-nav-pagelink-background-image--loaded     : ;
+    --sidebar-nav-pagelink-background-position          : ;
+    --sidebar-nav-pagelink-background-position--active  : ;
+    --sidebar-nav-pagelink-background-position--collapse: ;
+    --sidebar-nav-pagelink-background-position--loaded  : ;
+    --sidebar-nav-pagelink-background-repeat            : no-repeat;
+    --sidebar-nav-pagelink-transition                   : var(--sidebar-nav-link-transition);
 
     /* Nav Headings */
     --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
@@ -129,12 +119,12 @@
     --sidebar-order-nav                           : ;
 
     /* Toggle */
-    --sidebar-toggle-background                   : transparent;
+    --sidebar-toggle-background                   : ;
     --sidebar-toggle-border-color                 : ;
     --sidebar-toggle-border-radius                : var(--border-radius-s);
     --sidebar-toggle-border-style                 : solid;
     --sidebar-toggle-border-width                 : 0;
-    --sidebar-toggle-height                       : 40px;
+    --sidebar-toggle-height                       : 36px;
     --sidebar-toggle-icon-color                   : var(--body-color);
     --sidebar-toggle-icon-height                  : 10px;
     --sidebar-toggle-icon-stroke-width            : 1px;

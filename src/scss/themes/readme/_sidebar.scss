@@ -13,10 +13,13 @@
     --sidebar-nav-link-before-content             : null, null, null, '\2022';
 
     // Nav - Page Links
-    --sidebar-nav-pagelink-background-image--loaded       : #{chevron-data-uri(down, null, 8px, 1.25, currentColor)};
-    --sidebar-nav-pagelink-background-image--loaded-active: #{chevron-data-uri(down, null, 8px, 1.25, white)};
-    --sidebar-nav-pagelink-background-image--notloaded    : #{chevron-data-uri(right, 8px, null, 1.25, currentColor)};
-    --sidebar-nav-pagelink-background-position--loaded    : calc(100% - 1rem) center;
-    --sidebar-nav-pagelink-background-position--notloaded : calc(100% - 1rem - 3px) center;
-    --sidebar-nav-pagelink-background-repeat              : no-repeat;
+    --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 8px, null, 1.25, currentColor)};
+    --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 8px, 1.25, white)};
+    --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 8px, null, 1.25, white)};;
+    --sidebar-nav-pagelink-background-image--loaded     : #{chevron-data-uri(down, null, 8px, 1.25, currentColor)};
+    --sidebar-nav-pagelink-background-position          : calc(100% - 1rem - 3px) center;
+    --sidebar-nav-pagelink-background-position--active  : calc(100% - 1rem) center;
+    --sidebar-nav-pagelink-background-position--collapse: var(--sidebar-nav-pagelink-background-position);
+    --sidebar-nav-pagelink-background-position--loaded  : var(--sidebar-nav-pagelink-background-position--active);
+    --sidebar-nav-pagelink-transition                   : none;
 }
