@@ -1,5 +1,4 @@
 /* Plugin: Search
-   https://docsify.js.org/#/plugins?id=full-text-search
 ============================================================================= */
 :root {
     --search-background                      : ;
@@ -17,7 +16,7 @@
     --search-input-background-size           : ;
     --search-input-background-size--focus    : ;
     --search-input-border-color              : var(--color-background-shade3);
-    --search-input-border-radius             : var(--border-radius-s);
+    --search-input-border-radius             : ;
     --search-input-border-width              : 1px;
     --search-input-color                     : ;
     --search-input-font-size                 : ;

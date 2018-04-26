@@ -178,7 +178,7 @@
     --small-font-size                   : var(--font-size-s);
 
     /* Strong */
-    --strong-color                      : var(--color-gray-darkest);
+    --strong-color                      : var(--heading-color);
     --strong-font-weight                : 600;
 
     /* Sub/Sup */

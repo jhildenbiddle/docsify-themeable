@@ -4,7 +4,7 @@
     // Blockquote
     --blockquote-border-radius          : var(--border-radius-m);
     --blockquote-quotes-close           : close-quote;
-    --blockquote-quotes-color           : rgba(0, 0, 0, 0.2);
+    --blockquote-quotes-color           : var(--color-background-shade3);
     --blockquote-quotes-font-family     : Georgia, serif;
     --blockquote-quotes-font-size       : 4em;
     --blockquote-quotes-open            : open-quote;
@@ -45,7 +45,6 @@
     --notice-border-radius              : 0 0 var(--border-radius-m) var(--border-radius-m);
     --notice-border-style               : solid;
     --notice-border-width               : 1px 0 0;
-
 
     // Notice - Important
     --notice-important-background       : #fff5f5;

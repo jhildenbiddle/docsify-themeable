@@ -2,10 +2,11 @@
 // =============================================================================
 :root {
     // Blockquote
-    --blockquote-background             : var(--color-background-tint2);
+    --blockquote-background             : var(--color-background-shade2);
+    --blockquote-quotes-color           : var(--color-background-tint2);
 
     // Code
-    --code-theme-background             : var(--color-background-shade3);
+    --code-theme-background             : var(--color-background-shade2);
     --code-theme-comment                : #516e7a;
     --code-theme-function               : #f07178;
     --code-theme-keyword                : #c2e78c;
@@ -18,15 +19,27 @@
     --code-theme-variable               : #ffcb6b;
 
     // Headings
-    --heading-color                     : var(--color-gray);
+    --heading-color                     : #fff;
     --heading-h2-border-color           : var(--color-background-tint2);
+
+    /* Horizontal Rule */
+    --hr-border                         : 1px solid var(--color-background-tint2);
 
     // Keyboard
     --kbd-background                    : var(--color-background-tint2);
 
+    /* Mark */
+    --mark-background                   : #ffcb6b;
+    --mark-color                        : var(--base-background-color);
+
     // Notice - Important
-    --notice-important-background       : var(--color-background-tint2);
+    --notice-important-background       : var(--color-background-shade2);
 
     // Notice - Tip
-    --notice-tip-background             : var(--color-background-tint2);
+    --notice-tip-background             : var(--color-background-shade2);
+
+    /* Tables */
+    --table-cell-border-color           : var(--color-background-shade2);
+    --table-head-border-color           : var(--color-background-shade2);
+    --table-row-odd-background          : var(--color-background-shade2);
 }
