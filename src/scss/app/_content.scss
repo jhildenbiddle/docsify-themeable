@@ -123,8 +123,7 @@
     h1,
     h2,
     h3,
-    h4,
-    h5 {
+    h4 {
         &:first-child {
             margin-top: 0;
         }
@@ -132,8 +131,7 @@
 
     h1 + h2,
     h2 + h3,
-    h3 + h4,
-    h4 + h5 {
+    h3 + h4 {
         margin-top: 1rem;
     }
 
@@ -147,7 +145,7 @@
         font-family: var(--heading-h1-font-family, var(--heading-font-family));
         font-size: var(--heading-h1-font-size);
         font-weight: var(--heading-h1-font-weight, var(--heading-font-weight));
-        line-height: var(--root-line-height);
+        line-height: var(--base-line-height);
         color: var(--heading-h1-color, var(--heading-color));
     }
 
@@ -160,7 +158,7 @@
         font-family: var(--heading-h2-font-family, var(--heading-font-family));
         font-size: var(--heading-h2-font-size);
         font-weight: var(--heading-h2-font-weight, var(--heading-font-weight));
-        line-height: var(--root-line-height);
+        line-height: var(--base-line-height);
         color: var(--heading-h2-color, var(--heading-color));
     }
 
@@ -186,18 +184,6 @@
         font-size: var(--heading-h4-font-size);
         font-weight: var(--heading-h4-font-weight, var(--heading-font-weight));
         color: var(--heading-h4-color, var(--heading-color));
-    }
-
-    h5 {
-        margin: var(--heading-h5-margin, var(--heading-margin));
-        padding: var(--heading-h5-padding, var(--heading-padding));
-        border-width: var(--heading-h5-border-width, 0);
-        border-style: var(--heading-h5-border-style);
-        border-color: var(--heading-h5-border-color);
-        font-family: var(--heading-h5-font-family, var(--heading-font-family));
-        font-size: var(--heading-h5-font-size);
-        font-weight: var(--heading-h5-font-weight, var(--heading-font-weight));
-        color: var(--heading-h5-color, var(--heading-color));
     }
 
     hr {
@@ -354,9 +340,14 @@
         position: relative;
         margin: 2em 0;
         padding: 1em 1.5em;
+        border-width: var(--notice-border-width, 0);
+        border-style: var(--notice-border-style);
+        border-color: var(--notice-border-color);
         border-radius: var(--notice-border-radius);
+        background: var(--notice-background);
         font-family: var(--notice-font-family);
         font-weight: var(--notice-font-weight);
+        color: var(--notice-color);
 
         &:before {
             position: var(--notice-before-position);
@@ -375,30 +366,30 @@
     }
 
     .tip {
-        border-width: var(--notice-important-border-width, 0);
-        border-style: var(--notice-important-border-style);
-        border-color: var(--notice-important-border-color);
-        background: var(--notice-important-background);
-        color: var(--notice-important-color);
+        border-width: var(--notice-important-border-width, var(--notice-border-width, 0));
+        border-style: var(--notice-important-border-style, var(--notice-border-style));
+        border-color: var(--notice-important-border-color, var(--notice-border-color));
+        background: var(--notice-important-background, var(--notice-background));
+        color: var(--notice-important-color, var(--notice-color));
 
         &:before {
-            content: var(--notice-important-before-content);
-            background: var(--notice-important-before-background);
-            color: var(--notice-important-before-color);
+            content: var(--notice-important-before-content, var(--notice-before-content));
+            background: var(--notice-important-before-background, var(--notice-before-background));
+            color: var(--notice-important-before-color, var(--notice-before-color));
         }
     }
 
     .warn {
-        border-width: var(--notice-tip-border-width, 0);
-        border-style: var(--notice-tip-border-style);
-        border-color: var(--notice-tip-border-color);
-        background: var(--notice-tip-background);
-        color: var(--notice-tip-color);
+        border-width: var(--notice-tip-border-width, var(--notice-border-width, 0));
+        border-style: var(--notice-tip-border-style, var(--notice-border-style));
+        border-color: var(--notice-tip-border-color, var(--notice-border-color));
+        background: var(--notice-tip-background, var(--notice-background));
+        color: var(--notice-tip-color, var(--notice-color));
 
         &:before {
-            content: var(--notice-tip-before-content);
-            background: var(--notice-tip-before-background);
-            color: var(--notice-tip-before-color);
+            content: var(--notice-tip-before-content, var(--notice-before-content));
+            background: var(--notice-tip-before-background, var(--notice-before-background));
+            color: var(--notice-tip-before-color, var(--notice-before-color));
         }
     }
 }

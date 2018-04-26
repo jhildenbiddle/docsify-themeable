@@ -1,8 +1,7 @@
-// Content: Simple
+// Content
 // =============================================================================
 :root {
     // Blockquote
-    --blockquote-background             : var(--color-gray-lightest);
     --blockquote-border-radius          : var(--border-radius-m);
     --blockquote-quotes-close           : close-quote;
     --blockquote-quotes-color           : rgba(0, 0, 0, 0.2);
@@ -11,7 +10,7 @@
     --blockquote-quotes-open            : open-quote;
 
     // Code
-    --code-theme-background             : #f7f7f7;
+    --code-theme-background             : var(--color-background-shade1);
     --code-theme-comment                : #6e8090;
     --code-theme-function               : #dd4a68;
     --code-theme-keyword                : #07a;
@@ -27,22 +26,18 @@
     --heading-font-weight               : var(--strong-font-weight);
     --heading-h1-font-weight            : 400;
     --heading-h2-font-weight            : 400;
-    --heading-h2-border-color           : var(--color-gray-lighter);
+    --heading-h2-border-color           : var(--color-background-shade2);
     --heading-h2-border-style           : solid;
     --heading-h2-border-width           : 0 0 1px 0;
     --heading-h2-margin                 : 2.5rem 0 1.5rem;
     --heading-h2-padding                : 0 0 1rem 0;
 
-    // Keyboard
-    --kbd-background                    : var(--color-gray-lightest);
-    --kbd-border                        : 1px solid var(--color-gray-light);
-    --kbd-border-radius                 : var(--border-radius-m);
-
-    // Notices (Tip & Warning)
+    // Notices
     --notice-before-border-radius       : var(--border-radius-m);
+    --notice-before-color               : #fff;
     --notice-before-font-size           : var(--font-size-s);
     --notice-before-font-weight         : 600;
-    --notice-before-left                : 0;
+    --notice-before-left                : -0.5em;
     --notice-before-line-height         : 1.5;
     --notice-before-padding             : 0 0.6em;
     --notice-before-position            : absolute;
@@ -51,17 +46,16 @@
     --notice-border-style               : solid;
     --notice-border-width               : 1px 0 0;
 
+
     // Notice - Important
     --notice-important-background       : #fff5f5;
     --notice-important-before-background: #ff6b6b;
-    --notice-important-before-color     : #fff;
     --notice-important-before-content   : "Important";
     --notice-important-border-color     : var(--notice-important-before-background);
 
     // Notice - Tip
     --notice-tip-background             : #edf2ff;
     --notice-tip-before-background      : #5c7cfa;
-    --notice-tip-before-color           : #fff;
     --notice-tip-before-content         : "Tip";
     --notice-tip-border-color           : var(--notice-tip-before-background);
 

@@ -1,11 +1,8 @@
-// Theme: Simple
+// Theme: Simple Dark
 // =============================================================================
-@import "../defaults/theme-defaults";
-
+@import "../simple/theme-simple";
 @import "base";
 @import "content";
-@import "cover";
-@import "navbar";
 @import "plugin-search";
 @import "sidebar";
 
@@ -13,5 +10,5 @@
 // Customization
 // =============================================================================
 :root {
-    --theme-color: #1b84cc;
+
 }

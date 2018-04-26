@@ -4,7 +4,7 @@
     --content-max-width                 : 55em;
 
     /* Blockquote */
-    --blockquote-background             : var(--color-gray-lightest);
+    --blockquote-background             : var(--color-background-shade1);
     --blockquote-border-color           : ;
     --blockquote-border-style           : ;
     --blockquote-border-width           : ;
@@ -30,19 +30,30 @@
     --code-font-weight                  : ;
     --code-tab-size                     : 4;
 
-    --code-block-background             : var(--color-gray-lightest);
     --code-block-border-radius          : var(--border-radius-m);
-    --code-block-line-height            : var(--root-line-height);
+    --code-block-line-height            : var(--base-line-height);
     --code-block-margin                 : 1em 0;
     --code-block-padding                : 1.75em 1.5em 1.5em 1.5em;
 
-    --code-inline-background            : var(--color-gray-lighter);
+    --code-inline-background            : var(--color-background-shade2);
     --code-inline-border-radius         : var(--border-radius-s);
     --code-inline-margin                : 0 0.15em;
     --code-inline-padding               : 0.125em 0.4em;
 
+    --code-theme-background             : var(--color-background-shade1);
+    --code-theme-comment                : ;
+    --code-theme-function               : ;
+    --code-theme-keyword                : ;
+    --code-theme-operator               : ;
+    --code-theme-punctuation            : ;
+    --code-theme-selection              : ;
+    --code-theme-selector               : ;
+    --code-theme-tag                    : ;
+    --code-theme-text                   : ;
+    --code-theme-variable               : ;
+
     /* Emoji */
-    --emoji-size                        : calc(var(--root-line-height) * 1em);
+    --emoji-size                        : calc(var(--base-line-height) * 1em);
 
     /* Headings */
     --heading-color                     : var(--color-gray-darkest);
@@ -86,23 +97,14 @@
     --heading-h4-font-weight            : ;
     --heading-h4-margin                 : ;
     --heading-h4-padding                : ;
-    --heading-h5-border-color           : ;
-    --heading-h5-border-style           : ;
-    --heading-h5-border-width           : ;
-    --heading-h5-color                  : ;
-    --heading-h5-font-family            : ;
-    --heading-h5-font-size              : var(--font-size-s);
-    --heading-h5-font-weight            : ;
-    --heading-h5-margin                 : ;
-    --heading-h5-padding                : ;
 
     /* Horizontal Rule */
-    --hr-border                         : 1px solid var(--color-gray-lighter);
+    --hr-border                         : 1px solid var(--color-background-shade2);
 
     /* Keyboard */
-    --kbd-background                    : ;
-    --kbd-border                        : 1px solid currentColor;
-    --kbd-border-radius                 : var(--border-radius-s);
+    --kbd-background                    : var(--color-background-shade1);
+    --kbd-border                        : 1px solid var(--color-background-shade2);
+    --kbd-border-radius                 : var(--border-radius-m);
     --kbd-font-size                     : ;
     --kbd-margin                        : 0 0.3em;
     --kbd-min-width                     : 2.5em;
@@ -118,8 +120,16 @@
     --link-text-decoration-color        : ;
     --link-text-decoration-color--hover : ;
 
-    /* Notices (Tip & Warning) */
+    /* Mark */
+    --mark-background                   : #ffecb3;
+    --mark-color                        : ;
+
+    /* Notices */
+    --notice-background                 : var(--color-background-shade1);
+    --notice-before-background          : ;
     --notice-before-border-radius       : ;
+    --notice-before-color               : ;
+    --notice-before-content             : ;
     --notice-before-font-family         : ;
     --notice-before-font-size           : ;
     --notice-before-font-weight         : ;
@@ -130,28 +140,32 @@
     --notice-before-position            : ;
     --notice-before-top                 : ;
     --notice-before-width               : ;
+    --notice-border-color               : ;
     --notice-border-radius              : var(--border-radius-m);
+    --notice-border-style               : ;
+    --notice-border-width               : ;
+    --notice-color                      : ;
     --notice-font-family                : ;
     --notice-font-weight                : ;
 
     /* Notice - Important */
-    --notice-important-background       : var(--color-gray-lightest);
+    --notice-important-background       : ;
     --notice-important-before-background: ;
     --notice-important-before-color     : ;
     --notice-important-before-content   : ;
+    --notice-important-border-color     : ;
     --notice-important-border-style     : ;
     --notice-important-border-width     : ;
-    --notice-important-border-color     : ;
     --notice-important-color            : ;
 
     /* Notice - Tip */
-    --notice-tip-background             : var(--color-gray-lightest);
+    --notice-tip-background             : ;
     --notice-tip-before-background      : ;
     --notice-tip-before-color           : ;
     --notice-tip-before-content         : ;
+    --notice-tip-border-color           : ;
     --notice-tip-border-style           : ;
     --notice-tip-border-width           : ;
-    --notice-tip-border-color           : ;
     --notice-tip-color                  : ;
 
     /* Preformatted */
@@ -164,21 +178,22 @@
     --small-font-size                   : var(--font-size-s);
 
     /* Strong */
+    --strong-color                      : var(--color-gray-darkest);
     --strong-font-weight                : 600;
 
     /* Sub/Sup */
     --subsup-font-size                  : var(--font-size-s);
 
     /* Tables */
-    --table-body-border-color           : var(--color-gray-lighter);
-    --table-body-border-width           : 0 0 1px 0;
-    --table-cell-border-color           : var(--color-gray-lighter);
+    --table-body-border-color           : ;
+    --table-body-border-width           : ;
+    --table-cell-border-color           : var(--color-background-shade2);
     --table-cell-border-width           : 1px 0;
     --table-cell-padding                : 0.75em 0.5em;
     --table-head-background             : ;
-    --table-head-border-color           : var(--color-gray-lighter);
+    --table-head-border-color           : var(--color-background-shade2);
     --table-head-border-width           : ;
     --table-head-font-weight            : var(--strong-font-weight);
     --table-row-even-background         : ;
-    --table-row-odd-background          : var(--color-gray-lightest);
+    --table-row-odd-background          : var(--color-background-shade1);
 }

@@ -1,7 +1,7 @@
 /* Sidebar
 ============================================================================= */
 :root {
-    --sidebar-background                          : var(--body-background-color);
+    --sidebar-background                          : var(--base-background-color);
     --sidebar-border-color                        : ;
     --sidebar-border-width                        : 0;
     --sidebar-padding                             : 0 25px;
@@ -48,7 +48,7 @@
     --sidebar-nav-link-border-width               : ;
     --sidebar-nav-link-border-width--active       : ;
     --sidebar-nav-link-border-width--hover        : ;
-    --sidebar-nav-link-color                      : var(--body-color);
+    --sidebar-nav-link-color                      : var(--base-color);
     --sidebar-nav-link-color--active              : ;
     --sidebar-nav-link-color--hover               : ;
     --sidebar-nav-link-font-weight                : ;
@@ -106,7 +106,7 @@
     /* Nav Headings */
     --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
     --sidebar-nav-strong-border-width             : ;
-    --sidebar-nav-strong-color                    : ;
+    --sidebar-nav-strong-color                    : var(--heading-color);
     --sidebar-nav-strong-font-size                : ;
     --sidebar-nav-strong-font-weight              : var(--strong-font-weight);
     --sidebar-nav-strong-margin                   : 1.5em 0 0.5em;
@@ -125,7 +125,7 @@
     --sidebar-toggle-border-style                 : solid;
     --sidebar-toggle-border-width                 : 0;
     --sidebar-toggle-height                       : 36px;
-    --sidebar-toggle-icon-color                   : var(--body-color);
+    --sidebar-toggle-icon-color                   : var(--base-color);
     --sidebar-toggle-icon-height                  : 10px;
     --sidebar-toggle-icon-stroke-width            : 1px;
     --sidebar-toggle-icon-width                   : 16px;

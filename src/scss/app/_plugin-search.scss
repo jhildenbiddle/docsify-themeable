@@ -161,6 +161,7 @@ body {
             background-repeat: var(--search-input-background-repeat);
             background-size: var(--search-input-background-size);
             font-size: var(--search-input-font-size);
+            color: var(--search-input-color);
             transition: var(--search-input-transition);
 
             &::-ms-clear {
@@ -201,7 +202,11 @@ body {
 
             svg {
                 circle {
-                    fill: #b5b5b5;
+                    fill: var(--search-clear-icon-color1);
+                }
+
+                path {
+                    stroke: #fff;
                 }
             }
         }
@@ -246,7 +251,7 @@ body {
             padding: var(--search-result-keyword-padding);
             border-radius: var(--search-result-keyword-border-radius);
             background-color: var(--search-result-keyword-background);
-            color: var(--search-result-keyword-color);
+            color: var(--search-result-keyword-color, currentColor);
             font-style: normal;
             font-weight: var(--search-result-keyword-font-weight);
         }

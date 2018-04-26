@@ -2,7 +2,7 @@
    https://github.com/imyelo/docsify-pagination
 ============================================================================= */
 :root {
-    --pagination-border-top            : 1px solid var(--color-gray-lighter);
+    --pagination-border-top            : 1px solid var(--color-background-shade2);
     --pagination-chevron-height        : 0.8em;
     --pagination-chevron-stroke        : currentColor;
     --pagination-chevron-stroke-linecap: round;

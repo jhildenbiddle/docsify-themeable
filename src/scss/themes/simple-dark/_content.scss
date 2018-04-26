@@ -1,0 +1,32 @@
+// Content
+// =============================================================================
+:root {
+    // Blockquote
+    --blockquote-background             : var(--color-background-tint2);
+
+    // Code
+    --code-theme-background             : var(--color-background-shade3);
+    --code-theme-comment                : #516e7a;
+    --code-theme-function               : #f07178;
+    --code-theme-keyword                : #c2e78c;
+    --code-theme-operator               : #ffcb6b;
+    --code-theme-punctuation            : #89ddff;
+    --code-theme-selection              : rgba(255, 255, 255, 0.2);
+    --code-theme-selector               : #ffcb6b;
+    --code-theme-tag                    : #f07178;
+    --code-theme-text                   : #f3f3f3;
+    --code-theme-variable               : #ffcb6b;
+
+    // Headings
+    --heading-color                     : var(--color-gray);
+    --heading-h2-border-color           : var(--color-background-tint2);
+
+    // Keyboard
+    --kbd-background                    : var(--color-background-tint2);
+
+    // Notice - Important
+    --notice-important-background       : var(--color-background-tint2);
+
+    // Notice - Tip
+    --notice-tip-background             : var(--color-background-tint2);
+}

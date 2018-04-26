@@ -13,22 +13,22 @@
 
 html {
     box-sizing: border-box;
-    font-family: var(--root-font-family);
-    font-size: var(--root-font-size);
-    font-weight: var(--root-font-weight);
-    letter-spacing: var(--root-letter-spacing);
-    line-height: var(--root-line-height);
+    font-family: var(--base-font-family);
+    font-size: var(--base-font-size);
+    font-weight: var(--base-font-weight);
+    letter-spacing: var(--base-letter-spacing);
+    line-height: var(--base-line-height);
 
     // Normalize font weights across browsers and operating systems
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
 }
 
 body {
     margin: 0;
-    background-color: var(--body-background-color);
-    color: var(--body-color);
+    background-color: var(--base-background-color);
+    color: var(--base-color);
 }
 
 ::selection {
@@ -61,8 +61,17 @@ main {
     display: block; // IE Fix
 }
 
+mark {
+    background: var(--mark-background);
+    color: var(--mark-color);
+}
+
 small {
     font-size: var(--small-font-size);
+}
+
+strong {
+    color: var(--strong-color, currentColor);
 }
 
 sub,
@@ -74,9 +83,9 @@ sup {
 }
 
 sub {
-	bottom: -0.25em;
+    bottom: -0.25em;
 }
 
 sup {
-	top: -0.5em;
+    top: -0.5em;
 }

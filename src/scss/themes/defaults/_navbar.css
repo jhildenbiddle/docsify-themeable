@@ -27,7 +27,7 @@
     --navbar-link-text-decoration-color--hover      : ;
 
     /* Menus */
-    --navbar-menu-background                        : var(--body-background-color);
+    --navbar-menu-background                        : var(--base-background-color);
     --navbar-menu-border-color                      : ;
     --navbar-menu-border-radius                     : var(--border-radius-m);
     --navbar-menu-border-width                      : ;

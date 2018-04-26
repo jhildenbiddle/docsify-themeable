@@ -16,29 +16,35 @@
     --search-input-background-repeat         : no-repeat;
     --search-input-background-size           : ;
     --search-input-background-size--focus    : ;
-    --search-input-border-color              : ;
+    --search-input-border-color              : var(--color-background-shade3);
     --search-input-border-radius             : var(--border-radius-s);
     --search-input-border-width              : 1px;
+    --search-input-color                     : ;
     --search-input-font-size                 : ;
     --search-input-margin                    : ;
     --search-input-padding                   : 0.5em;
     --search-input-placeholder-color         : var(--color-gray);
     --search-input-transition                : all var(--duration-fast);
 
+    /* Clear Button */
+    --search-clear-icon-color1               : var(--color-background-shade3);
+    --search-clear-icon-color2               : red;
+
     /* Results */
-    --search-result-heading-color            : ;
-    --search-result-heading-font-size        : var(--root-font-size);
+    --search-result-heading-color            : var(--heading-color);
+    --search-result-heading-font-size        : var(--base-font-size);
     --search-result-heading-font-weight      : normal;
-    --search-result-heading-margin           : 0 0 0.5em;
-    --search-result-item-border-color        : var(--color-gray-lighter);
+    --search-result-heading-margin           : 0 0 0.25em;
+    --search-result-item-border-color        : var(--color-background-shade2);
     --search-result-item-border-style        : solid;
     --search-result-item-border-width        : 0 0 1px 0;
     --search-result-item-font-size           : ;
     --search-result-item-margin              : ;
     --search-result-item-padding             : 1em 0;
+    --search-result-keyword-background       : var(--mark-background);
     --search-result-keyword-border-radius    : var(--border-radius-s);
-    --search-result-keyword-background       : var(--theme-color);
-    --search-result-keyword-color            : #fff;
+    --search-result-keyword-color            : var(--mark-color);
+    --search-result-keyword-font-weight      : ;
     --search-result-keyword-margin           : 0 0.1em;
     --search-result-keyword-padding          : 0.2em 0;
 }

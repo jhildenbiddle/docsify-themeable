@@ -2,6 +2,6 @@
    https://github.com/jperasmus/docsify-copy-code
 ============================================================================= */
 :root {
-    --copycode-background: var(--color-gray-light);
+    --copycode-background: #808080;
     --copycode-color     : #fff;
 }

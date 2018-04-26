@@ -2,5 +2,5 @@
    https://docsify.js.org/#/plugins?id=zoom-image
 ============================================================================= */
 :root {
-    --zoomimage-overlay-background: var(--body-background-color);
+    --zoomimage-overlay-background: var(--base-background-color);
 }

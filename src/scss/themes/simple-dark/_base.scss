@@ -1,0 +1,41 @@
+// Base
+// =============================================================================
+:root {
+    /* Grayscale */
+    // --color-gray-darkest   : #13191c;
+    // --color-gray-darker    : #263238;
+    // --color-gray-dark      : #37474f;
+    // // --color-gray-dark      : #455a64;
+    // // --color-gray           : #546e7a;
+    // --color-gray           : #607d8b;
+    // // --color-gray           : #78909c;
+    // // --color-gray-light     : #90a4ae;
+    // --color-gray-light     : #b0bec5;
+    // --color-gray-lighter   : #cfd8dc;
+    // --color-gray-lightest  : #eceff1;
+
+    // --color-gray-lightest  : rgba(92, 125, 139, 0.9);  /* # */
+    // --color-gray-lighter   : rgba(92, 125, 139, 0.8);  /* # */
+    // --color-gray-light     : rgba(92, 125, 139, 0.7);  /* # */
+    // --color-gray           : rgba(92, 125, 139, 0.5);  /* #607d8b */
+    // --color-gray-dark      : rgba(92, 125, 139, 0.3);  /* # */
+    // --color-gray-darker    : rgba(92, 125, 139, 0.11); /* # */
+    // --color-gray-darkest   : rgba(92, 125, 139, 0.04); /* # */
+
+    --color-gray-lightest  : rgba(255, 255, 255, 0.9);  /* # */
+    --color-gray-lighter   : rgba(255, 255, 255, 0.8);  /* # */
+    --color-gray-light     : rgba(255, 255, 255, 0.7);  /* # */
+    --color-gray           : rgba(255, 255, 255, 0.5);  /* # */
+    --color-gray-dark      : rgba(255, 255, 255, 0.3);  /* # */
+    --color-gray-darker    : rgba(255, 255, 255, 0.11); /* # */
+    --color-gray-darkest   : rgba(255, 255, 255, 0.04); /* # */
+
+    // Borders
+    --border-radius-s      : 2px;
+    --border-radius-m      : 4px;
+    --border-radius-l      : 8px;
+
+    /* Body */
+    --base-background-color: #263238;
+    --base-color           : #fff;
+}

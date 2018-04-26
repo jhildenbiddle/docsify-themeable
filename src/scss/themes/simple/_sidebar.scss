@@ -1,37 +1,26 @@
 // Sidebar
 // =============================================================================
 :root {
-    --sidebar-background                : var(--color-gray-lightest);
-    --sidebar-border-color              : var(--color-gray-lighter);
+    --sidebar-background                : var(--color-background-shade1);
+    --sidebar-border-color              : var(--color-background-shade2);
     --sidebar-border-width              : 0 1px 0 0;
-    // --sidebar-padding                   : 0;
 
     // Heading
     --sidebar-heading-color             : var(--theme-color);
     --sidebar-heading-font-weight       : 300;
 
-    // Nav Container
-    // --sidebar-nav-margin                : 2rem 0 1.5rem 25px;
-
-    // Nav Links
-    // --sidebar-nav-link-margin           : 0.35em var(--sidebar-nav-indent) 0.35em 0;
-
     // Nav Links - Pseudo Content
-    --sidebar-nav-link-before-content-l4: '\2022';
+    --sidebar-nav-link-before-content-l2: '\2022';
 
     // Nav Headings
-    --sidebar-nav-strong-border-color   : null;
     --sidebar-nav-strong-border-width   : 0 0 1px 0;
-    --sidebar-nav-strong-color          : var(--color-gray-dark);
     --sidebar-nav-strong-font-size      : smaller;
-    --sidebar-nav-strong-font-weight    : null;
     --sidebar-nav-strong-margin         : 2em 0 0.65rem 0;
     --sidebar-nav-strong-padding        : 0 0 0.65rem 0;
     --sidebar-nav-strong-text-transform : uppercase;
 
     // Toggle
-    --sidebar-toggle-background         : rgba(0, 0, 0, 0.11);
+    --sidebar-toggle-background         : var(--color-background-shade2);
     --sidebar-toggle-border-radius      : 0 var(--border-radius-s) var(--border-radius-s) 0;
     --sidebar-toggle-width              : 32px;
-
 }
