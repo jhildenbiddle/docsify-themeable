@@ -1,30 +1,20 @@
 // Base
 // =============================================================================
 :root {
-    /* Background Tints (Lighter) */
-    --color-background-tint1 : rgba(255, 255, 255, 0.06);
-    --color-background-tint2 : rgba(255, 255, 255, 0.20);
-    --color-background-tint3 : rgba(255, 255, 255, 0.25);
+    // Monochrome
+    --mono-hue             : 201;
+    --mono-saturation      : 18%;
 
-    /* Background Shades (Darker) */
-    --color-background-shade1: rgba(0, 0, 0, 0.06);
-    --color-background-shade2: rgba(0, 0, 0, 0.20);
-    --color-background-shade3: rgba(0, 0, 0, 0.25);
-
-    --color-gray-lightest  : rgba(255, 255, 255, 0.9);  /* # */
-    --color-gray-lighter   : rgba(255, 255, 255, 0.8);  /* # */
-    --color-gray-light     : rgba(255, 255, 255, 0.7);  /* # */
-    --color-gray           : rgba(255, 255, 255, 0.5);  /* # */
-    --color-gray-dark      : rgba(255, 255, 255, 0.3);  /* # */
-    --color-gray-darker    : rgba(255, 255, 255, 0.11); /* # */
-    --color-gray-darkest   : rgba(255, 255, 255, 0.04); /* # */
-
-    // Borders
-    --border-radius-s      : 2px;
-    --border-radius-m      : 4px;
-    --border-radius-l      : 8px;
+    // Monochrome tints (lighter) and shades (darker)
+    --mono-tint3           : hsl(var(--mono-hue), var(--mono-saturation), 43%);
+    --mono-tint2           : hsl(var(--mono-hue), var(--mono-saturation), 35%);
+    --mono-tint1           : hsl(var(--mono-hue), var(--mono-saturation), 25%);
+    --mono-base            : hsl(var(--mono-hue), var(--mono-saturation), 19%);
+    --mono-shade1          : hsl(var(--mono-hue), var(--mono-saturation), 17%);
+    --mono-shade2          : hsl(var(--mono-hue), var(--mono-saturation), 15%);
+    --mono-shade3          : hsl(var(--mono-hue), var(--mono-saturation), 13%);
 
     /* Body */
-    --base-background-color: #263238;
-    --base-color           : var(--color-gray-lighter);
+    --base-background-color: var(--mono-base);
+    --base-color           : #d3d3d3;
 }

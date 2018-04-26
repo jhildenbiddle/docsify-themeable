@@ -1,8 +1,8 @@
 // Sidebar
 // =============================================================================
 :root {
-    --sidebar-background                : var(--color-background-shade1);
-    --sidebar-border-color              : var(--color-background-shade2);
+    --sidebar-background                : var(--mono-shade1);
+    --sidebar-border-color              : var(--mono-shade2);
     --sidebar-border-width              : 0 1px 0 0;
 
     // Heading
@@ -20,7 +20,7 @@
     --sidebar-nav-strong-text-transform : uppercase;
 
     // Toggle
-    --sidebar-toggle-background         : var(--color-background-shade2);
+    --sidebar-toggle-background         : var(--sidebar-border-color);
     --sidebar-toggle-border-radius      : 0 var(--border-radius-s) var(--border-radius-s) 0;
     --sidebar-toggle-width              : 32px;
 }

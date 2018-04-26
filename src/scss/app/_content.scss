@@ -116,6 +116,7 @@
             padding: var(--code-inline-padding);
             border-radius: var(--code-inline-border-radius);
             background: var(--code-inline-background);
+            color: var(--code-inline-color, currentColor);
             white-space: nowrap;
         }
     }
@@ -213,6 +214,7 @@
         text-align: center;
         letter-spacing: 0;
         line-height: 1;
+        color: var(--kbd-color);
 
         + kbd {
             margin-left: -0.15em;
@@ -253,6 +255,7 @@
 
     th {
         font-weight: var(--table-head-font-weight);
+        color: var(--strong-color);
     }
 
     td {

@@ -1,9 +1,6 @@
 // Sidebar
 // =============================================================================
 :root {
-    --sidebar-background                : var(--color-background-shade1);
-    --sidebar-border-color              : var(--color-background-tint1);
-
-    // Toggle
-    --sidebar-toggle-background         : var(--color-background-tint1);
+    --sidebar-background  : var(--mono-shade1);
+    --sidebar-border-color: var(--mono-tint1);
 }

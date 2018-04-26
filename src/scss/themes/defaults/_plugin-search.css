@@ -5,6 +5,10 @@
     --search-margin                          : 1.5rem 0 0;
     --search-padding                         : ;
 
+    /* Clear Button */
+    --search-clear-icon-color1               : ;
+    --search-clear-icon-color2               : ;
+
     /* Input */
     --search-input-background-color          : ;
     --search-input-background-color--focus   : ;
@@ -15,26 +19,22 @@
     --search-input-background-repeat         : no-repeat;
     --search-input-background-size           : ;
     --search-input-background-size--focus    : ;
-    --search-input-border-color              : var(--color-background-shade3);
+    --search-input-border-color              : var(--mono-shade3);
     --search-input-border-radius             : ;
     --search-input-border-width              : 1px;
     --search-input-color                     : ;
     --search-input-font-size                 : ;
     --search-input-margin                    : ;
     --search-input-padding                   : 0.5em;
-    --search-input-placeholder-color         : var(--color-gray);
+    --search-input-placeholder-color         : ;
     --search-input-transition                : all var(--duration-fast);
-
-    /* Clear Button */
-    --search-clear-icon-color1               : var(--color-background-shade3);
-    --search-clear-icon-color2               : red;
 
     /* Results */
     --search-result-heading-color            : var(--heading-color);
     --search-result-heading-font-size        : var(--base-font-size);
     --search-result-heading-font-weight      : normal;
     --search-result-heading-margin           : 0 0 0.25em;
-    --search-result-item-border-color        : var(--color-background-shade2);
+    --search-result-item-border-color        : var(--mono-shade2);
     --search-result-item-border-style        : solid;
     --search-result-item-border-width        : 0 0 1px 0;
     --search-result-item-font-size           : ;

@@ -118,7 +118,10 @@
 
         // Buttons
         > p:last-child {
-            margin: 2em 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 2em 0 0 -0.25em;
+            text-align: center;
 
             a {
                 display: inline-block;
@@ -144,7 +147,6 @@
 
                 // Primary
                 &:first-child {
-                    margin-left: 0;
                     border: var(--cover-button-primary-border, var(--cover-button-border));
                     box-shadow: var(--cover-button-primary-box-shadow, var(--cover-button-box-shadow));
                     background: var(--cover-button-primary-background, var(--cover-button-background));
@@ -164,6 +166,16 @@
 
                 &:last-child {
                     margin-right: 0;
+                }
+            }
+
+            @include media("<medium") {
+                > * {
+                    flex-grow: 1;
+
+                    &:first-child {
+                        flex-basis: 100%;
+                    }
                 }
             }
         }

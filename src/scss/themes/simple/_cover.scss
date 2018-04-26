@@ -1,45 +1,43 @@
 // Cover
 // =============================================================================
 :root {
-    --cover-color                    : rgba(255, 255, 255, 0.8);
-    --cover-text-align               : left;
+    --cover-color                   : rgba(255, 255, 255, 0.8);
+    --cover-text-align              : left;
 
     // Background
-    --cover-background-color         : #329af0;
-    --cover-background-image         : linear-gradient(45deg, #397ae9 15%, #4789e1 24%, #adf2ab 140%);
-    --cover-background-image         : radial-gradient(#4cceb2, #2f8fd8);
-
-    // --cover-background-image         : url(https: //images.unsplash.com/photo-1486180939859-b2fe47b8037d);
-    // --cover-background-mask-color    : #fff;
-    // --cover-background-mask-color    : #000;
-    // --cover-background-mask-opacity  : 0.5;
+    --cover-background-color        : #329af0;
+    --cover-background-image        : linear-gradient(45deg, #397ae9 15%, #4789e1 24%, #adf2ab 140%);
+    // --cover-background-image        : linear-gradient(45deg, #adf2ab -35%, #4789e1 35%, #397ae9 50%, #4789e1 65%, #adf2ab 135%);
+    --cover-background-image        : radial-gradient(circle farthest-corner, #4cceb2, #2f8fd8);
+    // --cover-background-image        : radial-gradient(circle farthest-corner, #4cceb2, #2f8fd8), url(https://images.unsplash.com/photo-1486180939859-b2fe47b8037d);
+    // --cover-background-image        : url(https://images.unsplash.com/photo-1486180939859-b2fe47b8037d);
+    // --cover-background-mask-color   : #fff;
+    // --cover-background-mask-color   : #000;
+    // --cover-background-mask-opacity : 0.5;
 
     // Blockquote (Subtitle)
-    --cover-blockquote-color         : #ffd43b;
+    --cover-blockquote-color        : #ffd43b;
 
     // Border
-    --cover-border-inset             : 15px;
-    --cover-border-color             : rgba(255, 255, 255, 0.5);
-    --cover-border-width             : 3px;
+    --cover-border-inset            : 10px;
+    --cover-border-color            : rgba(255, 255, 255, 0.5);
+    --cover-border-width            : 2px;
 
     // Buttons
-    --cover-button-border-radius     : 100vw;
-    --cover-button-box-shadow        : 0 0 0 4px transparent;
-    --cover-button-box-shadow--hover : 0 0 0 4px rgba(0, 0, 0, 0.1);
+    --cover-button-border-radius    : 100vw;
+    --cover-button-box-shadow       : 0 0 0 3px transparent;
+    --cover-button-box-shadow--hover: 0 0 0 3px rgba(255, 255, 255, 0.3);
+
+    // Buttons
+    --cover-button-color            : #fff;
+    --cover-button-border           : 1px solid rgba(255, 255, 255, 0.5);
 
     // Buttons - Primary
-    --cover-button-primary-background: var(--theme-color);
-    --cover-button-primary-color     : #fff;
+    --cover-button-primary-border   : 1px solid var(--theme-color);
 
     // Heading
-    --cover-heading-color            : #fff;
-    --cover-heading-font-size-max    : 56; // Unitless px
-    --cover-heading-font-size-min    : 34; // Unitless px
-    --cover-heading-font-weight      : 200;
+    --cover-heading-color           : #fff;
+    --cover-heading-font-size-max   : 56; // Unitless px
+    --cover-heading-font-size-min   : 34; // Unitless px
+    --cover-heading-font-weight     : 200;
 }
-
-
-
-
-
-

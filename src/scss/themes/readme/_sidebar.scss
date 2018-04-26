@@ -15,7 +15,7 @@
     // Nav - Page Links
     --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 8px, null, 1.25, currentColor)};
     --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 8px, 1.25, white)};
-    --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 8px, null, 1.25, white)};;
+    --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 8px, null, 1.25, white)};
     --sidebar-nav-pagelink-background-image--loaded     : #{chevron-data-uri(down, null, 8px, 1.25, currentColor)};
     --sidebar-nav-pagelink-background-position          : calc(100% - 1rem - 3px) center;
     --sidebar-nav-pagelink-background-position--active  : calc(100% - 1rem) center;

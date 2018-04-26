@@ -2,44 +2,46 @@
 // =============================================================================
 :root {
     // Blockquote
-    --blockquote-background             : var(--color-background-shade2);
-    --blockquote-quotes-color           : var(--color-background-tint2);
+    --blockquote-background      : var(--mono-tint1);
+    --blockquote-quotes-color    : var(--mono-tint2);
 
     // Code
-    --code-theme-background             : var(--color-background-shade2);
-    --code-theme-comment                : #516e7a;
-    --code-theme-function               : #f07178;
-    --code-theme-keyword                : #c2e78c;
-    --code-theme-operator               : #ffcb6b;
-    --code-theme-punctuation            : #89ddff;
-    --code-theme-selection              : rgba(255, 255, 255, 0.2);
-    --code-theme-selector               : #ffcb6b;
-    --code-theme-tag                    : #f07178;
-    --code-theme-text                   : #f3f3f3;
-    --code-theme-variable               : #ffcb6b;
+    --code-theme-background      : var(--mono-shade2);
+    --code-theme-comment         : #516e7a;
+    --code-theme-function        : #f07178;
+    --code-theme-keyword         : #c2e78c;
+    --code-theme-operator        : #ffcb6b;
+    --code-theme-punctuation     : #89ddff;
+    --code-theme-selection       : rgba(255, 255, 255, 0.2);
+    --code-theme-selector        : #ffcb6b;
+    --code-theme-tag             : #f07178;
+    --code-theme-text            : #f3f3f3;
+    --code-theme-variable        : #ffcb6b;
 
     // Headings
-    --heading-color                     : #fff;
-    --heading-h2-border-color           : var(--color-background-tint2);
+    --heading-color              : #fff;
+    --heading-h2-border-color    : var(--mono-tint2);
 
     /* Horizontal Rule */
-    --hr-border                         : 1px solid var(--color-background-tint2);
+    --hr-border                  : 1px solid var(--mono-tint2);
 
     // Keyboard
-    --kbd-background                    : var(--color-background-tint2);
+    --kbd-background             : var(--mono-tint1);
+    --kbd-border                 : none;
+    --kbd-color                  : var(--strong-color);
 
     /* Mark */
-    --mark-background                   : #ffcb6b;
-    --mark-color                        : var(--base-background-color);
+    --mark-background            : #ffcb6b;
+    --mark-color                 : var(--base-background-color);
 
     // Notice - Important
-    --notice-important-background       : var(--color-background-shade2);
+    --notice-important-background: var(--mono-tint1);
 
     // Notice - Tip
-    --notice-tip-background             : var(--color-background-shade2);
+    --notice-tip-background      : var(--mono-tint1);
 
     /* Tables */
-    --table-cell-border-color           : var(--color-background-shade2);
-    --table-head-border-color           : var(--color-background-shade2);
-    --table-row-odd-background          : var(--color-background-shade2);
+    --table-cell-border-color    : var(--mono-tint2);
+    --table-head-border-color    : var(--mono-tint2);
+    --table-row-odd-background   : var(--mono-tint1);
 }

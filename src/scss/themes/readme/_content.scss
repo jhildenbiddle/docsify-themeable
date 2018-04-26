@@ -26,14 +26,14 @@
     --notice-border-width          : 0 0 0 4px;
 
     // Notice - Important
-    --notice-important-background       : var(--color-gray-lightest);
+    --notice-important-background       : var(--mono-shade1);
     --notice-important-before-background: #fa5252;
     --notice-important-before-color     : #fff;
     --notice-important-before-content   : "!";
     --notice-important-border-color     : var(--notice-important-before-background);
 
     // Notice - Tip
-    --notice-tip-background       : var(--color-gray-lightest);
+    --notice-tip-background       : var(--mono-shade1);
     --notice-tip-before-background: #4c6ef5;
     --notice-tip-before-color     : #fff;
     --notice-tip-before-content   : "?";

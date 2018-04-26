@@ -1,7 +1,7 @@
 /* Plugin: Pagination
 ============================================================================= */
 :root {
-    --pagination-border-top            : 1px solid var(--color-background-shade2);
+    --pagination-border-top            : 1px solid var(--mono-shade2);
     --pagination-chevron-height        : 0.8em;
     --pagination-chevron-stroke        : currentColor;
     --pagination-chevron-stroke-linecap: round;

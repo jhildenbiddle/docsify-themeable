@@ -169,8 +169,7 @@ body {
             }
 
             &::placeholder {
-                color: var(--search-input-placeholder-color);
-                opacity: 1;
+                color: var(--search-input-placeholder-color, #808080);
             }
 
             &:focus {
@@ -202,11 +201,11 @@ body {
 
             svg {
                 circle {
-                    fill: var(--search-clear-icon-color1);
+                    fill: var(--search-clear-icon-color1, #808080);
                 }
 
                 path {
-                    stroke: #fff;
+                    stroke: var(--search-clear-icon-color2, #fff);
                 }
             }
         }

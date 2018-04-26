@@ -1,12 +1,20 @@
 // Supporting Elements
 // =============================================================================
-.cover > *,
+.sidebar,
+.sidebar-toggle,
 main > .content {
     transition: all var(--sidebar-transition-duration) ease-out;
 }
 
+nav.app-nav {
+    @include media(">=medium") {
+        margin-left: var(--sidebar-width);
+    }
+}
+
 main {
     position: relative;
+    overflow-x: hidden;
     min-height: 100vh;
 
     > .content {
@@ -40,7 +48,6 @@ main {
     border-style: solid;
     border-color: var(--sidebar-border-color);
     background: var(--sidebar-background);
-    transition: all var(--sidebar-transition-duration) ease-out;
 
     > h1 {
         order: var(--sidebar-order-heading);
@@ -280,7 +287,6 @@ main {
 .sidebar-toggle,
 .sidebar-toggle-button {
     outline: none;
-    transition: all var(--sidebar-transition-duration) ease-out, width 0s;
 }
 
 .sidebar-toggle {
@@ -348,7 +354,6 @@ main {
 // css-vars-ponyfill does not append transformed values that unintentinally
 // override non-transformed values.
 body.close {
-    .cover > *,
     .sidebar,
     .sidebar-toggle,
     main > .content {
@@ -357,14 +362,6 @@ body.close {
         }
     }
 
-    .cover,
-    main {
-        @include media("<medium") {
-            overflow-x: hidden;
-        }
-    }
-
-    .cover > *,
     main > .content {
         @include media(">=medium") {
             transform: translateX(0);
@@ -382,6 +379,12 @@ body.close {
     .sidebar-toggle {
         @include media(">=medium") {
             transform: translateX(0);
+        }
+    }
+
+    nav.app-nav {
+        @include media(">=medium") {
+            margin-left: 0;
         }
     }
 
