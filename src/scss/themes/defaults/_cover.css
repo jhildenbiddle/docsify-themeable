@@ -2,14 +2,15 @@
 ============================================================================= */
 :root {
     --cover-color                                      : ;
-    --cover-margin                                     : 5em auto 3em auto;
+    --cover-margin                                     : 0 auto;
     --cover-max-width                                  : 40em;
     --cover-text-align                                 : center;
 
     /* Background */
+    --cover-background-blend-mode                      : ;
     --cover-background-color                           : ;
     --cover-background-image                           : ;
-    --cover-background-mask-color                      : #fff;
+    --cover-background-mask-color                      : var(--base-background-color);
     --cover-background-mask-opacity                    : 0.8;
     --cover-background-mask-visibility                 : ;
     --cover-background-position                        : center center;
@@ -45,13 +46,13 @@
     /* Buttons - Primary */
     --cover-button-primary-background                  : var(--theme-color);
     --cover-button-primary-background--hover           : ;
-    --cover-button-primary-border                      : ;
+    --cover-button-primary-border                      : 1px solid var(--theme-color);
     --cover-button-primary-border--hover               : ;
     --cover-button-primary-box-shadow                  : ;
     --cover-button-primary-box-shadow--hover           : ;
     --cover-button-primary-color                       : #fff;
     --cover-button-primary-color--hover                : ;
-    --cover-button-primary-text-decoration             : none;
+    --cover-button-primary-text-decoration             : ;
     --cover-button-primary-text-decoration--hover      : ;
     --cover-button-primary-text-decoration-color       : ;
     --cover-button-primary-text-decoration-color--hover: ;

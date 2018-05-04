@@ -4,13 +4,13 @@
     // Blockquote
     --blockquote-border-radius          : var(--border-radius-m);
     --blockquote-quotes-close           : close-quote;
-    --blockquote-quotes-color           : var(--mono-shade3);
+    --blockquote-quotes-color           : var(--mono-tint1);
     --blockquote-quotes-font-family     : Georgia, serif;
     --blockquote-quotes-font-size       : 4em;
     --blockquote-quotes-open            : open-quote;
 
     // Code
-    --code-theme-background             : var(--mono-shade1);
+    --code-theme-background             : var(--mono-tint3);
     --code-theme-comment                : #6e8090;
     --code-theme-function               : #dd4a68;
     --code-theme-keyword                : #07a;
@@ -26,7 +26,7 @@
     --heading-font-weight               : var(--strong-font-weight);
     --heading-h1-font-weight            : 400;
     --heading-h2-font-weight            : 400;
-    --heading-h2-border-color           : var(--mono-shade2);
+    --heading-h2-border-color           : var(--mono-tint2);
     --heading-h2-border-style           : solid;
     --heading-h2-border-width           : 0 0 1px 0;
     --heading-h2-margin                 : 2.5rem 0 1.5rem;

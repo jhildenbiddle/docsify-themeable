@@ -28,6 +28,7 @@
         bottom: 0;
         left: 0;
         right: 0;
+        background-blend-mode: var(--cover-background-blend-mode);
         background-color: var(--cover-background-color);
         background-image: var(--cover-background-image);
         background-position: var(--cover-background-position);
@@ -118,14 +119,14 @@
 
         // Buttons
         > p:last-child {
-            display: flex;
+            display: inline-flex;
             flex-wrap: wrap;
-            margin: 2em 0 0 -0.25em;
+            margin: 1rem -0.35em 0 -0.35em;
             text-align: center;
 
             a {
                 display: inline-block;
-                margin: 0.25em;
+                margin: 0.35em;
                 padding: var(--cover-button-padding);
                 border: var(--cover-button-border);
                 border-radius: var(--cover-button-border-radius);
@@ -163,18 +164,14 @@
                         color: var(--cover-button-primary-color--hover, var(--cover-button-color--hover, var(--cover-button-primary-color, var(--cover-button-color))));
                     }
                 }
-
-                &:last-child {
-                    margin-right: 0;
-                }
             }
 
             @include media("<medium") {
-                > * {
-                    flex-grow: 1;
+                > :first-child {
+                    flex-basis: 100%;
 
-                    &:first-child {
-                        flex-basis: 100%;
+                    ~ * {
+                        flex-grow: 1;
                     }
                 }
             }

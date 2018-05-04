@@ -4,7 +4,7 @@
     --content-max-width                 : 55em;
 
     /* Blockquote */
-    --blockquote-background             : var(--mono-shade1);
+    --blockquote-background             : var(--mono-tint3);
     --blockquote-border-color           : ;
     --blockquote-border-style           : ;
     --blockquote-border-width           : ;
@@ -35,13 +35,13 @@
     --code-block-margin                 : 1em 0;
     --code-block-padding                : 1.75em 1.5em 1.5em 1.5em;
 
-    --code-inline-background            : var(--mono-shade2);
+    --code-inline-background            : var(--mono-tint2);
     --code-inline-border-radius         : var(--border-radius-s);
     --code-inline-color                 : var(--code-theme-text);
     --code-inline-margin                : 0 0.15em;
     --code-inline-padding               : 0.125em 0.4em;
 
-    --code-theme-background             : var(--mono-shade1);
+    --code-theme-background             : var(--mono-tint3);
     --code-theme-comment                : ;
     --code-theme-function               : ;
     --code-theme-keyword                : ;
@@ -57,7 +57,7 @@
     --emoji-size                        : calc(var(--base-line-height) * 1em);
 
     /* Headings */
-    --heading-color                     : var(--mono-shade7);
+    --heading-color                     : var(--mono-shade3);
     --heading-font-family               : ;
     --heading-font-weight               : ;
     --heading-margin                    : 2.5rem 0 0;
@@ -100,11 +100,11 @@
     --heading-h4-padding                : ;
 
     /* Horizontal Rule */
-    --hr-border                         : 1px solid var(--mono-shade2);
+    --hr-border                         : 1px solid var(--mono-tint2);
 
     /* Keyboard */
-    --kbd-background                    : var(--mono-shade1);
-    --kbd-border                        : 1px solid var(--mono-shade2);
+    --kbd-background                    : var(--mono-tint3);
+    --kbd-border                        : 1px solid var(--mono-tint2);
     --kbd-border-radius                 : var(--border-radius-m);
     --kbd-color                         : ;
     --kbd-font-size                     : ;
@@ -127,7 +127,7 @@
     --mark-color                        : ;
 
     /* Notices */
-    --notice-background                 : var(--mono-shade1);
+    --notice-background                 : var(--mono-tint3);
     --notice-before-background          : ;
     --notice-before-border-radius       : ;
     --notice-before-color               : ;
@@ -189,13 +189,13 @@
     /* Tables */
     --table-body-border-color           : ;
     --table-body-border-width           : ;
-    --table-cell-border-color           : var(--mono-shade2);
+    --table-cell-border-color           : var(--mono-tint2);
     --table-cell-border-width           : 1px 0;
     --table-cell-padding                : 0.75em 0.5em;
     --table-head-background             : ;
-    --table-head-border-color           : var(--mono-shade2);
+    --table-head-border-color           : var(--mono-tint2);
     --table-head-border-width           : ;
     --table-head-font-weight            : var(--strong-font-weight);
     --table-row-even-background         : ;
-    --table-row-odd-background          : var(--mono-shade1);
+    --table-row-odd-background          : var(--mono-tint3);
 }
