@@ -4,8 +4,8 @@
     --cover-text-align           : left;
 
     // Background
-    --cover-background-color     : var(--theme-color);
-    --cover-background-image     : radial-gradient(ellipse at 50% 120vh, rgba(255, 255, 255, 0.9), transparent);
+    --cover-background-color     : hsl(205, 25%, 60%);
+    --cover-background-image     : radial-gradient(ellipse at center 115%, rgba(255, 255, 255, 0.85), transparent);
 
     // Blockquote (Subtitle)
     --cover-blockquote-color     : var(--strong-color);
