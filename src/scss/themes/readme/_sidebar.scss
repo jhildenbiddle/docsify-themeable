@@ -12,7 +12,7 @@
     // Nav Links - Pseudo Content
     --sidebar-nav-link-before-content             : null, null, null, '\2022';
 
-    // Nav - Page Links
+    // Nav Page Links
     --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 8px, null, 1.25, currentColor)};
     --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 8px, 1.25, white)};
     --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 8px, null, 1.25, white)};
