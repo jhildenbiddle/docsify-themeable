@@ -34,11 +34,6 @@
     $width : $width / ($width * 0 + 1);
     $height: $height / ($height * 0 + 1);
 
-    // Convert color to RGB
-    @if type-of($color) == color {
-        $color: 'rgb%28#{red($color)}, #{green($color)}, #{blue($color)}%29';
-    }
-
     // Polygon points
     $polygon-points: '';
 

@@ -45,11 +45,6 @@
     $height: $height / ($height * 0 + 1);
     $stroke: $stroke / ($stroke * 0 + 1);
 
-    // Convert color to RGB
-    @if type-of($color) == color {
-        $color: 'rgb%28#{red($color)}, #{green($color)}, #{blue($color)}%29';
-    }
-
     // Stroke linecap and linejoin
     $linecap : if($round, round, square);
     $linejoin: if($round, round, miter);
