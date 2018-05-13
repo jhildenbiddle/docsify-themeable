@@ -13,11 +13,13 @@
 
 html {
     box-sizing: border-box;
+    background-color: var(--base-background-color);
     font-family: var(--base-font-family);
     font-size: var(--base-font-size);
     font-weight: var(--base-font-weight);
     letter-spacing: var(--base-letter-spacing);
     line-height: var(--base-line-height);
+    color: var(--base-color);
 
     // Normalize font weights across browsers and operating systems
     -webkit-font-smoothing: antialiased;
@@ -27,8 +29,6 @@ html {
 
 body {
     margin: 0;
-    background-color: var(--base-background-color);
-    color: var(--base-color);
 }
 
 ::selection {

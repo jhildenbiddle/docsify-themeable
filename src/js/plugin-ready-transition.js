@@ -4,7 +4,7 @@
 // fade transition after initialization is complete
 export default function(hook, vm) {
     hook.init(function() {
-        const isEnabled = ((window.$docsify || {}).themeable || {}).spinner !== false;
+        const isEnabled = ((window.$docsify || {}).themeable || {}).readyTransition !== false;
 
         if (isEnabled) {
             document.body.classList.add('ready-transition');

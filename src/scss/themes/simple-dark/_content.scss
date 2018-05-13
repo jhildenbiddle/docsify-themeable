@@ -2,10 +2,12 @@
 // =============================================================================
 :root {
     // Blockquote
-    --blockquote-background      : var(--mono-tint1);
-    --blockquote-quotes-color    : var(--mono-tint2);
+    --blockquote-background      : var(--mono-shade2);
+    --blockquote-quotes-color    : var(--mono-tint1);
 
     // Code
+    --code-inline-background     : var(--mono-tint1);
+
     --code-theme-background      : var(--mono-shade2);
     --code-theme-comment         : #516e7a;
     --code-theme-function        : #f07178;
@@ -26,7 +28,7 @@
     --hr-border                  : 1px solid var(--mono-tint2);
 
     // Keyboard
-    --kbd-background             : var(--mono-tint1);
+    --kbd-background             : var(--mono-shade2);
     --kbd-border                 : none;
     --kbd-color                  : var(--strong-color);
 
@@ -35,13 +37,13 @@
     --mark-color                 : var(--base-background-color);
 
     // Notice - Important
-    --notice-important-background: var(--mono-tint1);
+    --notice-important-background: var(--mono-shade2);
 
     // Notice - Tip
-    --notice-tip-background      : var(--mono-tint1);
+    --notice-tip-background      : var(--mono-shade2);
 
     /* Tables */
-    --table-cell-border-color    : var(--mono-tint2);
-    --table-head-border-color    : var(--mono-tint2);
-    --table-row-odd-background   : var(--mono-tint1);
+    --table-cell-border-color    : var(--mono-tint1);
+    --table-head-border-color    : var(--mono-tint1);
+    --table-row-odd-background   : var(--mono-shade2);
 }

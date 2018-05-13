@@ -3,14 +3,11 @@
 :root {
     /* Color
     ------------------------------------------------------------------------- */
-    --base-background-color: #fff;
-    --base-color           : var(--mono-shade2);
-
-    /* Monochrome */
+    /* Monochrome: hue and saturation */
     --mono-hue             : 113;
     --mono-saturation      : 0%;
 
-    /* Monochrome shades (darker) and tints (lighter) */
+    /* Monochrome: shades (darker) and tints (lighter) */
     --mono-shade3          : hsl(var(--mono-hue), var(--mono-saturation), 20%); /* #333333 */
     --mono-shade2          : hsl(var(--mono-hue), var(--mono-saturation), 30%); /* #4d4d4d */
     --mono-shade1          : hsl(var(--mono-hue), var(--mono-saturation), 40%); /* #666666 */
@@ -25,9 +22,13 @@
     /* Theme */
     --theme-color          : #1b84cc;
 
+    /* Base */
+    --base-background-color: #fff;
+    --base-color           : var(--mono-shade2);
+
     /* Typography
     ------------------------------------------------------------------------- */
-    /* Modular Scale - https: //type-scale.com/ */
+    /* Modular Scale (https://type-scale.com) */
     --modular-scale        : 1.333;
     --modular-scale--2     : calc(var(--modular-scale-2) / var(--modular-scale));
     --modular-scale--1     : calc(var(--modular-scale-1) / var(--modular-scale));
@@ -36,9 +37,9 @@
     --modular-scale-3      : calc(var(--modular-scale-2) * var(--modular-scale));
     --modular-scale-4      : calc(var(--modular-scale-3) * var(--modular-scale));
     --modular-scale-5      : calc(var(--modular-scale-4) * var(--modular-scale));
-    --modular-scale-6      : calc(var(--modular-scale-5) * var(--modular-scale));
 
     /* Font size */
+    --font-size-xxxl       : var(--modular-scale-5);
     --font-size-xxl        : var(--modular-scale-4);
     --font-size-xl         : var(--modular-scale-3);
     --font-size-l          : var(--modular-scale-2);
@@ -46,22 +47,21 @@
     --font-size-s          : var(--modular-scale--1);
     --font-size-xs         : var(--modular-scale--2);
 
-    /* Root */
+    /* Base */
     --base-font-family     : -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --base-font-size       : 15px;
     --base-font-weight     : ;
     --base-letter-spacing  : ;
     --base-line-height     : 1.6;
 
-    /* Style
+    /* Misc
     ------------------------------------------------------------------------- */
     /* Borders */
     --border-radius-s      : ;
     --border-radius-m      : ;
     --border-radius-l      : ;
 
-    /* Animation & Transitions
-    ------------------------------------------------------------------------- */
+    /* Duration (animation & transitions) */
     --duration-slow        : 1s;
     --duration-medium      : 0.5s;
     --duration-fast        : 0.25s;
