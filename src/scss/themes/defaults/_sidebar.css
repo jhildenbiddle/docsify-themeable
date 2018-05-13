@@ -18,6 +18,16 @@
     --sidebar-heading-padding                     : ;
     --sidebar-heading-text-align                  : center;
 
+    /* Nav Headings */
+    --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
+    --sidebar-nav-strong-border-width             : ;
+    --sidebar-nav-strong-color                    : var(--heading-color);
+    --sidebar-nav-strong-font-size                : ;
+    --sidebar-nav-strong-font-weight              : var(--strong-font-weight);
+    --sidebar-nav-strong-margin                   : 1.5em 0 0.5em;
+    --sidebar-nav-strong-padding                  : ;
+    --sidebar-nav-strong-text-transform           : ;
+
     /* Nav Container */
     --sidebar-nav-background                      : ;
     --sidebar-nav-indent                          : 1em;
@@ -60,7 +70,7 @@
     --sidebar-nav-link-text-decoration--active    : underline;
     --sidebar-nav-link-text-decoration--hover     : underline;
     --sidebar-nav-link-text-decoration-color      : ;
-    --sidebar-nav-link-transition                 : all var(--sidebar-transition-duration);
+    --sidebar-nav-link-transition                 : ;
 
     /* Nav Links - Pseudo Content */
     --sidebar-nav-link-before-content             : ;
@@ -102,16 +112,6 @@
     --sidebar-nav-pagelink-background-position--loaded  : ;
     --sidebar-nav-pagelink-background-repeat            : no-repeat;
     --sidebar-nav-pagelink-transition                   : var(--sidebar-nav-link-transition);
-
-    /* Nav Headings */
-    --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
-    --sidebar-nav-strong-border-width             : ;
-    --sidebar-nav-strong-color                    : var(--heading-color);
-    --sidebar-nav-strong-font-size                : ;
-    --sidebar-nav-strong-font-weight              : var(--strong-font-weight);
-    --sidebar-nav-strong-margin                   : 1.5em 0 0.5em;
-    --sidebar-nav-strong-padding                  : ;
-    --sidebar-nav-strong-text-transform           : ;
 
     /* Order */
     --sidebar-order-heading                       : -1;
