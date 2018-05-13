@@ -1,31 +1,41 @@
 // Plugin
 // =============================================================================
-// Adds tabindex to top-level navbar <li> items that contain a non-link label.
-// This allows touch-based devices to display drop menus on :hover.
+// 1. Wraps top-level navbar <li> non-link labels in a <span> with a tabindex
+//    attribute to allow touch-based devices to display drop menus on :hover.
+// 2. Toggles 'focus-within' class to simulate native :focus-within behavior
 export default function(hook, vm) {
     hook.doneEach(function() {
         const navbarItems = Array.apply(null, document.querySelectorAll('body > nav.app-nav > ul > li'));
 
         navbarItems.forEach(item => {
-            const hasLink = Array.apply(null, item.children).filter(child => child.tagName.toLowerCase() === 'a').length;
-            const hasMenu = Array.apply(null, item.children).filter(child => child.tagName.toLowerCase() === 'ul').length;
+            const itemMenuElm = item.querySelector('ul');
 
-            if (hasMenu) {
-                const focusWithinClassName = 'focus-within';
+            if (itemMenuElm) {
+                const hasTabIndex    = Array.apply(null, item.children).some(child => child.tabIndex > -1);
+                const focusClassName = 'focus-within';
 
-                if (!hasLink) {
-                    item.setAttribute('tabindex', 0);
+                // Wrap non-link labels
+                if (!hasTabIndex) {
+                    const wrapElm = document.createElement('span');
+
+                    wrapElm.setAttribute('tabindex', 0);
+                    item.insertBefore(wrapElm, itemMenuElm);
+
+                    while(item.childNodes[0] !== wrapElm) {
+                        wrapElm.appendChild(item.childNodes[0]);
+                    }
                 }
 
+                // Simulate :focus-within
                 item.addEventListener('focusin', evt => {
                     if (item.contains(document.activeElement)) {
-                        item.classList.add(focusWithinClassName);
+                        item.classList.add(focusClassName);
                     }
                 });
 
                 item.addEventListener('focusout', evt => {
                     if (!item.contains(document.activeElement)) {
-                        item.classList.remove(focusWithinClassName);
+                        item.classList.remove(focusClassName);
                     }
                 });
             }
