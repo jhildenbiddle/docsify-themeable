@@ -23,7 +23,8 @@
 
         ol,
         ul {
-            margin-top: 0;
+            margin-top: 0.15rem;
+            margin-bottom: 0.15rem;
         }
     }
 
@@ -133,12 +134,9 @@
     h1 + h2,
     h1 + h3,
     h1 + h4,
-    h1 + h5,
     h2 + h3,
     h2 + h4,
-    h2 + h5,
-    h3 + h4,
-    h3 + h5 {
+    h3 + h4 {
         margin-top: 1rem;
     }
 
@@ -214,7 +212,7 @@
         border: var(--kbd-border);
         border-radius: var(--kbd-border-radius);
         background: var(--kbd-background);
-        font-family: monospace;
+        font-family: inherit;
         font-size: var(--kbd-font-size);
         text-align: center;
         letter-spacing: 0;
@@ -343,11 +341,26 @@
         vertical-align: middle;
     }
 
+    > ul {
+        .task-list-item {
+            list-style: none;
+
+            input {
+                margin-right: 0.5em;
+                vertical-align: 0.075em;
+            }
+        }
+
+        > .task-list-item {
+            margin-left: -2rem;
+        }
+    }
+
     .tip,
     .warn {
         position: relative;
         margin: 2em 0;
-        padding: 1em 1.5em;
+        padding: var(--notice-padding);
         border-width: var(--notice-border-width, 0);
         border-style: var(--notice-border-style);
         border-color: var(--notice-border-color);
@@ -358,11 +371,13 @@
         color: var(--notice-color);
 
         &:before {
-            position: var(--notice-before-position);
+            display: inline-block;
+            position: var(--notice-before-position, relative);
             top: var(--notice-before-top);
             left: var(--notice-before-left);
             height: var(--notice-before-height);
             width: var(--notice-before-width);
+            margin: var(--notice-before-margin);
             padding: var(--notice-before-padding);
             border-radius: var(--notice-before-border-radius);
             line-height: var(--notice-before-line-height);

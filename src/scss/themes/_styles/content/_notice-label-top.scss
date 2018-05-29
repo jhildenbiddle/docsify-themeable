@@ -1,0 +1,35 @@
+// Content
+// =============================================================================
+:root {
+    // Notice
+    --notice-border-radius              : 0 0 var(--border-radius-m) var(--border-radius-m);
+    --notice-border-style               : solid;
+    --notice-border-width               : 1px 0 0;
+
+    // Notice Pseudo
+    --notice-before-border-radius       : var(--border-radius-m);
+    --notice-before-color               : #fff;
+    --notice-before-font-size           : var(--font-size-s);
+    --notice-before-font-weight         : 600;
+    --notice-before-left                : -0.5em;
+    --notice-before-line-height         : 1.5;
+    --notice-before-padding             : 0 0.6em;
+    --notice-before-position            : absolute;
+    --notice-before-top                 : -0.75em;
+
+    // Notice - Important
+    --notice-important-background       : #fff5f5;
+    --notice-important-border-color     : var(--notice-important-before-background);
+
+    // Notice - Important Pseudo
+    --notice-important-before-background: #ff6b6b;
+    --notice-important-before-content   : "Important";
+
+    // Notice - Tip
+    --notice-tip-background             : #edf2ff;
+    --notice-tip-border-color           : var(--notice-tip-before-background);
+
+    // Notice - Tip Pseudo
+    --notice-tip-before-background      : #5c7cfa;
+    --notice-tip-before-content         : "Tip";
+}

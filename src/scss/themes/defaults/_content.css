@@ -35,7 +35,7 @@
     --code-block-margin                 : 1em 0;
     --code-block-padding                : 1.75em 1.5em 1.5em 1.5em;
 
-    --code-inline-background            : var(--mono-tint2);
+    --code-inline-background            : var(--code-theme-background);
     --code-inline-border-radius         : var(--border-radius-s);
     --code-inline-color                 : var(--code-theme-text);
     --code-inline-margin                : 0 0.15em;
@@ -126,8 +126,18 @@
     --mark-background                   : #ffecb3;
     --mark-color                        : ;
 
-    /* Notices */
+    /* Notice */
     --notice-background                 : var(--mono-tint3);
+    --notice-border-color               : ;
+    --notice-border-radius              : var(--border-radius-m);
+    --notice-border-style               : ;
+    --notice-border-width               : ;
+    --notice-color                      : ;
+    --notice-font-family                : ;
+    --notice-font-weight                : ;
+    --notice-padding                    : 1em 1.5em;
+
+    /* Notice - Pseudo */
     --notice-before-background          : ;
     --notice-before-border-radius       : ;
     --notice-before-color               : ;
@@ -138,37 +148,35 @@
     --notice-before-height              : ;
     --notice-before-left                : ;
     --notice-before-line-height         : ;
+    --notice-before-margin              : ;
     --notice-before-padding             : ;
     --notice-before-position            : ;
     --notice-before-top                 : ;
     --notice-before-width               : ;
-    --notice-border-color               : ;
-    --notice-border-radius              : var(--border-radius-m);
-    --notice-border-style               : ;
-    --notice-border-width               : ;
-    --notice-color                      : ;
-    --notice-font-family                : ;
-    --notice-font-weight                : ;
 
     /* Notice - Important */
     --notice-important-background       : ;
-    --notice-important-before-background: ;
-    --notice-important-before-color     : ;
-    --notice-important-before-content   : ;
     --notice-important-border-color     : ;
     --notice-important-border-style     : ;
     --notice-important-border-width     : ;
     --notice-important-color            : ;
 
+    /* Notice - Important Pseudo */
+    --notice-important-before-background: ;
+    --notice-important-before-color     : ;
+    --notice-important-before-content   : ;
+
     /* Notice - Tip */
     --notice-tip-background             : ;
-    --notice-tip-before-background      : ;
-    --notice-tip-before-color           : ;
-    --notice-tip-before-content         : ;
     --notice-tip-border-color           : ;
     --notice-tip-border-style           : ;
     --notice-tip-border-width           : ;
     --notice-tip-color                  : ;
+
+    /* Notice - Tip Pseudo */
+    --notice-tip-before-background      : ;
+    --notice-tip-before-color           : ;
+    --notice-tip-before-content         : ;
 
     /* Preformatted */
     --pre-font-family                   : var(--code-font-family);

@@ -30,6 +30,11 @@
         $height: if($height == null, $width, $height);
     }
 
+    // Convert color to RGB (unescaped hex colors not allowed in some browsers)
+    @if type-of($color) == color {
+        $color: 'rgb%28#{red($color)},#{green($color)},#{blue($color)}%29';
+    }
+
     // Strip units
     $width : $width / ($width * 0 + 1);
     $height: $height / ($height * 0 + 1);
