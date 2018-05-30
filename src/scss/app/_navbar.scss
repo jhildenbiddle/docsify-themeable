@@ -25,7 +25,7 @@
     a {
         display: block;
         line-height: 1;
-        transition: var(--navbar-link-transition);
+        transition: var(--navbar-root-transition);
     }
 
     ul,
@@ -42,7 +42,7 @@
     > ul {
         > li {
             display: inline-block;
-            margin: var(--navbar-link-margin);
+            margin: var(--navbar-root-margin);
 
             &:first-child {
                 margin-left: 0;
@@ -52,33 +52,54 @@
                 margin-right: 0;
             }
 
-            > a {
-                padding: var(--navbar-link-padding);
-                border-width: var(--navbar-link-border-width, 0);
-                border-style: var(--navbar-link-border-style);
-                border-color: var(--navbar-link-border-color);
-                border-radius: var(--navbar-link-border-radius);
-                background: var(--navbar-link-background);
-                color: var(--navbar-link-color);
-                text-decoration: var(--navbar-link-text-decoration);
-                text-decoration-color: var(--navbar-link-text-decoration-color);
+            // Root
+            > a,
+            > span {
+                padding: var(--navbar-root-padding);
+                border-width: var(--navbar-root-border-width, 0);
+                border-style: var(--navbar-root-border-style);
+                border-color: var(--navbar-root-border-color);
+                border-radius: var(--navbar-root-border-radius);
+                background: var(--navbar-root-background);
+                color: var(--navbar-root-color);
+                text-decoration: var(--navbar-root-text-decoration);
+                text-decoration-color: var(--navbar-root-text-decoration-color);
 
                 &:hover {
-                    background: var(--navbar-link-background--hover, var(--navbar-link-background));
-                    border-style: var(--navbar-link-border-style--hover, var(--navbar-link-border-style));
-                    border-color: var(--navbar-link-border-color--hover, var(--navbar-link-border-color));
-                    color: var(--navbar-link-color--hover, var(--navbar-link-color));
-                    text-decoration: var(--navbar-link-text-decoration--hover, var(--navbar-link-text-decoration));
-                    text-decoration-color: var(--navbar-link-text-decoration-color--hover, var(--navbar-link-text-decoration-color));
+                    background: var(--navbar-root-background--hover, var(--navbar-root-background));
+                    border-style: var(--navbar-root-border-style--hover, var(--navbar-root-border-style));
+                    border-color: var(--navbar-root-border-color--hover, var(--navbar-root-border-color));
+                    color: var(--navbar-root-color--hover, var(--navbar-root-color));
+                    text-decoration: var(--navbar-root-text-decoration--hover, var(--navbar-root-text-decoration));
+                    text-decoration-color: var(--navbar-root-text-decoration-color--hover, var(--navbar-root-text-decoration-color));
                 }
 
+                // Menu root
+                &:not(:last-child) {
+                    padding: var(--navbar-menu-root-padding, var(--navbar-root-padding));
+                    background: var(--navbar-menu-root-background, var(--navbar-root-background));
+
+                    &:hover {
+                        background: var(--navbar-menu-root-background--hover, var(--navbar-menu-root-background, var(--navbar-root-background--hover, var(--navbar-root-background))));
+                    }
+                }
+            }
+
+            > a {
                 &.active {
-                    background: var(--navbar-link-background--active, var(--navbar-link-background));
-                    border-style: var(--navbar-link-border-style--active, var(--navbar-link-border-style));
-                    border-color: var(--navbar-link-border-color--active, var(--navbar-link-border-color));
-                    color: var(--navbar-link-color--active, var(--navbar-link-color));
-                    text-decoration: var(--navbar-link-text-decoration--active, var(--navbar-link-text-decoration));
-                    text-decoration-color: var(--navbar-link-text-decoration-color--active, var(--navbar-link-text-decoration-color));
+                    background: var(--navbar-root-background--active, var(--navbar-root-background));
+                    border-style: var(--navbar-root-border-style--active, var(--navbar-root-border-style));
+                    border-color: var(--navbar-root-border-color--active, var(--navbar-root-border-color));
+                    color: var(--navbar-root-color--active, var(--navbar-root-color));
+                    text-decoration: var(--navbar-root-text-decoration--active, var(--navbar-root-text-decoration));
+                    text-decoration-color: var(--navbar-root-text-decoration-color--active, var(--navbar-root-text-decoration-color));
+
+                    // Menu root
+                    &:not(:last-child) {
+                        &:hover {
+                            background: var(--navbar-menu-root-background--active, var(--navbar-menu-root-background, var(--navbar-root-background--active, var(--navbar-root-background))));
+                        }
+                    }
                 }
             }
 

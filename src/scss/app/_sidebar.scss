@@ -187,6 +187,11 @@ main {
             &[href^="#/"]:not([href*="?id="]) {
                 transition: var(--sidebar-nav-pagelink-transition);
 
+                &,
+                ~ ul a {
+                    padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
+                }
+
                 // Not loaded (w/o subnav)
                 &:only-child {
                     background-image: var(--sidebar-nav-pagelink-background-image);

@@ -32,24 +32,20 @@
     --sidebar-nav-link-before-content-l1      : none;
     --sidebar-nav-link-before-content-l2      : none;
 
+    // Nav Page Links
+    --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 7px, null, 1.5, #b3b3b3)};
+    --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 7px, 1.5, #0b87da)};
+    --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 7px, null, 1.5, #0b87da)};
+    --sidebar-nav-pagelink-background-image--loaded     : #{chevron-data-uri(down, null, 7px, 1.5, #0b87da)};
+    --sidebar-nav-pagelink-background-position          : 3px center;
+    --sidebar-nav-pagelink-background-position--active  : left center;
+    --sidebar-nav-pagelink-background-position--collapse: var(--sidebar-nav-pagelink-background-position);
+    --sidebar-nav-pagelink-background-position--loaded  : var(--sidebar-nav-pagelink-background-position--active);
+    --sidebar-nav-pagelink-padding                      : 0.25em 0 0.25em 20px;
+    --sidebar-nav-pagelink-transition                   : none;
+
     // Toggle
     --sidebar-toggle-background               : var(--sidebar-border-color);
     --sidebar-toggle-border-radius            : 0 var(--border-radius-s) var(--border-radius-s) 0;
     --sidebar-toggle-width                    : 32px;
 }
-
-// :root {
-//     // Nav Links
-//     --sidebar-nav-link-padding                : 0.25em 0 0.25em 20px;
-
-//     // Nav Page Links
-//     --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 7px, null, 1.25, #ccc)};
-//     --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 7px, 1.25, #1b84cc)};
-//     --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 7px, null, 1.25, #1b84cc)};
-//     --sidebar-nav-pagelink-background-image--loaded     : #{chevron-data-uri(down, null, 7px, 1.25, #1b84cc)};
-//     --sidebar-nav-pagelink-background-position          : 3px center;
-//     --sidebar-nav-pagelink-background-position--active  : left center;
-//     --sidebar-nav-pagelink-background-position--collapse: var(--sidebar-nav-pagelink-background-position);
-//     --sidebar-nav-pagelink-background-position--loaded  : var(--sidebar-nav-pagelink-background-position--active);
-//     --sidebar-nav-pagelink-transition                   : none;
-// }

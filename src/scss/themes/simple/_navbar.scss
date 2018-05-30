@@ -1,9 +1,13 @@
 // Navbar
 // =============================================================================
 :root {
-    // Links
-    --navbar-link-color--active: var(--theme-color);
+    // Root
+    --navbar-root-color--active  : var(--theme-color);
 
     // Menus
-    --navbar-menu-border-radius: var(--border-radius-m);
+    --navbar-menu-border-radius  : var(--border-radius-m);
+
+    // Menu Root
+    --navbar-menu-root-background: #{chevron-data-uri(down, null, 6px, 1.5, #b3b3b3)} right no-repeat;
+    --navbar-menu-root-padding   : 0 18px 0 0;
 }

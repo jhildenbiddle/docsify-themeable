@@ -1,30 +1,30 @@
 /* Navbar
 ============================================================================= */
 :root {
-    /* Links */
-    --navbar-link-background                        : ;
-    --navbar-link-background--active                : ;
-    --navbar-link-background--hover                 : ;
-    --navbar-link-border-color                      : ;
-    --navbar-link-border-color--active              : ;
-    --navbar-link-border-color--hover               : ;
-    --navbar-link-border-radius                     : ;
-    --navbar-link-border-style                      : solid;
-    --navbar-link-border-style--active              : ;
-    --navbar-link-border-style--hover               : ;
-    --navbar-link-border-width                      : ;
-    --navbar-link-color                             : ;
-    --navbar-link-color--active                     : ;
-    --navbar-link-color--hover                      : ;
-    --navbar-link-margin                            : 0 0 0 1.5em;
-    --navbar-link-padding                           : ;
-    --navbar-link-transition                        : all var(--duration-fast);
-    --navbar-link-text-decoration                   : ;
-    --navbar-link-text-decoration--active           : ;
-    --navbar-link-text-decoration--hover            : ;
-    --navbar-link-text-decoration-color             : ;
-    --navbar-link-text-decoration-color--active     : ;
-    --navbar-link-text-decoration-color--hover      : ;
+    /* Root */
+    --navbar-root-background                        : ;
+    --navbar-root-background--active                : ;
+    --navbar-root-background--hover                 : ;
+    --navbar-root-border-color                      : ;
+    --navbar-root-border-color--active              : ;
+    --navbar-root-border-color--hover               : ;
+    --navbar-root-border-radius                     : ;
+    --navbar-root-border-style                      : solid;
+    --navbar-root-border-style--active              : ;
+    --navbar-root-border-style--hover               : ;
+    --navbar-root-border-width                      : ;
+    --navbar-root-color                             : ;
+    --navbar-root-color--active                     : ;
+    --navbar-root-color--hover                      : ;
+    --navbar-root-margin                            : 0 0 0 1.5em;
+    --navbar-root-padding                           : ;
+    --navbar-root-transition                        : all var(--duration-fast);
+    --navbar-root-text-decoration                   : ;
+    --navbar-root-text-decoration--active           : ;
+    --navbar-root-text-decoration--hover            : ;
+    --navbar-root-text-decoration-color             : ;
+    --navbar-root-text-decoration-color--active     : ;
+    --navbar-root-text-decoration-color--hover      : ;
 
     /* Menus */
     --navbar-menu-background                        : var(--base-background-color);
@@ -34,6 +34,12 @@
     --navbar-menu-box-shadow                        : rgba(45,45,45,0.05) 0px 0px 1px, rgba(49,49,49,0.05) 0px 1px 2px, rgba(42,42,42,0.05) 0px 2px 4px, rgba(32,32,32,0.05) 0px 4px 8px, rgba(49,49,49,0.05) 0px 8px 16px, rgba(35,35,35,0.05) 0px 16px 32px;
     --navbar-menu-padding                           : 0.5em;
     --navbar-menu-transition                        : all var(--duration-fast);
+
+    /* Menu Root */
+    --navbar-menu-root-background                   : ;
+    --navbar-menu-root-background--active           : ;
+    --navbar-menu-root-background--hover            : ;
+    --navbar-menu-root-padding                      : ;
 
     /* Menu Links */
     --navbar-menu-link-background                   : ;
