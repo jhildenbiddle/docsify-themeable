@@ -7,6 +7,7 @@ import pluginFixPrismThemes       from './plugin-fix-prism-themes';
 import pluginFixReadyState        from './plugin-fix-ready-state';
 import pluginFixSearchClearButton from './plugin-fix-search-clear-button';
 import pluginFixSearchResults     from './plugin-fix-search-results';
+import pluginFixZoomImage         from './plugin-fix-zoomimage';
 import pluginReadyTransition      from './plugin-ready-transition';
 import pluginResponsiveTables     from './plugin-responsive-tables';
 import { version as pkgVersion }  from '../../package.json';
@@ -27,24 +28,35 @@ if (window) {
     cssVars(cssVarsOptions);
 
     window.$docsify = window.$docsify || {};
-    window.$docsify.themeable = window.$docsify.themeable || {};
 
     // Add plugins
-    window.$docsify.plugins = [
-        pluginReadyTransition,
-        pluginFixCoverHeader,
-        pluginFixNavbarMenus,
-        pluginFixPrismThemes,
-        pluginFixReadyState,
-        pluginFixSearchClearButton,
-        pluginFixSearchResults,
-        pluginResponsiveTables
-    ].concat(window.$docsify.plugins || []);
+    window.$docsify.plugins = [].concat(
+        // Prepend
+        [
+            pluginReadyTransition,
+            pluginFixCoverHeader,
+            pluginFixNavbarMenus,
+            pluginFixPrismThemes,
+            pluginFixReadyState,
+            pluginResponsiveTables,
+        ],
+        // Existing
+        (window.$docsify.plugins || []),
+        // Append
+        [
+            pluginFixSearchClearButton,
+            pluginFixSearchResults,
+            pluginFixZoomImage
+        ]
+    );
+
+    // Add themeable object
+    window.$docsify.themeable = window.$docsify.themeable || {};
 
     // Add themeable properties
     window.$docsify.themeable.version = pkgVersion;
 
-    // Add utilities
+    // Add themeable utilities
     window.$docsify.themeable.util = {
         cssVars: function(options = cssVarsOptions) {
             cssVars(options);
