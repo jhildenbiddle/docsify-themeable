@@ -52,21 +52,21 @@ main {
     > h1 {
         order: var(--sidebar-order-heading);
         margin: 0;
-        margin: var(--sidebar-heading-margin);
-        padding: var(--sidebar-heading-padding);
-        background: var(--sidebar-heading-background);
-        color: var(--sidebar-heading-color);
-        font-family: var(--sidebar-heading-font-family);
-        font-size: var(--sidebar-heading-font-size);
-        font-weight: var(--sidebar-heading-font-weight);
-        text-align: var(--sidebar-heading-text-align);
+        margin: var(--sidebar-name-margin);
+        padding: var(--sidebar-name-padding);
+        background: var(--sidebar-name-background);
+        color: var(--sidebar-name-color);
+        font-family: var(--sidebar-name-font-family);
+        font-size: var(--sidebar-name-font-size);
+        font-weight: var(--sidebar-name-font-weight);
+        text-align: var(--sidebar-name-text-align);
 
         img {
             max-width: 100%;
         }
 
         .app-name-link {
-            color: var(--sidebar-heading-color);
+            color: var(--sidebar-name-color);
         }
     }
 
@@ -82,8 +82,8 @@ main {
 
 // Nav
 // -----------------------------------------------------------------------------
-.sidebar nav,  // 1. Merged nav bar in sidebar via 'mergeNavbar' option
-.sidebar-nav { // 2. Standard sidebar navigation
+.sidebar-nav,  // 1. Standard sidebar navigation
+.sidebar nav { // 2. Merged nav bar in sidebar via 'mergeNavbar' option
     order: var(--sidebar-order-nav);
     margin: var(--sidebar-nav-margin);
     padding: var(--sidebar-nav-padding);
@@ -145,20 +145,31 @@ main {
         }
     }
 
-    strong {
-        display: block;
-        margin: var(--sidebar-nav-strong-margin);
-        padding: var(--sidebar-nav-strong-padding);
-        border-width: var(--sidebar-nav-strong-border-width, 0);
-        border-style: solid;
-        border-color: var(--sidebar-nav-strong-border-color);
-        color: var(--sidebar-nav-strong-color);
-        font-size: var(--sidebar-nav-strong-font-size);
-        font-weight: var(--sidebar-nav-strong-font-weight);
-        text-transform: var(--sidebar-nav-strong-text-transform);
+    // Nav Headings
+    ul > li {
+        > span,
+        > strong {
+            display: block;
+            margin: var(--sidebar-nav-strong-margin);
+            padding: var(--sidebar-nav-strong-padding);
+            border-width: var(--sidebar-nav-strong-border-width, 0);
+            border-style: solid;
+            border-color: var(--sidebar-nav-strong-border-color);
+            color: var(--sidebar-nav-strong-color);
+            font-size: var(--sidebar-nav-strong-font-size);
+            font-weight: var(--sidebar-nav-strong-font-weight);
+            text-transform: var(--sidebar-nav-strong-text-transform);
 
-        + ul {
-            margin-left: 0;
+            + ul {
+                margin-left: 0;
+            }
+        }
+
+        &:first-child {
+            > span,
+            > strong {
+                margin-top: 0;
+            }
         }
     }
 
@@ -167,6 +178,7 @@ main {
     }
 }
 
+// 1. Standard sidebar navigation
 .sidebar-nav {
     li {
         > a,

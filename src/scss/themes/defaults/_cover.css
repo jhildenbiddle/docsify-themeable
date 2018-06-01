@@ -8,7 +8,7 @@
 
     /* Background */
     --cover-background-blend-mode                      : ;
-    --cover-background-color                           : ;
+    --cover-background-color                           : var(--base-background-color);
     --cover-background-image                           : ;
     --cover-background-mask-color                      : var(--base-background-color);
     --cover-background-mask-opacity                    : 0.8;

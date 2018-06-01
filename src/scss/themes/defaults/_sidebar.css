@@ -8,15 +8,15 @@
     --sidebar-transition-duration                 : var(--duration-fast);
     --sidebar-width                               : 17rem;
 
-    /* Heading */
-    --sidebar-heading-background                  : ;
-    --sidebar-heading-color                       : ;
-    --sidebar-heading-font-family                 : ;
-    --sidebar-heading-font-size                   : var(--font-size-l);
-    --sidebar-heading-font-weight                 : ;
-    --sidebar-heading-margin                      : 1.5rem 0 0;
-    --sidebar-heading-padding                     : ;
-    --sidebar-heading-text-align                  : center;
+    /* Name */
+    --sidebar-name-background                     : ;
+    --sidebar-name-color                          : ;
+    --sidebar-name-font-family                    : ;
+    --sidebar-name-font-size                      : var(--font-size-l);
+    --sidebar-name-font-weight                    : ;
+    --sidebar-name-margin                         : 1.5rem 0 0;
+    --sidebar-name-padding                        : ;
+    --sidebar-name-text-align                     : center;
 
     /* Nav Headings */
     --sidebar-nav-strong-border-color             : var(--sidebar-border-color);
@@ -25,7 +25,7 @@
     --sidebar-nav-strong-font-size                : ;
     --sidebar-nav-strong-font-weight              : var(--strong-font-weight);
     --sidebar-nav-strong-margin                   : 1.5em 0 0.5em;
-    --sidebar-nav-strong-padding                  : ;
+    --sidebar-nav-strong-padding                  : 0.25em 0;
     --sidebar-nav-strong-text-transform           : ;
 
     /* Nav Container */
