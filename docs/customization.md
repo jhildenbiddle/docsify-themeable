@@ -41,37 +41,37 @@ To customize a *docsify-themeable* [theme](themes):
 
 Theme properties for base styles.
 
-[_base.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_base.css ':include :type:code')
+[_base.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_base.css ':include :type:code')
 
 ### Content
 
 Theme properties for markdown content.
 
-[_content.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_content.css ':include :type:code')
+[_content.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_content.css ':include :type:code')
 
 ### Cover
 
 Theme properties for docsify's [`coverpage`](https://docsify.js.org/#/cover).
 
-[_cover.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_cover.css ':include :type:code')
+[_cover.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_cover.css ':include :type:code')
 
 ### Misc
 
 Theme properties for miscellaneous elements.
 
-[_misc.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_misc.css ':include :type:code')
+[_misc.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_misc.css ':include :type:code')
 
 ### Navbar
 
 Theme properties for docsify's custom [`navbar`](https://docsify.js.org/#/custom-navbar).
 
-[_navbar.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_navbar.css ':include :type:code')
+[_navbar.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_navbar.css ':include :type:code')
 
 ### Sidebar
 
 Theme properties for docsify's custom [`sidebar`](https://docsify.js.org/#/more-pages).
 
-[_sidebar.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_sidebar.css ':include :type:code')
+[_sidebar.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_sidebar.css ':include :type:code')
 
 ## Plugin Styles
 
@@ -89,25 +89,25 @@ All [docsify plugins](https://docsify.js.org/#/plugins) will work with *docsify-
 
 Theme properties for [docsify-copy-code](https://github.com/jperasmus/docsify-copy-code) plugin.
 
-[_plugin-copycode.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_plugin-copy-code.css ':include :type:code')
+[_plugin-copycode.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_plugin-copy-code.css ':include :type:code')
 
 ### Pagination
 
 Theme properties for [docsify-pagination](https://github.com/imyelo/docsify-pagination) plugin.
 
-[_plugin-pagination.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_plugin-pagination.css ':include :type:code')
+[_plugin-pagination.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_plugin-pagination.css ':include :type:code')
 
 ### Search
 
 Theme properties for docsify's [search](https://docsify.js.org/#/plugins?id=full-text-search) plugin.
 
-[_plugin-search.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_plugin-search.css ':include :type:code')
+[_plugin-search.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_plugin-search.css ':include :type:code')
 
 ### Zoom Image
 
 Theme properties for docsify's [zoom image](https://docsify.js.org/#/plugins?id=zoom-image) plugin.
 
-[_plugin-zoom.css](https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/src/scss/themes/defaults/_plugin-zoom-image.css ':include :type:code')
+[_plugin-zoom.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_plugin-zoom-image.css ':include :type:code')
 
 ## PrismJS
 
