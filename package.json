@@ -1,6 +1,6 @@
 {
   "name": "docsify-themeable",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "description": "A delightfully simple theme system for docsify.js",
   "author": "John Hildenbiddle <http://hildenbiddle.com>",
   "license": "MIT",
@@ -24,7 +24,8 @@
     "ie >= 10"
   ],
   "files": [
-    "dist"
+    "dist",
+    "src/scss/themes/defaults"
   ],
   "main": "dist/js/docsify-themeable.js",
   "unpkg": "dist/js/docsify-themeable.min.js",
