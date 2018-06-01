@@ -40,7 +40,7 @@
     "start": "run-p watch serve",
     "watch": "run-p 'build:* -- -w'",
     "prewatch": "npm run build:scss",
-    "version": "npm run build && git add -A dist"
+    "version": "npm run build"
   },
   "devDependencies": {
     "autoprefixer": "^8.5.1",
