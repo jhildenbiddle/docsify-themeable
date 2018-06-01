@@ -14,11 +14,15 @@
   },
   "keywords": [
     "css",
+    "custom",
+    "docs",
     "docsify",
-    "sass",
-    "scsss",
+    "documentation",
+    "properties",
     "theme",
-    "themeable"
+    "themes",
+    "themeable",
+    "variables"
   ],
   "browserslist": [
     "ie >= 10"
