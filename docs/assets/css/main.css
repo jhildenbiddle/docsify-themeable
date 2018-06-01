@@ -1,3 +1,7 @@
+.markdown-section iframe[src*="buttons.github.io"] {
+    margin: 0;
+}
+
 .markdown-section .thumbnail {
     display: inline-block;
     max-width: 23%;
