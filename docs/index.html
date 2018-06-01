@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="A delightfully simple theme system for docsify.js">
+    <title>docsify-themeable</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css" title="Simple">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!-- Alternate Stylesheets -->
+    <link rel="stylesheet alternate" href="https://unpkg.com/docsify-themeable/dist/css/theme-defaults.css" title="Defaults">
+    <link rel="stylesheet alternate" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple-dark.css" title="Simple Dark">
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- JavaScript -->
+    <script>
+        window.$docsify = {
+            // GENERAL
+            // -----------------------------------------------------------------
+            name         : 'docsify-themeable',
+            repo         : 'https://github.com/jhildenbiddle/docsify-themeable',
+            coverpage    : 'coverpage.md',
+            homepage     : 'index.md',
+            loadSidebar  : 'sidebar.md',
+
+            // NAVIGATION
+            // -----------------------------------------------------------------
+            auto2top     : true,
+            maxLevel     : 3,
+            autoHeader   : true,
+            mergeNavbar  : true,
+            subMaxLevel  : 3,
+
+            // PLUGINS
+            // -----------------------------------------------------------------
+            executeScript: true,
+            ga           : '',
+            search       : {
+                depth      : 3,
+                noData     : 'No results!',
+                placeholder: 'Search...'
+            }
+        };
+    </script>
+    <script src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+    <script src="https://unpkg.com/docsify-copy-code"></script>
+    <script src="https://unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <script src="https://unpkg.com/docsify-themeable/dist/js/docsify-themeable.min.js"></script>
+    <!-- <script src="https://unpkg.com/docsify/lib/plugins/emoji.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/docsify/lib/plugins/external-script.min.js"></script> -->
+    <!-- <script src="https://unpkg.com/docsify/lib/plugins/ga.min.js"></script> -->
+    <script src="https://unpkg.com/docsify/lib/plugins/search.js"></script>
+    <script src="https://unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
+    <script src="https://unpkg.com/prismjs/components/prism-bash.min.js"></script>
+</body>
+</html>
