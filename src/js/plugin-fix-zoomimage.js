@@ -1,4 +1,4 @@
-// Plugin
+// Functions
 // =============================================================================
 /**
  * Ponyfill for native Element.matches method
@@ -13,6 +13,9 @@ function matchesSelector(elm, selector) {
     return matches.call(elm, selector);
 }
 
+
+// Plugin
+// =============================================================================
 // Removes unnecessary <a> wrapper around <h1> content in coverpage
 export default function(hook, vm) {
     hook.doneEach(function() {
