@@ -6,9 +6,6 @@
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,docsify,developers,frontend)
 <a class="github-button" href="https://github.com/jhildenbiddle/docsify-themeable" data-icon="octicon-star" data-show-count="true" aria-label="Star jhildenbiddle/docsify-themeable on GitHub">Star</a>
 
-<!-- <a class="github-button" href="https://github.com/jhildenbiddle/docsify-themeable/issues" data-icon="octicon-issue-opened" aria-label="Issue jhildenbiddle/docsify-themeable on GitHub">Issue</a> -->
-<!-- <a class="github-button" href="https://github.com/jhildenbiddle/docsify-themeable/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download jhildenbiddle/docsify-themeable on GitHub">Download</a> -->
-
 ## Features
 
 - **Flexible theme system based on CSS custom properties**<br>
