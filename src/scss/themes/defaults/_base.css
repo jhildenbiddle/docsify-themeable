@@ -20,7 +20,10 @@
     --selection-color      : #b4d5fe;
 
     /* Theme */
-    --theme-color          : hsl(204, 90%, 45%);
+    --theme-hue            : 204;
+    --theme-saturation     : 90%;
+    --theme-lightness      : 45%;
+    --theme-color          : hsl(var(--theme-hue), var(--theme-saturation), var(--theme-lightness));
 
     /* Base */
     --base-background-color: #fff;

@@ -48,7 +48,7 @@
     // Cover
     // =========================================================================
     // Background
-    --cover-background-color     : hsl(204, 25%, 60%);
+    --cover-background-color     : hsl(var(--theme-hue), 25%, 60%);
     --cover-background-image     : radial-gradient(ellipse at center 115%, rgba(255, 255, 255, 0.9), transparent);
 
     // Blockquote (Subtitle)
