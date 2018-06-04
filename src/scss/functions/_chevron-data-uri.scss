@@ -74,7 +74,6 @@
         @error "chevron-data-uri: #{$direction} is not a valid direction";
     }
     @else {
-        @debug "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}'%3E%3Cpath d='#{$path-d}' stroke-width='#{$stroke}' stroke='#{$color}' fill='none' stroke-linecap='#{$linecap}' stroke-linejoin='#{$linejoin}' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E";
         // Unencoded SVG: <svg xmlns='http://www.w3.org/2000/svg' width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}'><path d='#{$path-d}' stroke-width='#{$stroke}' stroke='#{$color}' fill='none' stroke-linecap='#{$linecap}' stroke-linejoin='#{$linejoin}' vector-effect='non-scaling-stroke'/></svg>
         @return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{$width}' height='#{$height}' viewBox='0 0 #{$width} #{$height}'%3E%3Cpath d='#{$path-d}' stroke-width='#{$stroke}' stroke='#{$color}' fill='none' stroke-linecap='#{$linecap}' stroke-linejoin='#{$linejoin}' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E");
     }
