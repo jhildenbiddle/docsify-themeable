@@ -47,7 +47,7 @@
     "version": "npm run build"
   },
   "devDependencies": {
-    "autoprefixer": "^8.5.1",
+    "autoprefixer": "^8.6.0",
     "babel-core": "^6.26.3",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.7.0",
