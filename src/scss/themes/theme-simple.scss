@@ -1,0 +1,147 @@
+// Theme: Simple
+// =============================================================================
+// Main Import
+@import "theme-defaults";
+
+// Shared Imports
+@import "shared/code-light";
+@import "shared/notice-icons";
+
+// Properties
+:root {
+    // Base
+    // =========================================================================
+    // Borders
+    --border-radius-s: 2px;
+    --border-radius-m: 4px;
+    --border-radius-l: 8px;
+
+
+    // Content
+    // =========================================================================
+    // Blockquote
+    --blockquote-border-radius     : var(--border-radius-m);
+    --blockquote-quotes-close      : close-quote;
+    --blockquote-quotes-color      : var(--mono-tint1);
+    --blockquote-quotes-font-family: Georgia, serif;
+    --blockquote-quotes-font-size  : 4em;
+    --blockquote-quotes-open       : open-quote;
+
+    // Code
+    --code-inline-background       : var(--mono-tint2);
+    --code-theme-background        : var(--mono-tint3);
+
+    // Headings
+    --heading-font-weight          : var(--strong-font-weight);
+    --heading-h1-font-weight       : 400;
+    --heading-h2-font-weight       : 400;
+    --heading-h2-border-color      : var(--mono-tint2);
+    --heading-h2-border-style      : solid;
+    --heading-h2-border-width      : 0 0 1px 0;
+    --heading-h2-margin            : 2.5rem 0 1.5rem;
+    --heading-h2-padding           : 0 0 1rem 0;
+
+    // Strong
+    --strong-font-weight           : 600;
+
+
+    // Cover
+    // =========================================================================
+    // Background
+    --cover-background-color     : hsl(204, 25%, 60%);
+    --cover-background-image     : radial-gradient(ellipse at center 115%, rgba(255, 255, 255, 0.9), transparent);
+
+    // Blockquote (Subtitle)
+    --cover-blockquote-color     : var(--strong-color);
+
+    // Heading
+    --cover-heading-color        : #fff;
+    --cover-heading-font-size-max: 56; // Unitless px
+    --cover-heading-font-size-min: 34; // Unitless px
+    --cover-heading-font-weight  : 200;
+
+
+    // Navbar
+    // =========================================================================
+    // Root
+    --navbar-root-color--active  : var(--theme-color);
+
+    // Menus
+    --navbar-menu-border-radius  : var(--border-radius-m);
+
+    // Menu Root
+    --navbar-menu-root-background: #{chevron-data-uri(down, null, 6px, 1.5, #b3b3b3)} right no-repeat;
+    --navbar-menu-root-padding   : 0 18px 0 0;
+
+
+    // Plugin: Search
+    // =========================================================================
+    // Input
+    --search-input-background-color      : #fff;
+    --search-input-background-image      : #{svg-data-uri('<svg height="20px" width="20px" viewBox="0 0 24 24" fill="none" stroke="rgba(0, 0, 0, 0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="10.5" r="7.5" vector-effect="non-scaling-stroke"></circle><line x1="21" y1="21" x2="15.8" y2="15.8" vector-effect="non-scaling-stroke"></line></svg>')};
+    --search-input-background-position   : 25px center;
+    --search-input-border-color          : var(--sidebar-border-color);
+    --search-input-border-width          : 1px 0;
+    --search-input-margin                : 0 -25px;
+    --search-input-padding               : 0.65em 1em 0.65em 50px;
+    --search-input-placeholder-color     : rgba(0, 0, 0, 0.4);
+
+    /* Clear Button */
+    --search-clear-icon-color1           : rgba(0, 0, 0, 0.3);
+
+    // Results
+    --search-result-heading-font-weight  : var(--strong-font-weight);
+    --search-result-item-border-color    : var(--sidebar-border-color);
+    --search-result-keyword-border-radius: var(--border-radius-s);
+
+
+    // Sidebar
+    // =========================================================================
+    --sidebar-background                      : var(--mono-tint3);
+    --sidebar-border-color                    : var(--mono-tint2);
+    --sidebar-border-width                    : 0 1px 0 0;
+
+    // Name
+    --sidebar-name-color                      : var(--theme-color);
+    --sidebar-name-font-weight                : 300;
+
+    // Nav Headings
+    --sidebar-nav-strong-border-width         : 0 0 1px 0;
+    --sidebar-nav-strong-font-size            : smaller;
+    --sidebar-nav-strong-margin               : 2em -25px 0.75em 0;
+    --sidebar-nav-strong-padding              : 0.25em 0 0.75em 0;
+    --sidebar-nav-strong-text-transform       : uppercase;
+
+    // Nav Links
+    --sidebar-nav-link-border-color           : transparent;
+    --sidebar-nav-link-border-color--active   : var(--theme-color);
+    --sidebar-nav-link-border-style           : solid;
+    --sidebar-nav-link-border-width           : 0 4px 0 0;
+    --sidebar-nav-link-color--active          : var(--theme-color);
+    --sidebar-nav-link-margin                 : 0 -25px 0 0;
+    --sidebar-nav-link-text-decoration        : none;
+    --sidebar-nav-link-text-decoration--active: none;
+    --sidebar-nav-link-text-decoration--hover : underline;
+
+    // Nav Links - Pseudo Content
+    --sidebar-nav-link-before-content         : '-';
+    --sidebar-nav-link-before-content-l1      : none;
+    --sidebar-nav-link-before-content-l2      : none;
+
+    // Nav Page Links
+    --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 7px, null, 1.5, #b3b3b3)};
+    --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 7px, 1.5, #0b87da)};
+    --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 7px, null, 1.5, #0b87da)};
+    --sidebar-nav-pagelink-background-image--loaded     : #{chevron-data-uri(down, null, 7px, 1.5, #0b87da)};
+    --sidebar-nav-pagelink-background-position          : 3px center;
+    --sidebar-nav-pagelink-background-position--active  : left center;
+    --sidebar-nav-pagelink-background-position--collapse: var(--sidebar-nav-pagelink-background-position);
+    --sidebar-nav-pagelink-background-position--loaded  : var(--sidebar-nav-pagelink-background-position--active);
+    --sidebar-nav-pagelink-padding                      : 0.25em 0 0.25em 20px;
+    --sidebar-nav-pagelink-transition                   : none;
+
+    // Toggle
+    --sidebar-toggle-background               : var(--sidebar-border-color);
+    --sidebar-toggle-border-radius            : 0 var(--border-radius-s) var(--border-radius-s) 0;
+    --sidebar-toggle-width                    : 32px;
+}
