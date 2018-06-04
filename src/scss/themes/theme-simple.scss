@@ -9,12 +9,18 @@
 
 // Properties
 :root {
-    // Base
+    // App
     // =========================================================================
     // Borders
     --border-radius-s: 2px;
     --border-radius-m: 4px;
     --border-radius-l: 8px;
+
+
+    // Base
+    // =========================================================================
+    // Strong
+    --strong-font-weight: 600;
 
 
     // Content
@@ -40,9 +46,6 @@
     --heading-h2-border-width      : 0 0 1px 0;
     --heading-h2-margin            : 2.5rem 0 1.5rem;
     --heading-h2-padding           : 0 0 1rem 0;
-
-    // Strong
-    --strong-font-weight           : 600;
 
 
     // Cover
@@ -97,36 +100,36 @@
 
     // Sidebar
     // =========================================================================
-    --sidebar-background                      : var(--mono-tint3);
-    --sidebar-border-color                    : var(--mono-tint2);
-    --sidebar-border-width                    : 0 1px 0 0;
+    --sidebar-background                                : var(--mono-tint3);
+    --sidebar-border-color                              : var(--mono-tint2);
+    --sidebar-border-width                              : 0 1px 0 0;
 
     // Name
-    --sidebar-name-color                      : var(--theme-color);
-    --sidebar-name-font-weight                : 300;
+    --sidebar-name-color                                : var(--theme-color);
+    --sidebar-name-font-weight                          : 300;
 
     // Nav Headings
-    --sidebar-nav-strong-border-width         : 0 0 1px 0;
-    --sidebar-nav-strong-font-size            : smaller;
-    --sidebar-nav-strong-margin               : 2em -25px 0.75em 0;
-    --sidebar-nav-strong-padding              : 0.25em 0 0.75em 0;
-    --sidebar-nav-strong-text-transform       : uppercase;
+    --sidebar-nav-strong-border-width                   : 0 0 1px 0;
+    --sidebar-nav-strong-font-size                      : smaller;
+    --sidebar-nav-strong-margin                         : 2em -25px 0.75em 0;
+    --sidebar-nav-strong-padding                        : 0.25em 0 0.75em 0;
+    --sidebar-nav-strong-text-transform                 : uppercase;
 
     // Nav Links
-    --sidebar-nav-link-border-color           : transparent;
-    --sidebar-nav-link-border-color--active   : var(--theme-color);
-    --sidebar-nav-link-border-style           : solid;
-    --sidebar-nav-link-border-width           : 0 4px 0 0;
-    --sidebar-nav-link-color--active          : var(--theme-color);
-    --sidebar-nav-link-margin                 : 0 -25px 0 0;
-    --sidebar-nav-link-text-decoration        : none;
-    --sidebar-nav-link-text-decoration--active: none;
-    --sidebar-nav-link-text-decoration--hover : underline;
+    --sidebar-nav-link-border-color                     : transparent;
+    --sidebar-nav-link-border-color--active             : var(--theme-color);
+    --sidebar-nav-link-border-style                     : solid;
+    --sidebar-nav-link-border-width                     : 0 4px 0 0;
+    --sidebar-nav-link-color--active                    : var(--theme-color);
+    --sidebar-nav-link-margin                           : 0 -25px 0 0;
+    --sidebar-nav-link-text-decoration                  : none;
+    --sidebar-nav-link-text-decoration--active          : none;
+    --sidebar-nav-link-text-decoration--hover           : underline;
 
     // Nav Links - Pseudo Content
-    --sidebar-nav-link-before-content         : '-';
-    --sidebar-nav-link-before-content-l1      : none;
-    --sidebar-nav-link-before-content-l2      : none;
+    --sidebar-nav-link-before-content                   : '-';
+    --sidebar-nav-link-before-content-l1                : none;
+    --sidebar-nav-link-before-content-l2                : none;
 
     // Nav Page Links
     --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 7px, null, 1.5, #b3b3b3)};
@@ -141,7 +144,7 @@
     --sidebar-nav-pagelink-transition                   : none;
 
     // Toggle
-    --sidebar-toggle-background               : var(--sidebar-border-color);
-    --sidebar-toggle-border-radius            : 0 var(--border-radius-s) var(--border-radius-s) 0;
-    --sidebar-toggle-width                    : 32px;
+    --sidebar-toggle-background                         : var(--sidebar-border-color);
+    --sidebar-toggle-border-radius                      : 0 var(--border-radius-s) var(--border-radius-s) 0;
+    --sidebar-toggle-width                              : 32px;
 }

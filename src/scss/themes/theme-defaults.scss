@@ -9,10 +9,10 @@
 @import "../app/__import";
 
 // Properties
+@import "defaults/app";
 @import "defaults/base";
 @import "defaults/content";
 @import "defaults/cover";
-@import "defaults/misc";
 @import "defaults/navbar";
 @import "defaults/plugin-copy-code";
 @import "defaults/plugin-pagination";

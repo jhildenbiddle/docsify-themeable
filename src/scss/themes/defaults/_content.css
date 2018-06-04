@@ -53,9 +53,6 @@
     --code-theme-text                   : ;
     --code-theme-variable               : ;
 
-    /* Emoji */
-    --emoji-size                        : calc(var(--base-line-height) * 1em);
-
     /* Headings */
     --heading-color                     : var(--mono-shade3);
     --heading-font-family               : ;
@@ -99,9 +96,6 @@
     --heading-h4-margin                 : ;
     --heading-h4-padding                : ;
 
-    /* Horizontal Rule */
-    --hr-border                         : 1px solid var(--mono-tint2);
-
     /* Keyboard */
     --kbd-background                    : var(--mono-tint3);
     --kbd-border                        : 1px solid var(--mono-tint2);
@@ -121,10 +115,6 @@
     --link-text-decoration--hover       : ;
     --link-text-decoration-color        : ;
     --link-text-decoration-color--hover : ;
-
-    /* Mark */
-    --mark-background                   : #ffecb3;
-    --mark-color                        : ;
 
     /* Notice */
     --notice-background                 : var(--mono-tint3);
@@ -177,22 +167,6 @@
     --notice-tip-before-background      : ;
     --notice-tip-before-color           : ;
     --notice-tip-before-content         : ;
-
-    /* Preformatted */
-    --pre-font-family                   : var(--code-font-family);
-    --pre-font-size                     : var(--code-font-size);
-    --pre-font-weight                   : ;
-    --pre-line-height                   : ;
-
-    /* Small */
-    --small-font-size                   : var(--font-size-s);
-
-    /* Strong */
-    --strong-color                      : var(--heading-color);
-    --strong-font-weight                : 600;
-
-    /* Sub/Sup */
-    --subsup-font-size                  : var(--font-size-s);
 
     /* Tables */
     --table-body-border-color           : ;

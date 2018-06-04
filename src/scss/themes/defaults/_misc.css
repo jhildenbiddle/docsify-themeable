@@ -1,9 +1,0 @@
-/* Misc
-============================================================================= */
-:root {
-    /* Spinner */
-    --spinner-size               : 60px;
-    --spinner-track-width        : 4px;
-    --spinner-track-color        : rgba(0, 0, 0, 0.15);
-    --spinner-transition-duration: var(--duration-medium);
-}

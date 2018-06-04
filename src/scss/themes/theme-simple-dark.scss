@@ -8,24 +8,36 @@
 
 // Properties
 :root {
+    // App
+    // =========================================================================
+    // Monochrome
+    --mono-hue           : 201;
+    --mono-saturation    : 18%;
+
+    // Monochrome shades (darker) and tints (lighter)
+    --mono-shade3        : hsl(var(--mono-hue), var(--mono-saturation), 13%);
+    --mono-shade2        : hsl(var(--mono-hue), var(--mono-saturation), 15%);
+    --mono-shade1        : hsl(var(--mono-hue), var(--mono-saturation), 17%);
+    --mono-base          : hsl(var(--mono-hue), var(--mono-saturation), 19%);
+    --mono-tint1         : hsl(var(--mono-hue), var(--mono-saturation), 25%);
+    --mono-tint2         : hsl(var(--mono-hue), var(--mono-saturation), 35%);
+    --mono-tint3         : hsl(var(--mono-hue), var(--mono-saturation), 43%);
+
+    // Spinner
+    --spinner-track-color: rgba(255, 255, 255, 0.15);
+
+
     // Base
     // =========================================================================
-    // Monochrome: hue and saturation
-    --mono-hue             : 201;
-    --mono-saturation      : 18%;
-
-    // Monochrome: shades (darker) and tints (lighter)
-    --mono-shade3          : hsl(var(--mono-hue), var(--mono-saturation), 13%);
-    --mono-shade2          : hsl(var(--mono-hue), var(--mono-saturation), 15%);
-    --mono-shade1          : hsl(var(--mono-hue), var(--mono-saturation), 17%);
-    --mono-base            : hsl(var(--mono-hue), var(--mono-saturation), 19%);
-    --mono-tint1           : hsl(var(--mono-hue), var(--mono-saturation), 25%);
-    --mono-tint2           : hsl(var(--mono-hue), var(--mono-saturation), 35%);
-    --mono-tint3           : hsl(var(--mono-hue), var(--mono-saturation), 43%);
-
-    // Base
     --base-background-color: var(--mono-base);
     --base-color           : #d3d3d3;
+
+    // Horizontal Rule
+    --hr-border            : 1px solid var(--mono-tint2);
+
+    // Mark
+    --mark-background      : #ffcb6b;
+    --mark-color           : var(--base-background-color);
 
 
     // Content
@@ -42,17 +54,10 @@
     --heading-color              : #fff;
     --heading-h2-border-color    : var(--mono-tint2);
 
-    // Horizontal Rule
-    --hr-border                  : 1px solid var(--mono-tint2);
-
     // Keyboard
     --kbd-background             : var(--mono-shade2);
     --kbd-border                 : none;
     --kbd-color                  : var(--strong-color);
-
-    // Mark
-    --mark-background            : #ffcb6b;
-    --mark-color                 : var(--base-background-color);
 
     // Notice - Important
     --notice-important-background: var(--mono-shade2);
@@ -113,6 +118,9 @@
 
     // Sidebar
     // =========================================================================
-    --sidebar-background  : var(--mono-shade1);
-    --sidebar-border-color: var(--mono-tint1);
+    --sidebar-background                   : var(--mono-shade1);
+    --sidebar-border-color                 : var(--mono-tint1);
+
+    // Nav Page Links
+    --sidebar-nav-pagelink-background-image: #{chevron-data-uri(right, 7px, null, 1.5, #495d68)};
 }

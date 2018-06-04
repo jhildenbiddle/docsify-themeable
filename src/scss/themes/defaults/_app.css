@@ -1,0 +1,67 @@
+/* App
+============================================================================= */
+:root {
+    /* Color
+    ------------------------------------------------------------------------- */
+    /* Monochrome */
+    --mono-hue        : 113;
+    --mono-saturation : 0%;
+
+    /* Monochrome shades (darker) and tints (lighter) */
+    --mono-shade3     : hsl(var(--mono-hue), var(--mono-saturation), 20%); /* #333333 */
+    --mono-shade2     : hsl(var(--mono-hue), var(--mono-saturation), 30%); /* #4d4d4d */
+    --mono-shade1     : hsl(var(--mono-hue), var(--mono-saturation), 40%); /* #666666 */
+    --mono-base       : hsl(var(--mono-hue), var(--mono-saturation), 50%); /* #808080 */
+    --mono-tint1      : hsl(var(--mono-hue), var(--mono-saturation), 70%); /* #b3b3b3 */
+    --mono-tint2      : hsl(var(--mono-hue), var(--mono-saturation), 89%); /* #e3e3e3 */
+    --mono-tint3      : hsl(var(--mono-hue), var(--mono-saturation), 97%); /* #f7f7f7 */
+
+    /* Theme */
+    --theme-hue       : 204;
+    --theme-saturation: 90%;
+    --theme-lightness : 45%;
+    --theme-color     : hsl(var(--theme-hue), var(--theme-saturation), var(--theme-lightness));
+
+    /* Typography
+    ------------------------------------------------------------------------- */
+    /* Modular Scale */
+    --modular-scale   : 1.333;
+
+    /* Module Scale Calculations (do not edit these) */
+    --modular-scale--2: calc(var(--modular-scale-2) / var(--modular-scale));
+    --modular-scale--1: calc(var(--modular-scale-1) / var(--modular-scale));
+    --modular-scale-1 : 1rem;
+    --modular-scale-2 : calc(var(--modular-scale-1) * var(--modular-scale));
+    --modular-scale-3 : calc(var(--modular-scale-2) * var(--modular-scale));
+    --modular-scale-4 : calc(var(--modular-scale-3) * var(--modular-scale));
+    --modular-scale-5 : calc(var(--modular-scale-4) * var(--modular-scale));
+
+    /* Font size */
+    --font-size-xxxl  : var(--modular-scale-5);
+    --font-size-xxl   : var(--modular-scale-4);
+    --font-size-xl    : var(--modular-scale-3);
+    --font-size-l     : var(--modular-scale-2);
+    --font-size-m     : var(--modular-scale-1);
+    --font-size-s     : var(--modular-scale--1);
+    --font-size-xs    : var(--modular-scale--2);
+
+    /* Utility
+    ------------------------------------------------------------------------- */
+    /* Borders */
+    --border-radius-s : ;
+    --border-radius-m : ;
+    --border-radius-l : ;
+
+    /* Animations and transitions */
+    --duration-slow   : 1s;
+    --duration-medium : 0.5s;
+    --duration-fast   : 0.25s;
+
+    /* Misc
+    ------------------------------------------------------------------------- */
+    /* Spinner */
+    --spinner-size               : 60px;
+    --spinner-track-width        : 4px;
+    --spinner-track-color        : rgba(0, 0, 0, 0.15);
+    --spinner-transition-duration: var(--duration-medium);
+}
