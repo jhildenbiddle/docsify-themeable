@@ -28,8 +28,10 @@
 
     /* Typography
     ------------------------------------------------------------------------- */
-    /* Modular Scale (https://type-scale.com) */
+    /* Modular Scale Value (edit this) */
     --modular-scale        : 1.333;
+
+    /* Module Scale Properties (do not edit these) */
     --modular-scale--2     : calc(var(--modular-scale-2) / var(--modular-scale));
     --modular-scale--1     : calc(var(--modular-scale-1) / var(--modular-scale));
     --modular-scale-1      : 1rem;
