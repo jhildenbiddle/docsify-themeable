@@ -1,10 +1,11 @@
 # docsify-themeable
 
-> A delightfully simple theme system for [docsify.js](//docsify.js.org)
+> A delightfully simple theme system for [docsify.js](https://docsify.js.org)
 
-- Flexible theme system based on <nobr>CSS custom properties</nobr>
-- No packages to install or static <nobr>files to build</nobr>
-- Multiple production-ready <nobr>themes available</nobr>
+- Based on CSS custom properties
+- No packages to install or files to build
+- Improved desktop and mobile experience
+- Multiple themes available
 - Legacy browser support (IE10+)
 
 [Get Started](#main)

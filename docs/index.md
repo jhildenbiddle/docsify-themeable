@@ -9,19 +9,25 @@
 ## Features
 
 - **Flexible theme system based on CSS custom properties**<br>
-  Theme settings are presented as a flat list of logically-named of [CSS custom properties](customization). There's no need to navigate or modify a theme's source, allowing changes to be made quickly and confidently.
+  Theme settings are presented as a flat list of logically-named [CSS custom properties](customization). There's no need to navigate or modify complex CSS, allowing changes to be made quickly and confidently.
 
 - **No packages to install or static files to build**<br>
-  All processing is done in the browser so there's no need to compile your CSS. Just link to a theme, then set [theme-related CSS custom properties](customization) as needed. That's it.
+  All processing is done in the browser, removing the need for CSS preprocessors and other build tools. Just link to a theme, then customize it by setting [theme-related properties](customization). That's it.
 
-- **Multiple production-ready themes available**<br>
-  Use any theme as-is or as a starting point for something completely new. All themes share the same customizable properties, making it easy mix styles from different themes.
+- **Multiple themes available**<br>
+  Use a theme as-is, or as a starting point for something completely new. All themes share the same customizable properties, making it easy mix styles from different themes.
 
-- **Enhanced features and compatibility**<br>
-  [PrimsJS theme compatibility](customization#primsjs), [responsive tables](options#responsivetables), and [modular scale typography](customization#base) are just a few of the enhanced features available, along with improved desktop and mobile browser compatibility.
+- **Improved desktop and mobile experience**<br>
+  Enhancements that are unique to docsify-themeable themes—along with docsify- and browser-related bug fixes—provide a more enjoyable and trouble-free experience for site visitors.
+
+  - [Loading transitions](options#readytransitions)
+  - [Responsive tables](options#responsivetables)
+  - [PrismJS theme compatibility](customization#prismjs)
+  - [Module scale typography](customization#base)
+  - [Plugin customization](customization#pluginstyles)
 
 - **Legacy browser support (IE10+)**<br>
-  Thoroughly tested and compatible with legacy browsers, including support for CSS custom properties.
+  Thoroughly tested and fully compatible with legacy browsers, including support for CSS custom properties (courtesy of a handy [ponyfill](https://github.com/jhildenbiddle/css-vars-ponyfill) developed specifically for docsify-themeable).
 
 ## Contact & Support
 
