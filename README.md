@@ -7,7 +7,8 @@
 
 Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsify.js.org).
 
-- [Demo / Documentation](//jhildenbiddle.github.io/docsify-themeable)
+- [Documentation](https://jhildenbiddle.github.io/docsify-themeable)
+- [Code Sandbox](https://codesandbox.io/s/xv36w4695o)
 
 ## Contact
 
