@@ -1,16 +1,14 @@
+// Theme: Defaults
+// =============================================================================
 @charset "utf-8";
 
-
 // App
-// =============================================================================
 @import "../../functions/__import";
 @import "../../mixins/__import";
 @import "../../utility/__import";
 @import "../../app/__import";
 
-
-// Theme: Default
-// =============================================================================
+// Properties
 @import "base";
 @import "content";
 @import "cover";
