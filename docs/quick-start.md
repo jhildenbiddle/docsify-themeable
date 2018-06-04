@@ -35,7 +35,7 @@
    </script>
    ```
 
-1. Review the [Customize](customization) section and set theme properties as needed. For example:
+1. Review the [Customization](customization) section and set theme properties as needed. For example:
 
    ```html
    <style>
