@@ -350,7 +350,6 @@ main {
     @include media(">=medium") {
         position: absolute;
         overflow: visible;
-        width: 0;
         left: 0;
         transform: translateX(var(--sidebar-width));
     }
