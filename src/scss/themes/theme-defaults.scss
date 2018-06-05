@@ -1,11 +1,10 @@
-@charset "utf-8";
-
 // Theme: Default
 // =============================================================================
+// node_modules
+@import "include-media/dist/include-media";
+@import "sass-utilities/__import";
+
 // App
-@import "../functions/__import";
-@import "../mixins/__import";
-@import "../utility/__import";
 @import "../app/__import";
 
 // Properties

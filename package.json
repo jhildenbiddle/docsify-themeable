@@ -38,7 +38,7 @@
     "build": "npm-run-all build:scss --parallel build:js build:pcss",
     "build:js": "rollup -c",
     "build:pcss": "postcss build/css/**/*.css --dir dist/css --use postcss-remove-null postcss-discard-empty postcss-flexbugs-fixes autoprefixer --map",
-    "build:scss": "node-sass --output-style compressed src/scss/themes -o build/css --source-map true --source-map-contents true --include-path node_modules/include-media/dist",
+    "build:scss": "node-sass --output-style compressed src/scss/themes -o build/css --source-map true --source-map-contents true --include-path node_modules",
     "clean": "rimraf build/* dist/* docs/css docs/js",
     "serve": "node server.js",
     "start": "run-p watch serve",
@@ -72,6 +72,7 @@
     "rollup-plugin-eslint": "^4.0.0",
     "rollup-plugin-json": "^3.0.0",
     "rollup-plugin-node-resolve": "^3.3.0",
-    "rollup-plugin-uglify": "^3.0.0"
+    "rollup-plugin-uglify": "^3.0.0",
+    "sass-utilities": "0.0.4"
   }
 }
