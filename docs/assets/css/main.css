@@ -10,5 +10,16 @@
 }
 
 .markdown-section .thumbnail + .thumbnail {
-    margin-left: 2%
+    margin-left: 2%;
+}
+
+@media (max-width: 30em) {
+    .markdown-section .thumbnail {
+        max-width: 100%;
+    }
+
+    .markdown-section .thumbnail + .thumbnail {
+        margin-top: 1em;
+        margin-left: 0;
+    }
 }
