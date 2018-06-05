@@ -4,10 +4,10 @@
 
 1. [Create a docsify site](//docsify.js.org/#/quickstart) by following the instructions on the [docsify.js](//docsify.js.org) website.
 
-1. Select a theme from the [Themes](themes) section and update the `<link>` in your `index.html`.
+1. Select a theme from the [Themes](themes) section and replace the `<link>` in your `index.html`.
 
    ```html
-   <!-- Simple Theme -->
+   <!-- Theme: Simple -->
    <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css">
    ```
 
@@ -40,8 +40,14 @@
    ```html
    <style>
      :root {
+       /* Reduce the font size */
        --base-font-size: 14px;
-       --theme-color   : purple;
+
+       /* Change the theme color hue */
+       --theme-hue: 325;
+
+       /* Change the sidebar bullets */
+       --sidebar-nav-link-before-content: '😀';
      }
    </style>
    ```

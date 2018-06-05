@@ -24,7 +24,7 @@
   - [PrismJS theme compatibility](customization#prismjs)
   - [Module scale typography](customization#base)
   - [Plugin customization](customization#plugin-styles)
-  - [Loading transitions](options#readytransitions)
+  - [Ready transition](options#readytransition)
   - [Responsive tables](options#responsivetables)
 
 - **Legacy browser support (IE10+)**<br>

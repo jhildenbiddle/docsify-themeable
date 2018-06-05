@@ -26,7 +26,7 @@ background cover page, and visual indicators for drop-menus and expand/collapse
 state.
 
 <a href="#" data-link-title="Simple">Preview</a> |
-[Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/simple)
+[Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/theme-simple.scss)
 
 ```html
 <!-- Theme: Simple -->
@@ -43,7 +43,7 @@ state.
 A modified version of the Simple theme featuring a dark color scheme.
 
 <a href="#" data-link-title="Simple Dark">Preview</a> |
-[Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/simple-dark)
+[Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/theme-simple-dark.scss)
 
 ```html
 <!-- Theme: Simple Dark -->
