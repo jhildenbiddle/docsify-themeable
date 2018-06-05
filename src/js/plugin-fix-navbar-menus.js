@@ -9,9 +9,10 @@
  * @param {number|string} [tabIndex=null] The wrapTag tabIndex value
  */
 function wrapTextNodes(elm, wrapTag, tabIndex = null) {
-    const menuElm = elm.querySelector('ul');
+    const hasTextNodes = elm.childNodes[0].nodeType === 3;
+    const menuElm      = elm.querySelector('ul');
 
-    if (menuElm) {
+    if (hasTextNodes && menuElm) {
         const hasChildWithTabIndex = Array.apply(null, elm.children).some(child => child.tabIndex > -1).length;
 
         // Wrap non-link labels
