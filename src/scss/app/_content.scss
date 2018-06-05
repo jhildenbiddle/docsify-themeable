@@ -194,6 +194,10 @@
         margin: 1em 0;
     }
 
+    img {
+        max-width: 100%;
+    }
+
     kbd {
         display: inline-block;
         min-width: var(--kbd-min-width);
