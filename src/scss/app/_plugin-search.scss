@@ -211,7 +211,7 @@ body {
         }
 
         &.show {
-            ~ * {
+            ~ *:not(h1) {
                 display: none;
             }
         }
