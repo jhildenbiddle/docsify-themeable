@@ -9,12 +9,15 @@ customized theme.
 <a href="#" data-link-title="Defaults">Preview</a> |
 [Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/defaults)
 
-<img src="assets/img/theme-defaults-cover.png" class="thumbnail" alt="Screenshot of coverpage" title="Coverpage">
-<img src="assets/img/theme-defaults-content.png" class="thumbnail" alt="Screenshot of navigation and content" title="Sidebar and content">
-
 ```html
+<!-- Theme: Defaults -->
 <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-defaults.css">
 ```
+
+<figure class="thumbnails">
+    <img src="assets/img/theme-defaults-cover.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="assets/img/theme-defaults-content.png" alt="Screenshot of content" title="Content">
+</figure>
 
 ### Simple
 
@@ -25,12 +28,15 @@ state.
 <a href="#" data-link-title="Simple">Preview</a> |
 [Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/simple)
 
-<img src="assets/img/theme-simple-cover.png" class="thumbnail" alt="Screenshot of coverpage" title="Coverpage">
-<img src="assets/img/theme-simple-content.png" class="thumbnail" alt="Screenshot of navigation and content" title="Sidebar and content">
-
 ```html
+<!-- Theme: Simple -->
 <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css">
 ```
+
+<figure class="thumbnails">
+    <img src="assets/img/theme-simple-cover.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="assets/img/theme-simple-content.png" alt="Screenshot of content" title="Content">
+</figure>
 
 ### Simple Dark
 
@@ -39,9 +45,12 @@ A modified version of the Simple theme featuring a dark color scheme.
 <a href="#" data-link-title="Simple Dark">Preview</a> |
 [Source](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes/simple-dark)
 
-<img src="assets/img/theme-simple-dark-cover.png" class="thumbnail" alt="Screenshot of coverpage" title="Coverpage">
-<img src="assets/img/theme-simple-dark-content.png" class="thumbnail" alt="Screenshot of navigation and content" title="Sidebar and content">
-
 ```html
+<!-- Theme: Simple Dark -->
 <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple-dark.css">
 ```
+
+<figure class="thumbnails">
+    <img src="assets/img/theme-simple-dark-cover.png" alt="Screenshot of coverpage" title="Cover page">
+    <img src="assets/img/theme-simple-dark-content.png" alt="Screenshot of content" title="Content">
+</figure>
