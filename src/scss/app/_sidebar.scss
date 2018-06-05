@@ -270,8 +270,7 @@ main {
 
     @for $i from 1 through 4 {
         #{$level-selector} {
-            > a,
-            > strong {
+            > a {
                 &:before {
                     content: var(--sidebar-nav-link-before-content-l#{$i}, var(--sidebar-nav-link-before-content));
                     margin: var(--sidebar-nav-link-before-margin-l#{$i}, var(--sidebar-nav-link-before-margin));
@@ -280,8 +279,7 @@ main {
             }
 
             &.active {
-                > a,
-                > strong {
+                > a {
                     &:before {
                         content: var(--sidebar-nav-link-before-content-l#{$i}--active, var(--sidebar-nav-link-before-content--active, var(--sidebar-nav-link-before-content-l#{$i}, var(--sidebar-nav-link-before-content))));
                         color: var(--sidebar-nav-link-before-color-l#{$i}--active, var(--sidebar-nav-link-before-color--active, var(--sidebar-nav-link-before-color-l#{$i}, var(--sidebar-nav-link-before-color))));
