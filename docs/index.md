@@ -12,19 +12,20 @@
   Theme settings are presented as a flat list of logically-named [CSS custom properties](customization). There's no need to navigate or modify complex CSS, allowing changes to be made quickly and confidently.
 
 - **No packages to install or static files to build**<br>
-  All processing is done in the browser, removing the need for CSS preprocessors and other build tools. Just link to a theme, then customize it by setting [theme-related properties](customization). That's it.
+  All processing is done in the browser, removing the need for CSS preprocessors and other build tools. Just link to a theme, then customize by setting [theme-related properties](customization). That's it.
 
 - **Multiple themes available**<br>
   Use a theme as-is, or as a starting point for something completely new. All themes share the same customizable properties, making it easy mix styles from different themes.
 
 - **Improved desktop and mobile experience**<br>
-  Enhancements that are unique to docsify-themeable themes—along with docsify- and browser-related bug fixes—provide a more enjoyable and trouble-free experience for site visitors.
+  Enhancements that are unique to docsify-themeable—along with docsify- and browser-related bug fixes—provide a more enjoyable and trouble-free experience for site visitors:
 
-  - [Loading transitions](options#readytransitions)
-  - [Responsive tables](options#responsivetables)
+  - [Extensive customization](customization)
   - [PrismJS theme compatibility](customization#prismjs)
   - [Module scale typography](customization#base)
-  - [Plugin customization](customization#pluginstyles)
+  - [Plugin customization](customization#plugin-styles)
+  - [Loading transitions](options#readytransitions)
+  - [Responsive tables](options#responsivetables)
 
 - **Legacy browser support (IE10+)**<br>
   Thoroughly tested and fully compatible with legacy browsers, including support for CSS custom properties (courtesy of a handy [ponyfill](https://github.com/jhildenbiddle/css-vars-ponyfill) developed specifically for docsify-themeable).
