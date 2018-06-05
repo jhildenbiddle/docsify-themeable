@@ -29,6 +29,9 @@
     --search-input-placeholder-color         : ;
     --search-input-transition                : all var(--duration-fast);
 
+    /* Order */
+    --search-flex-order                      : 1;
+
     /* Results */
     --search-result-heading-color            : var(--heading-color);
     --search-result-heading-font-size        : var(--base-font-size);

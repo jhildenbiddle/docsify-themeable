@@ -126,7 +126,7 @@ body {
 // =============================================================================
 .sidebar {
     .search {
-        order: var(--sidebar-order-search);
+        order: var(--search-flex-order);
         margin: var(--search-margin);
         padding: var(--search-padding);
         background: var(--search-background);
@@ -211,7 +211,7 @@ body {
         }
 
         &.show {
-            ~ .sidebar-nav {
+            ~ * {
                 display: none;
             }
         }

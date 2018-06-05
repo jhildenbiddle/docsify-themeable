@@ -50,7 +50,6 @@ main {
     background: var(--sidebar-background);
 
     > h1 {
-        order: var(--sidebar-order-heading);
         margin: 0;
         margin: var(--sidebar-name-margin);
         padding: var(--sidebar-name-padding);
@@ -84,7 +83,7 @@ main {
 // -----------------------------------------------------------------------------
 .sidebar-nav,  // 1. Standard sidebar navigation
 .sidebar nav { // 2. Merged nav bar in sidebar via 'mergeNavbar' option
-    order: var(--sidebar-order-nav);
+    order: 1;
     margin: var(--sidebar-nav-margin);
     padding: var(--sidebar-nav-padding);
     background: var(--sidebar-nav-background);
