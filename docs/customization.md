@@ -37,6 +37,12 @@ To customize a *docsify-themeable* [theme](themes):
 
    ?> It's easy to to mix styles from different themes! Just [view the source of other themes](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes), find the theme properties you like, and copy them to your custom stylesheet.
 
+### App
+
+Theme properties for application styles.
+
+[_app.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_app.css ':include :type:code')
+
 ### Base
 
 Theme properties for base styles.
@@ -54,12 +60,6 @@ Theme properties for markdown content.
 Theme properties for docsify's [`coverpage`](https://docsify.js.org/#/cover).
 
 [_cover.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_cover.css ':include :type:code')
-
-### Misc
-
-Theme properties for miscellaneous elements.
-
-[_misc.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_misc.css ':include :type:code')
 
 ### Navbar
 
