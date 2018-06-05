@@ -115,9 +115,9 @@
     --sidebar-nav-pagelink-transition                   : var(--sidebar-nav-link-transition);
 
     /* Order */
-    --sidebar-order-heading                       : -1;
-    --sidebar-order-search                        : ;
-    --sidebar-order-nav                           : ;
+    --sidebar-order-heading                       : -2;
+    --sidebar-order-search                        : -1;
+    --sidebar-order-nav                           : 0;
 
     /* Toggle */
     --sidebar-toggle-background                   : ;
