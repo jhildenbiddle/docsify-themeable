@@ -67,7 +67,12 @@ browserSync.init({
     },
     rewriteRules: [
         {
-            // Replace CDN references with local paths
+            // Replace CDN default with local js path
+            match  : /"https:\/\/unpkg\.com\/docsify-themeable"/g,
+            replace: '"/js/docsify-themeable.min.js"'
+        },
+        {
+            // Replace CDN URLs with local paths
             match  : /https:\/\/unpkg\.com\/docsify-themeable\/dist\//g,
             replace: '/'
         }
