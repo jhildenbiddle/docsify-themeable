@@ -9,5 +9,5 @@
 - Legacy browser support (IE10+)
 
 [Get Started](#main)
+[Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
 [GitHub](https://github.com/jhildenbiddle/docsify-themeable)
-[NPM](https://www.npmjs.com/package/docsify-themeable)
