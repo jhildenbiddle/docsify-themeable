@@ -112,6 +112,7 @@
     }
 
     .cover-main {
+        position: relative;
         z-index: 1;
         max-width: var(--cover-max-width);
         margin: var(--cover-margin);
