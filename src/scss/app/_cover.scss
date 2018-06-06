@@ -119,22 +119,23 @@
 
         // Buttons
         > p:last-child {
-            display: inline-flex;
-            flex-wrap: wrap;
-            margin: 1rem -0.35em 0 -0.35em;
-            text-align: center;
+            $button-margin: 0.25em;
+
+            margin: 1.5em -$button-margin 0 -$button-margin;
 
             a {
-                display: inline-block;
-                margin: 0.35em;
+                display: block;
+                margin: ($button-margin * 1.5) $button-margin;
                 padding: var(--cover-button-padding);
                 border: var(--cover-button-border);
                 border-radius: var(--cover-button-border-radius);
                 box-shadow: var(--cover-button-box-shadow);
                 background: var(--cover-button-background);
+                text-align: center;
                 text-decoration: var(--cover-button-text-decoration);
                 text-decoration-color: var(--cover-button-text-decoration-color);
                 color: var(--cover-button-color);
+                white-space: nowrap;
                 transition: var(--cover-button-transition);
 
                 &:hover {
@@ -164,15 +165,9 @@
                         color: var(--cover-button-primary-color--hover, var(--cover-button-color--hover, var(--cover-button-primary-color, var(--cover-button-color))));
                     }
                 }
-            }
 
-            @include media("<medium") {
-                > :first-child {
-                    flex-basis: 100%;
-
-                    ~ * {
-                        flex-grow: 1;
-                    }
+                @include media(">small") {
+                    display: inline-block;
                 }
             }
         }
