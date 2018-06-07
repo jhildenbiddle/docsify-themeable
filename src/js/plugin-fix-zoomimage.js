@@ -1,33 +1,23 @@
-// Functions
-// =============================================================================
-/**
- * Ponyfill for native Element.matches method
- *
- * @param   {object} elm The element to test
- * @param   {string} selector The CSS selector to test against
- * @returns {boolean}
- */
-function matchesSelector(elm, selector) {
-    const matches = elm.matches || elm.matchesSelector || elm.webkitMatchesSelector || elm.mozMatchesSelector || elm.msMatchesSelector || elm.oMatchesSelector;
-
-    return matches.call(elm, selector);
-}
-
-
 // Plugin
 // =============================================================================
 // Removes unnecessary <a> wrapper around <h1> content in coverpage
 export default function(hook, vm) {
+    const matchesSelector = Element.prototype.matches || Element.prototype.webkitMatchesSelector || Element.prototype.msMatchesSelector;
+
     hook.doneEach(function() {
         const className = 'medium-zoom-image';
         const imageElms = Array.apply(null, document.querySelectorAll(`.${className}`));
 
         imageElms.forEach(elm => {
-            const isLinkImage    = matchesSelector(elm, 'a img');
-            const isContentImage = matchesSelector(elm, '.content img');
+            const isLinkImage    = matchesSelector.call(elm, 'a img');
+            const isContentImage = matchesSelector.call(elm, '.content img');
 
             if (isLinkImage || !isContentImage) {
-                elm.classList.remove(className);
+                const cloneElm = elm.cloneNode(true);
+
+                // Replace elm with clone to remove event listener
+                elm.parentNode.replaceChild(cloneElm, elm);
+                cloneElm.classList.remove(className);
             }
         });
     });
