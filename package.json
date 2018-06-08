@@ -1,7 +1,7 @@
 {
   "name": "docsify-themeable",
   "version": "0.1.0",
-  "description": "A delightfully simple theme system for docsify.js",
+  "description": "A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+).",
   "author": "John Hildenbiddle",
   "license": "MIT",
   "homepage": "https://jhildenbiddle.github.io/docsify-themeable/",

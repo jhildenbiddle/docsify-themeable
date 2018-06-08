@@ -18,7 +18,7 @@
   Use a theme as-is, or as a starting point for something completely new. All themes share the same customizable properties, making it easy mix styles from different themes.
 
 - **Improved desktop and mobile experience**<br>
-  Enhancements that are unique to docsify-themeable—along with docsify- and browser-related bug fixes—provide a more enjoyable and trouble-free experience for site visitors:
+  Enhancements that are unique to docsify-themeable—along with docsify- and browser-related bug fixes—provide a more enjoyable and trouble-free experience for and site authors and visitors.
 
   - [Extensive customization](customization)
   - [PrismJS theme compatibility](customization#prismjs)
