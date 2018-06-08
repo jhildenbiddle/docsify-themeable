@@ -52,10 +52,10 @@
     --sidebar-nav-link-border-color--active       : ;
     --sidebar-nav-link-border-color--hover        : ;
     --sidebar-nav-link-border-radius              : ;
-    --sidebar-nav-link-border-style               : ;
+    --sidebar-nav-link-border-style               : solid;
     --sidebar-nav-link-border-style--active       : ;
     --sidebar-nav-link-border-style--hover        : ;
-    --sidebar-nav-link-border-width               : ;
+    --sidebar-nav-link-border-width               : 0;
     --sidebar-nav-link-border-width--active       : ;
     --sidebar-nav-link-border-width--hover        : ;
     --sidebar-nav-link-color                      : var(--base-color);

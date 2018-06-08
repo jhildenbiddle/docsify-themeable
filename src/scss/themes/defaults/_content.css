@@ -6,7 +6,7 @@
     /* Blockquote */
     --blockquote-background             : var(--mono-tint3);
     --blockquote-border-color           : ;
-    --blockquote-border-style           : ;
+    --blockquote-border-style           : solid;
     --blockquote-border-width           : ;
     --blockquote-border-radius          : var(--border-radius-m);
     --blockquote-color                  : ;
@@ -60,7 +60,7 @@
     --heading-margin                    : 2.5rem 0 0;
     --heading-padding                   : ;
     --heading-h1-border-color           : ;
-    --heading-h1-border-style           : ;
+    --heading-h1-border-style           : solid;
     --heading-h1-border-width           : ;
     --heading-h1-color                  : ;
     --heading-h1-font-family            : ;
@@ -69,7 +69,7 @@
     --heading-h1-margin                 : ;
     --heading-h1-padding                : ;
     --heading-h2-border-color           : ;
-    --heading-h2-border-style           : ;
+    --heading-h2-border-style           : solid;
     --heading-h2-border-width           : ;
     --heading-h2-color                  : ;
     --heading-h2-font-family            : ;
@@ -78,7 +78,7 @@
     --heading-h2-margin                 : ;
     --heading-h2-padding                : ;
     --heading-h3-border-color           : ;
-    --heading-h3-border-style           : ;
+    --heading-h3-border-style           : solid;
     --heading-h3-border-width           : ;
     --heading-h3-color                  : ;
     --heading-h3-font-family            : ;
@@ -87,7 +87,7 @@
     --heading-h3-margin                 : ;
     --heading-h3-padding                : ;
     --heading-h4-border-color           : ;
-    --heading-h4-border-style           : ;
+    --heading-h4-border-style           : solid;
     --heading-h4-border-width           : ;
     --heading-h4-color                  : ;
     --heading-h4-font-family            : ;
@@ -98,7 +98,7 @@
 
     /* Keyboard */
     --kbd-background                    : var(--mono-tint3);
-    --kbd-border                        : 1px solid var(--mono-tint2);
+    --kbd-border                        : ;
     --kbd-border-radius                 : var(--border-radius-m);
     --kbd-color                         : ;
     --kbd-font-size                     : ;
@@ -120,7 +120,7 @@
     --notice-background                 : var(--mono-tint3);
     --notice-border-color               : ;
     --notice-border-radius              : var(--border-radius-m);
-    --notice-border-style               : ;
+    --notice-border-style               : solid;
     --notice-border-width               : ;
     --notice-color                      : ;
     --notice-font-family                : ;
@@ -171,11 +171,11 @@
     /* Tables */
     --table-body-border-color           : ;
     --table-body-border-width           : ;
-    --table-cell-border-color           : var(--mono-tint2);
-    --table-cell-border-width           : 1px 0;
+    --table-cell-border-color           : ;
+    --table-cell-border-width           : ;
     --table-cell-padding                : 0.75em 0.5em;
     --table-head-background             : ;
-    --table-head-border-color           : var(--mono-tint2);
+    --table-head-border-color           : var(--table-cell-border-color);
     --table-head-border-width           : ;
     --table-head-font-weight            : var(--strong-font-weight);
     --table-row-even-background         : ;

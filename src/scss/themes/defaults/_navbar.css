@@ -49,7 +49,7 @@
     --navbar-menu-link-border-color--active         : ;
     --navbar-menu-link-border-color--hover          : ;
     --navbar-menu-link-border-radius                : ;
-    --navbar-menu-link-border-style                 : ;
+    --navbar-menu-link-border-style                 : solid;
     --navbar-menu-link-border-style--active         : ;
     --navbar-menu-link-border-style--hover          : ;
     --navbar-menu-link-border-width                 : ;
