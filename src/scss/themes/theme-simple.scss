@@ -11,105 +11,105 @@
     // App
     // =========================================================================
     // Borders
-    --border-radius-s: 2px;
-    --border-radius-m: 4px;
-    --border-radius-l: 8px;
+    --border-radius-s                    : 2px;
+    --border-radius-m                    : 4px;
+    --border-radius-l                    : 8px;
 
 
     // Base
     // =========================================================================
     // Strong
-    --strong-font-weight: 600;
+    --strong-font-weight                 : 600;
 
 
     // Content
     // =========================================================================
     // Blockquote
-    --blockquote-border-color           : var(--theme-color);
-    --blockquote-border-radius          : 0 var(--border-radius-m) var(--border-radius-m) 0;
-    --blockquote-border-width           : 0 0 0 4px;
+    --blockquote-border-color            : var(--theme-color);
+    --blockquote-border-radius           : 0 var(--border-radius-m) var(--border-radius-m) 0;
+    --blockquote-border-width            : 0 0 0 4px;
 
     // Code
-    --code-inline-background            : var(--mono-tint2);
-    --code-theme-background             : var(--mono-tint3);
+    --code-inline-background             : var(--mono-tint2);
+    --code-theme-background              : var(--mono-tint3);
 
     // Headings
-    --heading-font-weight               : var(--strong-font-weight);
-    --heading-h1-font-weight            : 400;
-    --heading-h2-font-weight            : 400;
-    --heading-h2-border-color           : var(--mono-tint2);
-    --heading-h2-border-width           : 0 0 1px 0;
-    --heading-h2-margin                 : 2.5rem 0 1.5rem;
-    --heading-h2-padding                : 0 0 1rem 0;
+    --heading-font-weight                : var(--strong-font-weight);
+    --heading-h1-font-weight             : 400;
+    --heading-h2-font-weight             : 400;
+    --heading-h2-border-color            : var(--mono-tint2);
+    --heading-h2-border-width            : 0 0 1px 0;
+    --heading-h2-margin                  : 2.5rem 0 1.5rem;
+    --heading-h2-padding                 : 0 0 1rem 0;
 
     // Keyboard
-    --kbd-border                        : 1px solid var(--mono-tint2);
+    --kbd-border                         : 1px solid var(--mono-tint2);
 
     // Notice
-    --notice-border-radius              : 0 var(--border-radius-m) var(--border-radius-m) 0;
-    --notice-border-width               : 0 0 0 4px;
-    --notice-padding                    : 1em 1.5em 1em 3em;
+    --notice-border-radius               : 0 var(--border-radius-m) var(--border-radius-m) 0;
+    --notice-border-width                : 0 0 0 4px;
+    --notice-padding                     : 1em 1.5em 1em 3em;
 
     // Notice Pseudo
-    --notice-before-border-radius       : 100%;
-    --notice-before-font-weight         : bold;
-    --notice-before-height              : 1.5em;
-    --notice-before-left                : 0.75em;
-    --notice-before-line-height         : 1.5;
-    --notice-before-margin              : 0 0.25em 0 0;
-    --notice-before-position            : absolute;
-    --notice-before-width               : var(--notice-before-height);
+    --notice-before-border-radius        : 100%;
+    --notice-before-font-weight          : bold;
+    --notice-before-height               : 1.5em;
+    --notice-before-left                 : 0.75em;
+    --notice-before-line-height          : 1.5;
+    --notice-before-margin               : 0 0.25em 0 0;
+    --notice-before-position             : absolute;
+    --notice-before-width                : var(--notice-before-height);
 
     // Notice - Important
-    --notice-important-background       : hsl(340, 60%, 96%);
-    --notice-important-border-color     : hsl(340, 90%, 45%);
+    --notice-important-background        : hsl(340, 60%, 96%);
+    --notice-important-border-color      : hsl(340, 90%, 45%);
 
     // Notice - Important Pseudo
-    --notice-important-before-background: var(--notice-important-border-color) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3E%3Cpath d='M10 14C10 15.1 9.1 16 8 16 6.9 16 6 15.1 6 14 6 12.9 6.9 12 8 12 9.1 12 10 12.9 10 14Z'/%3E%3Cpath d='M10 1.6C10 1.2 9.8 0.9 9.6 0.7 9.2 0.3 8.6 0 8 0 7.4 0 6.8 0.2 6.5 0.6 6.2 0.9 6 1.2 6 1.6 6 1.7 6 1.8 6 1.9L6.8 9.6C6.9 9.9 7 10.1 7.2 10.2 7.4 10.4 7.7 10.5 8 10.5 8.3 10.5 8.6 10.4 8.8 10.3 9 10.1 9.1 9.9 9.2 9.6L10 1.9C10 1.8 10 1.7 10 1.6Z'/%3E%3C/svg%3E") center / 0.875em no-repeat;
-    --notice-important-before-color     : #fff;
-    --notice-important-before-content   : "";
+    --notice-important-before-background : var(--notice-important-border-color) #{svg-data-uri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff"><path d="M10 14C10 15.1 9.1 16 8 16 6.9 16 6 15.1 6 14 6 12.9 6.9 12 8 12 9.1 12 10 12.9 10 14Z"/><path d="M10 1.6C10 1.2 9.8 0.9 9.6 0.7 9.2 0.3 8.6 0 8 0 7.4 0 6.8 0.2 6.5 0.6 6.2 0.9 6 1.2 6 1.6 6 1.7 6 1.8 6 1.9L6.8 9.6C6.9 9.9 7 10.1 7.2 10.2 7.4 10.4 7.7 10.5 8 10.5 8.3 10.5 8.6 10.4 8.8 10.3 9 10.1 9.1 9.9 9.2 9.6L10 1.9C10 1.8 10 1.7 10 1.6Z"/></svg>')} center / 0.875em no-repeat;
+    --notice-important-before-color      : #fff;
+    --notice-important-before-content    : "";
 
     // Notice - Tip
-    --notice-tip-background             : hsl(204, 60%, 96%);
-    --notice-tip-border-color           : hsl(204, 90%, 45%);
+    --notice-tip-background              : hsl(204, 60%, 96%);
+    --notice-tip-border-color            : hsl(204, 90%, 45%);
 
     // Notice - Tip Psuedo
-    --notice-tip-before-background      : var(--notice-tip-border-color) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3E%3Cpath d='M9.1 0C10.2 0 10.7 0.7 10.7 1.6 10.7 2.6 9.8 3.6 8.6 3.6 7.6 3.6 7 3 7 2 7 1.1 7.7 0 9.1 0Z'/%3E%3Cpath d='M5.8 16C5 16 4.4 15.5 5 13.2L5.9 9.1C6.1 8.5 6.1 8.2 5.9 8.2 5.7 8.2 4.6 8.6 3.9 9.1L3.5 8.4C5.6 6.6 7.9 5.6 8.9 5.6 9.8 5.6 9.9 6.6 9.5 8.2L8.4 12.5C8.2 13.2 8.3 13.5 8.5 13.5 8.7 13.5 9.6 13.2 10.4 12.5L10.9 13.2C8.9 15.2 6.7 16 5.8 16Z'/%3E%3C/svg%3E") center / 0.875em no-repeat;
-    --notice-tip-before-color           : #fff;
-    --notice-tip-before-content         : "";
+    --notice-tip-before-background       : var(--notice-tip-border-color) #{svg-data-uri('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff"><path d="M9.1 0C10.2 0 10.7 0.7 10.7 1.6 10.7 2.6 9.8 3.6 8.6 3.6 7.6 3.6 7 3 7 2 7 1.1 7.7 0 9.1 0Z"/><path d="M5.8 16C5 16 4.4 15.5 5 13.2L5.9 9.1C6.1 8.5 6.1 8.2 5.9 8.2 5.7 8.2 4.6 8.6 3.9 9.1L3.5 8.4C5.6 6.6 7.9 5.6 8.9 5.6 9.8 5.6 9.9 6.6 9.5 8.2L8.4 12.5C8.2 13.2 8.3 13.5 8.5 13.5 8.7 13.5 9.6 13.2 10.4 12.5L10.9 13.2C8.9 15.2 6.7 16 5.8 16Z"/></svg>')} center / 0.875em no-repeat;
+    --notice-tip-before-color            : #fff;
+    --notice-tip-before-content          : "";
 
     // Tables
-    --table-cell-border-color           : var(--mono-tint2);
-    --table-cell-border-width           : 1px 0;
+    --table-cell-border-color            : var(--mono-tint2);
+    --table-cell-border-width            : 1px 0;
 
 
     // Cover
     // =========================================================================
     // Background
-    --cover-background-color     : hsl(var(--theme-hue), 25%, 60%);
-    --cover-background-image     : radial-gradient(ellipse at center 115%, rgba(255, 255, 255, 0.9), transparent);
+    --cover-background-color             : hsl(var(--theme-hue), 25%, 60%);
+    --cover-background-image             : radial-gradient(ellipse at center 115%, rgba(255, 255, 255, 0.9), transparent);
 
     // Blockquote (Subtitle)
-    --cover-blockquote-color     : var(--strong-color);
+    --cover-blockquote-color             : var(--strong-color);
 
     // Heading
-    --cover-heading-color        : #fff;
-    --cover-heading-font-size-max: 56; // Unitless px
-    --cover-heading-font-size-min: 34; // Unitless px
-    --cover-heading-font-weight  : 200;
+    --cover-heading-color                : #fff;
+    --cover-heading-font-size-max        : 56; // Unitless px
+    --cover-heading-font-size-min        : 34; // Unitless px
+    --cover-heading-font-weight          : 200;
 
 
     // Navbar
     // =========================================================================
     // Root
-    --navbar-root-color--active  : var(--theme-color);
+    --navbar-root-color--active          : var(--theme-color);
 
     // Menus
-    --navbar-menu-border-radius  : var(--border-radius-m);
+    --navbar-menu-border-radius          : var(--border-radius-m);
 
     // Menu Root
-    --navbar-menu-root-background: #{chevron-data-uri(down, null, 6px, 1.5, #b3b3b3)} right no-repeat;
-    --navbar-menu-root-padding   : 0 18px 0 0;
+    --navbar-menu-root-background        : #{chevron-data-uri(down, null, 6px, 1.5, #b3b3b3)} right no-repeat;
+    --navbar-menu-root-padding           : 0 18px 0 0;
 
 
     // Plugin: Search
