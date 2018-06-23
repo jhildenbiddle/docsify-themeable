@@ -27,7 +27,7 @@
     --search-input-margin                    : ;
     --search-input-padding                   : 0.5em;
     --search-input-placeholder-color         : ;
-    --search-input-transition                : all var(--duration-fast);
+    --search-input-transition                : ;
 
     /* Order */
     --search-flex-order                      : 1;
