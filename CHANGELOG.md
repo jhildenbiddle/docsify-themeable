@@ -2,10 +2,11 @@
 
 ## 0.1.2
 
-*2018-06-18*
+*2018-06-23*
 
 - Updated Simple and Simple-Dark themes: Fixed `--notice-tip-border-color`
-  value inheriting from `-theme-color`.
+  value inheriting from `-theme-color`
+- Fixed high CPU usage in Safari when using Simple or Simple-Dark themes
 
 ## 0.1.1
 
