@@ -111,6 +111,7 @@
     --sidebar-nav-pagelink-background-position--collapse: ;
     --sidebar-nav-pagelink-background-position--loaded  : ;
     --sidebar-nav-pagelink-background-repeat            : no-repeat;
+    --sidebar-nav-pagelink-background-size              : ;
     --sidebar-nav-pagelink-padding                      : ;
     --sidebar-nav-pagelink-transition                   : var(--sidebar-nav-link-transition);
 

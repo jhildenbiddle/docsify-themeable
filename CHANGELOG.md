@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.3.0
+
+*2018-08-07*
+
+- Added `--sidebar-nav-pagelink-background-size` property.
+
 ## 0.2.0
 
 *2018-08-07*

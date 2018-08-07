@@ -193,6 +193,7 @@ main {
 
         > a {
             background-repeat: var(--sidebar-nav-pagelink-background-repeat);
+            background-size: var(--sidebar-nav-pagelink-background-size);
 
             // Page links
             &[href^="#/"]:not([href*="?id="]) {
