@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.2.0
+
+*2018-08-07*
+
+- Updated css-vars-ponyfill dependency to address potential issues with
+  CSS custom properties in legacy browsers.
+
 ## 0.1.2
 
 *2018-06-23*
