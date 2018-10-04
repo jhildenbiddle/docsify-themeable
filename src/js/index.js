@@ -38,7 +38,7 @@ if (window) {
             pluginFixNavbarMenus,
             pluginFixPrismThemes,
             pluginFixReadyState,
-            pluginResponsiveTables,
+            pluginResponsiveTables
         ],
         // Existing
         (window.$docsify.plugins || []),
