@@ -4,19 +4,29 @@
 
 # Heading 1 {docsify-ignore}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus nulla eu ex varius, a varius elit tincidunt. Aenean arcu magna, gravida id purus a, interdum convallis turpis. Aenean id ipsum eu tortor sollicitudin scelerisque in quis elit.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus
+nulla eu ex varius, a varius elit tincidunt. Aenean arcu magna, gravida id purus
+a, interdum convallis turpis. Aenean id ipsum eu tortor sollicitudin scelerisque
+in quis elit.
 
 ## Heading 2 {docsify-ignore}
 
-Vestibulum lobortis laoreet nunc vel vulputate. In et augue non lectus pellentesque molestie et ac justo. Sed sed turpis ut diam gravida sagittis nec at neque. Vivamus id tellus est. Nam ac dignissim mi. Vestibulum nec sem convallis, condimentum augue at, commodo diam.
+Vestibulum lobortis laoreet nunc vel vulputate. In et augue non lectus
+pellentesque molestie et ac justo. Sed sed turpis ut diam gravida sagittis nec
+at neque. Vivamus id tellus est. Nam ac dignissim mi. Vestibulum nec sem
+convallis, condimentum augue at, commodo diam.
 
 ### Heading 3 {docsify-ignore}
 
-Suspendisse sit amet tincidunt nibh, ac interdum velit. Ut orci diam, dignissim at enim sit amet, placerat rutrum magna. Mauris consectetur nibh eget sem feugiat, sit amet congue quam laoreet. Curabitur sed massa metus.
+Suspendisse sit amet tincidunt nibh, ac interdum velit. Ut orci diam, dignissim
+at enim sit amet, placerat rutrum magna. Mauris consectetur nibh eget sem
+feugiat, sit amet congue quam laoreet. Curabitur sed massa metus.
 
 #### Heading 4 {docsify-ignore}
 
-Donec odio orci, facilisis ac vehicula in, vestibulum ut urna. Ut bibendum ullamcorper risus, ac euismod leo maximus sed. In pulvinar sagittis rutrum. Morbi quis cursus diam. Cras ac laoreet nulla, rhoncus sodales dui.
+Donec odio orci, facilisis ac vehicula in, vestibulum ut urna. Ut bibendum
+ullamcorper risus, ac euismod leo maximus sed. In pulvinar sagittis rutrum.
+Morbi quis cursus diam. Cras ac laoreet nulla, rhoncus sodales dui.
 
 ## Text
 
@@ -115,6 +125,27 @@ to force the content to wrap and span multiple lines.
 
 ?> **Tip** notice with `inline code` and additional placeholder text used to
 force the content to wrap and span multiple lines.
+
+## Tabs
+
+Tabs provided via the
+[docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs) plugin.
+
+<!-- tabs:start -->
+
+#### **English**
+
+Hello!
+
+#### **French**
+
+Bonjour!
+
+#### **Italian**
+
+Ciao!
+
+<!-- tabs:end -->
 
 ## Tables
 

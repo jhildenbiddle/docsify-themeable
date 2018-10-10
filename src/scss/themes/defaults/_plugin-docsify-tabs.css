@@ -1,0 +1,11 @@
+/* Plugin: Docsify Tabs
+============================================================================= */
+:root {
+    /* Tab blocks */
+    --docsifytabs-border-color    : var(--mono-tint2);
+    --docsifytabs-border-radius-px: var(--border-radius-s);
+
+    /* Tabs */
+    --docsifytabs-tab-background  : var(--mono-tint3);
+    --docsifytabs-tab-color       : var(--mono-tint1);
+}

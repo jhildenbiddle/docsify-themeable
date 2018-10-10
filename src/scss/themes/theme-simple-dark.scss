@@ -96,6 +96,16 @@
     --copycode-color                       : #fff;
 
 
+    // Plugin: Docsify Tabs
+    // =========================================================================
+    /* Tab blocks */
+    --docsifytabs-border-color    : var(--mono-tint2);
+
+    /* Tabs */
+    --docsifytabs-tab-background  : var(--mono-shade1);
+    --docsifytabs-tab-color       : var(--mono-tint2);
+
+
     // Plugin: Pagination
     // =========================================================================
     --pagination-border-top                : 1px solid var(--mono-tint2);
