@@ -1,5 +1,13 @@
 # Change Log
 
+## 0.4.0
+
+*2018-10-10*
+
+- Added docsify-tabs support and demo.
+- Added heading level 5-6 styles.
+- Fixed `<small>` line height presentation.
+
 ## 0.3.0
 
 *2018-08-07*

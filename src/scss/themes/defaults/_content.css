@@ -96,6 +96,26 @@
     --heading-h4-margin                 : ;
     --heading-h4-padding                : ;
 
+    --heading-h5-border-color           : ;
+    --heading-h5-border-style           : solid;
+    --heading-h5-border-width           : ;
+    --heading-h5-color                  : ;
+    --heading-h5-font-family            : ;
+    --heading-h5-font-size              : var(--font-size-s);
+    --heading-h5-font-weight            : ;
+    --heading-h5-margin                 : ;
+    --heading-h5-padding                : ;
+
+    --heading-h6-border-color           : ;
+    --heading-h6-border-style           : solid;
+    --heading-h6-border-width           : ;
+    --heading-h6-color                  : var(--mono-base);
+    --heading-h6-font-family            : ;
+    --heading-h6-font-size              : var(--font-size-s);
+    --heading-h6-font-weight            : ;
+    --heading-h6-margin                 : ;
+    --heading-h6-padding                : ;
+
     /* Keyboard */
     --kbd-background                    : var(--mono-tint3);
     --kbd-border                        : ;

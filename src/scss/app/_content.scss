@@ -125,7 +125,9 @@
     h1,
     h2,
     h3,
-    h4 {
+    h4,
+    h5,
+    h6 {
         &:first-child {
             margin-top: 0;
         }
@@ -134,9 +136,18 @@
     h1 + h2,
     h1 + h3,
     h1 + h4,
+    h1 + h5,
+    h1 + h6,
     h2 + h3,
     h2 + h4,
-    h3 + h4 {
+    h2 + h5,
+    h2 + h6,
+    h3 + h4,
+    h3 + h5,
+    h3 + h6,
+    h4 + h5,
+    h4 + h6,
+    h5 + h6 {
         margin-top: 1rem;
     }
 
@@ -188,6 +199,40 @@
         font-size: var(--heading-h4-font-size);
         font-weight: var(--heading-h4-font-weight, var(--heading-font-weight));
         color: var(--heading-h4-color, var(--heading-color));
+    }
+
+    h5 {
+        margin: var(--heading-h5-margin, var(--heading-margin));
+        padding: var(--heading-h5-padding, var(--heading-padding));
+        border-width: var(--heading-h5-border-width, 0);
+        border-style: var(--heading-h5-border-style);
+        border-color: var(--heading-h5-border-color);
+        font-family: var(--heading-h5-font-family, var(--heading-font-family));
+        font-weight: var(--heading-h5-font-weight, var(--heading-font-weight));
+        color: var(--heading-h5-color, var(--heading-color));
+
+        &,
+        & + p,
+        & + p + p {
+            font-size: var(--heading-h5-font-size);
+        }
+    }
+
+    h6 {
+        margin: var(--heading-h6-margin, var(--heading-margin));
+        padding: var(--heading-h6-padding, var(--heading-padding));
+        border-width: var(--heading-h6-border-width, 0);
+        border-style: var(--heading-h6-border-style);
+        border-color: var(--heading-h6-border-color);
+        font-family: var(--heading-h6-font-family, var(--heading-font-family));
+        font-weight: var(--heading-h6-font-weight, var(--heading-font-weight));
+
+        &,
+        & + p,
+        & + p + p {
+            font-size: var(--heading-h6-font-size);
+            color: var(--heading-h6-color, var(--heading-color));
+        }
     }
 
     iframe {
