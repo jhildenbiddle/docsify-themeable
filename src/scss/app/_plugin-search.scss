@@ -6,6 +6,13 @@
 // =============================================================================
 // v4.6.10
 body {
+    .app-name.hide {
+        // display: block;
+
+        // OVERRIDE
+        display: block;
+    }
+
     .sidebar {
         // padding-top: 0;
 

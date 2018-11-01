@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.5.0
+
+*2018-11-01*
+
+- Updated CSS to provide compatibility with the new `hideOtherSidebarContent`
+  option added to the search plugin in docsify v4.8.0
+
 ## 0.4.0
 
 *2018-10-10*
