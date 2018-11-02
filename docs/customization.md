@@ -103,6 +103,14 @@ Theme properties for docsify's [search](https://docsify.js.org/#/plugins?id=full
 
 [_plugin-search.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_plugin-search.css ':include :type:code')
 
+### Tabs
+
+See the [docsify-tabs site](https://jhildenbiddle.github.io/docsify-tabs/) for a complete list of theme properties.
+
+The following theme properties overrides are included with docsify-themeable:
+
+[_plugin-docsify-tabs.css](https://unpkg.com/docsify-themeable/src/scss/themes/defaults/_plugin-docsify-tabs.css ':include :type:code')
+
 ### Zoom Image
 
 Theme properties for docsify's [zoom image](https://docsify.js.org/#/plugins?id=zoom-image) plugin.
