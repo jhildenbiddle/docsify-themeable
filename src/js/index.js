@@ -13,6 +13,16 @@ import pluginResponsiveTables     from './plugin-responsive-tables';
 import { version as pkgVersion }  from '../../package.json';
 
 
+// Functions
+// =============================================================================
+function ifLessThanVersion(version, pluginFn) {
+    const docsifyVersion  = Number('0.' + ((window.Docsify || {}).version || '0').replace(/\./g, ''));
+    const lessThanVersion = Number('0.' + version.replace(/\./g, ''));
+
+    return docsifyVersion < lessThanVersion ? pluginFn : null;
+}
+
+
 // Main
 // =============================================================================
 // Docsify plugins
@@ -45,18 +55,18 @@ if (window) {
         // Append
         [
             pluginFixSearchClearButton,
-            pluginFixSearchResults,
-            pluginFixZoomImage
+            ifLessThanVersion('4.8.0', pluginFixSearchResults),
+            ifLessThanVersion('4.8.0', pluginFixZoomImage)
         ]
-    );
+    ).filter(plugin => plugin !== null);
 
-    // Add themeable object
+    // Add search options
+    window.$docsify.search = window.$docsify.search || {};
+    window.$docsify.search.hideOtherSidebarContent = true;
+
+    // Add themeable options
     window.$docsify.themeable = window.$docsify.themeable || {};
-
-    // Add themeable properties
     window.$docsify.themeable.version = pkgVersion;
-
-    // Add themeable utilities
     window.$docsify.themeable.util = {
         cssVars: function(options = cssVarsOptions) {
             cssVars(options);
