@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.5.1
+
+*2018.11.09*
+
+-  Fixed `<th>` center and right alignment
+
 ## 0.5.0
 
 *2018.11.01*

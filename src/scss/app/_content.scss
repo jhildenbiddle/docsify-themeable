@@ -274,6 +274,9 @@
     th,
     td {
         padding: var(--table-cell-padding);
+    }
+
+    th:not([align]) {
         text-align: left;
     }
 
