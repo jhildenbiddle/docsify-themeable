@@ -1,4 +1,4 @@
-- [Introduction](/)
+- [Introduction](introduction)
 - [Quick Start](quick-start)
 - [Themes](themes)
 - [Customization](customization)

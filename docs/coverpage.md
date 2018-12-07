@@ -8,6 +8,6 @@
 - Multiple themes available
 - Legacy browser support (IE10+)
 
-[Get Started](#main)
+[Get Started](introduction)
 [Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
 [GitHub](https://github.com/jhildenbiddle/docsify-themeable)
