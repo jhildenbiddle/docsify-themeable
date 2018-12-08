@@ -44,7 +44,7 @@
     "start": "run-p watch serve",
     "watch": "run-p 'build:* -- -w'",
     "prewatch": "npm run build:scss",
-    "version": "npm run build"
+    "version": "npm run prepare"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
