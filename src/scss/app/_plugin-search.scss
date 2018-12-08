@@ -179,11 +179,22 @@ body {
                 color: var(--search-input-placeholder-color, #808080);
             }
 
+            &::-webkit-input-placeholder {
+                // Fix vertical centering
+                line-height: normal;
+            }
+
             &:focus {
                 background-color: var(--search-input-background-color--focus, var(--search-input-background-color));
                 background-image: var(--search-input-background-image--focus, var(--search-input-background-image));
                 background-position: var(--search-input-background-position--focus, var(--search-input-background-position));
                 background-size: var(--search-input-background-size--focus, var(--search-input-background-size));
+            }
+
+            @supports(width: env(safe-area-inset)) {
+                @media only screen and (orientation: landscape) {
+                    margin-left: calc(env(safe-area-inset-left) / 2);
+                }
             }
         }
 

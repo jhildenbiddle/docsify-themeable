@@ -175,6 +175,12 @@ main {
     &::-webkit-scrollbar {
         width: 0;
     }
+
+    @supports(width: env(safe-area-inset)) {
+        @media only screen and (orientation: landscape) {
+            margin-left: calc(env(safe-area-inset-left) / 2);
+        }
+    }
 }
 
 // 1. Standard sidebar navigation
