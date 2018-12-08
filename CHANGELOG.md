@@ -1,10 +1,18 @@
 # Change Log
 
+## 0.6.0
+
+*2018.12.07*
+
+- Add support for docsify's `onlyCover` option
+- Add support for full-width landscape presentation for "notched" devices
+- Fix search placeholder text vertical centering on Safari (iOS/Mac)
+
 ## 0.5.1
 
 *2018.11.09*
 
--  Fixed `<th>` center and right alignment
+- Fixed `<th>` center and right alignment
 
 ## 0.5.0
 
