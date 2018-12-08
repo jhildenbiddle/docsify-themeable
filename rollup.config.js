@@ -94,9 +94,9 @@ const iife = merge({}, config, {
     output: {
         format: 'iife'
     },
-    plugins: [
+    plugins: config.plugins.concat([
         uglify(pluginSettings.uglify.beautify)
-    ]
+    ])
 });
 
 // IIFE (Minified)
@@ -105,9 +105,9 @@ const iifeMinified = merge({}, config, {
         file  : iife.output.file.replace(/\.js$/, '.min.js'),
         format: iife.output.format
     },
-    plugins: [
+    plugins: config.plugins.concat([
         uglify(pluginSettings.uglify.minify)
-    ]
+    ])
 });
 
 
