@@ -14,6 +14,10 @@ import { uglify } from 'rollup-plugin-uglify';
 
 // Settings
 // =============================================================================
+// Copyright
+const currentYear  = (new Date()).getFullYear();
+const releaseYear  = 2018;
+
 // Output
 const entryFile  = path.resolve(__dirname, 'src', 'js', 'index.js');
 const outputFile = path.resolve(__dirname, 'dist', 'js', `${pkg.name}.js`);
@@ -23,7 +27,7 @@ const bannerData = [
     `${pkg.name}`,
     `v${pkg.version}`,
     `${pkg.homepage}`,
-    `(c) ${(new Date()).getFullYear()} ${pkg.author}`,
+    `(c) ${releaseYear}${currentYear === releaseYear ? '' : '-' + currentYear} ${pkg.author}`,
     `${pkg.license} license`
 ];
 

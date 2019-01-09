@@ -40,7 +40,7 @@
 
 This project is licensed under the [MIT license](https://github.com/jhildenbiddle/docsify-themeable/blob/master/LICENSE).
 
-Copyright (c) 2018 John Hildenbiddle ([@jhildenbiddle](https://twitter.com/jhildenbiddle))
+Copyright (c) John Hildenbiddle ([@jhildenbiddle](https://twitter.com/jhildenbiddle))
 
 <!-- GitHub Buttons -->
 <script async defer src="https://buttons.github.io/buttons.js"></script>
