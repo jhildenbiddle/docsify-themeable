@@ -7,18 +7,18 @@
 1. Select a theme from the [Themes](themes) section and replace the `<link>` in your `index.html`.
 
    ```html
-   <!-- Theme: Simple -->
-   <link rel="stylesheet" href="https://unpkg.com/docsify-themeable/dist/css/theme-simple.css">
+   <!-- Theme: Simple (latest v0.x.x) -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
    ```
 
-1. Add the docsify-themeable plugin `<script>` to your `index.html`:
+1. Add the docsify-themeable plugin to your `index.html` after docsify:
 
    ```html
-   <!-- docsify (also available on jsdelivr.com -->
-   <script src="https://unpkg.com/docsify/lib/docsify.min.js"></script>
+   <!-- docsify (latest v4.x.x) -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
 
-   <!-- docsify-themeable -->
-   <script src="https://unpkg.com/docsify-themeable"></script>
+   <!-- docsify-themeable (latest v0.x.x) -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
    ```
 
 1. Review the [Options](options) section and configure as needed. For example:
