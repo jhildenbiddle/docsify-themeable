@@ -66,15 +66,14 @@ browserSync.init({
         }
     },
     rewriteRules: [
+        // Replace CDN URLs with local paths
         {
-            // Replace CDN default with local js path
-            match  : /"https:\/\/unpkg\.com\/docsify-themeable"/g,
-            replace: '"/js/docsify-themeable.min.js"'
+            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@0\/dist\//g,
+            replace: '/'
         },
         {
-            // Replace CDN URLs with local paths
-            match  : /https:\/\/unpkg\.com\/docsify-themeable\/dist\//g,
-            replace: '/'
+            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@0/g,
+            replace: '/js/docsify-themeable.min.js'
         }
     ]
 });
