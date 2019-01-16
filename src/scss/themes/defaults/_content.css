@@ -109,9 +109,9 @@
     --heading-h6-border-color           : ;
     --heading-h6-border-style           : solid;
     --heading-h6-border-width           : ;
-    --heading-h6-color                  : var(--mono-base);
+    --heading-h6-color                  : ;
     --heading-h6-font-family            : ;
-    --heading-h6-font-size              : var(--font-size-s);
+    --heading-h6-font-size              : var(--font-size-xs);
     --heading-h6-font-weight            : ;
     --heading-h6-margin                 : ;
     --heading-h6-padding                : ;

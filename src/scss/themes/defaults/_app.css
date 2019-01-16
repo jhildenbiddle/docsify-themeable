@@ -28,7 +28,7 @@
     --modular-scale   : 1.333;
 
     /* Module Scale Calculations (do not edit these) */
-    --modular-scale--2: calc(var(--modular-scale-2) / var(--modular-scale));
+    --modular-scale--2: calc(var(--modular-scale--1) / var(--modular-scale));
     --modular-scale--1: calc(var(--modular-scale-1) / var(--modular-scale));
     --modular-scale-1 : 1rem;
     --modular-scale-2 : calc(var(--modular-scale-1) * var(--modular-scale));

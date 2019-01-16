@@ -208,14 +208,9 @@
         border-style: var(--heading-h5-border-style);
         border-color: var(--heading-h5-border-color);
         font-family: var(--heading-h5-font-family, var(--heading-font-family));
+        font-size: var(--heading-h5-font-size);
         font-weight: var(--heading-h5-font-weight, var(--heading-font-weight));
         color: var(--heading-h5-color, var(--heading-color));
-
-        &,
-        & + p,
-        & + p + p {
-            font-size: var(--heading-h5-font-size);
-        }
     }
 
     h6 {
@@ -225,14 +220,9 @@
         border-style: var(--heading-h6-border-style);
         border-color: var(--heading-h6-border-color);
         font-family: var(--heading-h6-font-family, var(--heading-font-family));
+        font-size: var(--heading-h6-font-size);
         font-weight: var(--heading-h6-font-weight, var(--heading-font-weight));
-
-        &,
-        & + p,
-        & + p + p {
-            font-size: var(--heading-h6-font-size);
-            color: var(--heading-h6-color, var(--heading-color));
-        }
+        color: var(--heading-h6-color, var(--heading-color));
     }
 
     iframe {
