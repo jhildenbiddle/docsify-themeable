@@ -358,6 +358,7 @@ main {
         position: absolute;
         overflow: visible;
         left: 0;
+        width: 0;
         transform: translateX(var(--sidebar-width));
     }
 
