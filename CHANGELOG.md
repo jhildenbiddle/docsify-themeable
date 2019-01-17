@@ -1,5 +1,17 @@
 # Change Log
 
+## 0.6.1
+
+*2019.01.16*
+
+- Add rendered/markdown tabs to Markdown section of website
+- Fix font size of paragraph elements following H5 and H6 headings
+- Fix Autoprefixr behavior by updating browserslist settings
+- Update invisible sidebar left-edge toggle on appearance so it only appears
+  on smaller screens
+- Update zoom image plugin default overlay color
+- Update CDN links to jsDelivr
+
 ## 0.6.0
 
 *2018.12.07*
@@ -12,54 +24,54 @@
 
 *2018.11.09*
 
-- Fixed `<th>` center and right alignment
+- Fix `<th>` center and right alignment
 
 ## 0.5.0
 
 *2018.11.01*
 
-- Added conditional loading of plugins based on docsify version
-- Added docsify version check before loading `pluginFixSearchResults`
-- Added docsify version check before loading `pluginFixZoomImage`
-- Updated CSS and set seach options to provide compatibility with the new
+- Add conditional loading of plugins based on docsify version
+- Add docsify version check before loading `pluginFixSearchResults`
+- Add docsify version check before loading `pluginFixZoomImage`
+- Update CSS and set seach options to provide compatibility with the new
   `hideOtherSidebarContent` option added to the search plugin in docsify 4.8.0
 
 ## 0.4.0
 
 *2018-10-10*
 
-- Added docsify-tabs support and demo
-- Added heading level 5-6 styles
-- Fixed `<small>` line height presentation
+- Add docsify-tabs support and demo
+- Add heading level 5-6 styles
+- Fix `<small>` line height presentation
 
 ## 0.3.0
 
 *2018-08-07*
 
-- Added `--sidebar-nav-pagelink-background-size` property
+- Add `--sidebar-nav-pagelink-background-size` property
 
 ## 0.2.0
 
 *2018-08-07*
 
-- Updated css-vars-ponyfill dependency to address potential issues with
+- Update css-vars-ponyfill dependency to address potential issues with
   CSS custom properties in legacy browsers
 
 ## 0.1.2
 
 *2018-06-23*
 
-- Updated Simple and Simple-Dark themes: Fixed `--notice-tip-border-color`
+- Update Simple and Simple-Dark themes: Fixed `--notice-tip-border-color`
   value inheriting from `-theme-color`
-- Fixed high CPU usage in Safari when using Simple or Simple-Dark themes
+- Fix high CPU usage in Safari when using Simple or Simple-Dark themes
 
 ## 0.1.1
 
 *2018-06-08*
 
-- Updated package.json, index.md and README copy
-- Updated default theme: remove borders from `<table>` and `<kbd>`
-- Update. simple theme: change `<blockquote>` style to match important/tip style
+- Update package.json, index.md and README copy
+- Update default theme: remove borders from `<table>` and `<kbd>`
+- Update simple theme: change `<blockquote>` style to match important/tip style
 
 ## 0.1.0
 
