@@ -1,5 +1,5 @@
 /* Plugin: Zoom Image
 ============================================================================= */
 :root {
-    --zoomimage-overlay-background: var(--base-background-color);
+    --zoomimage-overlay-background: rgba(0, 0, 0, 0.875);
 }
