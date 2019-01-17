@@ -25,7 +25,8 @@
     "variables"
   ],
   "browserslist": [
-    "ie >= 10"
+    "last 2 versions",
+    "not dead"
   ],
   "files": [
     "dist",
