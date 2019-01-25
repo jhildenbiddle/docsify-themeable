@@ -14,9 +14,6 @@
 1. Add the docsify-themeable plugin to your `index.html` after docsify:
 
    ```html
-   <!-- docsify (latest v4.x.x) -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4"></script>
-
    <!-- docsify-themeable (latest v0.x.x) -->
    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
    ```
