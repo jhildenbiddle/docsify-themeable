@@ -5,45 +5,103 @@
 // External styles are copied below for reference only.
 // https://github.com/jperasmus/docsify-copy-code/blob/master/src/styles.css
 // =============================================================================
-// v1.1.0
+// v2.0.x
+// -----------------------------------------------------------------------------
 .docsify-copy-code-button {
-    // background: #ccc;
-    // color: #fff;
-    // position: absolute;
-    // top: 0;
+    // z-index: 1;
     // right: 0;
-    // outline: 0;
+    // padding: 10px;
+    // opacity: 0;
     // border: 0;
     // border-radius: 0;
+    // outline: 0;
+    // cursor: pointer
+}
+
+.docsify-copy-code-button,
+.docsify-copy-code-button:after {
+    // position: absolute;
+    // top: 0;
+    // background: #ccc;
+    // color: #fff;
+    // transition: all .25s ease
+}
+
+.docsify-copy-code-button:after {
+    // content: "Copied!";
+    // z-index: 0;
+    // right: 100%;
+    // margin: 5px 10px 0;
+    // padding: 5px;
+    // border-radius: 3px;
+    // font-size: 11px;
+    // -webkit-transform: translateX(120%) scale(0);
+    // transform: translateX(120%) scale(0)
+}
+
+.docsify-copy-code-button.success:after {
+    // -webkit-transform: translateX(0) scale(1);
+    // transform: translateX(0) scale(1)
+}
+
+pre[v-pre]:hover .docsify-copy-code-button {
+    // opacity: 1
+}
+
+// v2.1.x
+// -----------------------------------------------------------------------------
+.docsify-copy-code-button,
+.docsify-copy-code-button span {
     // cursor: pointer;
+    // transition: all .25s ease
+}
+
+.docsify-copy-code-button {
+    // position: absolute;
     // z-index: 1;
-    // padding: 10px;
-    // transition: all 0.25s ease;
+    // top: 0;
+    // right: 0;
+    // overflow: visible;
+    // padding: .65em .8em;
+    // border: 0;
+    // border-radius: 0;
+    // outline: 0;
+    // font-size: 1em;
+    // background: grey;
+    // background: var(--theme-color, grey);
+    // color: #fff;
+    // opacity: 0
+}
+
+.docsify-copy-code-button span {
+    // border-radius: 3px;
+    // background: inherit;
+    // pointer-events: none
+}
+
+.docsify-copy-code-button .error,
+.docsify-copy-code-button .success {
+    // position: absolute;
+    // z-index: -100;
+    // top: 50%;
+    // left: 0;
+    // padding: .5em .65em;
+    // font-size: .825em;
     // opacity: 0;
+    // -webkit-transform: translateY(-50%);
+    // transform: translateY(-50%)
+}
 
-    &::after {
-        // content: "Copied!";
-        // position: absolute;
-        // right: 100%;
-        // top: 0;
-        // background: #ccc;
-        // color: #fff;
-        // padding: 5px;
-        // margin: 5px 10px 0;
-        // font-size: 11px;
-        // z-index: 0;
-        // transition: all 0.25s ease;
-        // transform: translateX(120%) scale(0);
-        // border-radius: 3px;
-    }
+.docsify-copy-code-button.error .error,
+.docsify-copy-code-button.success .success {
+    // opacity: 1;
+    // -webkit-transform: translate(-115%, -50%);
+    // transform: translate(-115%, -50%)
+}
 
-    &.success::after {
-        // transform: translateX(0) scale(1);
-    }
-
-    pre[v-pre]:hover & {
-        // opacity: 1;
-    }
+.docsify-copy-code-button:focus,
+pre:hover .docsify-copy-code-button {
+    // opacity: 1
 }
 
 
@@ -53,8 +111,17 @@
 // =============================================================================
 body {
     .docsify-copy-code-button,
-    .docsify-copy-code-button::after {
+    .docsify-copy-code-button:after /* 2.0.x */ {
+        border-radius: var(--border-radius-m, 0);
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
         background: var(--copycode-background);
         color: var(--copycode-color);
+    }
+
+    .docsify-copy-code-button {
+        span /* 2.1.x */ {
+            border-radius: var(--border-radius-s, 0);
+        }
     }
 }

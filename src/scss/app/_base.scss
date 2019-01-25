@@ -11,28 +11,38 @@
     -webkit-touch-callout: none;
 }
 
-html {
+:root {
     box-sizing: border-box;
     background-color: var(--base-background-color);
-    font-family: var(--base-font-family);
     font-size: var(--base-font-size);
     font-weight: var(--base-font-weight);
-    letter-spacing: var(--base-letter-spacing);
     line-height: var(--base-line-height);
+    letter-spacing: var(--base-letter-spacing);
     color: var(--base-color);
-
     // Normalize font weights across browsers and operating systems
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
 }
 
-::selection {
-    background: var(--selection-color);
+html,
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-family: var(--base-font-family);
 }
 
-// Tags
-// -----------------------------------------------------------------------------
+button,
+input,
+optgroup,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+}
+
 a {
     text-decoration: none;
     text-decoration-skip-ink: auto;
@@ -97,6 +107,12 @@ sub {
 
 sup {
     top: -0.5em;
+}
+
+// Pseudo
+// -----------------------------------------------------------------------------
+::selection {
+    background: var(--selection-color);
 }
 
 // Classes

@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.6.2
+
+*2019.01.25*
+
+- Update styles for docsify-copy-code 2.1.x
+
 ## 0.6.1
 
 *2019.01.16*
