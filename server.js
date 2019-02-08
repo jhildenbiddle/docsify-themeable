@@ -24,7 +24,10 @@ browserSync.init({
         ],
         middleware: [
             compression()
-        ]
+        ],
+        routes: {
+            '/CHANGELOG.md': './CHANGELOG.md'
+        }
     },
     serveStatic: [
         './dist/'
