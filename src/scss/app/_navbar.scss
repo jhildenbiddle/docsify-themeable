@@ -22,12 +22,6 @@
         }
     }
 
-    a {
-        display: block;
-        line-height: 1;
-        transition: var(--navbar-root-transition);
-    }
-
     ul,
     li {
         margin: 0;
@@ -37,6 +31,12 @@
 
     li {
         position: relative;
+
+        a {
+            display: block;
+            line-height: 1;
+            transition: var(--navbar-root-transition);
+        }
     }
 
     > ul {
