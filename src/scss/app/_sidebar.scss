@@ -307,6 +307,7 @@ main {
 // -----------------------------------------------------------------------------
 .sidebar-toggle,
 .sidebar-toggle-button {
+    width: var(--sidebar-toggle-width);
     outline: none;
 }
 
@@ -316,7 +317,7 @@ main {
     top: 0;
     bottom: 0;
     left: 0;
-    width: 40px;
+    max-width: 40px;
     margin: 0;
     padding: 0;
     border: 0;
@@ -329,7 +330,6 @@ main {
         top: var(--sidebar-toggle-offset-top);
         left: var(--sidebar-toggle-offset-left);
         height: var(--sidebar-toggle-height);
-        width: var(--sidebar-toggle-width);
         border-radius: var(--sidebar-toggle-border-radius);
         border-width: var(--sidebar-toggle-border-width);
         border-style: var(--sidebar-toggle-border-style);
@@ -357,9 +357,15 @@ main {
     @include media(">=medium") {
         position: absolute;
         overflow: visible;
+        top: var(--sidebar-toggle-offset-top);
+        bottom: auto;
         left: 0;
-        width: 0;
+        height: var(--sidebar-toggle-height);
         transform: translateX(var(--sidebar-width));
+
+        .sidebar-toggle-button {
+            top: 0;
+        }
     }
 
     @media print {
@@ -412,6 +418,7 @@ body.close {
     .sidebar-toggle {
         @include media("<medium") {
             width: 100%;
+            max-width: none;
 
             span {
                 margin-top: 0;
