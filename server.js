@@ -71,11 +71,15 @@ browserSync.init({
     rewriteRules: [
         // Replace CDN URLs with local paths
         {
-            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@0\/dist\//g,
+            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@[\d.]*\/dist\//g,
             replace: '/'
         },
         {
-            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@0/g,
+            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@[\d.]*\/CHANGELOG.md/g,
+            replace: '/CHANGELOG.md'
+        },
+        {
+            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@[\d.]*/g,
             replace: '/js/docsify-themeable.min.js'
         }
     ]
