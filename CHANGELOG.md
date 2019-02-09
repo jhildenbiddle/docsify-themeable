@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.6.3
+
+*2019.02.08*
+
+- Fix sidebar toggle in Firefox
+
 ## 0.6.2
 
 *2019.01.25*
