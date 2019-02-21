@@ -40,7 +40,9 @@
     --search-result-item-border-color        : var(--mono-tint2);
     --search-result-item-border-style        : solid;
     --search-result-item-border-width        : 0 0 1px 0;
+    --search-result-item-color               : ;
     --search-result-item-font-size           : ;
+    --search-result-item-font-weight         : ;
     --search-result-item-margin              : ;
     --search-result-item-padding             : 1em 0;
     --search-result-keyword-background       : var(--mark-background);

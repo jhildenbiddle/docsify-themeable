@@ -238,7 +238,9 @@ body {
         // ---------------------------------------------------------------------
         .results-panel {
             display: none;
+            color: var(--search-result-item-color);
             font-size: var(--search-result-item-font-size);
+            font-weight: var(--search-result-item-font-weight);
 
             &.show {
                 display: block;

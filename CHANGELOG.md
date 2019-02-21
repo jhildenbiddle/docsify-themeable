@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.7.0
+
+*2019.02.21*
+
+- Add `--search-result-item-color` theme property
+- Add `--search-result-item-weight` theme property
+
 ## 0.6.3
 
 *2019.02.08*
