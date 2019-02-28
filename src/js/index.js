@@ -37,6 +37,10 @@ if (window) {
     // CSS custom properties ponyfill
     cssVars(cssVarsOptions);
 
+    // Add platform data to <body>
+    document.body.setAttribute('data-platform', navigator.platform);
+
+    // Create docsify config object if it does not already exist
     window.$docsify = window.$docsify || {};
 
     // Add plugins

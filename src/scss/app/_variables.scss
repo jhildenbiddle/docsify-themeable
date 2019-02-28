@@ -11,6 +11,8 @@ $breakpoints: (
     xxlarge: 100em // 1600px / large desktop
 );
 
+$scrollbar-width: 5px;
+
 $z-index: (
     progress    : 60,
     overlay     : 50,

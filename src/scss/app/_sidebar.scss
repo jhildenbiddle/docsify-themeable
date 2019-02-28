@@ -40,6 +40,7 @@ main {
     z-index: map-get($z-index, sidebar);
     top: 0;
     right: 100%;
+    overflow-x: hidden;
     overflow-y: auto;
     height: 100vh;
     width: var(--sidebar-width);
@@ -66,6 +67,29 @@ main {
 
         .app-name-link {
             color: var(--sidebar-name-color);
+        }
+    }
+
+    // Non-macOS Platforms
+    body:not([data-platform^="Mac"]) & {
+        &::-webkit-scrollbar {
+            width: 0;
+        }
+        &::-webkit-scrollbar-thumb {
+            border-radius: 50vw;
+        }
+
+        &:hover {
+            // Webkit-only (Firefox ignores this -webkit property)
+            @supports (-webkit-font-smoothing: auto) {
+                > *:not(.sidebar-nav) {
+                    margin-right: -$scrollbar-width;
+                }
+            }
+
+            &::-webkit-scrollbar {
+                width: $scrollbar-width;
+            }
         }
     }
 

@@ -111,6 +111,25 @@ sup {
 
 // Pseudo
 // -----------------------------------------------------------------------------
+// Non-macOS Platforms
+body:not([data-platform^="Mac"]) {
+    * {
+        scrollbar-color: hsla(var(--mono-hue), var(--mono-saturation), 50%, 0.3) hsla(var(--mono-hue), var(--mono-saturation), 50%, 0.1);
+        scrollbar-width: thin;
+
+        ::-webkit-scrollbar {
+            width: $scrollbar-width;
+            height: $scrollbar-width;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: hsla(var(--mono-hue), var(--mono-saturation), 50%, 0.3);
+        }
+        ::-webkit-scrollbar-track {
+            background: hsla(var(--mono-hue), var(--mono-saturation), 50%, 0.1);
+        }
+    }
+}
+
 ::selection {
     background: var(--selection-color);
 }
