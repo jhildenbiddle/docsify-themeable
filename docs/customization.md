@@ -41,37 +41,37 @@ To customize a *docsify-themeable* [theme](themes):
 
 Theme properties for application styles.
 
-[_app.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_app.css ':include :type:code')
+[_app.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_app.css ':include')
 
 ### Base
 
 Theme properties for base styles.
 
-[_base.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_base.css ':include :type:code')
+[_base.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_base.css ':include')
 
 ### Content
 
 Theme properties for markdown content.
 
-[_content.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_content.css ':include :type:code')
+[_content.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_content.css ':include')
 
 ### Cover
 
 Theme properties for docsify's [`coverpage`](https://docsify.js.org/#/cover).
 
-[_cover.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_cover.css ':include :type:code')
+[_cover.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_cover.css ':include')
 
 ### Navbar
 
 Theme properties for docsify's custom [`navbar`](https://docsify.js.org/#/custom-navbar).
 
-[_navbar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_navbar.css ':include :type:code')
+[_navbar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_navbar.css ':include')
 
 ### Sidebar
 
 Theme properties for docsify's custom [`sidebar`](https://docsify.js.org/#/more-pages).
 
-[_sidebar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_sidebar.css ':include :type:code')
+[_sidebar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_sidebar.css ':include')
 
 ## Plugin Styles
 
@@ -89,19 +89,19 @@ All [docsify plugins](https://docsify.js.org/#/plugins) will work with *docsify-
 
 Theme properties for [docsify-copy-code](https://github.com/jperasmus/docsify-copy-code) plugin.
 
-[_plugin-copycode.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-copy-code.css ':include :type:code')
+[_plugin-copycode.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-copy-code.css ':include')
 
 ### Pagination
 
 Theme properties for [docsify-pagination](https://github.com/imyelo/docsify-pagination) plugin.
 
-[_plugin-pagination.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-pagination.css ':include :type:code')
+[_plugin-pagination.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-pagination.css ':include')
 
 ### Search
 
 Theme properties for docsify's [search](https://docsify.js.org/#/plugins?id=full-text-search) plugin.
 
-[_plugin-search.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-search.css ':include :type:code')
+[_plugin-search.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-search.css ':include')
 
 ### Tabs
 
@@ -109,13 +109,13 @@ See the [docsify-tabs site](https://jhildenbiddle.github.io/docsify-tabs/) for a
 
 The following theme properties overrides are included with docsify-themeable:
 
-[_plugin-docsify-tabs.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-docsify-tabs.css ':include :type:code')
+[_plugin-docsify-tabs.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-docsify-tabs.css ':include')
 
 ### Zoom Image
 
 Theme properties for docsify's [zoom image](https://docsify.js.org/#/plugins?id=zoom-image) plugin.
 
-[_plugin-zoom.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-zoom-image.css ':include :type:code')
+[_plugin-zoom.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-zoom-image.css ':include')
 
 ## PrismJS
 
