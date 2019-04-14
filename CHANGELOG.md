@@ -1,11 +1,18 @@
 # Change Log
 
+## 0.7.2
+
+*2019.04.14*
+
+- Fixed font weight rendering in Edge 17/18
+- Fixed `.app-name` shift on sidebar hover (#22)
+
 ## 0.7.1
 
 *2019.02.27*
 
 - Fixed custom scrollbar styles for moz- and webkit-based based browsers on
-  non-macOS platforms.
+  non-macOS platforms
 
 ## 0.7.0
 
