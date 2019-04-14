@@ -5,7 +5,7 @@
     --base-color           : var(--mono-shade2);
     --base-font-family     : -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --base-font-size       : 16px;
-    --base-font-weight     : ;
+    --base-font-weight     : normal;
     --base-letter-spacing  : ;
     --base-line-height     : 1.7;
 
@@ -22,7 +22,7 @@
     /* Preformatted */
     --pre-font-family      : var(--code-font-family);
     --pre-font-size        : var(--code-font-size);
-    --pre-font-weight      : ;
+    --pre-font-weight      : normal;
     --pre-line-height      : ;
 
     /* Selection */

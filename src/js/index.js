@@ -28,9 +28,9 @@ function ifLessThanVersion(version, pluginFn) {
 // Docsify plugins
 if (window) {
     const cssVarsOptions = {
-        // Force ponyfill on Edge 15/16 due to numerous custom property bugs
+        // Force ponyfill on Edge 15-18 due to many custom property bugs
         // https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/?page=1&q=%22custom%20property%22%20%22custom%20properties%22%20%22css%20variable%22%20%22css%20variables%22
-        onlyLegacy: !(/Edge\/15|Edge\/16./i.test(navigator.userAgent)),
+        onlyLegacy: !(/Edge\/1[5678]/i.test(navigator.userAgent)),
         silent    : true
     };
 

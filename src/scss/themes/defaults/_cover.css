@@ -62,7 +62,7 @@
     --cover-heading-font-size                          : var(--font-size-xxl);
     --cover-heading-font-size-min                      : ;
     --cover-heading-font-size-max                      : ;
-    --cover-heading-font-weight                        : ;
+    --cover-heading-font-weight                        : normal;
 
     /* Links */
     --cover-link-border-bottom                         : ;

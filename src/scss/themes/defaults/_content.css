@@ -13,11 +13,11 @@
     --blockquote-em-font-family         : ;
     --blockquote-em-font-size           : ;
     --blockquote-em-font-style          : ;
-    --blockquote-em-font-weight         : ;
+    --blockquote-em-font-weight         : normal;
     --blockquote-font-family            : ;
     --blockquote-font-size              : ;
     --blockquote-font-style             : ;
-    --blockquote-font-weight            : ;
+    --blockquote-font-weight            : normal;
     --blockquote-quotes-close           : ;
     --blockquote-quotes-color           : ;
     --blockquote-quotes-font-family     : ;
@@ -27,7 +27,7 @@
     /* Code */
     --code-font-family                  : Inconsolata, Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
     --code-font-size                    : calc(var(--font-size-m) * 0.95);
-    --code-font-weight                  : ;
+    --code-font-weight                  : normal;
     --code-tab-size                     : 4;
 
     --code-block-border-radius          : var(--border-radius-m);
@@ -144,7 +144,7 @@
     --notice-border-width               : ;
     --notice-color                      : ;
     --notice-font-family                : ;
-    --notice-font-weight                : ;
+    --notice-font-weight                : normal;
     --notice-padding                    : 1em 1.5em;
 
     /* Notice - Pseudo */
@@ -154,7 +154,7 @@
     --notice-before-content             : ;
     --notice-before-font-family         : ;
     --notice-before-font-size           : ;
-    --notice-before-font-weight         : ;
+    --notice-before-font-weight         : normal;
     --notice-before-height              : ;
     --notice-before-left                : ;
     --notice-before-line-height         : ;

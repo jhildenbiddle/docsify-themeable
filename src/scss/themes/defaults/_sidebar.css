@@ -13,7 +13,7 @@
     --sidebar-name-color                          : ;
     --sidebar-name-font-family                    : ;
     --sidebar-name-font-size                      : var(--font-size-l);
-    --sidebar-name-font-weight                    : ;
+    --sidebar-name-font-weight                    : normal;
     --sidebar-name-margin                         : 1.5rem 0 0;
     --sidebar-name-padding                        : ;
     --sidebar-name-text-align                     : center;
@@ -61,7 +61,7 @@
     --sidebar-nav-link-color                      : var(--base-color);
     --sidebar-nav-link-color--active              : ;
     --sidebar-nav-link-color--hover               : ;
-    --sidebar-nav-link-font-weight                : ;
+    --sidebar-nav-link-font-weight                : normal;
     --sidebar-nav-link-font-weight--active        : ;
     --sidebar-nav-link-font-weight--hover         : ;
     --sidebar-nav-link-margin                     : ;
