@@ -73,23 +73,10 @@ main {
     // Non-macOS Platforms
     body:not([data-platform^="Mac"]) & {
         &::-webkit-scrollbar {
-            width: 0;
+            width: $scrollbar-width;
         }
         &::-webkit-scrollbar-thumb {
             border-radius: 50vw;
-        }
-
-        &:hover {
-            // Webkit-only (Firefox ignores this -webkit property)
-            @supports (-webkit-font-smoothing: auto) {
-                > *:not(.sidebar-nav) {
-                    margin-right: -$scrollbar-width;
-                }
-            }
-
-            &::-webkit-scrollbar {
-                width: $scrollbar-width;
-            }
         }
     }
 
