@@ -314,6 +314,8 @@
     }
 
     .table-wrapper {
+        overflow-x: auto;
+
         table {
             display: table;
             width: 100%;
@@ -353,13 +355,15 @@
             }
 
             td {
-                display: flex;
-                padding: 0.15em 0;
+                $label-width: 8em;
+
+                padding: 0.15em 0 0.15em $label-width;
 
                 &::before {
-                    display: block;
-                    min-width: 8em;
-                    max-width: 8em;
+                    display: inline-block;
+                    float: left;
+                    width: $label-width;
+                    margin-left: 0 - $label-width;
                     font-weight: bold;
                     text-align: left;
                 }
