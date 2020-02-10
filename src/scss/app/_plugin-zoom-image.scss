@@ -42,7 +42,8 @@
 // - For inline declarations, add !important to selector
 // =============================================================================
 .medium-zoom-overlay,
-.medium-zoom-image--open {
+.medium-zoom-image--open,
+.medium-zoom-image--opened {
     z-index: map-get($z-index, overlay) !important;
 }
 

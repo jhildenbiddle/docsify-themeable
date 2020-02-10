@@ -517,7 +517,7 @@ Ciao!
 
 Inline-style
 
-![alt text](//source.unsplash.com/collection/181581 "Provided by unsplash.com")
+![alt text](//source.unsplash.com/daily "Provided by unsplash.com")
 
 Reference-style
 
@@ -530,7 +530,7 @@ Reference-style
 ```markdown
 **Inline**
 
-![alt text](//source.unsplash.com/collection/181581 "Provided by unsplash.com")
+![alt text](//source.unsplash.com/daily "Provided by unsplash.com")
 
 **Reference**
 
