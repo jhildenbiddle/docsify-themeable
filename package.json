@@ -30,7 +30,7 @@
   ],
   "files": [
     "dist",
-    "src/scss/themes/defaults"
+    "src/scss"
   ],
   "main": "dist/js/docsify-themeable.js",
   "unpkg": "dist/js/docsify-themeable.min.js",
