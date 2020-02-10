@@ -1,17 +1,27 @@
 # Change Log
 
+## 0.8.0
+
+*2020.02.10*
+
+- Add additional Sass file to npm package (#26)
+- Fix zoom image plugin z-index issue introduced in docsify 4.10 (#37)
+- Fix table overflow behavior (#38)
+- Update dependencies
+- Remove sentry.io from website
+
 ## 0.7.2
 
 *2019.04.14*
 
-- Fixed font weight rendering in Edge 17/18
-- Fixed `.app-name` shift on sidebar hover (#22)
+- Fix font weight rendering in Edge 17/18
+- Fix `.app-name` shift on sidebar hover (#22)
 
 ## 0.7.1
 
 *2019.02.27*
 
-- Fixed custom scrollbar styles for moz- and webkit-based based browsers on
+- Fix custom scrollbar styles for moz- and webkit-based based browsers on
   non-macOS platforms
 
 ## 0.7.0
