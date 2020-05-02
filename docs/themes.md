@@ -2,7 +2,7 @@
 
 ### Defaults
 
-A minimalistic theme containing only the default values used by all other
+A minimalist theme containing only the default values used by all other
 themes. This theme is intended to serve as the most basic starting point for a
 customized theme.
 
