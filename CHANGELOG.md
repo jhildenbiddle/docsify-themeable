@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.8.1
+
+*2020.05.02*
+
+- Fix max-width on images
+- Update dependencies
+
 ## 0.8.0
 
 *2020.02.10*
