@@ -1,5 +1,38 @@
 # Customization
 
+## Theme Switcher
+
+To switch between themes [theme](themes):
+
+Add styles same as below in your `index.html`
+
+```html
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/style.min.css" type="text/css">
+```
+
+You can give any external or custom stylesheets from local based on you preference inside `href` on below two stylesheet links.
+
+Just [view the source of other themes](https://github.com/jhildenbiddle/docsify-themeable/tree/master/src/scss/themes), find the theme properties you like, and copy them to your custom stylesheet.
+
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css" title="light">
+<link rel="stylesheet alternative" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css" title="dark"> 
+```
+
+And finally add below two scripts on bottom of the `index.html`
+
+```html
+<script
+    src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/main.min.js"
+    type="text/javascript">
+</script>
+
+<script
+    src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@3/dist/docsify-themeable/index.min.js"
+    type="text/javascript">
+</script>
+```
+
 ## Theme Styles
 
 To customize a *docsify-themeable* [theme](themes):
