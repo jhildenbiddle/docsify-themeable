@@ -133,6 +133,7 @@ body:not([data-platform^="Mac"]) {
 
 ::selection {
     background: var(--selection-color);
+    color: var(--base-background-color);
 }
 
 // Classes
