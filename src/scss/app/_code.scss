@@ -55,7 +55,7 @@ pre[data-lang] ::-moz-selection,
 code[class*="lang-"]::-moz-selection,
 code[class*="lang-"] ::-moz-selection {
     background: var(--code-theme-selection, var(--selection-color));
-    color: var(--base-background-color);
+    color: inherit;
 }
 
 pre[data-lang]::selection,
@@ -63,7 +63,7 @@ pre[data-lang] ::selection,
 code[class*="lang-"]::selection,
 code[class*="lang-"] ::selection {
     background: var(--code-theme-selection, var(--selection-color));
-    color: var(--base-background-color);
+    color: inherit;
 }
 
 :not(pre) > code[class*="lang-"],
