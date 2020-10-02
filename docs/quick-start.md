@@ -15,7 +15,7 @@
 
    ```html
    <!-- docsify-themeable (latest v0.x.x) -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0"></script>
+   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
    ```
 
 1. Review the [Options](options) section and configure as needed. For example:
