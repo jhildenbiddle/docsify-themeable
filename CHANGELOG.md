@@ -1,5 +1,15 @@
 # Change Log
 
+## 0.8.2
+
+*2020.10.02*
+
+- Add support for docsify's `hideSidebar` option (#55)
+- Fix font size of `<code>` elements nested within headings (#56)
+- Fix position of headings on scroll events (now flush with top of viewport)
+- Update docs to recommend full URL to `docsify.min.js` to avoid 404 errors for
+  sourcemaps (#54)
+
 ## 0.8.1
 
 *2020.05.02*
