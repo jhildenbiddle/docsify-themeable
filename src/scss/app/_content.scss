@@ -132,6 +132,10 @@
             margin-top: 0;
         }
 
+        a[data-id] {
+            display: inline-block;
+        }
+
         code {
             font-size: 0.875em;
         }
