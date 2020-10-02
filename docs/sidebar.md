@@ -6,7 +6,7 @@
 - [Markdown](markdown)
 - [Changelog](changelog)
 - **Links**
-- [![Code](https://icongr.am/feather/code.svg?size=16&color=808080)Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
-- [![Github](https://icongram.jgog.in/simple/github.svg?color=808080&size=16)Github](https://github.com/jhildenbiddle/docsify-themeable)
-- [![NPM](https://icongram.jgog.in/simple/npm.svg?colored&size=16)NPM](https://www.npmjs.com/package/docsify-themeable)
-- [![Twitter](https://icongram.jgog.in/simple/twitter.svg?colored&size=16)@jhildenbiddle](http://twitter.com/jhildenbiddle)
+- [![Code](assets/img/code.svg)Demo Sandbox](https://codesandbox.io/s/xv36w4695o)
+- [![Github](assets/img/github.svg)Github](https://github.com/jhildenbiddle/docsify-themeable)
+- [![NPM](assets/img/npm.svg)NPM](https://www.npmjs.com/package/docsify-themeable)
+- [![Twitter](assets/img/twitter.svg)@jhildenbiddle](http://twitter.com/jhildenbiddle)
