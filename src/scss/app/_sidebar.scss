@@ -1,11 +1,5 @@
 // Supporting Elements
 // =============================================================================
-.sidebar,
-.sidebar-toggle,
-main > .content {
-    transition: all var(--sidebar-transition-duration) ease-out;
-}
-
 nav.app-nav {
     @include media(">=medium") {
         margin-left: var(--sidebar-width);
@@ -16,11 +10,17 @@ main {
     position: relative;
     overflow-x: hidden;
     min-height: 100vh;
+}
 
-    > .content {
-        @include media(">=medium") {
-            margin-left: var(--sidebar-width);
-        }
+.sidebar,
+.sidebar-toggle,
+.sidebar + .content {
+    transition: all var(--sidebar-transition-duration) ease-out;
+}
+
+.sidebar + .content {
+    @include media(">=medium") {
+        margin-left: var(--sidebar-width);
     }
 }
 
@@ -394,13 +394,13 @@ main {
 body.close {
     .sidebar,
     .sidebar-toggle,
-    main > .content {
+    .sidebar + .content {
         @include media("<medium") {
             transform: translateX(var(--sidebar-width));
         }
     }
 
-    main > .content {
+    .sidebar + .content {
         @include media(">=medium") {
             transform: translateX(0);
         }
@@ -447,7 +447,7 @@ body.close {
         }
     }
 
-    main > .content {
+    .sidebar + .content {
         @include media(">=medium") {
             margin-left: 0;
         }
