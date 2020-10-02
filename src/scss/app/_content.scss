@@ -131,6 +131,10 @@
         &:first-child {
             margin-top: 0;
         }
+
+        code {
+            font-size: 0.875em;
+        }
     }
 
     h1 + h2,
