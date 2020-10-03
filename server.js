@@ -75,7 +75,7 @@ browserSync.init({
             replace: '/'
         },
         {
-            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@[\d.]*\/CHANGELOG.md/g,
+            match  : /https:\/\/raw\.githubusercontent\.com\/jhildenbiddle\/docsify-themeable\/master\/CHANGELOG.md/g,
             replace: '/CHANGELOG.md'
         },
         {
