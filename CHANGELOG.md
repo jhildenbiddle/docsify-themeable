@@ -1,5 +1,11 @@
 # Change Log
 
+## 0.8.4
+
+*2020.11.06*
+
+- Fix text selection inconsistencies
+
 ## 0.8.3
 
 *2020.10.02*
