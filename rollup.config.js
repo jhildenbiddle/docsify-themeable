@@ -9,7 +9,7 @@ import json        from '@rollup/plugin-json';
 import merge       from 'lodash.merge';
 import pkg         from './package.json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { uglify }  from 'rollup-plugin-uglify';
+import { terser }  from 'rollup-plugin-terser';
 
 
 // Settings
@@ -49,7 +49,7 @@ const pluginSettings = {
             }]
         ]
     },
-    uglify: {
+    terser: {
         beautify: {
             compress: false,
             mangle  : false,
@@ -99,7 +99,7 @@ const iife = merge({}, config, {
         format: 'iife'
     },
     plugins: config.plugins.concat([
-        uglify(pluginSettings.uglify.beautify)
+        terser(pluginSettings.terser.beautify)
     ])
 });
 
@@ -110,7 +110,7 @@ const iifeMinified = merge({}, config, {
         format: iife.output.format
     },
     plugins: config.plugins.concat([
-        uglify(pluginSettings.uglify.minify)
+        terser(pluginSettings.terser.minify)
     ])
 });
 
