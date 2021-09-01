@@ -150,6 +150,7 @@ body {
         }
 
         .input-wrap {
+            align-items: stretch;
             margin: var(--search-input-margin);
             background-color: var(--search-input-background-color);
             border-width: var(--search-input-border-width, 0);
@@ -210,8 +211,8 @@ body {
         }
 
         .clear-button {
-            margin: 0 15px 0 0;
-            padding: 0;
+            margin: 0;
+            padding: 0 10px;
             border: none;
             line-height: 1;
             background: transparent;
