@@ -212,7 +212,8 @@ main {
             background-repeat: var(--sidebar-nav-pagelink-background-repeat);
             background-size: var(--sidebar-nav-pagelink-background-size);
 
-            // Page links
+            // Page links (routerMode: history|hash)
+            &[href^="/"]:not([href*="?id="]),
             &[href^="#/"]:not([href*="?id="]) {
                 transition: var(--sidebar-nav-pagelink-transition);
 
@@ -254,7 +255,8 @@ main {
 
         &.active {
             > a {
-                // Page links
+                // Page links (routerMode: history|hash)
+                &[href^="/"]:not([href*="?id="]),
                 &[href^="#/"]:not([href*="?id="]) {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
@@ -267,7 +269,8 @@ main {
 
         &.collapse {
             > a {
-                // Page links
+                // Page links (routerMode: history|hash)
+                &[href^="/"]:not([href*="?id="]),
                 &[href^="#/"]:not([href*="?id="]) {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
