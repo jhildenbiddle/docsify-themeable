@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.8.5
+
+*2021.09.01*
+
+- Fixed search field clear button behavior (#62)
+- Fixed missing expand/collapse icons in sidebar when 'routerMode' is set to 'history' (#66)
+
 ## 0.8.4
 
 *2020.11.06*
