@@ -41,11 +41,13 @@
     "build:pcss": "postcss build/css/**/*.css --dir dist/css --use postcss-remove-null postcss-discard-empty postcss-flexbugs-fixes autoprefixer --map",
     "build:scss": "node-sass --output-style compressed src/scss/themes -o build/css --source-map true --source-map-contents true --include-path node_modules",
     "clean": "rimraf build/* dist/* docs/css docs/js",
+    "lint": "eslint . && markdownlint . --ignore node_modules",
     "serve": "node server.js",
     "start": "run-p watch serve",
+    "test": "npm run lint",
     "watch": "run-p 'build:* -- -w'",
     "prewatch": "npm run build:scss",
-    "version": "npm run prepare"
+    "version": "npm run prepare && npm test"
   },
   "devDependencies": {
     "@babel/core": "^7.13.16",
@@ -61,6 +63,7 @@
     "eslint-plugin-html": "^6.1.2",
     "include-media": "^1.4.9",
     "lodash.merge": "^4.6.2",
+    "markdownlint-cli": "^0.28.1",
     "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^7.1.2",
