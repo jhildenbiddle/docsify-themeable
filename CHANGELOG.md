@@ -1,5 +1,12 @@
 # Change Log
 
+## 0.8.6
+
+*2021.09.02*
+
+- Updated code quality badges in documentation
+- Added GitHub CI
+
 ## 0.8.5
 
 *2021.09.01*
