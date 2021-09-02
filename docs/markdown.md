@@ -1,11 +1,13 @@
+<!-- markdownlint-disable single-title no-duplicate-heading -->
 # Markdown
 
 ## Headings
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
+<!-- markdownlint-disable-next-line single-title -->
 # Heading 1 {docsify-ignore}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus
@@ -44,7 +46,7 @@ Ipsum ea amet dolore mollit incididunt fugiat nulla laboris est sint voluptate.
 Ex culpa id amet ipsum amet pariatur ipsum officia sit laborum irure ullamco
 deserunt. Consequat qui tempor occaecat nostrud proident.
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 # Heading 1
@@ -92,7 +94,7 @@ deserunt. Consequat qui tempor occaecat nostrud proident.
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 Body text
 
@@ -112,7 +114,7 @@ This is <sub>subscript</sub>
 
 This is <sup>superscript</sup>
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 Body text
@@ -140,7 +142,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 [Inline link](https://google.com)
 
@@ -156,7 +158,7 @@ This is <sup>superscript</sup>
 [1]: https://google.com
 [Reference link by self]: https://google.com
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 [Inline link](https://google.com)
@@ -180,7 +182,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 **Ordered Lists**
 
@@ -208,7 +210,7 @@ This is <sup>superscript</sup>
   - [ ] Subtask B
 - [ ] Task 3
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 **Ordered Lists**
@@ -244,7 +246,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 > Cras aliquet nulla quis metus tincidunt, sed placerat enim cursus. Etiam
 > turpis nisl, posuere eu condimentum ut, interdum a risus. Sed non luctus mi.
@@ -253,7 +255,7 @@ This is <sup>superscript</sup>
 >
 > *- Quote Source*
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 > Cras aliquet nulla quis metus tincidunt, sed placerat enim cursus. Etiam
@@ -270,7 +272,7 @@ This is <sup>superscript</sup>
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 This is `inline code`
 
@@ -287,7 +289,7 @@ console.log(total); // 3
 </body>
 ```
 
-#### ** Markdown **
+#### **Markdown**
 
 ````markdown
 This is `inline code`
@@ -312,7 +314,7 @@ console.log(total); // 3
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 !> **Important** notice with `inline code` and additional placeholder text used
 to force the content to wrap and span multiple lines.
@@ -320,7 +322,7 @@ to force the content to wrap and span multiple lines.
 ?> **Tip** notice with `inline code` and additional placeholder text used to
 force the content to wrap and span multiple lines.
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 !> **Important** notice with `inline code` and additional placeholder text used
@@ -351,7 +353,7 @@ Bonjour!
 
 Ciao!
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 <!-- tabs:start -->
@@ -377,7 +379,7 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 | Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
 | ---------- |:------------:| -----------:| ------------------------------ |
@@ -385,7 +387,7 @@ Ciao!
 | B1         | B2           | B3          | B4                             |
 | C1         | C2           | C3          | C4                             |
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 | Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
@@ -401,7 +403,7 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 <kbd>&uarr;</kbd> Arrow Up
 
@@ -445,7 +447,7 @@ Ciao!
 
 <kbd>&#8676;</kbd> Tab + Shift
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 <kbd>&uarr;</kbd> Arrow Up
@@ -497,11 +499,11 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 ---
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 ---
@@ -513,7 +515,7 @@ Ciao!
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 Inline-style
 
@@ -525,7 +527,7 @@ Reference-style
 
 [logo]: //source.unsplash.com/collection/881815 "Provided by unsplash.com"
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 **Inline**
@@ -547,7 +549,7 @@ A complete list is available here: [Emoji Cheat Sheet](https://www.webpagefx.com
 
 <!-- tabs:start -->
 
-#### ** Rendered **
+#### **Rendered**
 
 **People**
 
@@ -1436,7 +1438,7 @@ A complete list is available here: [Emoji Cheat Sheet](https://www.webpagefx.com
 :small_red_triangle_down:
 :shipit:
 
-#### ** Markdown **
+#### **Markdown**
 
 ```markdown
 **People**

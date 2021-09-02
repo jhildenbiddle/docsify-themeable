@@ -38,4 +38,3 @@ Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsi
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/jhildenbiddle/docsify-themeable/blob/master/LICENSE) for details.
 
 Copyright (c) John Hildenbiddle ([@jhildenbiddle](https://twitter.com/jhildenbiddle))
-

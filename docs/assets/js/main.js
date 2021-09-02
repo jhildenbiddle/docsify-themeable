@@ -22,7 +22,7 @@
      *   <link rel="stylesheet" title="Bar" href="path/to/file.css" >
      */
     function initStyleSwitcher() {
-        var isInitialzed      = false;
+        var isInitialized     = false;
         var sessionStorageKey = 'activeStylesheetHref';
 
         function handleSwitch(activeHref, activeTitle) {
@@ -86,8 +86,8 @@
         }
 
         // Event listeners
-        if (!isInitialzed) {
-            isInitialzed = true;
+        if (!isInitialized) {
+            isInitialized = true;
 
             // Restore active stylesheet
             document.addEventListener('DOMContentLoaded', function() {
@@ -101,7 +101,7 @@
             // Update active stylesheet
             document.addEventListener('click', function(evt) {
                 var dataHref  = evt.target.getAttribute('data-link-href');
-                var dataTitle = evt.target.getAttribute('data-link-title')
+                var dataTitle = evt.target.getAttribute('data-link-title');
 
                 if (dataHref || dataTitle) {
                     dataTitle = dataTitle

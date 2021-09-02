@@ -2,6 +2,7 @@
 
 ## Headings
 
+<!-- markdownlint-disable-next-line single-title -->
 # Heading 1 {docsify-ignore}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus nulla eu ex varius, a varius elit tincidunt. Aenean arcu magna, gravida id purus a, interdum convallis turpis. Aenean id ipsum eu tortor sollicitudin scelerisque in quis elit.
@@ -61,18 +62,18 @@ This is <sup>superscript</sup>
 - Unordered 1
 - Unordered 2
 - Unordered 3
-    - Unordered 3-1
-    - Unordered 3-2
-    - Unordered 3-3
+  - Unordered 3-1
+  - Unordered 3-2
+  - Unordered 3-3
 
 **Ordered Lists**
 
 1. Ordered 1
 1. Ordered 2
 1. Ordered 3
-    1. Ordered 3-1
-    1. Ordered 3-2
-    1. Ordered 3-3
+   1. Ordered 3-1
+   1. Ordered 3-2
+   1. Ordered 3-3
 
 ## Blockquotes
 
