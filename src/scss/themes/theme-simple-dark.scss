@@ -133,5 +133,10 @@
     --sidebar-border-color                 : var(--mono-tint1);
 
     // Nav Page Links
-    --sidebar-nav-pagelink-background-image: #{chevron-data-uri(right, 7px, null, 1.5, #495d68)};
+    --sidebar-nav-pagelink-background:
+        /* Chevron right */
+        no-repeat 2px calc(50% - 2.5px) / 6px 5px
+        linear-gradient(45deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4px),
+        no-repeat 2px calc(50% + 2.5px) / 6px 5px
+        linear-gradient(135deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4px);
 }

@@ -164,14 +164,24 @@
     --sidebar-nav-link-before-content-l3                : '-';
 
     // Nav Page Links
-    --sidebar-nav-pagelink-background-image             : #{chevron-data-uri(right, 7px, null, 1.5, #b3b3b3)};
-    --sidebar-nav-pagelink-background-image--active     : #{chevron-data-uri(down, null, 7px, 1.5, #0b87da)};
-    --sidebar-nav-pagelink-background-image--collapse   : #{chevron-data-uri(right, 7px, null, 1.5, #0b87da)};
-    --sidebar-nav-pagelink-background-image--loaded     : #{chevron-data-uri(down, null, 7px, 1.5, #0b87da)};
-    --sidebar-nav-pagelink-background-position          : 3px center;
-    --sidebar-nav-pagelink-background-position--active  : left center;
-    --sidebar-nav-pagelink-background-position--collapse: var(--sidebar-nav-pagelink-background-position);
-    --sidebar-nav-pagelink-background-position--loaded  : var(--sidebar-nav-pagelink-background-position--active);
+    --sidebar-nav-pagelink-background:
+        /* Chevron right */
+        no-repeat 2px calc(50% - 2.5px) / 6px 5px
+        linear-gradient(45deg, transparent 2.75px, var(--mono-tint1) 2.75px 4.25px, transparent 4px),
+        no-repeat 2px calc(50% + 2.5px) / 6px 5px
+        linear-gradient(135deg, transparent 2.75px, var(--mono-tint1) 2.75px 4.25px, transparent 4px);
+    --sidebar-nav-pagelink-background--active:
+        /* Chevron down - Theme color */
+        no-repeat 0px center / 5px 6px
+        linear-gradient(225deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4.25px),
+        no-repeat 5px center / 5px 6px
+        linear-gradient(135deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4.25px);
+    --sidebar-nav-pagelink-background--collapse:
+        /* Chevron right - Theme color */
+        no-repeat 2px calc(50% - 2.5px) / 6px 5px
+        linear-gradient(45deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4px),
+        no-repeat 2px calc(50% + 2.5px) / 6px 5px
+        linear-gradient(135deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4px);
     --sidebar-nav-pagelink-padding                      : 0.25em 0 0.25em 20px;
     --sidebar-nav-pagelink-transition                   : none;
 

@@ -118,11 +118,7 @@ main {
         border-style: var(--sidebar-nav-link-border-style);
         border-color: var(--sidebar-nav-link-border-color);
         border-radius: var(--sidebar-nav-link-border-radius);
-        background-color: var(--sidebar-nav-link-background-color);
-        background-image: var(--sidebar-nav-link-background-image);
-        background-position: var(--sidebar-nav-link-background-position);
-        background-repeat: var(--sidebar-nav-link-background-repeat);
-        background-size: var(--sidebar-nav-link-background-size);
+        background: var(--sidebar-nav-link-background);
         color: var(--sidebar-nav-link-color);
         font-weight: var(--sidebar-nav-link-font-weight);
         white-space: nowrap;
@@ -144,10 +140,7 @@ main {
             border-width: var(--sidebar-nav-link-border-width--hover, var(--sidebar-nav-link-border-width, 0));
             border-style: var(--sidebar-nav-link-border-style--hover, var(--sidebar-nav-link-border-style));
             border-color: var(--sidebar-nav-link-border-color--hover, var(--sidebar-nav-link-border-color));
-            background-color: var(--sidebar-nav-link-background-color--hover, var(--sidebar-nav-link-background-color));
-            background-image: var(--sidebar-nav-link-background-image--hover, var(--sidebar-nav-link-background-image));
-            background-position: var(--sidebar-nav-link-background-position--hover, var(--sidebar-nav-link-background-position));
-            background-size: var(--sidebar-nav-link-background-size--hover, var(--sidebar-nav-link-background-size));
+            background: var(--sidebar-nav-link-background--hover, var(--sidebar-nav-link-background));
             color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
             font-weight: var(--sidebar-nav-link-font-weight--hover, var(--sidebar-nav-link-font-weight));
             text-decoration: var(--sidebar-nav-link-text-decoration--hover, var(--sidebar-nav-link-text-decoration));
@@ -224,14 +217,12 @@ main {
 
                 // Not loaded (w/o subnav)
                 &:only-child {
-                    background-image: var(--sidebar-nav-pagelink-background-image);
-                    background-position: var(--sidebar-nav-pagelink-background-position);
+                    background: var(--sidebar-nav-pagelink-background);
                 }
 
                 // Loaded (w/ subnav)
                 &:not(:only-child) {
-                    background-image: var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image));
-                    background-position: var(--sidebar-nav-pagelink-background-position--loaded, var(--sidebar-nav-pagelink-background-image));
+                    background: var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background));
                 }
             }
         }
@@ -242,10 +233,7 @@ main {
                 border-width: var(--sidebar-nav-link-border-width--active, var(--sidebar-nav-link-border-width));
                 border-style: var(--sidebar-nav-link-border-style--active, var(--sidebar-nav-link-border-style));
                 border-color: var(--sidebar-nav-link-border-color--active, var(--sidebar-nav-link-border-color));
-                background-color: var(--sidebar-nav-link-background-color--active, var(--sidebar-nav-link-background-color));
-                background-image: var(--sidebar-nav-link-background-image--active, var(--sidebar-nav-link-background-image));
-                background-position: var(--sidebar-nav-link-background-position--active, var(--sidebar-nav-link-background-position));
-                background-size: var(--sidebar-nav-link-background-size--active, var(--sidebar-nav-link-background-size));
+                background: var(--sidebar-nav-link-background--active, var(--sidebar-nav-link-background));
                 color: var(--sidebar-nav-link-color--active, var(--sidebar-nav-link-color));
                 font-weight: var(--sidebar-nav-link-font-weight--active, var(--sidebar-nav-link-font-weight));
                 text-decoration: var(--sidebar-nav-link-text-decoration--active, var(--sidebar-nav-link-text-decoration));
@@ -260,8 +248,7 @@ main {
                 &[href^="#/"]:not([href*="?id="]) {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
-                        background-image: var(--sidebar-nav-pagelink-background-image--active, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
-                        background-position: var(--sidebar-nav-pagelink-background-position--active, var(--sidebar-nav-pagelink-background-position--loaded, var(--sidebar-nav-pagelink-background-image)));
+                        background: var(--sidebar-nav-pagelink-background--active, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
                     }
                 }
             }
@@ -274,8 +261,7 @@ main {
                 &[href^="#/"]:not([href*="?id="]) {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
-                        background-image: var(--sidebar-nav-pagelink-background-image--collapse, var(--sidebar-nav-pagelink-background-image--loaded, var(--sidebar-nav-pagelink-background-image)));
-                        background-position: var(--sidebar-nav-pagelink-background-position--collapse, var(--sidebar-nav-pagelink-background-position--loaded, var(--sidebar-nav-pagelink-background-image)));
+                        background: var(--sidebar-nav-pagelink-background--collapse, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
                     }
                 }
             }
