@@ -1,24 +1,103 @@
 # Quick Start
 
-## Installation
+## HTML Template
 
-1. [Create a docsify site](//docsify.js.org/#/quickstart) by following the instructions on the [docsify.js](//docsify.js.org) website.
+The quickest way to get started is by creating an `index.html` file that contains the HTML markup below. This markup contains everything needed for [docsify](https://docsify.js.org/), docsify-themeable, recommended [plugins](https://docsify.js.org/#/plugins), auto light/dark themes, and placeholders for your docsify configuration and custom theme styles.
 
-1. Select a theme from the [Themes](themes) section and replace the `<link>` in your `index.html`.
+After copying the template, be sure to complete the following tasks:
+
+1. Create a [homepage](https://docsify.js.org/#/configuration?id=homepage) in the same directory (e.g., `README.md`)
+1. Add a description to the `<meta name="description">` tag
+1. Add a title to the `<title>` tag
+1. Add custom styles to the `<style>` tag
+1. Configure [docsify options](https://docsify.js.org/#/configuration) and [docsify-themeable options](options) in the `<script>` tag
+
+!> Note the `@` version number lock in the URLs below. This prevents breaking changes in future releases from affecting your project and is therefore the safest method of loading dependencies from a CDN. When a new major version is released, you will need to manually update your CDN URLs by changing the version number after the @ symbol.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+   <meta name="description" content="">
+   <title></title>
+
+   <!-- Themes (light + dark) -->
+   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+
+   <!-- Custom Styles -->
+   <style>
+     :root {
+       /* --theme-hue: 325; */
+     }
+   </style>
+</head>
+<body>
+   <div id="app"></div>
+
+   <script>
+     // Docsify Configuration
+     window.$docsify = {
+       // ..
+     };
+   </script>
+
+   <!-- Required -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+
+   <!-- Recommended -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+</body>
+</html>
+```
+
+## Step-by-step
+
+Existing site owners may prefer to modify their existing `index.html` file using the following steps:
+
+!> Note the `@` version number lock in the URLs below. This prevents breaking changes in future releases from affecting your project and is therefore the safest method of loading dependencies from a CDN. When a new major version is released, you will need to manually update your CDN URLs by changing the version number after the @ symbol.
+
+1. Replace the docsify theme with a docsify-themeable theme from the [Themes](themes) section:
 
    ```html
-   <!-- Theme: Simple (latest v0.x.x) -->
+   <!-- Theme: Simple -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
    ```
 
-1. Add the docsify-themeable plugin to your `index.html` after docsify:
+   For automatic light/dark mode support based on the user's operating system preference, specify a light and dark theme with appropriate `media` attribute:
 
    ```html
-   <!-- docsify-themeable (latest v0.x.x) -->
+   <!-- Theme: Simple (light + dark) -->
+   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+   ```
+
+1. Add the docsify-themeable plugin after docsify.js:
+
+   ```html
+   <!-- docsify -->
+   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+
+   <!-- docsify-themeable -->
    <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
    ```
 
-1. Review the [Options](options) section and configure as needed. For example:
+1. Review the [Customization](customization) section and set theme properties as needed. For example:
+
+   ```html
+   <style>
+     :root {
+       --theme-hue: 325;
+     }
+   </style>
+   ```
+
+1. Review the docsify-themeable [options](options) section and configure as needed. For example:
 
    ```html
    <script>
@@ -32,28 +111,11 @@
    </script>
    ```
 
-1. Review the [Customization](customization) section and set theme properties as needed. For example:
-
-   ```html
-   <style>
-     :root {
-       /* Reduce the font size */
-       --base-font-size: 14px;
-
-       /* Change the theme color hue */
-       --theme-hue: 325;
-
-       /* Change the sidebar bullets */
-       --sidebar-nav-link-before-content: '😀';
-     }
-   </style>
-   ```
-
 ## Local Preview
 
 Previewing your site locally requires serving your files from a web server.
 
-The docsify [Quick Start](//docsify.js.org/#/quickstart) guide recommends [docsify-cli](//github.com/QingWei-Li/docsify-cli) for creating and previewing your site:
+The docsify [Quick Start](//docsify.js.org/#/quickstart) guide recommends [docsify-cli](//github.com/QingWei-Li/docsify-cli) for previewing your site:
 
 ```bash
 # Install docsify-cli globally
@@ -66,7 +128,7 @@ docsify serve
 docsify serve docs
 ```
 
-A simple [Python](https://www.python.org/) web server can also be used:
+A simple [Python](https://www.python.org/) web server can also be used and is likely pre-installed with your operating system:
 
 ```bash
 # Change to site directory
@@ -84,9 +146,4 @@ python -m http.server
 
 ## Hosting
 
-Sites powered by [docsify.js](//docsify.js.org/) can be hosted on any web server. The [docsify website](//docsify.js.org/) provides a helpful [deployment guide](//docsify.js.org/#/deploy) with tips for hosting your site on following platforms:
-
-- [GitHub Pages](https://pages.github.com/)
-- [GitLab Pages](https://about.gitlab.com/features/pages/)
-- [Firebase Hosting](https://firebase.google.com/docs/hosting/)
-- [Virtual Private Server (VPS)](https://en.wikipedia.org/wiki/Virtual_private_server)
+Sites powered by [docsify.js](//docsify.js.org/) can be hosted on any web server. The [docsify website](//docsify.js.org/) provides a helpful [deployment guide](//docsify.js.org/#/deploy) with tips for hosting your site on several platforms.
