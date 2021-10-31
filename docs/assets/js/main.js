@@ -8,31 +8,24 @@
      * @example
      *
      * This link:
-     *   <a href="#" data-link-title="Foo">Foo</a>
-     * Will active this existing link:
-     *   <link rel="stylesheet alternate" title="Foo" href="..." >
-     *
-     * @example
-     *
-     * This link:
      *   <a href="#" data-link-href="path/to/file.css">Bar</a>
      * Will activate this existing link:
-     *   <link rel="stylesheet alternate" title="[someID]" href="path/to/file.css" >
+     *   <link rel="stylesheet alternate" data-style-switcher href="deep/path/to/file.css" >
      * Or generate this active link:
-     *   <link rel="stylesheet" title="Bar" href="path/to/file.css" >
+     *   <link rel="stylesheet" data-style-switcher href="path/to/file.css" >
      */
     function initStyleSwitcher() {
         var isInitialized     = false;
         var sessionStorageKey = 'activeStylesheetHref';
 
-        function handleSwitch(activeHref, activeTitle) {
-            var activeElm = document.querySelector('link[href*="' + activeHref +'"],link[title="' + activeTitle +'"]');
+        function handleSwitch(activeHref) {
+            var activeElm = document.querySelector('link[href*="' + activeHref +'"]');
 
             if (!activeElm && activeHref) {
                 activeElm = document.createElement('link');
-                activeElm.setAttribute('href', activeHref);
                 activeElm.setAttribute('rel', 'stylesheet');
-                activeElm.setAttribute('title', activeTitle);
+                activeElm.setAttribute('data-style-switcher', '');
+                activeElm.setAttribute('href', activeHref);
 
                 document.head.appendChild(activeElm);
 
@@ -48,11 +41,11 @@
 
         function setActiveLink(activeElm) {
             var activeHref   = activeElm.getAttribute('href');
-            var activeTitle  = activeElm.getAttribute('title');
-            var inactiveElms = document.querySelectorAll('link[title]:not([href*="' + activeHref +'"]):not([title="' + activeTitle +'"])');
+            var inactiveElms = document.querySelectorAll('link[data-style-switcher]:not([href*="' + activeHref +'"])');
 
-            // Remove "alternate" keyword
+            // Remove "alternate" keyword and media attribute
             activeElm.setAttribute('rel', (activeElm.rel || '').replace(/\s*alternate/g, '').trim());
+            activeElm.removeAttribute('media');
 
             // Force enable stylesheet (required for some browsers)
             activeElm.disabled = true;
@@ -79,7 +72,7 @@
                 }
             }
 
-            // CSS custom property ponyfil
+            // CSS custom property ponyfill
             if ((window.$docsify || {}).themeable) {
                 window.$docsify.themeable.util.cssVars();
             }
@@ -100,15 +93,12 @@
 
             // Update active stylesheet
             document.addEventListener('click', function(evt) {
-                var dataHref  = evt.target.getAttribute('data-link-href');
-                var dataTitle = evt.target.getAttribute('data-link-title');
+                var isStyleSwitch = evt.target.hasAttrbite('data-style-switch');
 
-                if (dataHref || dataTitle) {
-                    dataTitle = dataTitle
-                        || evt.target.textContent
-                        || '_' + Math.random().toString(36).substr(2, 9); // UID
+                if (isStyleSwitch) {
+                    var dataHref  = evt.target.getAttribute('data-link-href');
 
-                    handleSwitch(dataHref, dataTitle);
+                    handleSwitch(dataHref);
                     evt.preventDefault();
                 }
             });
