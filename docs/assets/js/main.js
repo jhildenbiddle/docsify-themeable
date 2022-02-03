@@ -93,7 +93,7 @@
 
             // Update active stylesheet
             document.addEventListener('click', function(evt) {
-                var isStyleSwitch = evt.target.hasAttrbite('data-style-switch');
+                var isStyleSwitch = evt.target.hasAttribute('data-style-switch');
 
                 if (isStyleSwitch) {
                     var dataHref  = evt.target.getAttribute('data-link-href');
