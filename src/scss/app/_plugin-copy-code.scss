@@ -111,7 +111,7 @@ pre:hover .docsify-copy-code-button {
 // =============================================================================
 body {
     .docsify-copy-code-button,
-    .docsify-copy-code-button:after /* 2.0.x */ {
+    .docsify-copy-code-button:after { // 2.0.x
         border-radius: var(--border-radius-m, 0);
         border-top-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -120,7 +120,7 @@ body {
     }
 
     .docsify-copy-code-button {
-        span /* 2.1.x */ {
+        span { // 2.0.x
             border-radius: var(--border-radius-s, 0);
         }
     }

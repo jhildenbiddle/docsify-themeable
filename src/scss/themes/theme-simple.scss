@@ -124,7 +124,7 @@
     --search-input-padding               : 0.65em 1em 0.65em 50px;
     --search-input-placeholder-color     : rgba(0, 0, 0, 0.4);
 
-    /* Clear Button */
+    // Clear Button
     --search-clear-icon-color1           : rgba(0, 0, 0, 0.3);
 
     // Results
@@ -164,26 +164,26 @@
     --sidebar-nav-link-before-content-l3                : '-';
 
     // Nav Page Links
+    // Chevron right (Mono)
     --sidebar-nav-pagelink-background:
-        /* Chevron right */
         no-repeat 2px calc(50% - 2.5px) / 6px 5px
         linear-gradient(45deg, transparent 2.75px, var(--mono-tint1) 2.75px 4.25px, transparent 4px),
         no-repeat 2px calc(50% + 2.5px) / 6px 5px
         linear-gradient(135deg, transparent 2.75px, var(--mono-tint1) 2.75px 4.25px, transparent 4px);
+    // Chevron down (Theme color)
     --sidebar-nav-pagelink-background--active:
-        /* Chevron down - Theme color */
         no-repeat 0px center / 5px 6px
         linear-gradient(225deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4.25px),
         no-repeat 5px center / 5px 6px
         linear-gradient(135deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4.25px);
+    // Chevron right (Theme color)
     --sidebar-nav-pagelink-background--collapse:
-        /* Chevron right - Theme color */
         no-repeat 2px calc(50% - 2.5px) / 6px 5px
         linear-gradient(45deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4px),
         no-repeat 2px calc(50% + 2.5px) / 6px 5px
         linear-gradient(135deg, transparent 2.75px, var(--theme-color) 2.75px 4.25px, transparent 4px);
+    // Chevron down (Mono)
     --sidebar-nav-pagelink-background--loaded:
-        /* Chevron down - Theme color */
         no-repeat 0px center / 5px 6px
         linear-gradient(225deg, transparent 2.75px, var(--mono-tint1) 2.75px 4.25px, transparent 4.25px),
         no-repeat 5px center / 5px 6px

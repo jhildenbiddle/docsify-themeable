@@ -39,7 +39,7 @@
     --mark-background                      : #ffcb6b;
     --mark-color                           : var(--base-background-color);
 
-    /* Selection */
+    // Selection
     --selection-color                      : rgba(94, 131, 175, 0.75);
 
 
@@ -101,10 +101,10 @@
 
     // Plugin: Docsify Tabs
     // =========================================================================
-    /* Tab blocks */
+    // Tab blocks
     --docsifytabs-border-color    : var(--mono-tint2);
 
-    /* Tabs */
+    // Tabs
     --docsifytabs-tab-background  : var(--mono-shade1);
     --docsifytabs-tab-color       : var(--mono-tint2);
 
@@ -133,14 +133,14 @@
     --sidebar-border-color                 : var(--mono-tint1);
 
     // Nav Page Links
+    // Chevron right
     --sidebar-nav-pagelink-background:
-        /* Chevron right */
         no-repeat 2px calc(50% - 2.5px) / 6px 5px
         linear-gradient(45deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4px),
         no-repeat 2px calc(50% + 2.5px) / 6px 5px
         linear-gradient(135deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4px);
+    // Chevron down - Theme color
     --sidebar-nav-pagelink-background--loaded:
-        /* Chevron down - Theme color */
         no-repeat 0px center / 5px 6px
         linear-gradient(225deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4.25px),
         no-repeat 5px center / 5px 6px
