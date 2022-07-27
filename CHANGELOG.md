@@ -113,7 +113,7 @@
 - Add conditional loading of plugins based on docsify version
 - Add docsify version check before loading `pluginFixSearchResults`
 - Add docsify version check before loading `pluginFixZoomImage`
-- Update CSS and set seach options to provide compatibility with the new
+- Update CSS and set search options to provide compatibility with the new
   `hideOtherSidebarContent` option added to the search plugin in docsify 4.8.0
 
 ## 0.4.0
