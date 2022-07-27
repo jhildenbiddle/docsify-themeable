@@ -7,32 +7,37 @@
 [![jsDelivr](https://data.jsdelivr.com/v1/package/npm/docsify-themeable/badge)](https://www.jsdelivr.com/package/npm/docsify-themeable)
 [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,docsify,developers,frontend)
 
-Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsify.js.org). Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE10+).
+Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsify.js.org). Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE11+).
 
 - [Homepage](https://jhildenbiddle.github.io/docsify-themeable) - Live demo, documentation, and theme previews
-- [Demo Sandbox](https://codesandbox.io/s/xv36w4695o) - Online editor with demo docsify-themeable site
 
 ## Screenshots
 
 #### Simple Theme
 
 <p float="left">
-  <img alt="Simple theme cover page" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-cover.png" width="49%">
-  <img alt="Simple theme content" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-content.png" width="49%">
+  <a href="https://jhildenbiddle.github.io/docsify-themeable">
+    <img alt="Simple theme cover page" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-cover.png" width="49%">
+    <img alt="Simple theme content" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-content.png" width="49%">
+  </a>
 </p>
 
 #### Simple Dark Theme
 
 <p float="left">
-  <img alt="Simple dark theme cover page" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-dark-cover.png" width="49%">
-  <img alt="Simple dark theme content" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-dark-content.png" width="49%">
+  <a href="https://jhildenbiddle.github.io/docsify-themeable">
+    <img alt="Simple dark theme cover page" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-dark-cover.png" width="49%">
+    <img alt="Simple dark theme content" src="https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/docs/assets/img/theme-simple-dark-content.png" width="49%">
+  </a>
 </p>
+
+> 💡 Like docsify-themeable? Be sure to check out [docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs/) for tabbed content, [docsify-plugin-ethicalads](https://jhildenbiddle.github.io/docsify-plugin-ethicalads/) for EthicalAds integration, and [docsify-plugin-runkit](https://jhildenbiddle.github.io/docsify-plugin-runkit/) for live JavaScript REPLs!
 
 ## Contact
 
 - Create a [GitHub issue](https://github.com/jhildenbiddle/docsify-themeable/issues) for bug reports, feature requests, or questions
 - Follow [@jhildenbiddle](https://twitter.com/jhildenbiddle) for announcements
-- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/docsify-themeable) or ❤️ [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,developers,frontend,javascript) to support the project!
+- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/docsify-themeable) or 🐦 [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,developers,frontend,javascript) to support the project!
 
 ## License
 
