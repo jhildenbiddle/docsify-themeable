@@ -29,16 +29,16 @@
   - [Ready transition](options#readytransition)
   - [Responsive tables](options#responsivetables)
 
-- **Legacy browser support (IE10+)**<br>
+- **Legacy browser support (IE11+)**<br>
   Thoroughly tested and fully compatible with legacy browsers, including support for CSS custom properties (courtesy of a handy [ponyfill](https://github.com/jhildenbiddle/css-vars-ponyfill) developed specifically for docsify-themeable).
 
-?> Like docsify-themeable? Be sure to check out [docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs)!
+?> Like docsify-themeable? Be sure to check out [docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs/) for tabbed content, [docsify-plugin-ethicalads](https://jhildenbiddle.github.io/docsify-plugin-ethicalads/) for EthicalAds integration, and [docsify-plugin-runkit](https://jhildenbiddle.github.io/docsify-plugin-runkit/) for live JavaScript REPLs!
 
 ## Contact & Support
 
 - Create a [GitHub issue](https://github.com/jhildenbiddle/docsify-themeable/issues) for bug reports, feature requests, or questions
 - Follow [@jhildenbiddle](https://twitter.com/jhildenbiddle) for announcements
-- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/docsify-themeable) or ❤️ [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,developers,frontend,javascript) to support the project!
+- Add a ⭐️ [star on GitHub](https://github.com/jhildenbiddle/docsify-themeable) or 🐦 [tweet](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fjhildenbiddle%2Fdocsify-themeable&hashtags=css,developers,frontend,javascript) to support the project!
 
 ## License
 
