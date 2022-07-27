@@ -1,0 +1,12 @@
+@forward "__variables";
+@forward "include-media/dist/include-media" with (
+    $breakpoints: (
+        xsmall : 26em, // 416px / phone @ portrait
+        small  : 30em, // 480px / phone @ landscape / small tablet (portrait)
+        medium : 48em, // 768px / small tablet (landscape) / large tablet (portrait)
+        large  : 64em, // 1024px / large tablet (landscape) / small desktop
+        xlarge : 80em, // 1280px / standard desktop
+        xxlarge: 100em // 1600px / large desktop
+    )
+);
+@forward "sass-utilities";

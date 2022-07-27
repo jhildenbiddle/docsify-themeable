@@ -1,3 +1,6 @@
+@use "__helpers" as *;
+@use "sass:map";
+
 // Plugin: Zoom Image
 // https://docsify.js.org/#/plugins?id=zoom-image
 //
@@ -44,7 +47,7 @@
 .medium-zoom-overlay,
 .medium-zoom-image--open,
 .medium-zoom-image--opened {
-    z-index: map-get($z-index, overlay) !important;
+    z-index: map.get($z-index, overlay) !important;
 }
 
 .medium-zoom-overlay {

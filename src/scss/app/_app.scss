@@ -1,8 +1,11 @@
+@use "__helpers" as *;
+@use "sass:map";
+
 // Github Icon
 // =============================================================================
 .github-corner {
     position: absolute;
-    z-index: map-get($z-index, githubcorner);
+    z-index: map.get($z-index, githubcorner);
     top: 0;
     right: 0;
     border-bottom: 0;
@@ -39,7 +42,7 @@
 // =============================================================================
 .progress {
     position: fixed;
-    z-index: map-get($z-index, progress);
+    z-index: map.get($z-index, progress);
     top: 0;
     left: 0;
     right: 0;

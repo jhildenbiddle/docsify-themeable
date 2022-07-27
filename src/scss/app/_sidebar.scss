@@ -1,3 +1,6 @@
+@use "__helpers" as *;
+@use "sass:map";
+
 // Supporting Elements
 // =============================================================================
 nav.app-nav {
@@ -37,7 +40,7 @@ main {
     display: flex;
     flex-direction: column;
     position: fixed;
-    z-index: map-get($z-index, sidebar);
+    z-index: map.get($z-index, sidebar);
     top: 0;
     right: 100%;
     overflow-x: hidden;
@@ -313,7 +316,7 @@ main {
 
 .sidebar-toggle {
     position: fixed;
-    z-index: (map-get($z-index, sidebar) + 1);
+    z-index: (map.get($z-index, sidebar) + 1);
     top: 0;
     bottom: 0;
     left: 0;

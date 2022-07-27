@@ -1,0 +1,12 @@
+// Variables
+// =============================================================================
+$scrollbar-width: 5px;
+
+$z-index: (
+    progress    : 2147483647, // z-index limit
+    overlay     : 2147483646, // z-index limit - 1
+    githubcorner: 40,
+    navbar      : 30,
+    coverpage   : 20,
+    sidebar     : 10
+);

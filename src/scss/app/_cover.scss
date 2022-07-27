@@ -1,9 +1,12 @@
+@use "__helpers" as *;
+@use "sass:map";
+
 // Cover
 // =============================================================================
 .cover {
     display: none;
     position: relative;
-    z-index: map-get($z-index, coverpage);
+    z-index: map.get($z-index, coverpage);
     min-height: 100vh;
     flex-direction: column;
     align-items: center;

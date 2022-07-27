@@ -1,8 +1,11 @@
+@use "__helpers" as *;
+@use "sass:map";
+
 // Nav bar
 // =============================================================================
 .app-nav {
     position: absolute;
-    z-index: map-get($z-index, navbar);
+    z-index: map.get($z-index, navbar);
     top: calc(35px - (0.5em * var(--base-line-height)));
     left: 45px;
     right: 80px;

@@ -1,10 +1,12 @@
+@use "../app/__helpers" as *;
+
 // Theme: Simple
 // =============================================================================
 // Main Import
-@import "theme-defaults";
+@use "theme-defaults";
 
 // Shared Imports
-@import "shared/code-light";
+@use "shared/code-light";
 
 // Properties
 :root {
