@@ -22,6 +22,7 @@ browserSync.init({
         baseDir: [
             './docs/'
         ],
+        // directory: true,
         middleware: [
             compression()
         ],
@@ -32,55 +33,27 @@ browserSync.init({
     serveStatic: [
         './dist/'
     ],
-    snippetOptions: {
-        rule: {
-            match: /<\/body>/i,
-            fn: function (snippet, match) {
-                // Fix CSS injection for alternate stylesheets
-                const styleSwitchFix = `
-                    <script>
-                        (function() {
-                            if (window.MutationObserver) {
-                                window.browsersyncObserver = new MutationObserver(function(mutationsList) {
-                                    mutationsList.forEach(function(mutation) {
-                                        Array.apply(null, mutation.addedNodes).forEach(function(node) {
-                                            var isLink       = node.tagName === 'LINK';
-                                            var isStylesheet = isLink && (node.getAttribute('rel') || '').indexOf('stylesheet') !== -1;
-
-                                            if (isStylesheet) {
-                                                node.disabled = !node.disabled;
-                                                node.disabled = !node.disabled;
-                                            }
-                                        });
-                                    });
-                                });
-
-                                browsersyncObserver.observe(document.documentElement, {
-                                    childList: true,
-                                    subtree: true
-                                });
-                            }
-                        })();
-                    </script>
-                `;
-
-                return snippet + styleSwitchFix + match;
-            }
-        }
-    },
     rewriteRules: [
         // Replace CDN URLs with local paths
         {
-            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@[\d.]*\/dist\//g,
-            replace: '/'
-        },
-        {
-            match  : /https:\/\/raw\.githubusercontent\.com\/jhildenbiddle\/docsify-themeable\/master\/CHANGELOG.md/g,
+            match  : /https?.*\/CHANGELOG.md/g,
             replace: '/CHANGELOG.md'
         },
         {
-            match  : /https:\/\/cdn\.jsdelivr\.net\/npm\/docsify-themeable@[\d.]*/g,
+            // CDN versioned default
+            // Ex1: //cdn.com/package-name
+            // Ex2: http://cdn.com/package-name@1.0.0
+            // Ex3: https://cdn.com/package-name@latest
+            match  : /(?:https?:)*\/\/.*docsify-themeable[@\d.latest]*(?=["'])/g,
             replace: '/js/docsify-themeable.min.js'
+        },
+        {
+            // CDN paths to local paths
+            // Ex1: //cdn.com/package-name/path/file.js => /path/file.js
+            // Ex2: http://cdn.com/package-name@1.0.0/dist/file.js => /dist/file.js
+            // Ex3: https://cdn.com/package-name@latest/dist/file.js => /dist/file.js
+            match  : /(?:https?:)*\/\/.*docsify-themeable[@\d.latest]*\/(?:dist\/)/g,
+            replace: '/'
         }
     ]
 });

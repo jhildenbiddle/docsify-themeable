@@ -8,40 +8,50 @@
      * @example
      *
      * This link:
-     *   <a href="#" data-link-href="path/to/file.css">Bar</a>
-     * Will activate this existing link:
-     *   <link rel="stylesheet alternate" data-style-switcher href="deep/path/to/file.css" >
-     * Or generate this active link:
-     *   <link rel="stylesheet" data-style-switcher href="path/to/file.css" >
+     *   <a href="#" data-style-href="path/to/file.css" data-style-group="foo">Bar</a>
+     * Activates an existing matched <link> (href + group match):
+     *   <link rel="stylesheet alternate" data-style-group="foo" href="deep/path/to/file.css" >
+     * Generates a new <link> if needed (no href + group match):
+     *   <link rel="stylesheet" data-style-group="foo" href="path/to/file.css" >
+     * Disables <link> elements that match group but not href
+     *   <link rel="stylesheet" data-style-group="foo" href="some/other/file.css" >
+     * Ignores <link> elements that do not match href and group
+     *   <link rel="stylesheet" data-style-group="bar" href="some/other/file.css" >
      */
     function initStyleSwitcher() {
-        var isInitialized     = false;
-        var sessionStorageKey = 'activeStylesheetHref';
+        var SESSION_STORAGE_KEY = 'activeStylesheetHref';
+        var SESSION_VAL_SEPARATOR = '||';
 
-        function handleSwitch(activeHref) {
-            var activeElm = document.querySelector('link[href*="' + activeHref +'"]');
+        var isInitialized = false;
 
-            if (!activeElm && activeHref) {
-                activeElm = document.createElement('link');
-                activeElm.setAttribute('rel', 'stylesheet');
-                activeElm.setAttribute('data-style-switcher', '');
-                activeElm.setAttribute('href', activeHref);
+        function createLinkedStylesheet(styleHref, styleGroup) {
+            var activeElm = document.createElement('link');
 
-                document.head.appendChild(activeElm);
+            activeElm.setAttribute('rel', 'stylesheet');
+            activeElm.setAttribute('href', styleHref);
+            activeElm.setAttribute('data-style-group', styleGroup || '');
 
-                activeElm.addEventListener('load', function linkOnLoad() {
-                    activeElm.removeEventListener('load', linkOnLoad);
-                    setActiveLink(activeElm);
-                });
-            }
-            else if (activeElm) {
-                setActiveLink(activeElm);
-            }
+            document.head.appendChild(activeElm);
+
+            activeElm.addEventListener('load', function linkOnLoad() {
+                activeElm.removeEventListener('load', linkOnLoad);
+                handleSwitch(styleHref, styleGroup);
+            });
+
+            return activeElm;
         }
 
-        function setActiveLink(activeElm) {
-            var activeHref   = activeElm.getAttribute('href');
-            var inactiveElms = document.querySelectorAll('link[data-style-switcher]:not([href*="' + activeHref +'"])');
+        function handleSwitch(styleHref, styleGroup) {
+            var activeElm = styleGroup
+                ? document.querySelector('link[href*="' + styleHref +'"][data-style-group="' + styleGroup + '"]')
+                : document.querySelector('link[href*="' + styleHref +'"]');
+
+            if (!activeElm) {
+                activeElm = createLinkedStylesheet(styleHref, styleGroup);
+
+                // Stylesheet will call this function after loading is complete
+                return;
+            }
 
             // Remove "alternate" keyword and media attribute
             activeElm.setAttribute('rel', (activeElm.rel || '').replace(/\s*alternate/g, '').trim());
@@ -52,7 +62,11 @@
             activeElm.disabled = false;
 
             // Store active style sheet
-            sessionStorage.setItem(sessionStorageKey, activeHref);
+            sessionStorage.setItem(SESSION_STORAGE_KEY, styleGroup ? styleHref + SESSION_VAL_SEPARATOR + styleGroup : styleHref);
+
+            var inactiveElms = styleGroup
+                ? document.querySelectorAll('link:not([href*="' + styleHref +'"])[data-style-group="' + styleGroup + '"]')
+                : document.querySelectorAll('link:not([href*="' + styleHref +'"])');
 
             // Disable other elms
             for (var i = 0; i < inactiveElms.length; i++) {
@@ -84,21 +98,23 @@
 
             // Restore active stylesheet
             document.addEventListener('DOMContentLoaded', function() {
-                var activeHref = sessionStorage.getItem(sessionStorageKey);
+                var storedData = sessionStorage.getItem(SESSION_STORAGE_KEY) || '';
+                var storedVals = storedData.split(SESSION_VAL_SEPARATOR);
+                var styleHref = storedVals[0] || '';
+                var styleGroup = storedVals[1] || '';
 
-                if (activeHref) {
-                    handleSwitch(activeHref);
+                if (styleHref) {
+                    handleSwitch(styleHref, styleGroup);
                 }
             });
 
             // Update active stylesheet
             document.addEventListener('click', function(evt) {
-                var isStyleSwitch = evt.target.hasAttribute('data-style-switch');
+                var styleHref = evt.target.getAttribute('data-style-href');
+                var styleGroup = evt.target.getAttribute('data-style-group');
 
-                if (isStyleSwitch) {
-                    var dataHref  = evt.target.getAttribute('data-link-href');
-
-                    handleSwitch(dataHref);
+                if (styleHref) {
+                    handleSwitch(styleHref, styleGroup);
                     evt.preventDefault();
                 }
             });
