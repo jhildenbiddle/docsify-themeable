@@ -1,62 +1,63 @@
 # Quick Start
 
-## HTML Template
+## New site
 
-The quickest way to get started is by creating an `index.html` file that contains the HTML markup below. This markup contains everything needed for [docsify](https://docsify.js.org/), docsify-themeable, recommended [plugins](https://docsify.js.org/#/plugins), auto light/dark themes, and placeholders for your docsify configuration and custom theme styles.
+The quickest way to get started on a new docsify site is by using the template provided below.
 
-After copying the template, be sure to complete the following tasks:
+1. Create an `index.html` file that contains the following HTML markup. This markup contains everything needed for [docsify](https://docsify.js.org/), docsify-themeable, recommended [plugins](https://docsify.js.org/#/plugins), auto light/dark themes, and placeholders for your docsify configuration and custom theme styles.
 
-1. Create a [homepage](https://docsify.js.org/#/configuration?id=homepage) in the same directory (e.g., `README.md`)
-1. Add a description to the `<meta name="description">` tag
-1. Add a title to the `<title>` tag
-1. Add custom styles to the `<style>` tag
-1. Configure [docsify options](https://docsify.js.org/#/configuration) and [docsify-themeable options](options) in the `<script>` tag
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+      <meta name="description" content="">
+      <title></title>
 
-!> Note the `@` version number lock in the URLs below. This prevents breaking changes in future releases from affecting your project and is therefore the safest method of loading dependencies from a CDN. When a new major version is released, you will need to manually update your CDN URLs by changing the version number after the @ symbol.
+      <!-- Themes (light + dark) -->
+      <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+      <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="utf-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-   <meta name="description" content="">
-   <title></title>
+      <!-- Custom Styles -->
+      <style>
+        :root {
+          /* --theme-hue: 325; */
+        }
+      </style>
+   </head>
+   <body>
+      <div id="app"></div>
 
-   <!-- Themes (light + dark) -->
-   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+      <script>
+        // Docsify Configuration
+        window.$docsify = {
+          // ..
+        };
+      </script>
 
-   <!-- Custom Styles -->
-   <style>
-     :root {
-       /* --theme-hue: 325; */
-     }
-   </style>
-</head>
-<body>
-   <div id="app"></div>
+      <!-- Required -->
+      <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 
-   <script>
-     // Docsify Configuration
-     window.$docsify = {
-       // ..
-     };
-   </script>
+      <!-- Recommended -->
+      <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+   </body>
+   </html>
+   ```
 
-   <!-- Required -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+   !> Note the `@` version number lock in the URLs above. This prevents breaking changes in future releases from affecting your project and is therefore the safest method of loading dependencies from a CDN. When a new major version is released, you will need to manually update your CDN URLs by changing the version number after the @ symbol.
 
-   <!-- Recommended -->
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-</body>
-</html>
-```
+1. Fill in the empty tags in the HTML template
+   - Add a description to the `<meta name="description">` tag
+   - Add a title to the `<title>` tag
+   - Add [custom styles](customization) to the `<style>` tag
+   - Configure [docsify options](https://docsify.js.org/#/configuration) using the `window.$docsify` object
+1. Create a new `README.md` markdown file in the same directory as your `index.html` file. This new file will serve as your [homepage](https://docsify.js.org/#/configuration?id=homepage).
 
-## Step-by-step
+## Existing site
 
 Existing site owners may prefer to modify their existing `index.html` file using the following steps:
 
@@ -121,6 +122,9 @@ The docsify [Quick Start](//docsify.js.org/#/quickstart) guide recommends [docsi
 # Install docsify-cli globally
 npm install -g docsify-cli
 
+# Change to site directory
+cd /path/to/site
+
 # Serve current directory
 docsify serve
 
@@ -128,22 +132,15 @@ docsify serve
 docsify serve docs
 ```
 
-A simple [Python](https://www.python.org/) web server can also be used and is likely pre-installed with your operating system:
+[Node](https://nodejs.org/) and [Python](https://www.python.org/) users can launch a simple web server from the directory containing their `index.html`:
 
 ```bash
 # Change to site directory
-cd /path/to/site/files
+cd /path/to/site
 
-# Show Python version
-python --version
+# Node
+npx http-server
 
-# Launch web server (Python 2.x)
-python -m SimpleHTTPServer
-
-# Launch web server (Python 3.x)
+# Python (v3)
 python -m http.server
 ```
-
-## Hosting
-
-Sites powered by [docsify.js](//docsify.js.org/) can be hosted on any web server. The [docsify website](//docsify.js.org/) provides a helpful [deployment guide](//docsify.js.org/#/deploy) with tips for hosting your site on several platforms.
