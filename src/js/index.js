@@ -37,6 +37,9 @@ if (window) {
     // CSS custom properties ponyfill
     cssVars(cssVarsOptions);
 
+    // Add 'themeable' class to document for style hook
+    document.documentElement.classList.add('themeable');
+
     // Add platform data to <body>
     document.body.setAttribute('data-platform', navigator.platform);
 
