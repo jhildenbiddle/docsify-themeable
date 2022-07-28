@@ -57,7 +57,7 @@
     blockquote {
         overflow: visible;
         margin: 2em 0;
-        padding: 1.5em;
+        padding: var(--blockquote-padding);
         border-width: var(--blockquote-border-width, 0);
         border-style: var(--blockquote-border-style);
         border-color: var(--blockquote-border-color);

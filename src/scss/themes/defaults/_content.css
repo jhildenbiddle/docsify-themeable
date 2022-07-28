@@ -23,6 +23,7 @@
     --blockquote-quotes-font-family     : ;
     --blockquote-quotes-font-size       : ;
     --blockquote-quotes-open            : ;
+    --blockquote-padding                : 1.5em;
 
     /* Code */
     --code-font-family                  : Inconsolata, Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
