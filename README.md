@@ -31,7 +31,11 @@ Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsi
   </a>
 </p>
 
-> 💡 Like docsify-themeable? Be sure to check out [docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs/) for tabbed content, [docsify-plugin-ethicalads](https://jhildenbiddle.github.io/docsify-plugin-ethicalads/) for EthicalAds integration, and [docsify-plugin-runkit](https://jhildenbiddle.github.io/docsify-plugin-runkit/) for live JavaScript REPLs!
+> 💡 Like docsify-themeable? Check out [docsify-tabs](https://jhildenbiddle.github.io/docsify-tabs/) for tabbed content, [docsify-plugin-ethicalads](https://jhildenbiddle.github.io/docsify-plugin-ethicalads/) for EthicalAds integration, and [docsify-plugin-runkit](https://jhildenbiddle.github.io/docsify-plugin-runkit/) for live JavaScript REPLs!
+
+## Installation & Options
+
+See the [documentation site](https://jhildenbiddle.github.io/docsify-themeable) for details.
 
 ## Contact
 
