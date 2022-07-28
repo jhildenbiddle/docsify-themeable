@@ -10,8 +10,8 @@
     <title>docsify-themeable - A delightfully simple theme system for docsify.js</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" data-style-group="themeable" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
     <link rel="stylesheet" data-style-group="themeable" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+    <link rel="stylesheet" data-style-group="themeable" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
     <link rel="stylesheet" href="assets/css/main.css">
 
     <!-- Test Stylesheets -->
@@ -47,6 +47,9 @@
 
             // PLUGINS
             // -----------------------------------------------------------------
+            ethicalAds: {
+                eaPublisher: 'jhildenbiddle-github-io',
+            },
             executeScript: true,
             ga    : 'UA-100100910-3',
             search: {
@@ -59,6 +62,7 @@
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/docsify-plugin-ethicalads@0"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1/dist/docsify-tabs.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
