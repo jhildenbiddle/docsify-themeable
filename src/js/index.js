@@ -74,6 +74,7 @@ if (window) {
     // Add themeable options
     window.$docsify.themeable = window.$docsify.themeable || {};
     window.$docsify.themeable.version = pkgVersion;
+    window.$docsify.themeable.semver = pkgVersion.split('.');
     window.$docsify.themeable.util = {
         cssVars: function(options = cssVarsOptions) {
             cssVars(options);
