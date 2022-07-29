@@ -49,6 +49,10 @@ Theme properties for base styles.
 
 [_base.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_base.css ':include')
 
+### Code
+
+See the  `--code` properties listed in [Content](#content) section as well as the [PrismJS](#prismjs) section for additional details related to syntax highlighting themes.
+
 ### Content
 
 Theme properties for markdown content.
