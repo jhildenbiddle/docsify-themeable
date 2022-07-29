@@ -51,6 +51,7 @@ The quickest way to get started on a new docsify site is by using the template p
    !> Note the `@` version number lock in the URLs above. This prevents breaking changes in future releases from affecting your project and is therefore the safest method of loading dependencies from a CDN. When a new major version is released, you will need to manually update your CDN URLs by changing the version number after the @ symbol.
 
 1. Fill in the empty tags in the HTML template
+   - For non-English sites update the [`<html lang="en">`](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/lang) tag with the appropriate two-letter [language code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes).
    - Add a description to the `<meta name="description">` tag
    - Add a title to the `<title>` tag
    - Add [custom styles](customization) to the `<style>` tag
