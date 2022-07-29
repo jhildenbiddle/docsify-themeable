@@ -1,18 +1,33 @@
 # Change Log
 
+## 0.9.0
+
+*2022.07.28*
+
+- Add "themeable" class to document as style hook
+- Add `semver` property and value `window.$docsify.themeable` object
+- Add ability for sidebar chevrons to use `--theme-color` (#3, #25, #58, #65)
+- Add light/dark theme switching to documentation (based on OS-level preference)
+- Add `--blockquote-padding` theme property
+- Fix sidebar chevron loaded state color
+- Fix stylesheet switcher in documentation
+- Fix `-` displayed before level-3 sidebar navigation items
+- Update dependencies
+- Update documentation
+
 ## 0.8.6
 
 *2021.09.02*
 
-- Updated code quality badges in documentation
-- Added GitHub CI
+- Update code quality badges in documentation
+- Add GitHub CI
 
 ## 0.8.5
 
 *2021.09.01*
 
-- Fixed search field clear button behavior (#62)
-- Fixed missing expand/collapse icons in sidebar when 'routerMode' is set to 'history' (#66)
+- Fix search field clear button behavior (#62)
+- Fix missing expand/collapse icons in sidebar when 'routerMode' is set to 'history' (#66)
 
 ## 0.8.4
 
