@@ -26,7 +26,7 @@ To customize a *docsify-themeable* [theme](themes):
    <link rel="stylesheet" href="theme-custom.css">
    ```
 
-1. Set any of the [theme properties](#theme) found below:
+1. Set any of the theme properties found below:
 
    ```css
    :root {
@@ -119,7 +119,7 @@ Theme properties for docsify's [zoom image](https://docsify.js.org/#/plugins?id=
 
 ## PrismJS
 
-[PrismJS](http://prismjs.com/) is the syntax highlighter used by [docsify](https://docsify.js.org/) for styling code blocks. Styles can be customized by setting [`--code`](#-code) theme properties or by using one of the many [PrismJS themes](https://cdn.jsdelivr.net/npm/prismjs/themes/) available.
+[PrismJS](http://prismjs.com/) is the syntax highlighter used by [docsify](https://docsify.js.org/) for styling code blocks. Styles can be customized by setting `--code` theme properties listed in the [Content](#content) section or by using one of the many [PrismJS themes](https://cdn.jsdelivr.net/npm/prismjs/themes/) available.
 
 To use a PrismJS theme, add a `<link>` to your `index.html` after your site theme:
 
@@ -133,7 +133,7 @@ To use a PrismJS theme, add a `<link>` to your `index.html` after your site them
 
 Note that only PrismJS theme colors will be applied. Layout and typography styles such as `font-family`, `border-radius`, `margin` and `padding` will continue to be applied by the site theme to maintain visual consistency.
 
-The [theme properties](#theme) that override PrismJS theme values are:
+The theme properties that override PrismJS theme values are:
 
 - `--code-font-family`
 - `--code-font-size`
