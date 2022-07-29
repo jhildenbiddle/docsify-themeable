@@ -4,6 +4,7 @@
 - [Themes](themes)
 - [Customization](customization)
 - [Options](options)
+- [Plugin authors](plugin-authors)
 - [Markdown](markdown)
 - [Changelog](changelog)
 - **Links**
