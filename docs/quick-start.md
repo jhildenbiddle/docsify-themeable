@@ -6,6 +6,8 @@ The quickest way to get started on a new docsify site is by using the template p
 
 1. Create an `index.html` file that contains the following HTML markup. This markup contains everything needed for [docsify](https://docsify.js.org/), docsify-themeable, recommended [plugins](https://docsify.js.org/#/plugins), auto light/dark themes, and placeholders for your docsify configuration and custom theme styles.
 
+   ?> CDN availability includes [jsdelivr](https://www.jsdelivr.com/package/npm/docsify-themeable) (shown below), [unpkg](https://unpkg.com/browse/docsify-themeable/), and other CDN services that auto-publish npm packages.
+
    ```html
    <!DOCTYPE html>
    <html lang="en">
@@ -47,8 +49,6 @@ The quickest way to get started on a new docsify site is by using the template p
    </body>
    </html>
    ```
-
-   CDN availability includes [jsdelivr](https://www.jsdelivr.com/package/npm/docsify-themeable) (above), [unpkg](https://unpkg.com/browse/docsify-themeable/), and other CDN services that auto-publish npm packages.
 
    !> Note the `@` version number lock in the URLs above. This prevents breaking changes in future releases from affecting your project and is therefore the safest method of loading dependencies from a CDN. When a new major version is released, you will need to manually update your CDN URLs by changing the version number after the @ symbol.
 
