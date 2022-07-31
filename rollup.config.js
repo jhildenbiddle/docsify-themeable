@@ -2,14 +2,14 @@
 // =============================================================================
 const path = require('path');
 
-import babel       from 'rollup-plugin-babel';
-import commonjs    from '@rollup/plugin-commonjs';
-import { eslint }  from 'rollup-plugin-eslint';
-import json        from '@rollup/plugin-json';
-import merge       from 'lodash.merge';
-import pkg         from './package.json';
+import babel           from 'rollup-plugin-babel';
+import commonjs        from '@rollup/plugin-commonjs';
+import { eslint }      from 'rollup-plugin-eslint';
+import json            from '@rollup/plugin-json';
+import mergician       from 'mergician';
+import pkg             from './package.json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { terser }  from 'rollup-plugin-terser';
+import { terser }      from 'rollup-plugin-terser';
 
 
 // Settings
@@ -94,7 +94,7 @@ const config = {
 // Formats
 // -----------------------------------------------------------------------------
 // IIFE
-const iife = merge({}, config, {
+const iife = mergician({}, config, {
     output: {
         format: 'iife'
     },
@@ -104,7 +104,7 @@ const iife = merge({}, config, {
 });
 
 // IIFE (Minified)
-const iifeMinified = merge({}, config, {
+const iifeMinified = mergician({}, config, {
     output: {
         file  : iife.output.file.replace(/\.js$/, '.min.js'),
         format: iife.output.format
