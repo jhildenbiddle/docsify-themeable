@@ -63,7 +63,25 @@
                 depth      : 3,
                 noData     : 'No results!',
                 placeholder: 'Search...'
-            }
+            },
+            plugins: [
+                // Restores initial <title>
+                function persistTitle(hook, vm) {
+                    var titleElm = document.querySelector('title');
+                    var rootTitle = titleElm && titleElm.textContent;
+                    var pageTitlePrefix = window.$docsify.name ? window.$docsify.name + ' - ' : '';
+
+                    if (rootTitle) {
+                        hook.doneEach(function () {
+                            var currentTitle = titleElm.textContent;
+                            var isRoot = !/\/[a-z]/.test(location.hash);
+                            var newTitle = isRoot ? rootTitle : pageTitlePrefix + currentTitle;
+
+                            titleElm.textContent = newTitle;
+                        });
+                    }
+                }
+            ]
         };
     </script>
     <script src="assets/js/main.js"></script>
