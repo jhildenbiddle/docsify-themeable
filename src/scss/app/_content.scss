@@ -336,49 +336,6 @@
                 display: none;
             }
         }
-
-        @include media("<=small") {
-            tbody,
-            tr,
-            td {
-                display: block;
-            }
-
-            th,
-            td {
-                border: none;
-            }
-
-            thead {
-                display: none;
-            }
-
-            tr {
-                border-color: var(--table-cell-border-color);
-                border-style: solid;
-                border-width: var(--table-cell-border-width, 0);
-                padding: var(--table-cell-padding);
-
-                &:not(:last-child) {
-                    border-bottom: 0;
-                }
-            }
-
-            td {
-                $label-width: 8em;
-
-                padding: 0.15em 0 0.15em $label-width;
-
-                &::before {
-                    display: inline-block;
-                    float: left;
-                    width: $label-width;
-                    margin-left: 0 - $label-width;
-                    font-weight: bold;
-                    text-align: left;
-                }
-            }
-        }
     }
 
     .tip,
