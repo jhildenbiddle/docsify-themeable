@@ -1,15 +1,19 @@
 // Dependencies
 // =============================================================================
-const path = require('path');
 
 import { babel }       from '@rollup/plugin-babel';
 import commonjs        from '@rollup/plugin-commonjs';
 import eslint          from '@rollup/plugin-eslint';
+import fs              from 'node:fs/promises';
 import json            from '@rollup/plugin-json';
 import mergician       from 'mergician';
-import pkg             from './package.json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
+import path            from 'node:path';
 import terser          from '@rollup/plugin-terser';
+
+const pkg = JSON.parse(
+    await fs.readFile(new URL('./package.json', import.meta.url), 'utf8') // prettier-ignore
+);
 
 
 // Settings
@@ -19,8 +23,8 @@ const currentYear = (new Date()).getFullYear();
 const releaseYear = 2018;
 
 // Output
-const entryFile  = path.resolve(__dirname, 'src', 'js', 'index.js');
-const outputFile = path.resolve(__dirname, 'dist', 'js', `${pkg.name}.js`);
+const entryFile  = path.resolve('src', 'js', 'index.js');
+const outputFile = path.resolve('dist', 'js', `${pkg.name}.js`);
 
 // Banner
 const bannerData = [
