@@ -2,14 +2,14 @@
 // =============================================================================
 const path = require('path');
 
-import babel           from 'rollup-plugin-babel';
+import { babel }       from '@rollup/plugin-babel';
 import commonjs        from '@rollup/plugin-commonjs';
-import { eslint }      from 'rollup-plugin-eslint';
+import eslint          from '@rollup/plugin-eslint';
 import json            from '@rollup/plugin-json';
 import mergician       from 'mergician';
 import pkg             from './package.json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
-import { terser }      from 'rollup-plugin-terser';
+import terser          from '@rollup/plugin-terser';
 
 
 // Settings
@@ -39,6 +39,7 @@ const pluginSettings = {
         throwOnError  : true
     },
     babel: {
+        babelHelpers: 'bundled',
         exclude: ['node_modules/**'],
         presets: [
             ['@babel/env', {
