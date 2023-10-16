@@ -43,7 +43,7 @@
     "build:scss": "sass src/scss/themes:build/css --source-map --style=compressed --load-path=node_modules",
     "clean": "rimraf build/* dist/* docs/css docs/js",
     "lint": "eslint . && markdownlint . --ignore node_modules",
-    "serve": "node server.js",
+    "serve": "node server.cjs",
     "start": "run-p watch serve",
     "test": "npm run lint",
     "watch": "run-p 'build:* -- -w'",
