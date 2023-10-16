@@ -72,7 +72,15 @@ if (window) {
     ).filter(plugin => plugin !== null);
 
     // Add search options
-    window.$docsify.search = window.$docsify.search || {};
+    if (typeof window.$docsify.search !== 'object') {
+        window.$docsify.search = {};
+    }
+    else if (Array.isArray(window.$docsify.search)) {
+        window.$docsify.search = {
+            paths: window.$docsify.search
+        };
+    }
+
     window.$docsify.search.hideOtherSidebarContent = true;
 
     // Add themeable options
