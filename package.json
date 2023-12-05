@@ -40,7 +40,7 @@
     "build": "npm-run-all build:scss --parallel build:js build:pcss",
     "build:js": "rollup -c",
     "build:pcss": "postcss build/css/**/*.css --dir dist/css --map",
-    "build:scss": "sass src/scss/themes:build/css --source-map --style=compressed --load-path=node_modules",
+    "build:scss": "sass src/scss:build/css --source-map --style=compressed --load-path=node_modules",
     "clean": "rimraf build/* dist/* docs/css docs/js",
     "lint": "eslint . && markdownlint . --ignore node_modules",
     "serve": "node server.cjs",
