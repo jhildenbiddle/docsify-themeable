@@ -1,6 +1,37 @@
 @use "__helpers" as *;
 @use "sass:map";
 
+// Skip Link
+// =============================================================================
+#skip-to-content {
+    appearance: none;
+    display: block;
+    position: fixed;
+    z-index: 2147483647;
+    top: 0;
+    left: 50%;
+    padding: 0.5rem 1.5rem;
+    border: 0;
+    border-radius: 100vw;
+    background-color: var(--theme-color);
+    color: var(--mono-tint3);
+    opacity: 0;
+    font-size: inherit;
+    text-decoration: none;
+    transform: translate(-50%, -100%);
+    transition-property: opacity, transform;
+    transition-duration: 0s, 0.2s;
+    transition-delay: 0.2s, 0s;
+
+    &:focus {
+        opacity: 1;
+        transform: translate(-50%, 0.75rem);
+        transition-duration: 0s, 0.2s;
+        transition-delay: 0s, 0s;
+    }
+}
+
+
 // Github Icon
 // =============================================================================
 .github-corner {
