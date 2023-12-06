@@ -41,7 +41,7 @@
     "build:js": "rollup -c",
     "build:pcss": "postcss build/css/**/*.css --dir dist/css --map",
     "build:scss": "sass src/scss:build/css --source-map --style=compressed --load-path=node_modules",
-    "clean": "rimraf build/* dist/* docs/css docs/js",
+    "clean": "rimraf --glob build/* dist/* docs/css docs/js",
     "lint": "eslint . && markdownlint *.md docs/*.md",
     "serve": "node server.cjs",
     "start": "run-p watch serve",
