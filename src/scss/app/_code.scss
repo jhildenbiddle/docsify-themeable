@@ -4,6 +4,7 @@
 .markdown-section {
     code[class*="lang-"],
     pre[data-lang] {
+        border-radius: var(--code-block-border-radius);
         font-family: var(--code-font-family);
         font-size: var(--code-font-size);
         font-weight: var(--code-font-weight);
@@ -20,10 +21,8 @@
 
     pre[data-lang] {
         position: relative;
-        overflow: hidden;
         margin: var(--code-block-margin);
         padding: 0;
-        border-radius: var(--code-block-border-radius);
 
         &::after {
             content: attr(data-lang);
