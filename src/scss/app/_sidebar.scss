@@ -220,15 +220,7 @@ main {
                     padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
                 }
 
-                // Not loaded (w/o subnav)
-                &:only-child {
-                    background: var(--sidebar-nav-pagelink-background);
-                }
-
-                // Loaded (w/ subnav)
-                &:not(:only-child) {
-                    background: var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background));
-                }
+                background: var(--sidebar-nav-pagelink-background); // Chevron mono right
             }
         }
 
@@ -254,6 +246,21 @@ main {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
                         background: var(--sidebar-nav-pagelink-background--active, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
+                    }
+                }
+            }
+        }
+
+        &:has(.active) {
+            > a {
+
+                // Page links (routerMode: history|hash)
+                &[href^="/"]:not([href*="?id="]),
+                &[href^="#/"]:not([href*="?id="]) {
+
+                    // Loaded (w/ subnav)
+                    &:not(:only-child) {
+                        background: var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
                     }
                 }
             }
