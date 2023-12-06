@@ -4,7 +4,7 @@
 import { babel }       from '@rollup/plugin-babel';
 import commonjs        from '@rollup/plugin-commonjs';
 import eslint          from '@rollup/plugin-eslint';
-import fs              from 'node:fs/promises';
+import fs              from 'node:fs';
 import json            from '@rollup/plugin-json';
 import mergician       from 'mergician';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
@@ -12,7 +12,7 @@ import path            from 'node:path';
 import terser          from '@rollup/plugin-terser';
 
 const pkg = JSON.parse(
-    await fs.readFile(new URL('./package.json', import.meta.url), 'utf8') // prettier-ignore
+    fs.readFileSync(new URL('./package.json', import.meta.url), 'utf8') // prettier-ignore
 );
 
 
