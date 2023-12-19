@@ -1,7 +1,8 @@
-// Dependencies
-// =============================================================================
 const browserSync = require('browser-sync').create();
 const compression = require('compression');
+const { rewriteRules } = require('./preview.config.cjs');
+
+const previewDir = '/preview';
 
 browserSync.init({
     files: [
@@ -18,42 +19,25 @@ browserSync.init({
     cors: true,
     reloadDebounce: 1000,
     reloadOnRestart: true,
+    rewriteRules,
     server: {
-        baseDir: [
-            './docs/'
-        ],
-        // directory: true,
+        baseDir: '.',
         middleware: [
-            compression()
+            compression(),
+            // Redirect root to preview
+            function(req, res, next) {
+                if (req.url === '/') {
+                    res.writeHead(301, { Location: previewDir });
+                    res.end();
+                }
+
+                return next();
+            }
         ],
         routes: {
-            '/CHANGELOG.md': './CHANGELOG.md'
+            [previewDir]: './docs/',
+            [`${previewDir}/CHANGELOG.md`]: './CHANGELOG.md',
         }
     },
-    serveStatic: [
-        './dist/'
-    ],
-    rewriteRules: [
-        // Replace CDN URLs with local paths
-        {
-            match  : /https?.*\/CHANGELOG.md/g,
-            replace: '/CHANGELOG.md'
-        },
-        {
-            // CDN versioned default
-            // Ex1: //cdn.com/package-name
-            // Ex2: http://cdn.com/package-name@1.0.0
-            // Ex3: https://cdn.com/package-name@latest
-            match  : /(?:https?:)*\/\/.*cdn.*docsify-themeable[@\d.latest]*(?=["'])/g,
-            replace: '/js/docsify-themeable.min.js'
-        },
-        {
-            // CDN paths to local paths
-            // Ex1: //cdn.com/package-name/path/file.js => /path/file.js
-            // Ex2: http://cdn.com/package-name@1.0.0/dist/file.js => /dist/file.js
-            // Ex3: https://cdn.com/package-name@latest/dist/file.js => /dist/file.js
-            match  : /(?:https?:)*\/\/.*cdn.*docsify-themeable[@\d.latest]*\/(?:dist\/)/g,
-            replace: '/'
-        }
-    ]
+    startPath: previewDir,
 });
