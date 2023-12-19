@@ -133,6 +133,10 @@ body:not([data-platform^="Mac"]) {
     }
 }
 
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
 ::selection {
     background: var(--selection-color);
 }

@@ -30,13 +30,14 @@ main {
 
 // Sidebar
 // =============================================================================
-// NOTE: The use of "right:100%" to push the sidebar off convas is required for
-// IE and Edge compatibilty. Pulling the sidebar using "left" would require a
+// NOTE: The use of "right:100%" to push the sidebar off canvas is required for
+// IE and Edge compatibility. Pulling the sidebar using "left" would require a
 // negative value, and since we are using a CSS custom property this would be
 // accomplished using "left: calc(0px - var(--sidebar-width)". Unfortunately,
 // transitioning calc() values triggers bugs in IE and Edge, so we are forced
 // to set static values instead.
 .sidebar {
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -84,6 +85,7 @@ main {
     }
 
     @include media(">=medium") {
+        visibility: visible;
         position: absolute;
         transform: translateX(var(--sidebar-width));
     }
@@ -218,15 +220,7 @@ main {
                     padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
                 }
 
-                // Not loaded (w/o subnav)
-                &:only-child {
-                    background: var(--sidebar-nav-pagelink-background);
-                }
-
-                // Loaded (w/ subnav)
-                &:not(:only-child) {
-                    background: var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background));
-                }
+                background: var(--sidebar-nav-pagelink-background); // Chevron mono right
             }
         }
 
@@ -252,6 +246,21 @@ main {
                     // Loaded (w/ subnav)
                     &:not(:only-child) {
                         background: var(--sidebar-nav-pagelink-background--active, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
+                    }
+                }
+            }
+        }
+
+        &:has(.active) {
+            > a {
+
+                // Page links (routerMode: history|hash)
+                &[href^="/"]:not([href*="?id="]),
+                &[href^="#/"]:not([href*="?id="]) {
+
+                    // Loaded (w/ subnav)
+                    &:not(:only-child) {
+                        background: var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
                     }
                 }
             }
@@ -311,7 +320,6 @@ main {
 .sidebar-toggle,
 .sidebar-toggle-button {
     width: var(--sidebar-toggle-width);
-    outline: none;
 }
 
 .sidebar-toggle {
@@ -381,45 +389,26 @@ main {
 // -----------------------------------------------------------------------------
 // Note: Wrapping property changes in media queries is required for legacy
 // compatibility. Scoping property changes using media queries ensures that the
-// css-vars-ponyfill does not append transformed values that unintentinally
+// css-vars-ponyfill does not append transformed values that unintentionally
 // override non-transformed values.
 body.close {
-    .sidebar,
-    .sidebar-toggle,
-    .sidebar + .content {
-        @include media("<medium") {
+    @include media("<medium") {
+        .sidebar,
+        .sidebar-toggle,
+        .sidebar + .content {
             transform: translateX(var(--sidebar-width));
         }
-    }
 
-    .sidebar + .content {
-        @include media(">=medium") {
-            transform: translateX(0);
-        }
-    }
-
-    nav.app-nav,
-    .github-corner {
-        @include media("<medium") {
+        nav.app-nav,
+        .github-corner {
             display: none;
         }
-    }
 
-    .sidebar,
-    .sidebar-toggle {
-        @include media(">=medium") {
-            transform: translateX(0);
+        .sidebar {
+            visibility: visible;
         }
-    }
 
-    nav.app-nav {
-        @include media(">=medium") {
-            margin-left: 0;
-        }
-    }
-
-    .sidebar-toggle {
-        @include media("<medium") {
+        .sidebar-toggle {
             width: 100%;
             max-width: none;
 
@@ -439,17 +428,28 @@ body.close {
         }
     }
 
-    .sidebar + .content {
-        @include media(">=medium") {
+    @include media(">=medium") {
+        .sidebar,
+        .sidebar-toggle,
+        .sidebar + .content {
+            transform: translateX(0);
+        }
+
+        nav.app-nav,
+        .sidebar + .content {
             margin-left: 0;
+        }
+
+        .sidebar {
+            visibility: hidden;
         }
     }
 }
 
 body.sticky {
-    .sidebar,
-    .sidebar-toggle {
-        @include media(">=medium") {
+    @include media(">=medium") {
+        .sidebar,
+        .sidebar-toggle {
             position: fixed;
         }
     }

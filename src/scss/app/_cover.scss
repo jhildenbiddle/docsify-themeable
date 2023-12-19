@@ -125,7 +125,7 @@
         > p:last-child {
             $button-margin: 0.25em;
 
-            margin: 1.5em -$button-margin 0 -$button-margin;
+            margin: 1.5em (-$button-margin) 0 (-$button-margin);
 
             a {
                 display: block;

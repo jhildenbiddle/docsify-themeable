@@ -1,7 +1,6 @@
-const postcss = require('postcss');
-
-const removeUnsetCustomProperties = postcss.plugin('postcss-remove-unset-custom-properties', (options = {}) => {
-    return root => {
+const removeUnsetCustomProperties = (options = {}) => ({
+    postcssPlugin: 'postcss-remove-unset-custom-properties',
+    Once (root, { result }) {
         root.walkDecls(decl => {
             const isCustomProp = decl.prop.startsWith('--');
             const isEmpty = decl.value.trim().length === 0;
@@ -10,8 +9,10 @@ const removeUnsetCustomProperties = postcss.plugin('postcss-remove-unset-custom-
                 decl.remove();
             }
         });
-    };
+    }
 });
+
+removeUnsetCustomProperties.postcss = true;
 
 module.exports = {
     plugins: [

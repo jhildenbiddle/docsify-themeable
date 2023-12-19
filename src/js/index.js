@@ -15,11 +15,15 @@ import { version as pkgVersion }  from '../../package.json';
 
 // Functions
 // =============================================================================
-function ifLessThanVersion(version, pluginFn) {
-    const docsifyVersion  = Number('0.' + ((window.Docsify || {}).version || '0').replace(/\./g, ''));
-    const lessThanVersion = Number('0.' + version.replace(/\./g, ''));
+function isLessThanSemVer(version) {
+    const docsifyVersion = ((window.Docsify || {}).version || '0.0.0').split('.');
+    const lessThanVersion = version.split('.');
 
-    return docsifyVersion < lessThanVersion ? pluginFn : null;
+    while (lessThanVersion.length < docsifyVersion.length) {
+        lessThanVersion.push('0');
+    }
+
+    return lessThanVersion.some((value, index) => value < docsifyVersion[index]);
 }
 
 
@@ -62,13 +66,21 @@ if (window) {
         // Append
         [
             pluginFixSearchClearButton,
-            ifLessThanVersion('4.8.0', pluginFixSearchResults),
-            ifLessThanVersion('4.8.0', pluginFixZoomImage)
+            isLessThanSemVer('4.8.0', pluginFixSearchResults),
+            isLessThanSemVer('4.8.0', pluginFixZoomImage)
         ]
     ).filter(plugin => plugin !== null);
 
     // Add search options
-    window.$docsify.search = window.$docsify.search || {};
+    if (typeof window.$docsify.search !== 'object') {
+        window.$docsify.search = {};
+    }
+    else if (Array.isArray(window.$docsify.search)) {
+        window.$docsify.search = {
+            paths: window.$docsify.search
+        };
+    }
+
     window.$docsify.search.hideOtherSidebarContent = true;
 
     // Add themeable options
