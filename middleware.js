@@ -19,6 +19,9 @@ export default async function middleware(request) {
 
     return new Response(previewHTML, {
         status: 200,
-        headers: { 'content-type': 'text/html' },
+        headers: {
+            'content-type': 'text/html',
+            'x-robots-tag': 'noindex'
+        },
     });
 }
