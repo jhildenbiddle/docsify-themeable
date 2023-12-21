@@ -1,9 +1,12 @@
+import * as path from 'node:path';
+import * as url from 'node:url';
 import { create } from 'browser-sync';
 import { rewriteRules } from './middleware.js';
 import compression from 'compression';
 
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 const bsServer = create();
-const previewDir = '/preview';
 
 bsServer.init({
   files: ['./dist/**/*.*', './docs/**/*.*'],
@@ -19,23 +22,11 @@ bsServer.init({
   reloadOnRestart: true,
   rewriteRules,
   server: {
-    baseDir: '.',
-    middleware: [
-      compression(),
-      // Redirect root to preview
-      function (req, res, next) {
-        if (req.url === '/') {
-          res.writeHead(301, { Location: previewDir });
-          res.end();
-        }
-
-        return next();
-      }
-    ],
+    baseDir: './docs',
+    middleware: [compression()],
     routes: {
-      [previewDir]: './docs/',
-      [`${previewDir}/CHANGELOG.md`]: './CHANGELOG.md'
+      '/changelog.md': path.resolve(__dirname, 'CHANGELOG.md'),
+      '/dist': path.resolve(__dirname, 'dist')
     }
-  },
-  startPath: previewDir
+  }
 });
