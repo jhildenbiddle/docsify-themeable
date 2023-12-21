@@ -1,177 +1,264 @@
-@use "__helpers" as *;
-@use "sass:map";
+@use '__helpers' as *;
+@use 'sass:map';
 
 // Nav bar
 // =============================================================================
 .app-nav {
-    position: absolute;
-    z-index: map.get($z-index, navbar);
-    top: calc(35px - (0.5em * var(--base-line-height)));
-    left: 45px;
-    right: 80px;
-    text-align: right;
+  position: absolute;
+  z-index: map.get($z-index, navbar);
+  top: calc(35px - (0.5em * var(--base-line-height)));
+  left: 45px;
+  right: 80px;
+  text-align: right;
 
-    &.no-badge {
-        right: 45px;
+  &.no-badge {
+    right: 45px;
+  }
+
+  li > img,
+  li > a > img {
+    margin-top: -0.25em;
+    vertical-align: middle;
+
+    &:first-child {
+      margin-right: 0.5em;
     }
+  }
 
-    li > img,
-    li > a > img {
-        margin-top: -0.25em;
-        vertical-align: middle;
+  ul,
+  li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-        &:first-child {
-            margin-right: 0.5em;
+  li {
+    position: relative;
+
+    a {
+      display: block;
+      line-height: 1;
+      transition: var(--navbar-root-transition);
+    }
+  }
+
+  > ul {
+    > li {
+      display: inline-block;
+      margin: var(--navbar-root-margin);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      // Root
+      > a,
+      > span {
+        padding: var(--navbar-root-padding);
+        border-width: var(--navbar-root-border-width, 0);
+        border-style: var(--navbar-root-border-style);
+        border-color: var(--navbar-root-border-color);
+        border-radius: var(--navbar-root-border-radius);
+        background: var(--navbar-root-background);
+        color: var(--navbar-root-color);
+        text-decoration: var(--navbar-root-text-decoration);
+        text-decoration-color: var(--navbar-root-text-decoration-color);
+
+        &:hover {
+          background: var(
+            --navbar-root-background--hover,
+            var(--navbar-root-background)
+          );
+          border-style: var(
+            --navbar-root-border-style--hover,
+            var(--navbar-root-border-style)
+          );
+          border-color: var(
+            --navbar-root-border-color--hover,
+            var(--navbar-root-border-color)
+          );
+          color: var(--navbar-root-color--hover, var(--navbar-root-color));
+          text-decoration: var(
+            --navbar-root-text-decoration--hover,
+            var(--navbar-root-text-decoration)
+          );
+          text-decoration-color: var(
+            --navbar-root-text-decoration-color--hover,
+            var(--navbar-root-text-decoration-color)
+          );
         }
-    }
 
-    ul,
-    li {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
+        // Menu root
+        &:not(:last-child) {
+          padding: var(--navbar-menu-root-padding, var(--navbar-root-padding));
+          background: var(
+            --navbar-menu-root-background,
+            var(--navbar-root-background)
+          );
 
-    li {
-        position: relative;
+          &:hover {
+            background: var(
+              --navbar-menu-root-background--hover,
+              var(
+                --navbar-menu-root-background,
+                var(
+                  --navbar-root-background--hover,
+                  var(--navbar-root-background)
+                )
+              )
+            );
+          }
+        }
+      }
+
+      > a {
+        &.active {
+          background: var(
+            --navbar-root-background--active,
+            var(--navbar-root-background)
+          );
+          border-style: var(
+            --navbar-root-border-style--active,
+            var(--navbar-root-border-style)
+          );
+          border-color: var(
+            --navbar-root-border-color--active,
+            var(--navbar-root-border-color)
+          );
+          color: var(--navbar-root-color--active, var(--navbar-root-color));
+          text-decoration: var(
+            --navbar-root-text-decoration--active,
+            var(--navbar-root-text-decoration)
+          );
+          text-decoration-color: var(
+            --navbar-root-text-decoration-color--active,
+            var(--navbar-root-text-decoration-color)
+          );
+
+          // Menu root
+          &:not(:last-child) {
+            &:hover {
+              background: var(
+                --navbar-menu-root-background--active,
+                var(
+                  --navbar-menu-root-background,
+                  var(
+                    --navbar-root-background--active,
+                    var(--navbar-root-background)
+                  )
+                )
+              );
+            }
+          }
+        }
+      }
+
+      ul {
+        visibility: hidden;
+        position: absolute;
+        top: 100%;
+        right: 50%;
+        overflow-y: auto;
+        box-sizing: border-box;
+        max-height: calc(50vh);
+        padding: var(--navbar-menu-padding);
+        border-width: var(--navbar-menu-border-width, 0);
+        border-style: solid;
+        border-color: var(--navbar-menu-border-color);
+        border-radius: var(--navbar-menu-border-radius);
+        background: var(--navbar-menu-background);
+        box-shadow: var(--navbar-menu-box-shadow);
+        text-align: left;
+        white-space: nowrap;
+        opacity: 0;
+        transform: translate(50%, -0.35em);
+        transition: var(--navbar-menu-transition);
+
+        li {
+          white-space: nowrap;
+        }
 
         a {
-            display: block;
-            line-height: 1;
-            transition: var(--navbar-root-transition);
+          margin: var(--navbar-menu-link-margin);
+          padding: var(--navbar-menu-link-padding);
+          border-width: var(--navbar-menu-link-border-width, 0);
+          border-style: var(--navbar-menu-link-border-style);
+          border-color: var(--navbar-menu-link-border-color);
+          border-radius: var(--navbar-menu-link-border-radius);
+          background: var(--navbar-menu-link-background);
+          color: var(--navbar-menu-link-color);
+          text-decoration: var(--navbar-menu-link-text-decoration);
+          text-decoration-color: var(--navbar-menu-link-text-decoration-color);
+
+          &:hover {
+            background: var(
+              --navbar-menu-link-background--hover,
+              var(--navbar-menu-link-background)
+            );
+            border-style: var(
+              --navbar-menu-link-border-style--hover,
+              var(--navbar-menu-link-border-style)
+            );
+            border-color: var(
+              --navbar-menu-link-border-color--hover,
+              var(--navbar-menu-link-border-color)
+            );
+            color: var(
+              --navbar-menu-link-color--hover,
+              var(--navbar-menu-link-color)
+            );
+            text-decoration: var(
+              --navbar-menu-link-text-decoration--hover,
+              var(--navbar-menu-link-text-decoration)
+            );
+            text-decoration-color: var(
+              --navbar-menu-link-text-decoration-color--hover,
+              var(--navbar-menu-link-text-decoration-color)
+            );
+          }
+
+          &.active {
+            background: var(
+              --navbar-menu-link-background--active,
+              var(--navbar-menu-link-background)
+            );
+            border-style: var(
+              --navbar-menu-link-border-style--active,
+              var(--navbar-menu-link-border-style)
+            );
+            border-color: var(
+              --navbar-menu-link-border-color--active,
+              var(--navbar-menu-link-border-color)
+            );
+            color: var(
+              --navbar-menu-link-color--active,
+              var(--navbar-menu-link-color)
+            );
+            text-decoration: var(
+              --navbar-menu-link-text-decoration--active,
+              var(--navbar-menu-link-text-decoration)
+            );
+            text-decoration-color: var(
+              --navbar-menu-link-text-decoration-color--active,
+              var(--navbar-menu-link-text-decoration-color)
+            );
+          }
         }
-    }
+      }
 
-    > ul {
-        > li {
-            display: inline-block;
-            margin: var(--navbar-root-margin);
-
-            &:first-child {
-                margin-left: 0;
-            }
-
-            &:last-child {
-                margin-right: 0;
-            }
-
-            // Root
-            > a,
-            > span {
-                padding: var(--navbar-root-padding);
-                border-width: var(--navbar-root-border-width, 0);
-                border-style: var(--navbar-root-border-style);
-                border-color: var(--navbar-root-border-color);
-                border-radius: var(--navbar-root-border-radius);
-                background: var(--navbar-root-background);
-                color: var(--navbar-root-color);
-                text-decoration: var(--navbar-root-text-decoration);
-                text-decoration-color: var(--navbar-root-text-decoration-color);
-
-                &:hover {
-                    background: var(--navbar-root-background--hover, var(--navbar-root-background));
-                    border-style: var(--navbar-root-border-style--hover, var(--navbar-root-border-style));
-                    border-color: var(--navbar-root-border-color--hover, var(--navbar-root-border-color));
-                    color: var(--navbar-root-color--hover, var(--navbar-root-color));
-                    text-decoration: var(--navbar-root-text-decoration--hover, var(--navbar-root-text-decoration));
-                    text-decoration-color: var(--navbar-root-text-decoration-color--hover, var(--navbar-root-text-decoration-color));
-                }
-
-                // Menu root
-                &:not(:last-child) {
-                    padding: var(--navbar-menu-root-padding, var(--navbar-root-padding));
-                    background: var(--navbar-menu-root-background, var(--navbar-root-background));
-
-                    &:hover {
-                        background: var(--navbar-menu-root-background--hover, var(--navbar-menu-root-background, var(--navbar-root-background--hover, var(--navbar-root-background))));
-                    }
-                }
-            }
-
-            > a {
-                &.active {
-                    background: var(--navbar-root-background--active, var(--navbar-root-background));
-                    border-style: var(--navbar-root-border-style--active, var(--navbar-root-border-style));
-                    border-color: var(--navbar-root-border-color--active, var(--navbar-root-border-color));
-                    color: var(--navbar-root-color--active, var(--navbar-root-color));
-                    text-decoration: var(--navbar-root-text-decoration--active, var(--navbar-root-text-decoration));
-                    text-decoration-color: var(--navbar-root-text-decoration-color--active, var(--navbar-root-text-decoration-color));
-
-                    // Menu root
-                    &:not(:last-child) {
-                        &:hover {
-                            background: var(--navbar-menu-root-background--active, var(--navbar-menu-root-background, var(--navbar-root-background--active, var(--navbar-root-background))));
-                        }
-                    }
-                }
-            }
-
-            ul {
-                visibility: hidden;
-                position: absolute;
-                top: 100%;
-                right: 50%;
-                overflow-y: auto;
-                box-sizing: border-box;
-                max-height: calc(50vh);
-                padding: var(--navbar-menu-padding);
-                border-width: var(--navbar-menu-border-width, 0);
-                border-style: solid;
-                border-color: var(--navbar-menu-border-color);
-                border-radius: var(--navbar-menu-border-radius);
-                background: var(--navbar-menu-background);
-                box-shadow: var(--navbar-menu-box-shadow);
-                text-align: left;
-                white-space: nowrap;
-                opacity: 0;
-                transform: translate(50%, -0.35em);
-                transition: var(--navbar-menu-transition);
-
-                li {
-                    white-space: nowrap;
-                }
-
-                a {
-                    margin: var(--navbar-menu-link-margin);
-                    padding: var(--navbar-menu-link-padding);
-                    border-width: var(--navbar-menu-link-border-width, 0);
-                    border-style: var(--navbar-menu-link-border-style);
-                    border-color: var(--navbar-menu-link-border-color);
-                    border-radius: var(--navbar-menu-link-border-radius);
-                    background: var(--navbar-menu-link-background);
-                    color: var(--navbar-menu-link-color);
-                    text-decoration: var(--navbar-menu-link-text-decoration);
-                    text-decoration-color: var(--navbar-menu-link-text-decoration-color);
-
-                    &:hover {
-                        background: var(--navbar-menu-link-background--hover, var(--navbar-menu-link-background));
-                        border-style: var(--navbar-menu-link-border-style--hover, var(--navbar-menu-link-border-style));
-                        border-color: var(--navbar-menu-link-border-color--hover, var(--navbar-menu-link-border-color));
-                        color: var(--navbar-menu-link-color--hover, var(--navbar-menu-link-color));
-                        text-decoration: var(--navbar-menu-link-text-decoration--hover, var(--navbar-menu-link-text-decoration));
-                        text-decoration-color: var(--navbar-menu-link-text-decoration-color--hover, var(--navbar-menu-link-text-decoration-color));
-                    }
-
-                    &.active {
-                        background: var(--navbar-menu-link-background--active, var(--navbar-menu-link-background));
-                        border-style: var(--navbar-menu-link-border-style--active, var(--navbar-menu-link-border-style));
-                        border-color: var(--navbar-menu-link-border-color--active, var(--navbar-menu-link-border-color));
-                        color: var(--navbar-menu-link-color--active, var(--navbar-menu-link-color));
-                        text-decoration: var(--navbar-menu-link-text-decoration--active, var(--navbar-menu-link-text-decoration));
-                        text-decoration-color: var(--navbar-menu-link-text-decoration-color--active, var(--navbar-menu-link-text-decoration-color));
-                    }
-                }
-            }
-
-            &:hover,
-            &:focus,
-            &.focus-within {
-                ul {
-                    visibility: visible;
-                    opacity: 1;
-                    transform: translate(50%, 0);
-                }
-            }
+      &:hover,
+      &:focus,
+      &.focus-within {
+        ul {
+          visibility: visible;
+          opacity: 1;
+          transform: translate(50%, 0);
         }
+      }
     }
+  }
 }

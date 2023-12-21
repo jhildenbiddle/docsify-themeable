@@ -1,4 +1,5 @@
 <!-- markdownlint-disable single-title no-duplicate-heading -->
+
 # Markdown
 
 ## Headings
@@ -8,6 +9,7 @@
 #### **Rendered**
 
 <!-- markdownlint-disable-next-line single-title -->
+
 # Heading 1 {docsify-ignore}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse luctus
@@ -100,7 +102,7 @@ Body text
 
 **Bold text**
 
-*Italic text*
+_Italic text_
 
 ~~Strikethrough~~
 
@@ -121,7 +123,7 @@ Body text
 
 **Bold text**
 
-*Italic text*
+_Italic text_
 
 ~~Strikethrough~~
 
@@ -146,7 +148,7 @@ This is <sup>superscript</sup>
 
 [Inline link](https://google.com)
 
-[Inline link with title](https://google.com "Google")
+[Inline link with title](https://google.com 'Google')
 
 [Reference link by name][link1]
 
@@ -163,7 +165,7 @@ This is <sup>superscript</sup>
 ```markdown
 [Inline link](https://google.com)
 
-[Inline link with title](https://google.com "Google")
+[Inline link with title](https://google.com 'Google')
 
 [Reference link by name][link1]
 
@@ -253,7 +255,7 @@ This is <sup>superscript</sup>
 > Quisque malesuada risus sit amet tortor aliquet, a posuere ex iaculis. Vivamus
 > ultrices enim dui, eleifend porttitor elit aliquet sed.
 >
-> *- Quote Source*
+> _- Quote Source_
 
 #### **Markdown**
 
@@ -263,7 +265,7 @@ This is <sup>superscript</sup>
 > Quisque malesuada risus sit amet tortor aliquet, a posuere ex iaculis. Vivamus
 > ultrices enim dui, eleifend porttitor elit aliquet sed.
 >
-> *- Quote Source*
+> _- Quote Source_
 ```
 
 <!-- tabs:end -->
@@ -277,7 +279,7 @@ This is <sup>superscript</sup>
 This is `inline code`
 
 ```javascript
-const add   = (num1, num2) => num1 + num2;
+const add = (num1, num2) => num1 + num2;
 const total = add(1, 2);
 
 console.log(total); // 3
@@ -285,7 +287,7 @@ console.log(total); // 3
 
 ```html
 <body>
-    <p>Hello</p>
+  <p>Hello</p>
 </body>
 ```
 
@@ -295,7 +297,7 @@ console.log(total); // 3
 This is `inline code`
 
 ```javascript
-const add   = (num1, num2) => num1 + num2;
+const add = (num1, num2) => num1 + num2;
 const total = add(1, 2);
 
 console.log(total); // 3
@@ -303,7 +305,7 @@ console.log(total); // 3
 
 ```html
 <body>
-    <p>Hello</p>
+  <p>Hello</p>
 </body>
 ```
 ````
@@ -382,19 +384,19 @@ Ciao!
 #### **Rendered**
 
 | Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
-| ---------- |:------------:| -----------:| ------------------------------ |
-| A1         | A2           | A3          | A4                             |
-| B1         | B2           | B3          | B4                             |
-| C1         | C2           | C3          | C4                             |
+| ---------- | :----------: | ----------: | ------------------------------ |
+| A1         |      A2      |          A3 | A4                             |
+| B1         |      B2      |          B3 | B4                             |
+| C1         |      C2      |          C3 | C4                             |
 
 #### **Markdown**
 
 ```markdown
 | Left Align | Center Align | Right Align | Non&#8209;Breaking&nbsp;Header |
-| ---------- |:------------:| -----------:| ------------------------------ |
-| A1         | A2           | A3          | A4                             |
-| B1         | B2           | B3          | B4                             |
-| C1         | C2           | C3          | C4                             |
+| ---------- | :----------: | ----------: | ------------------------------ |
+| A1         |      A2      |          A3 | A4                             |
+| B1         |      B2      |          B3 | B4                             |
+| C1         |      C2      |          C3 | C4                             |
 ```
 
 <!-- tabs:end -->
@@ -519,26 +521,26 @@ Ciao!
 
 Inline-style
 
-![alt text](//source.unsplash.com/daily "Provided by unsplash.com")
+![alt text](//source.unsplash.com/daily 'Provided by unsplash.com')
 
 Reference-style
 
 ![alt text][logo]
 
-[logo]: //source.unsplash.com/collection/881815 "Provided by unsplash.com"
+[logo]: //source.unsplash.com/collection/881815 'Provided by unsplash.com'
 
 #### **Markdown**
 
 ```markdown
 **Inline**
 
-![alt text](//source.unsplash.com/daily "Provided by unsplash.com")
+![alt text](//source.unsplash.com/daily 'Provided by unsplash.com')
 
 **Reference**
 
 ![alt text][logo]
 
-[logo]: //source.unsplash.com/collection/881815 "Provided by unsplash.com"
+[logo]: //source.unsplash.com/collection/881815 'Provided by unsplash.com'
 ```
 
 <!-- tabs:end -->

@@ -11,7 +11,10 @@ customized theme.
 
 ```html
 <!-- Theme: Defaults -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"
+/>
 ```
 
 <figure class="thumbnails">
@@ -30,7 +33,10 @@ state.
 
 ```html
 <!-- Theme: Simple -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+/>
 ```
 
 <figure class="thumbnails">
@@ -47,7 +53,10 @@ A modified version of the Simple theme featuring a dark color scheme.
 
 ```html
 <!-- Theme: Simple Dark -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+/>
 ```
 
 <figure class="thumbnails">

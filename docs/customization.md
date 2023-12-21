@@ -2,13 +2,16 @@
 
 ## Theme Styles
 
-To customize a *docsify-themeable* [theme](themes):
+To customize a _docsify-themeable_ [theme](themes):
 
 1. Add a `<style>` tag after the theme stylesheet in your `index.html`:
 
    ```html
    <!-- Theme -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+   <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+   />
 
    <!-- Custom theme styles -->
    <style>
@@ -20,10 +23,13 @@ To customize a *docsify-themeable* [theme](themes):
 
    ```html
    <!-- Theme -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+   <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+   />
 
    <!-- Custom theme stylesheet -->
-   <link rel="stylesheet" href="theme-custom.css">
+   <link rel="stylesheet" href="theme-custom.css" />
    ```
 
 1. Set any of the theme properties found below:
@@ -31,7 +37,7 @@ To customize a *docsify-themeable* [theme](themes):
    ```css
    :root {
      --base-font-size: 14px;
-     --theme-color   : purple;
+     --theme-color: purple;
    }
    ```
 
@@ -41,45 +47,45 @@ To customize a *docsify-themeable* [theme](themes):
 
 Theme properties for application styles.
 
-[_app.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_app.css ':include')
+[\_app.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_app.css ':include')
 
 ### Base
 
 Theme properties for base styles.
 
-[_base.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_base.css ':include')
+[\_base.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_base.css ':include')
 
 ### Code
 
-See the  `--code` properties listed in [Content](#content) section as well as the [PrismJS](#prismjs) section for additional details related to syntax highlighting themes.
+See the `--code` properties listed in [Content](#content) section as well as the [PrismJS](#prismjs) section for additional details related to syntax highlighting themes.
 
 ### Content
 
 Theme properties for markdown content.
 
-[_content.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_content.css ':include')
+[\_content.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_content.css ':include')
 
 ### Cover
 
 Theme properties for docsify's [`coverpage`](https://docsify.js.org/#/cover).
 
-[_cover.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_cover.css ':include')
+[\_cover.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_cover.css ':include')
 
 ### Navbar
 
 Theme properties for docsify's custom [`navbar`](https://docsify.js.org/#/custom-navbar).
 
-[_navbar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_navbar.css ':include')
+[\_navbar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_navbar.css ':include')
 
 ### Sidebar
 
 Theme properties for docsify's custom [`sidebar`](https://docsify.js.org/#/more-pages).
 
-[_sidebar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_sidebar.css ':include')
+[\_sidebar.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_sidebar.css ':include')
 
 ## Plugin Styles
 
-All [docsify plugins](https://docsify.js.org/#/plugins) will work with *docsify-themeable*, however there are two potential issues to be aware of:
+All [docsify plugins](https://docsify.js.org/#/plugins) will work with _docsify-themeable_, however there are two potential issues to be aware of:
 
 - **Not all plugins support multiple themes**
 
@@ -87,25 +93,25 @@ All [docsify plugins](https://docsify.js.org/#/plugins) will work with *docsify-
 
 - **Not all plugins support theme customization**
 
-  Many [docsify plugins](https://docsify.js.org/#/plugins) were developed prior to the release of *docsify-themeable* and therefore do not offer theme customization. To address this issue, *docsify-themeable* provides customizable theme properties for many popular docsify plugins (below). If you would like to see theme properties added to a plugin, create a [Github issue](https://github.com/jhildenbiddle/docsify-themeable/issues) with the plugin name and a link to the source code.
+  Many [docsify plugins](https://docsify.js.org/#/plugins) were developed prior to the release of _docsify-themeable_ and therefore do not offer theme customization. To address this issue, _docsify-themeable_ provides customizable theme properties for many popular docsify plugins (below). If you would like to see theme properties added to a plugin, create a [Github issue](https://github.com/jhildenbiddle/docsify-themeable/issues) with the plugin name and a link to the source code.
 
 ### Copy Code
 
 Theme properties for [docsify-copy-code](https://github.com/jperasmus/docsify-copy-code) plugin.
 
-[_plugin-copycode.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-copy-code.css ':include')
+[\_plugin-copycode.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-copy-code.css ':include')
 
 ### Pagination
 
 Theme properties for [docsify-pagination](https://github.com/imyelo/docsify-pagination) plugin.
 
-[_plugin-pagination.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-pagination.css ':include')
+[\_plugin-pagination.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-pagination.css ':include')
 
 ### Search
 
 Theme properties for docsify's [search](https://docsify.js.org/#/plugins?id=full-text-search) plugin.
 
-[_plugin-search.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-search.css ':include')
+[\_plugin-search.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-search.css ':include')
 
 ### Tabs
 
@@ -113,13 +119,13 @@ See the [docsify-tabs site](https://jhildenbiddle.github.io/docsify-tabs/) for a
 
 The following theme properties overrides are included with docsify-themeable:
 
-[_plugin-docsify-tabs.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-docsify-tabs.css ':include')
+[\_plugin-docsify-tabs.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-docsify-tabs.css ':include')
 
 ### Zoom Image
 
 Theme properties for docsify's [zoom image](https://docsify.js.org/#/plugins?id=zoom-image) plugin.
 
-[_plugin-zoom.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-zoom-image.css ':include')
+[\_plugin-zoom.css](https://cdn.jsdelivr.net/npm/docsify-themeable@0/src/scss/themes/defaults/_plugin-zoom-image.css ':include')
 
 ## PrismJS
 
@@ -129,10 +135,13 @@ To use a PrismJS theme, add a `<link>` to your `index.html` after your site them
 
 ```html
 <!-- Site theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.min.css"
+/>
 
 <!-- PrismJS theme -->
-<link rel="stylesheet" href="path/to/prismjs-theme.css">
+<link rel="stylesheet" href="path/to/prismjs-theme.css" />
 ```
 
 Note that only PrismJS theme colors will be applied. Layout and typography styles such as `font-family`, `border-radius`, `margin` and `padding` will continue to be applied by the site theme to maintain visual consistency.

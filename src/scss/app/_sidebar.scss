@@ -1,32 +1,31 @@
-@use "__helpers" as *;
-@use "sass:map";
+@use '__helpers' as *;
+@use 'sass:map';
 
 // Supporting Elements
 // =============================================================================
 nav.app-nav {
-    @include media(">=medium") {
-        margin-left: var(--sidebar-width);
-    }
+  @include media('>=medium') {
+    margin-left: var(--sidebar-width);
+  }
 }
 
 main {
-    position: relative;
-    overflow-x: hidden;
-    min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
 .sidebar,
 .sidebar-toggle,
 .sidebar + .content {
-    transition: all var(--sidebar-transition-duration) ease-out;
+  transition: all var(--sidebar-transition-duration) ease-out;
 }
 
 .sidebar + .content {
-    @include media(">=medium") {
-        margin-left: var(--sidebar-width);
-    }
+  @include media('>=medium') {
+    margin-left: var(--sidebar-width);
+  }
 }
-
 
 // Sidebar
 // =============================================================================
@@ -37,353 +36,443 @@ main {
 // transitioning calc() values triggers bugs in IE and Edge, so we are forced
 // to set static values instead.
 .sidebar {
-    visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    z-index: map.get($z-index, sidebar);
-    top: 0;
-    right: 100%;
-    overflow-x: hidden;
-    overflow-y: auto;
-    height: 100vh;
-    width: var(--sidebar-width);
-    padding: var(--sidebar-padding);
-    border-width: var(--sidebar-border-width);
-    border-style: solid;
-    border-color: var(--sidebar-border-color);
-    background: var(--sidebar-background);
+  visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: map.get($z-index, sidebar);
+  top: 0;
+  right: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+  width: var(--sidebar-width);
+  padding: var(--sidebar-padding);
+  border-width: var(--sidebar-border-width);
+  border-style: solid;
+  border-color: var(--sidebar-border-color);
+  background: var(--sidebar-background);
 
-    > h1 {
-        margin: 0;
-        margin: var(--sidebar-name-margin);
-        padding: var(--sidebar-name-padding);
-        background: var(--sidebar-name-background);
-        color: var(--sidebar-name-color);
-        font-family: var(--sidebar-name-font-family);
-        font-size: var(--sidebar-name-font-size);
-        font-weight: var(--sidebar-name-font-weight);
-        text-align: var(--sidebar-name-text-align);
+  > h1 {
+    margin: 0;
+    margin: var(--sidebar-name-margin);
+    padding: var(--sidebar-name-padding);
+    background: var(--sidebar-name-background);
+    color: var(--sidebar-name-color);
+    font-family: var(--sidebar-name-font-family);
+    font-size: var(--sidebar-name-font-size);
+    font-weight: var(--sidebar-name-font-weight);
+    text-align: var(--sidebar-name-text-align);
 
-        img {
-            max-width: 100%;
-        }
-
-        .app-name-link {
-            color: var(--sidebar-name-color);
-        }
+    img {
+      max-width: 100%;
     }
 
-    // Non-macOS Platforms
-    body:not([data-platform^="Mac"]) & {
-        &::-webkit-scrollbar {
-            width: $scrollbar-width;
-        }
-        &::-webkit-scrollbar-thumb {
-            border-radius: 50vw;
-        }
+    .app-name-link {
+      color: var(--sidebar-name-color);
     }
+  }
 
-    @include media(">=medium") {
-        visibility: visible;
-        position: absolute;
-        transform: translateX(var(--sidebar-width));
+  // Non-macOS Platforms
+  body:not([data-platform^='Mac']) & {
+    &::-webkit-scrollbar {
+      width: $scrollbar-width;
     }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 50vw;
+    }
+  }
 
-    @media print {
-        display: none;
-    }
+  @include media('>=medium') {
+    visibility: visible;
+    position: absolute;
+    transform: translateX(var(--sidebar-width));
+  }
+
+  @media print {
+    display: none;
+  }
 }
 
 // Nav
 // -----------------------------------------------------------------------------
 .sidebar-nav,  // 1. Standard sidebar navigation
-.sidebar nav { // 2. Merged nav bar in sidebar via 'mergeNavbar' option
-    order: 1;
-    margin: var(--sidebar-nav-margin);
-    padding: var(--sidebar-nav-padding);
-    background: var(--sidebar-nav-background);
+.sidebar nav {
+  // 2. Merged nav bar in sidebar via 'mergeNavbar' option
+  order: 1;
+  margin: var(--sidebar-nav-margin);
+  padding: var(--sidebar-nav-padding);
+  background: var(--sidebar-nav-background);
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
 
     ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+      margin-left: var(--sidebar-nav-indent);
+    }
+  }
 
-        ul {
-            margin-left: var(--sidebar-nav-indent);
-        }
+  a {
+    display: block;
+    overflow: hidden;
+    margin: var(--sidebar-nav-link-margin);
+    padding: var(--sidebar-nav-link-padding);
+    border-width: var(--sidebar-nav-link-border-width, 0);
+    border-style: var(--sidebar-nav-link-border-style);
+    border-color: var(--sidebar-nav-link-border-color);
+    border-radius: var(--sidebar-nav-link-border-radius);
+    background: var(--sidebar-nav-link-background);
+    color: var(--sidebar-nav-link-color);
+    font-weight: var(--sidebar-nav-link-font-weight);
+    white-space: nowrap;
+    text-decoration: var(--sidebar-nav-link-text-decoration);
+    text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+    text-overflow: ellipsis;
+    transition: var(--sidebar-nav-link-transition);
+
+    img {
+      margin-top: -0.25em;
+      vertical-align: middle;
+
+      &:first-child {
+        margin-right: 0.5em;
+      }
     }
 
-    a {
-        display: block;
-        overflow: hidden;
-        margin: var(--sidebar-nav-link-margin);
-        padding: var(--sidebar-nav-link-padding);
-        border-width: var(--sidebar-nav-link-border-width, 0);
-        border-style: var(--sidebar-nav-link-border-style);
-        border-color: var(--sidebar-nav-link-border-color);
-        border-radius: var(--sidebar-nav-link-border-radius);
-        background: var(--sidebar-nav-link-background);
-        color: var(--sidebar-nav-link-color);
-        font-weight: var(--sidebar-nav-link-font-weight);
-        white-space: nowrap;
-        text-decoration: var(--sidebar-nav-link-text-decoration);
-        text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
-        text-overflow: ellipsis;
-        transition: var(--sidebar-nav-link-transition);
+    &:hover {
+      border-width: var(
+        --sidebar-nav-link-border-width--hover,
+        var(--sidebar-nav-link-border-width, 0)
+      );
+      border-style: var(
+        --sidebar-nav-link-border-style--hover,
+        var(--sidebar-nav-link-border-style)
+      );
+      border-color: var(
+        --sidebar-nav-link-border-color--hover,
+        var(--sidebar-nav-link-border-color)
+      );
+      background: var(
+        --sidebar-nav-link-background--hover,
+        var(--sidebar-nav-link-background)
+      );
+      color: var(
+        --sidebar-nav-link-color--hover,
+        var(--sidebar-nav-link-color)
+      );
+      font-weight: var(
+        --sidebar-nav-link-font-weight--hover,
+        var(--sidebar-nav-link-font-weight)
+      );
+      text-decoration: var(
+        --sidebar-nav-link-text-decoration--hover,
+        var(--sidebar-nav-link-text-decoration)
+      );
+      text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+    }
+  }
 
-        img {
-            margin-top: -0.25em;
-            vertical-align: middle;
+  // Nav Headings
+  ul > li {
+    > span,
+    > strong {
+      display: block;
+      margin: var(--sidebar-nav-strong-margin);
+      padding: var(--sidebar-nav-strong-padding);
+      border-width: var(--sidebar-nav-strong-border-width, 0);
+      border-style: solid;
+      border-color: var(--sidebar-nav-strong-border-color);
+      color: var(--sidebar-nav-strong-color);
+      font-size: var(--sidebar-nav-strong-font-size);
+      font-weight: var(--sidebar-nav-strong-font-weight);
+      text-transform: var(--sidebar-nav-strong-text-transform);
 
-            &:first-child {
-                margin-right: 0.5em;
-            }
-        }
-
-        &:hover {
-            border-width: var(--sidebar-nav-link-border-width--hover, var(--sidebar-nav-link-border-width, 0));
-            border-style: var(--sidebar-nav-link-border-style--hover, var(--sidebar-nav-link-border-style));
-            border-color: var(--sidebar-nav-link-border-color--hover, var(--sidebar-nav-link-border-color));
-            background: var(--sidebar-nav-link-background--hover, var(--sidebar-nav-link-background));
-            color: var(--sidebar-nav-link-color--hover, var(--sidebar-nav-link-color));
-            font-weight: var(--sidebar-nav-link-font-weight--hover, var(--sidebar-nav-link-font-weight));
-            text-decoration: var(--sidebar-nav-link-text-decoration--hover, var(--sidebar-nav-link-text-decoration));
-            text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
-        }
+      + ul {
+        margin-left: 0;
+      }
     }
 
-    // Nav Headings
-    ul > li {
-        > span,
-        > strong {
-            display: block;
-            margin: var(--sidebar-nav-strong-margin);
-            padding: var(--sidebar-nav-strong-padding);
-            border-width: var(--sidebar-nav-strong-border-width, 0);
-            border-style: solid;
-            border-color: var(--sidebar-nav-strong-border-color);
-            color: var(--sidebar-nav-strong-color);
-            font-size: var(--sidebar-nav-strong-font-size);
-            font-weight: var(--sidebar-nav-strong-font-weight);
-            text-transform: var(--sidebar-nav-strong-text-transform);
-
-            + ul {
-                margin-left: 0;
-            }
-        }
-
-        &:first-child {
-            > span,
-            > strong {
-                margin-top: 0;
-            }
-        }
+    &:first-child {
+      > span,
+      > strong {
+        margin-top: 0;
+      }
     }
+  }
 
-    &::-webkit-scrollbar {
-        width: 0;
-    }
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 
-    @supports(width: env(safe-area-inset)) {
-        @media only screen and (orientation: landscape) {
-            margin-left: calc(env(safe-area-inset-left) / 2);
-        }
+  @supports (width: env(safe-area-inset)) {
+    @media only screen and (orientation: landscape) {
+      margin-left: calc(env(safe-area-inset-left) / 2);
     }
+  }
 }
 
 // 1. Standard sidebar navigation
 .sidebar-nav {
-    li {
-        > a,
-        > strong {
-            &:before {
-                display: inline-block;
+  li {
+    > a,
+    > strong {
+      &:before {
+        display: inline-block;
 
-                // Images
-                // line-height: 1;
-                // vertical-align: middle;
-            }
+        // Images
+        // line-height: 1;
+        // vertical-align: middle;
+      }
+    }
+
+    > a {
+      background-repeat: var(--sidebar-nav-pagelink-background-repeat);
+      background-size: var(--sidebar-nav-pagelink-background-size);
+
+      // Page links (routerMode: history|hash)
+      &[href^='/']:not([href*='?id=']),
+      &[href^='#/']:not([href*='?id=']) {
+        transition: var(--sidebar-nav-pagelink-transition);
+
+        &,
+        ~ ul a {
+          padding: var(
+            --sidebar-nav-pagelink-padding,
+            var(--sidebar-nav-link-padding)
+          );
         }
 
+        background: var(
+          --sidebar-nav-pagelink-background
+        ); // Chevron mono right
+      }
+    }
+
+    &.active,
+    &.collapse {
+      > a {
+        border-width: var(
+          --sidebar-nav-link-border-width--active,
+          var(--sidebar-nav-link-border-width)
+        );
+        border-style: var(
+          --sidebar-nav-link-border-style--active,
+          var(--sidebar-nav-link-border-style)
+        );
+        border-color: var(
+          --sidebar-nav-link-border-color--active,
+          var(--sidebar-nav-link-border-color)
+        );
+        background: var(
+          --sidebar-nav-link-background--active,
+          var(--sidebar-nav-link-background)
+        );
+        color: var(
+          --sidebar-nav-link-color--active,
+          var(--sidebar-nav-link-color)
+        );
+        font-weight: var(
+          --sidebar-nav-link-font-weight--active,
+          var(--sidebar-nav-link-font-weight)
+        );
+        text-decoration: var(
+          --sidebar-nav-link-text-decoration--active,
+          var(--sidebar-nav-link-text-decoration)
+        );
+        text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
+      }
+    }
+
+    &.active {
+      > a {
+        // Page links (routerMode: history|hash)
+        &[href^='/']:not([href*='?id=']),
+        &[href^='#/']:not([href*='?id=']) {
+          // Loaded (w/ subnav)
+          &:not(:only-child) {
+            background: var(
+              --sidebar-nav-pagelink-background--active,
+              var(
+                --sidebar-nav-pagelink-background--loaded,
+                var(--sidebar-nav-pagelink-background)
+              )
+            );
+          }
+        }
+      }
+    }
+
+    &:has(.active) {
+      > a {
+        // Page links (routerMode: history|hash)
+        &[href^='/']:not([href*='?id=']),
+        &[href^='#/']:not([href*='?id=']) {
+          // Loaded (w/ subnav)
+          &:not(:only-child) {
+            background: var(
+              --sidebar-nav-pagelink-background--loaded,
+              var(
+                --sidebar-nav-pagelink-background--loaded,
+                var(--sidebar-nav-pagelink-background)
+              )
+            );
+          }
+        }
+      }
+    }
+
+    &.collapse {
+      > a {
+        // Page links (routerMode: history|hash)
+        &[href^='/']:not([href*='?id=']),
+        &[href^='#/']:not([href*='?id=']) {
+          // Loaded (w/ subnav)
+          &:not(:only-child) {
+            background: var(
+              --sidebar-nav-pagelink-background--collapse,
+              var(
+                --sidebar-nav-pagelink-background--loaded,
+                var(--sidebar-nav-pagelink-background)
+              )
+            );
+          }
+        }
+      }
+
+      .app-sub-sidebar {
+        display: none;
+      }
+    }
+  }
+
+  // Pseudo-content bullets
+  $level-selector: '> ul > li';
+
+  @for $i from 1 through 4 {
+    #{$level-selector} {
+      > a {
+        &:before {
+          content: var(
+            --sidebar-nav-link-before-content-l#{$i},
+            var(--sidebar-nav-link-before-content)
+          );
+          margin: var(
+            --sidebar-nav-link-before-margin-l#{$i},
+            var(--sidebar-nav-link-before-margin)
+          );
+          color: var(
+            --sidebar-nav-link-before-color-l#{$i},
+            var(--sidebar-nav-link-before-color)
+          );
+        }
+      }
+
+      &.active {
         > a {
-            background-repeat: var(--sidebar-nav-pagelink-background-repeat);
-            background-size: var(--sidebar-nav-pagelink-background-size);
-
-            // Page links (routerMode: history|hash)
-            &[href^="/"]:not([href*="?id="]),
-            &[href^="#/"]:not([href*="?id="]) {
-                transition: var(--sidebar-nav-pagelink-transition);
-
-                &,
-                ~ ul a {
-                    padding: var(--sidebar-nav-pagelink-padding, var(--sidebar-nav-link-padding));
-                }
-
-                background: var(--sidebar-nav-pagelink-background); // Chevron mono right
-            }
+          &:before {
+            content: var(
+              --sidebar-nav-link-before-content-l#{$i}--active,
+              var(
+                --sidebar-nav-link-before-content--active,
+                var(
+                  --sidebar-nav-link-before-content-l#{$i},
+                  var(--sidebar-nav-link-before-content)
+                )
+              )
+            );
+            color: var(
+              --sidebar-nav-link-before-color-l#{$i}--active,
+              var(
+                --sidebar-nav-link-before-color--active,
+                var(
+                  --sidebar-nav-link-before-color-l#{$i},
+                  var(--sidebar-nav-link-before-color)
+                )
+              )
+            );
+          }
         }
-
-        &.active,
-        &.collapse {
-            > a {
-                border-width: var(--sidebar-nav-link-border-width--active, var(--sidebar-nav-link-border-width));
-                border-style: var(--sidebar-nav-link-border-style--active, var(--sidebar-nav-link-border-style));
-                border-color: var(--sidebar-nav-link-border-color--active, var(--sidebar-nav-link-border-color));
-                background: var(--sidebar-nav-link-background--active, var(--sidebar-nav-link-background));
-                color: var(--sidebar-nav-link-color--active, var(--sidebar-nav-link-color));
-                font-weight: var(--sidebar-nav-link-font-weight--active, var(--sidebar-nav-link-font-weight));
-                text-decoration: var(--sidebar-nav-link-text-decoration--active, var(--sidebar-nav-link-text-decoration));
-                text-decoration-color: var(--sidebar-nav-link-text-decoration-color);
-            }
-        }
-
-        &.active {
-            > a {
-                // Page links (routerMode: history|hash)
-                &[href^="/"]:not([href*="?id="]),
-                &[href^="#/"]:not([href*="?id="]) {
-                    // Loaded (w/ subnav)
-                    &:not(:only-child) {
-                        background: var(--sidebar-nav-pagelink-background--active, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
-                    }
-                }
-            }
-        }
-
-        &:has(.active) {
-            > a {
-
-                // Page links (routerMode: history|hash)
-                &[href^="/"]:not([href*="?id="]),
-                &[href^="#/"]:not([href*="?id="]) {
-
-                    // Loaded (w/ subnav)
-                    &:not(:only-child) {
-                        background: var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
-                    }
-                }
-            }
-        }
-
-        &.collapse {
-            > a {
-                // Page links (routerMode: history|hash)
-                &[href^="/"]:not([href*="?id="]),
-                &[href^="#/"]:not([href*="?id="]) {
-                    // Loaded (w/ subnav)
-                    &:not(:only-child) {
-                        background: var(--sidebar-nav-pagelink-background--collapse, var(--sidebar-nav-pagelink-background--loaded, var(--sidebar-nav-pagelink-background)));
-                    }
-                }
-            }
-
-            .app-sub-sidebar {
-                display: none;
-            }
-        }
+      }
     }
 
-    // Pseudo-content bullets
-    $level-selector: '> ul > li';
+    $level-selector: $level-selector + '> ul > li';
+  }
 
-    @for $i from 1 through 4 {
-        #{$level-selector} {
-            > a {
-                &:before {
-                    content: var(--sidebar-nav-link-before-content-l#{$i}, var(--sidebar-nav-link-before-content));
-                    margin: var(--sidebar-nav-link-before-margin-l#{$i}, var(--sidebar-nav-link-before-margin));
-                    color: var(--sidebar-nav-link-before-color-l#{$i}, var(--sidebar-nav-link-before-color));
-                }
-            }
-
-            &.active {
-                > a {
-                    &:before {
-                        content: var(--sidebar-nav-link-before-content-l#{$i}--active, var(--sidebar-nav-link-before-content--active, var(--sidebar-nav-link-before-content-l#{$i}, var(--sidebar-nav-link-before-content))));
-                        color: var(--sidebar-nav-link-before-color-l#{$i}--active, var(--sidebar-nav-link-before-color--active, var(--sidebar-nav-link-before-color-l#{$i}, var(--sidebar-nav-link-before-color))));
-                    }
-                }
-            }
-        }
-
-        $level-selector: $level-selector + '> ul > li';
-    }
-
-    > :last-child {
-        margin-bottom: 2rem;
-    }
+  > :last-child {
+    margin-bottom: 2rem;
+  }
 }
 
 // Toggle
 // -----------------------------------------------------------------------------
 .sidebar-toggle,
 .sidebar-toggle-button {
-    width: var(--sidebar-toggle-width);
+  width: var(--sidebar-toggle-width);
 }
 
 .sidebar-toggle {
-    position: fixed;
-    z-index: (map.get($z-index, sidebar) + 1);
-    top: 0;
-    bottom: 0;
+  position: fixed;
+  z-index: (map.get($z-index, sidebar) + 1);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 40px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  appearance: none;
+  cursor: pointer;
+
+  .sidebar-toggle-button {
+    position: absolute;
+    top: var(--sidebar-toggle-offset-top);
+    left: var(--sidebar-toggle-offset-left);
+    height: var(--sidebar-toggle-height);
+    border-radius: var(--sidebar-toggle-border-radius);
+    border-width: var(--sidebar-toggle-border-width);
+    border-style: var(--sidebar-toggle-border-style);
+    border-color: var(--sidebar-toggle-border-color);
+    background: var(--sidebar-toggle-background, transparent);
+    color: var(--sidebar-toggle-icon-color);
+  }
+
+  span {
+    position: absolute;
+    top: calc(50% - (var(--sidebar-toggle-icon-stroke-width) / 2));
+    left: calc(50% - (var(--sidebar-toggle-icon-width) / 2));
+    height: var(--sidebar-toggle-icon-stroke-width);
+    width: var(--sidebar-toggle-icon-width);
+    background-color: currentColor;
+
+    &:nth-child(1) {
+      margin-top: calc(0px - (var(--sidebar-toggle-icon-height) / 2));
+    }
+    &:nth-child(3) {
+      margin-top: calc((var(--sidebar-toggle-icon-height) / 2));
+    }
+  }
+
+  @include media('>=medium') {
+    position: absolute;
+    overflow: visible;
+    top: var(--sidebar-toggle-offset-top);
+    bottom: auto;
     left: 0;
-    max-width: 40px;
-    margin: 0;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    appearance: none;
-    cursor: pointer;
+    height: var(--sidebar-toggle-height);
+    transform: translateX(var(--sidebar-width));
 
     .sidebar-toggle-button {
-        position: absolute;
-        top: var(--sidebar-toggle-offset-top);
-        left: var(--sidebar-toggle-offset-left);
-        height: var(--sidebar-toggle-height);
-        border-radius: var(--sidebar-toggle-border-radius);
-        border-width: var(--sidebar-toggle-border-width);
-        border-style: var(--sidebar-toggle-border-style);
-        border-color: var(--sidebar-toggle-border-color);
-        background: var(--sidebar-toggle-background, transparent);
-        color: var(--sidebar-toggle-icon-color);
+      top: 0;
     }
+  }
 
-    span {
-        position: absolute;
-        top: calc(50% - (var(--sidebar-toggle-icon-stroke-width) / 2));
-        left: calc(50% - (var(--sidebar-toggle-icon-width) / 2));
-        height: var(--sidebar-toggle-icon-stroke-width);
-        width: var(--sidebar-toggle-icon-width);
-        background-color: currentColor;
-
-        &:nth-child(1) {
-            margin-top: calc(0px - (var(--sidebar-toggle-icon-height) / 2));
-        }
-        &:nth-child(3) {
-            margin-top: calc((var(--sidebar-toggle-icon-height) / 2));
-        }
-    }
-
-    @include media(">=medium") {
-        position: absolute;
-        overflow: visible;
-        top: var(--sidebar-toggle-offset-top);
-        bottom: auto;
-        left: 0;
-        height: var(--sidebar-toggle-height);
-        transform: translateX(var(--sidebar-width));
-
-        .sidebar-toggle-button {
-            top: 0;
-        }
-    }
-
-    @media print {
-        display: none;
-    }
+  @media print {
+    display: none;
+  }
 }
-
 
 // States
 // -----------------------------------------------------------------------------
@@ -392,65 +481,65 @@ main {
 // css-vars-ponyfill does not append transformed values that unintentionally
 // override non-transformed values.
 body.close {
-    @include media("<medium") {
-        .sidebar,
-        .sidebar-toggle,
-        .sidebar + .content {
-            transform: translateX(var(--sidebar-width));
-        }
-
-        nav.app-nav,
-        .github-corner {
-            display: none;
-        }
-
-        .sidebar {
-            visibility: visible;
-        }
-
-        .sidebar-toggle {
-            width: 100%;
-            max-width: none;
-
-            span {
-                margin-top: 0;
-
-                &:nth-child(1) {
-                    transform: rotate(45deg);
-                }
-                &:nth-child(2) {
-                    display: none;
-                }
-                &:nth-child(3) {
-                    transform: rotate(-45deg);
-                }
-            }
-        }
+  @include media('<medium') {
+    .sidebar,
+    .sidebar-toggle,
+    .sidebar + .content {
+      transform: translateX(var(--sidebar-width));
     }
 
-    @include media(">=medium") {
-        .sidebar,
-        .sidebar-toggle,
-        .sidebar + .content {
-            transform: translateX(0);
-        }
-
-        nav.app-nav,
-        .sidebar + .content {
-            margin-left: 0;
-        }
-
-        .sidebar {
-            visibility: hidden;
-        }
+    nav.app-nav,
+    .github-corner {
+      display: none;
     }
+
+    .sidebar {
+      visibility: visible;
+    }
+
+    .sidebar-toggle {
+      width: 100%;
+      max-width: none;
+
+      span {
+        margin-top: 0;
+
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          display: none;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  @include media('>=medium') {
+    .sidebar,
+    .sidebar-toggle,
+    .sidebar + .content {
+      transform: translateX(0);
+    }
+
+    nav.app-nav,
+    .sidebar + .content {
+      margin-left: 0;
+    }
+
+    .sidebar {
+      visibility: hidden;
+    }
+  }
 }
 
 body.sticky {
-    @include media(">=medium") {
-        .sidebar,
-        .sidebar-toggle {
-            position: fixed;
-        }
+  @include media('>=medium') {
+    .sidebar,
+    .sidebar-toggle {
+      position: fixed;
     }
+  }
 }

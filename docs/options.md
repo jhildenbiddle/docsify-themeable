@@ -1,4 +1,3 @@
-
 # Options
 
 ## readyTransition
@@ -16,7 +15,7 @@ window.$docsify = {
   themeable: {
     readyTransition: true // default
   }
-}
+};
 ```
 
 ## responsiveTables
@@ -36,5 +35,5 @@ window.$docsify = {
   themeable: {
     responsiveTables: true // default
   }
-}
+};
 ```

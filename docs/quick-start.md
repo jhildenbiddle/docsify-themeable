@@ -9,44 +9,55 @@ The quickest way to get started on a new docsify site is by using the template p
    ?> CDN availability includes [jsdelivr](https://www.jsdelivr.com/package/npm/docsify-themeable) (shown below), [unpkg](https://unpkg.com/browse/docsify-themeable/), and other CDN services that auto-publish npm packages.
 
    ```html
-   <!DOCTYPE html>
+   <!doctype html>
    <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-      <meta name="description" content="">
-      <title></title>
+     <head>
+       <meta charset="utf-8" />
+       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+       <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+       />
+       <meta name="description" content="" />
+       <title></title>
 
-      <!-- Themes (light + dark) -->
-      <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-      <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+       <!-- Themes (light + dark) -->
+       <link
+         rel="stylesheet"
+         media="(prefers-color-scheme: dark)"
+         href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+       />
+       <link
+         rel="stylesheet"
+         media="(prefers-color-scheme: light)"
+         href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+       />
 
-      <!-- Custom Styles -->
-      <style>
-        :root {
-          /* --theme-hue: 325; */
-        }
-      </style>
-   </head>
-   <body>
-      <div id="app"></div>
+       <!-- Custom Styles -->
+       <style>
+         :root {
+           /* --theme-hue: 325; */
+         }
+       </style>
+     </head>
+     <body>
+       <div id="app"></div>
 
-      <script>
-        // Docsify Configuration
-        window.$docsify = {
-          // ..
-        };
-      </script>
+       <script>
+         // Docsify Configuration
+         window.$docsify = {
+           // ..
+         };
+       </script>
 
-      <!-- Required -->
-      <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
+       <!-- Required -->
+       <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/js/docsify-themeable.min.js"></script>
 
-      <!-- Recommended -->
-      <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
-   </body>
+       <!-- Recommended -->
+       <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
+     </body>
    </html>
    ```
 
@@ -70,15 +81,26 @@ Existing site owners may prefer to modify their existing `index.html` file using
 
    ```html
    <!-- Theme: Simple -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
+   <link
+     rel="stylesheet"
+     href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+   />
    ```
 
    For automatic light/dark mode support based on the user's operating system preference, specify a light and dark theme with appropriate `media` attribute:
 
    ```html
    <!-- Theme: Simple (light + dark) -->
-   <link rel="stylesheet" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-   <link rel="stylesheet" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+   <link
+     rel="stylesheet"
+     media="(prefers-color-scheme: light)"
+     href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+   />
+   <link
+     rel="stylesheet"
+     media="(prefers-color-scheme: dark)"
+     href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+   />
    ```
 
 1. Add the docsify-themeable plugin after docsify.js:
@@ -106,12 +128,12 @@ Existing site owners may prefer to modify their existing `index.html` file using
    ```html
    <script>
      window.$docsify = {
-         // ...
-         themeable: {
-             readyTransition : true, // default
-             responsiveTables: true  // default
-         }
-     }
+       // ...
+       themeable: {
+         readyTransition: true, // default
+         responsiveTables: true // default
+       }
+     };
    </script>
    ```
 

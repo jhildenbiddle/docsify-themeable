@@ -6,108 +6,107 @@
 // =============================================================================
 // v2.3.0
 .docsify-pagination-container {
-    // display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // overflow: hidden;
-    // margin: 5em 0 1em;
-    // border-top: 1px solid rgba(0,0,0,.07);
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  // overflow: hidden;
+  // margin: 5em 0 1em;
+  // border-top: 1px solid rgba(0,0,0,.07);
 }
 
 .pagination-item {
-    // margin-top: 2.5em;
+  // margin-top: 2.5em;
 
-    a,
-    a:hover {
-        // text-decoration: none;
+  a,
+  a:hover {
+    // text-decoration: none;
+  }
+
+  a {
+    // color: currentColor;
+
+    &:hover .pagination-item-title {
+      // text-decoration: underline;
     }
+  }
 
-    a {
-        // color: currentColor;
+  &:not(:last-child) a .pagination-item-label,
+  &:not(:last-child) a .pagination-item-title {
+    // opacity: .3;
+    // transition: all .2s;
+  }
 
-        &:hover .pagination-item-title {
-            // text-decoration: underline;
-        }
-    }
+  &:last-child .pagination-item-label,
+  &:not(:last-child) a:hover .pagination-item-label {
+    // opacity: .6;
+  }
 
-    &:not(:last-child) a .pagination-item-label,
-    &:not(:last-child) a .pagination-item-title {
-        // opacity: .3;
-        // transition: all .2s;
-    }
-
-    &:last-child .pagination-item-label,
-    &:not(:last-child) a:hover .pagination-item-label {
-        // opacity: .6;
-    }
-
-    &:not(:last-child) a:hover .pagination-item-title {
-        // opacity: 1;
-    }
+  &:not(:last-child) a:hover .pagination-item-title {
+    // opacity: 1;
+  }
 }
 
 .pagination-item-label {
-    // margin-bottom: .35em;
-    // font-size: .8em;
+  // margin-bottom: .35em;
+  // font-size: .8em;
 
-    > * {
-        // line-height: 1;
-        // vertical-align: middle;
-    }
+  > * {
+    // line-height: 1;
+    // vertical-align: middle;
+  }
 
-    svg {
-        // height: .8em;
-        // width: auto;
-        // stroke: currentColor;
-        // stroke-linecap: round;
-        // stroke-linejoin: round;
-        // stroke-width: 1px;
-    }
+  svg {
+    // height: .8em;
+    // width: auto;
+    // stroke: currentColor;
+    // stroke-linecap: round;
+    // stroke-linejoin: round;
+    // stroke-width: 1px;
+  }
 }
 
 .pagination-item--next {
-    // margin-left: auto;
-    // text-align: right;
+  // margin-left: auto;
+  // text-align: right;
 }
 
 .pagination-item--next svg {
-    // margin-left: .5em;
+  // margin-left: .5em;
 }
 
 .pagination-item--previous svg {
-    // margin-right: .5em;
+  // margin-right: .5em;
 }
 
 .pagination-item-title {
-    // font-size: 1.6em;
+  // font-size: 1.6em;
 }
-
 
 // Overriding injected styles (above) requires higher specificity:
 // - For <style> declaration, add parent element to selector (e.g. body)
 // - For inline declarations, add !important to selector
 // =============================================================================
 body {
-    .docsify-pagination-container {
-        border-top: var(--pagination-border-top);
-        color: var(--pagination-color);
-    }
+  .docsify-pagination-container {
+    border-top: var(--pagination-border-top);
+    color: var(--pagination-color);
+  }
 
-    .pagination-item-label {
-        font-size: var(--pagination-label-font-size);
-    }
+  .pagination-item-label {
+    font-size: var(--pagination-label-font-size);
+  }
 
-    .pagination-item-label svg {
-        color: var(--pagination-label-color);
-        height: var(--pagination-chevron-height);
-        stroke: var(--pagination-chevron-stroke);
-        stroke-linecap: var(--pagination-chevron-stroke-linecap);
-        stroke-linejoin: var(--pagination-chevron-stroke-linecap);
-        stroke-width: var(--pagination-chevron-stroke-width);
-    }
+  .pagination-item-label svg {
+    color: var(--pagination-label-color);
+    height: var(--pagination-chevron-height);
+    stroke: var(--pagination-chevron-stroke);
+    stroke-linecap: var(--pagination-chevron-stroke-linecap);
+    stroke-linejoin: var(--pagination-chevron-stroke-linecap);
+    stroke-width: var(--pagination-chevron-stroke-width);
+  }
 
-    .pagination-item-title {
-        color: var(--pagination-title-color);
-        font-size: var(--pagination-title-font-size);
-    }
+  .pagination-item-title {
+    color: var(--pagination-title-color);
+    font-size: var(--pagination-title-font-size);
+  }
 }

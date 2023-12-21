@@ -6,31 +6,31 @@ Docsify-themeable provides access to individual style values using CSS custom pr
 
 ```css
 .myclass {
-    /* Color will be --theme-color for docsify-themeable themes */
-    /* Color will be red for other themes */
-    color: var(--theme-color, red);
+  /* Color will be --theme-color for docsify-themeable themes */
+  /* Color will be red for other themes */
+  color: var(--theme-color, red);
 }
 ```
 
 Docsify-themeable also adds a `themeable` class to the `<html>` element during initialization. This class can be used to create styles that will only be applied when docsify-themeable is used.
 
 ```html
-<html lang="en" class="themeable">
+<html lang="en" class="themeable"></html>
 ```
 
 ```css
 .myclass {
-    background: red;
+  background: red;
 }
 
 /* docsify-themeable (recommended - does not increase specificity) */
 :where(.themeable) .myclass {
-    background: blue;
+  background: blue;
 }
 
 /* docsify-themeable (increases specificity) */
 .themeable .myclass {
-    color: blue;
+  color: blue;
 }
 ```
 
@@ -51,5 +51,5 @@ var themeableVersion = (window.$docsify.themeable || {}).version;
 var themeableSemVer = (window.$docsify.themeable || {}).semver;
 
 console.log(themeableVersion); // "<Number>.<Number>.<Number>" (String)
-console.log(themeableSemVer);  // [<Number>, <Number>, <Number>] (Array)
+console.log(themeableSemVer); // [<Number>, <Number>, <Number>] (Array)
 ```

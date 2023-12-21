@@ -3,7 +3,7 @@ export const rewriteRules = [
   // Replace CDN URLs with local paths
   {
     match: /https?.*\/CHANGELOG.md/g,
-    replace: '/CHANGELOG.md',
+    replace: '/CHANGELOG.md'
   },
   {
     // CDN versioned default
@@ -11,7 +11,7 @@ export const rewriteRules = [
     // Ex2: http://cdn.com/package-name@1.0.0
     // Ex3: https://cdn.com/package-name@latest
     match: /(?:https?:)*\/\/.*cdn.*docsify-themeable[@\d.latest]*(?=["'])/g,
-    replace: '/dist/js/docsify-themeable.min.js',
+    replace: '/dist/js/docsify-themeable.min.js'
   },
   {
     // CDN paths to local paths
@@ -19,14 +19,14 @@ export const rewriteRules = [
     // Ex2: http://cdn.com/package-name@1.0.0/dist/file.js => /dist/file.js
     // Ex3: https://cdn.com/package-name@latest/dist/file.js => /dist/file.js
     match: /(?:https?:)*\/\/.*cdn.*docsify-themeable[@\d.latest]*\/(?:dist\/)/g,
-    replace: '/dist/',
-  },
+    replace: '/dist/'
+  }
 ];
 
 // Vercel Exports
 // =============================================================================
 export const config = {
-  matcher: ['/preview/(index.html)?'],
+  matcher: ['/preview/(index.html)?']
 };
 
 // Serve virtual /preview/index.html
@@ -47,7 +47,7 @@ export default async function middleware(request) {
     status: 200,
     headers: {
       'content-type': 'text/html',
-      'x-robots-tag': 'noindex',
-    },
+      'x-robots-tag': 'noindex'
+    }
   });
 }

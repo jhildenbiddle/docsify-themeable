@@ -1,138 +1,140 @@
-@use "__helpers" as *;
-@use "sass:map";
+@use '__helpers' as *;
+@use 'sass:map';
 
 // Skip Link
 // =============================================================================
 #skip-to-content {
-    appearance: none;
-    display: block;
-    position: fixed;
-    z-index: 2147483647;
-    top: 0;
-    left: 50%;
-    padding: 0.5rem 1.5rem;
-    border: 0;
-    border-radius: 100vw;
-    background-color: var(--theme-color);
-    color: var(--mono-tint3);
-    opacity: 0;
-    font-size: inherit;
-    text-decoration: none;
-    transform: translate(-50%, -100%);
-    transition-property: opacity, transform;
+  appearance: none;
+  display: block;
+  position: fixed;
+  z-index: 2147483647;
+  top: 0;
+  left: 50%;
+  padding: 0.5rem 1.5rem;
+  border: 0;
+  border-radius: 100vw;
+  background-color: var(--theme-color);
+  color: var(--mono-tint3);
+  opacity: 0;
+  font-size: inherit;
+  text-decoration: none;
+  transform: translate(-50%, -100%);
+  transition-property: opacity, transform;
+  transition-duration: 0s, 0.2s;
+  transition-delay: 0.2s, 0s;
+
+  &:focus {
+    opacity: 1;
+    transform: translate(-50%, 0.75rem);
     transition-duration: 0s, 0.2s;
-    transition-delay: 0.2s, 0s;
-
-    &:focus {
-        opacity: 1;
-        transform: translate(-50%, 0.75rem);
-        transition-duration: 0s, 0.2s;
-        transition-delay: 0s, 0s;
-    }
+    transition-delay: 0s, 0s;
+  }
 }
-
 
 // Github Icon
 // =============================================================================
 .github-corner {
-    position: absolute;
-    z-index: map.get($z-index, githubcorner);
-    top: 0;
-    right: 0;
-    border-bottom: 0;
-    text-decoration: none;
+  position: absolute;
+  z-index: map.get($z-index, githubcorner);
+  top: 0;
+  right: 0;
+  border-bottom: 0;
+  text-decoration: none;
 
-    svg {
-        height: 70px;
-        width: 70px;
-        fill: var(--theme-color);
-        color: var(--base-background-color);
-    }
+  svg {
+    height: 70px;
+    width: 70px;
+    fill: var(--theme-color);
+    color: var(--base-background-color);
+  }
 
-    &:hover {
-        .octo-arm {
-            animation: octocat-wave 560ms ease-in-out;
-        }
+  &:hover {
+    .octo-arm {
+      animation: octocat-wave 560ms ease-in-out;
     }
+  }
 }
 
 @keyframes octocat-wave {
-    0%, 100% {
-        transform: rotate(0);
-    }
-    20%, 60% {
-        transform: rotate(-25deg);
-    }
-    40%, 80% {
-        transform: rotate(10deg);
-    }
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+  20%,
+  60% {
+    transform: rotate(-25deg);
+  }
+  40%,
+  80% {
+    transform: rotate(10deg);
+  }
 }
-
 
 // Progress Bar
 // =============================================================================
 .progress {
-    position: fixed;
-    z-index: map.get($z-index, progress);
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    width: 0;
-    background-color: var(--theme-color);
-    transition: width var(--duration-fast), opacity calc(var(--duration-fast) * 2);
+  position: fixed;
+  z-index: map.get($z-index, progress);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  width: 0;
+  background-color: var(--theme-color);
+  transition:
+    width var(--duration-fast),
+    opacity calc(var(--duration-fast) * 2);
 }
-
 
 // Spinner
 // =============================================================================
 body.ready-transition {
-    &:after,
-    > *:not(.progress) {
-        opacity: 0;
-        transition: opacity var(--spinner-transition-duration);
-    }
+  &:after,
+  > *:not(.progress) {
+    opacity: 0;
+    transition: opacity var(--spinner-transition-duration);
+  }
 
-    // Spinner
+  // Spinner
+  &:after {
+    content: '';
+    position: absolute;
+    z-index: 1000;
+    top: calc(50% - (var(--spinner-size) / 2));
+    left: calc(50% - (var(--spinner-size) / 2));
+    height: var(--spinner-size);
+    width: var(--spinner-size);
+    border: var(--spinner-track-width, 0) solid var(--spinner-track-color);
+    border-left-color: var(--theme-color);
+    border-left-color: var(--theme-color);
+    border-radius: 50%;
+    animation: spinner var(--duration-slow) infinite linear;
+  }
+
+  // Separate class required for spinner fade-in
+  &.ready-spinner {
     &:after {
-        content: '';
-        position: absolute;
-        z-index: 1000;
-        top: calc(50% - (var(--spinner-size) / 2));
-        left: calc(50% - (var(--spinner-size) / 2));
-        height: var(--spinner-size);
-        width: var(--spinner-size);
-        border: var(--spinner-track-width, 0) solid var(--spinner-track-color);
-        border-left-color: var(--theme-color);
-        border-left-color: var(--theme-color);
-        border-radius: 50%;
-        animation: spinner var(--duration-slow) infinite linear;
+      opacity: 1;
+    }
+  }
+
+  &.ready-fix {
+    &:after {
+      opacity: 0;
     }
 
-    // Separate class required for spinner fade-in
-    &.ready-spinner {
-        &:after {
-            opacity: 1;
-        }
+    > *:not(.progress) {
+      opacity: 1;
+      transition-delay: var(--spinner-transition-duration);
     }
-
-    &.ready-fix {
-        &:after {
-            opacity: 0;
-        }
-
-        > *:not(.progress) {
-            opacity: 1;
-            transition-delay: var(--spinner-transition-duration);
-        }
-    }
+  }
 }
 
 @keyframes spinner {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

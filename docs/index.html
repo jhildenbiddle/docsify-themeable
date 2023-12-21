@@ -1,19 +1,44 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
-    <meta name="description" content="A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE11+).">
-    <meta name="google-site-verification" content="_EWJaM8G6xwMtEqemO4yN8WqSU2CaKVi3jTj0gLg48E">
-    <title>docsify-themeable - A delightfully simple theme system for docsify.js</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <meta
+      name="description"
+      content="A delightfully simple theme system for docsify.js. Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE11+)."
+    />
+    <meta
+      name="google-site-verification"
+      content="_EWJaM8G6xwMtEqemO4yN8WqSU2CaKVi3jTj0gLg48E"
+    />
+    <title>
+      docsify-themeable - A delightfully simple theme system for docsify.js
+    </title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" data-style-group="themeable" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css" disabled>
-    <link rel="stylesheet" data-style-group="themeable" media="(prefers-color-scheme: dark)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
-    <link rel="stylesheet" data-style-group="themeable" media="(prefers-color-scheme: light)" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-    <link rel="stylesheet" href="assets/css/main.css">
+    <link
+      rel="stylesheet"
+      data-style-group="themeable"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-defaults.css"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      data-style-group="themeable"
+      media="(prefers-color-scheme: dark)"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css"
+    />
+    <link
+      rel="stylesheet"
+      data-style-group="themeable"
+      media="(prefers-color-scheme: light)"
+      href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
 
     <!-- Test Stylesheets -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/buble.css" data-style-group="themeable"> -->
@@ -22,68 +47,78 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify@4/themes/vue.css" data-style-group="themeable"> -->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LYZ7R080K"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9LYZ7R080K"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-9LYZ7R080K');
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+      gtag('config', 'G-9LYZ7R080K');
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <div id="app"></div>
 
     <script>
-        // Docsify
-        window.$docsify = {
-            // GENERAL
-            // -----------------------------------------------------------------
-            name       : 'docsify-themeable',
-            repo       : 'https://github.com/jhildenbiddle/docsify-themeable',
-            coverpage  : 'coverpage.md',
-            homepage   : 'introduction.md',
-            loadSidebar: 'sidebar.md',
+      // Docsify
+      window.$docsify = {
+        // GENERAL
+        // -----------------------------------------------------------------
+        name: 'docsify-themeable',
+        repo: 'https://github.com/jhildenbiddle/docsify-themeable',
+        coverpage: 'coverpage.md',
+        homepage: 'introduction.md',
+        loadSidebar: 'sidebar.md',
 
-            // NAVIGATION
-            // -----------------------------------------------------------------
-            alias: {
-                '.*?/changelog': 'https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/CHANGELOG.md',
-            },
-            auto2top   : true,
-            maxLevel   : 3,
-            subMaxLevel: 3,
+        // NAVIGATION
+        // -----------------------------------------------------------------
+        alias: {
+          '.*?/changelog':
+            'https://raw.githubusercontent.com/jhildenbiddle/docsify-themeable/master/CHANGELOG.md'
+        },
+        auto2top: true,
+        maxLevel: 3,
+        subMaxLevel: 3,
 
-            // PLUGINS
-            // -----------------------------------------------------------------
-            ethicalAds: {
-                eaPublisher: 'jhildenbiddle-github-io',
-            },
-            executeScript: true,
-            search: {
-                depth      : 3,
-                noData     : 'No results!',
-                placeholder: 'Search...'
-            },
-            plugins: [
-                // Restores initial <title>
-                function persistTitle(hook, vm) {
-                    var titleElm = document.querySelector('title');
-                    var rootTitle = titleElm && titleElm.textContent;
-                    var pageTitlePrefix = window.$docsify.name ? window.$docsify.name + ' - ' : '';
+        // PLUGINS
+        // -----------------------------------------------------------------
+        ethicalAds: {
+          eaPublisher: 'jhildenbiddle-github-io'
+        },
+        executeScript: true,
+        search: {
+          depth: 3,
+          noData: 'No results!',
+          placeholder: 'Search...'
+        },
+        plugins: [
+          // Restores initial <title>
+          function persistTitle(hook, vm) {
+            var titleElm = document.querySelector('title');
+            var rootTitle = titleElm && titleElm.textContent;
+            var pageTitlePrefix = window.$docsify.name
+              ? window.$docsify.name + ' - '
+              : '';
 
-                    if (rootTitle) {
-                        hook.doneEach(function () {
-                            var currentTitle = titleElm.textContent;
-                            var isRoot = !/\/[a-z]/.test(location.hash);
-                            var newTitle = isRoot ? rootTitle : pageTitlePrefix + currentTitle;
+            if (rootTitle) {
+              hook.doneEach(function () {
+                var currentTitle = titleElm.textContent;
+                var isRoot = !/\/[a-z]/.test(location.hash);
+                var newTitle = isRoot
+                  ? rootTitle
+                  : pageTitlePrefix + currentTitle;
 
-                            titleElm.textContent = newTitle;
-                        });
-                    }
-                }
-            ]
-        };
+                titleElm.textContent = newTitle;
+              });
+            }
+          }
+        ]
+      };
     </script>
     <script src="assets/js/main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
@@ -96,5 +131,5 @@
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/docsify@4/lib/plugins/zoom-image.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
-</body>
+  </body>
 </html>

@@ -1,17 +1,17 @@
 // Theme: Default
 // =============================================================================
 // App
-@use "../app" as *;
+@use '../app' as *;
 
 // Properties
-@use "defaults/app";
-@use "defaults/base";
-@use "defaults/content";
-@use "defaults/cover";
-@use "defaults/navbar";
-@use "defaults/plugin-copy-code";
-@use "defaults/plugin-docsify-tabs";
-@use "defaults/plugin-pagination";
-@use "defaults/plugin-search";
-@use "defaults/plugin-zoom-image";
-@use "defaults/sidebar";
+@use 'defaults/app';
+@use 'defaults/base';
+@use 'defaults/content';
+@use 'defaults/cover';
+@use 'defaults/navbar';
+@use 'defaults/plugin-copy-code';
+@use 'defaults/plugin-docsify-tabs';
+@use 'defaults/plugin-pagination';
+@use 'defaults/plugin-search';
+@use 'defaults/plugin-zoom-image';
+@use 'defaults/sidebar';

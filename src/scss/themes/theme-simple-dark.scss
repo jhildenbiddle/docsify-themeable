@@ -1,150 +1,168 @@
-@use "../app/__helpers" as *;
+@use '../app/__helpers' as *;
 
 // Theme: Simple Dark
 // =============================================================================
 // Main Import
-@use "theme-simple";
+@use 'theme-simple';
 
 // Shared Imports
-@use "shared/code-dark";
+@use 'shared/code-dark';
 
 // Properties
 :root {
-    // App
-    // =========================================================================
-    // Monochrome
-    --mono-hue                             : 201;
-    --mono-saturation                      : 18%;
+  // App
+  // =========================================================================
+  // Monochrome
+  --mono-hue: 201;
+  --mono-saturation: 18%;
 
-    // Monochrome shades (darker) and tints (lighter)
-    --mono-shade3                          : hsl(var(--mono-hue), var(--mono-saturation), 13%);
-    --mono-shade2                          : hsl(var(--mono-hue), var(--mono-saturation), 15%);
-    --mono-shade1                          : hsl(var(--mono-hue), var(--mono-saturation), 17%);
-    --mono-base                            : hsl(var(--mono-hue), var(--mono-saturation), 19%);
-    --mono-tint1                           : hsl(var(--mono-hue), var(--mono-saturation), 25%);
-    --mono-tint2                           : hsl(var(--mono-hue), var(--mono-saturation), 35%);
-    --mono-tint3                           : hsl(var(--mono-hue), var(--mono-saturation), 43%);
+  // Monochrome shades (darker) and tints (lighter)
+  --mono-shade3: hsl(var(--mono-hue), var(--mono-saturation), 13%);
+  --mono-shade2: hsl(var(--mono-hue), var(--mono-saturation), 15%);
+  --mono-shade1: hsl(var(--mono-hue), var(--mono-saturation), 17%);
+  --mono-base: hsl(var(--mono-hue), var(--mono-saturation), 19%);
+  --mono-tint1: hsl(var(--mono-hue), var(--mono-saturation), 25%);
+  --mono-tint2: hsl(var(--mono-hue), var(--mono-saturation), 35%);
+  --mono-tint3: hsl(var(--mono-hue), var(--mono-saturation), 43%);
 
-    // Spinner
-    --spinner-track-color                  : rgba(255, 255, 255, 0.15);
+  // Spinner
+  --spinner-track-color: rgba(255, 255, 255, 0.15);
 
+  // Base
+  // =========================================================================
+  --base-background-color: var(--mono-base);
+  --base-color: #d3d3d3;
 
-    // Base
-    // =========================================================================
-    --base-background-color                : var(--mono-base);
-    --base-color                           : #d3d3d3;
+  // Horizontal Rule
+  --hr-border: 1px solid var(--mono-tint2);
 
-    // Horizontal Rule
-    --hr-border                            : 1px solid var(--mono-tint2);
+  // Mark
+  --mark-background: #ffcb6b;
+  --mark-color: var(--base-background-color);
 
-    // Mark
-    --mark-background                      : #ffcb6b;
-    --mark-color                           : var(--base-background-color);
+  // Selection
+  --selection-color: rgba(94, 131, 175, 0.75);
 
-    // Selection
-    --selection-color                      : rgba(94, 131, 175, 0.75);
+  // Content
+  // =========================================================================
+  // Blockquote
+  --blockquote-background: var(--mono-shade2);
 
+  // Code
+  --code-inline-background: var(--mono-tint1);
+  --code-theme-background: var(--mono-shade2);
 
-    // Content
-    // =========================================================================
-    // Blockquote
-    --blockquote-background                : var(--mono-shade2);
+  // Headings
+  --heading-color: #fff;
+  --heading-h2-border-color: var(--mono-tint2);
 
-    // Code
-    --code-inline-background               : var(--mono-tint1);
-    --code-theme-background                : var(--mono-shade2);
+  // Keyboard
+  --kbd-background: var(--mono-shade2);
+  --kbd-border: none;
+  --kbd-color: var(--strong-color);
 
-    // Headings
-    --heading-color                        : #fff;
-    --heading-h2-border-color              : var(--mono-tint2);
+  // Notice - Important
+  --notice-important-background: var(--mono-shade2);
 
-    // Keyboard
-    --kbd-background                       : var(--mono-shade2);
-    --kbd-border                           : none;
-    --kbd-color                            : var(--strong-color);
+  // Notice - Tip
+  --notice-tip-background: var(--mono-shade2);
 
-    // Notice - Important
-    --notice-important-background          : var(--mono-shade2);
+  // Tables
+  --table-cell-border-color: var(--mono-tint1);
+  --table-row-odd-background: var(--mono-shade2);
 
-    // Notice - Tip
-    --notice-tip-background                : var(--mono-shade2);
+  // Cover
+  // =========================================================================
+  // Background
+  --cover-background-color: var(--base-background-color);
+  --cover-background-image: radial-gradient(
+    ellipse at center bottom,
+    var(--mono-tint3),
+    transparent
+  );
 
-    // Tables
-    --table-cell-border-color              : var(--mono-tint1);
-    --table-row-odd-background             : var(--mono-shade2);
+  // Blockquote (Subtitle)
+  --cover-blockquote-color: var(--mark-background);
 
+  // Buttons
+  --cover-button-border: 1px solid var(--mono-tint3);
+  --cover-button-color: #fff;
 
-    // Cover
-    // =========================================================================
-    // Background
-    --cover-background-color               : var(--base-background-color);
-    --cover-background-image               : radial-gradient(ellipse at center bottom, var(--mono-tint3), transparent);
+  // Navbar
+  // =========================================================================
+  // Menus
+  --navbar-menu-background: var(--mono-tint1);
+  --navbar-menu-box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 1px,
+    rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.05) 0px 2px 4px,
+    rgba(0, 0, 0, 0.05) 0px 4px 8px, rgba(0, 0, 0, 0.05) 0px 8px 16px,
+    rgba(0, 0, 0, 0.05) 0px 16px 32px;
 
-    // Blockquote (Subtitle)
-    --cover-blockquote-color               : var(--mark-background);
+  // Plugin: Copy Code
+  // =========================================================================
+  --copycode-background: var(--mono-tint1);
+  --copycode-color: #fff;
 
-    // Buttons
-    --cover-button-border                  : 1px solid var(--mono-tint3);
-    --cover-button-color                   : #fff;
+  // Plugin: Docsify Tabs
+  // =========================================================================
+  // Tab blocks
+  --docsifytabs-border-color: var(--mono-tint2);
 
+  // Tabs
+  --docsifytabs-tab-background: var(--mono-shade1);
+  --docsifytabs-tab-color: var(--mono-tint2);
 
-    // Navbar
-    // =========================================================================
-    // Menus
-    --navbar-menu-background               : var(--mono-tint1);
-    --navbar-menu-box-shadow               : rgba(0,0,0,0.05) 0px 0px 1px, rgba(0,0,0,0.05) 0px 1px 2px, rgba(0,0,0,0.05) 0px 2px 4px, rgba(0,0,0,0.05) 0px 4px 8px, rgba(0,0,0,0.05) 0px 8px 16px, rgba(0,0,0,0.05) 0px 16px 32px;
+  // Plugin: Pagination
+  // =========================================================================
+  --pagination-border-top: 1px solid var(--mono-tint2);
+  --pagination-title-color: #fff;
 
+  // Plugin: Search
+  // =========================================================================
+  // Input
+  --search-input-background-color: var(--mono-shade2);
+  --search-input-background-image: #{svg-data-uri(
+      '<svg height="20px" width="20px" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="10.5" r="7.5" vector-effect="non-scaling-stroke"></circle><line x1="21" y1="21" x2="15.8" y2="15.8" vector-effect="non-scaling-stroke"></line></svg>'
+    )};
+  --search-input-border-color: var(--mono-tint1);
+  --search-input-placeholder-color: rgba(255, 255, 255, 0.4);
 
-    // Plugin: Copy Code
-    // =========================================================================
-    --copycode-background                  : var(--mono-tint1);
-    --copycode-color                       : #fff;
+  // Clear Button
+  --search-clear-icon-color1: rgba(255, 255, 255, 0.3);
 
+  // Sidebar
+  // =========================================================================
+  --sidebar-background: var(--mono-shade1);
+  --sidebar-border-color: var(--mono-tint1);
 
-    // Plugin: Docsify Tabs
-    // =========================================================================
-    // Tab blocks
-    --docsifytabs-border-color    : var(--mono-tint2);
-
-    // Tabs
-    --docsifytabs-tab-background  : var(--mono-shade1);
-    --docsifytabs-tab-color       : var(--mono-tint2);
-
-
-    // Plugin: Pagination
-    // =========================================================================
-    --pagination-border-top                : 1px solid var(--mono-tint2);
-    --pagination-title-color               : #fff;
-
-
-    // Plugin: Search
-    // =========================================================================
-    // Input
-    --search-input-background-color        : var(--mono-shade2);
-    --search-input-background-image        : #{svg-data-uri('<svg height="20px" width="20px" viewBox="0 0 24 24" fill="none" stroke="rgba(255, 255, 255, 0.3)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg"><circle cx="10.5" cy="10.5" r="7.5" vector-effect="non-scaling-stroke"></circle><line x1="21" y1="21" x2="15.8" y2="15.8" vector-effect="non-scaling-stroke"></line></svg>')};
-    --search-input-border-color            : var(--mono-tint1);
-    --search-input-placeholder-color       : rgba(255, 255, 255, 0.4);
-
-    // Clear Button
-    --search-clear-icon-color1             : rgba(255, 255, 255, 0.3);
-
-
-    // Sidebar
-    // =========================================================================
-    --sidebar-background                   : var(--mono-shade1);
-    --sidebar-border-color                 : var(--mono-tint1);
-
-    // Nav Page Links
-    // Chevron right
-    --sidebar-nav-pagelink-background:
-        no-repeat 2px calc(50% - 2.5px) / 6px 5px
-        linear-gradient(45deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4px),
-        no-repeat 2px calc(50% + 2.5px) / 6px 5px
-        linear-gradient(135deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4px);
-    // Chevron down - Theme color
-    --sidebar-nav-pagelink-background--loaded:
-        no-repeat 0px center / 5px 6px
-        linear-gradient(225deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4.25px),
-        no-repeat 5px center / 5px 6px
-        linear-gradient(135deg, transparent 2.75px, var(--mono-tint2) 2.75px 4.25px, transparent 4.25px);
+  // Nav Page Links
+  // Chevron right
+  --sidebar-nav-pagelink-background: no-repeat 2px calc(50% - 2.5px) / 6px 5px
+      linear-gradient(
+        45deg,
+        transparent 2.75px,
+        var(--mono-tint2) 2.75px 4.25px,
+        transparent 4px
+      ),
+    no-repeat 2px calc(50% + 2.5px) / 6px 5px
+      linear-gradient(
+        135deg,
+        transparent 2.75px,
+        var(--mono-tint2) 2.75px 4.25px,
+        transparent 4px
+      );
+  // Chevron down - Theme color
+  --sidebar-nav-pagelink-background--loaded: no-repeat 0px center / 5px 6px
+      linear-gradient(
+        225deg,
+        transparent 2.75px,
+        var(--mono-tint2) 2.75px 4.25px,
+        transparent 4.25px
+      ),
+    no-repeat 5px center / 5px 6px
+      linear-gradient(
+        135deg,
+        transparent 2.75px,
+        var(--mono-tint2) 2.75px 4.25px,
+        transparent 4.25px
+      );
 }

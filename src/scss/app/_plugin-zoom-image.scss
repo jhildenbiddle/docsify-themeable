@@ -1,5 +1,5 @@
-@use "__helpers" as *;
-@use "sass:map";
+@use '__helpers' as *;
+@use 'sass:map';
 
 // Plugin: Zoom Image
 // https://docsify.js.org/#/plugins?id=zoom-image
@@ -9,36 +9,35 @@
 // =============================================================================
 // v4.6.10
 .medium-zoom-overlay {
-    // position: fixed;
-    // top: 0;
-    // bottom: 0;
-    // left: 0;
-    // right: 0;
-    // opacity: 0;
-    // transition: opacity 0.3s;
-    // will-change: opacity;
+  // position: fixed;
+  // top: 0;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // opacity: 0;
+  // transition: opacity 0.3s;
+  // will-change: opacity;
 
-    .medium-zoom--open & {
-        // opacity: 1;
-        // cursor: pointer;
-        // cursor: zoom-out;
-    }
+  .medium-zoom--open & {
+    // opacity: 1;
+    // cursor: pointer;
+    // cursor: zoom-out;
+  }
 }
 
 .medium-zoom-image {
+  // cursor: pointer;
+  // cursor: zoom-in;
+  // transition: transform 0.3s;
+
+  &--open {
+    // position: relative;
+    // z-index: 1;
     // cursor: pointer;
-    // cursor: zoom-in;
-    // transition: transform 0.3s;
-
-    &--open {
-        // position: relative;
-        // z-index: 1;
-        // cursor: pointer;
-        // cursor: zoom-out;
-        // will-change: transform;
-    }
+    // cursor: zoom-out;
+    // will-change: transform;
+  }
 }
-
 
 // Overriding injected styles (above) requires higher specificity:
 // - For <style> declaration, add parent element to selector (e.g. body)
@@ -47,9 +46,9 @@
 .medium-zoom-overlay,
 .medium-zoom-image--open,
 .medium-zoom-image--opened {
-    z-index: map.get($z-index, overlay) !important;
+  z-index: map.get($z-index, overlay) !important;
 }
 
 .medium-zoom-overlay {
-    background: var(--zoomimage-overlay-background) !important;
+  background: var(--zoomimage-overlay-background) !important;
 }
