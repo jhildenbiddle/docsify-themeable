@@ -10,7 +10,7 @@
 Docsify-themeable is a delightfully simple theme system for [docsify.js](//docsify.js.org). Features multiple themes with rich customization options, an improved desktop and mobile experience, and legacy browser support (IE11+).
 
 - [Documentation](https://jhildenbiddle.github.io/docsify-themeable) - Demo, installation, options, and theme previews
-- [Development Preview](https://docsify-themeable-preview.vercel.app) - Live preview of [dev](https://github.com/jhildenbiddle/docsify-themeable/tree/dev) branch build
+- <a href="https://docsify-themeable-preview.vercel.app" rel=”nofollow”>Development Preview</a> - Live preview of [dev](https://github.com/jhildenbiddle/docsify-themeable/tree/dev) branch build
 
 ## Screenshots
 
