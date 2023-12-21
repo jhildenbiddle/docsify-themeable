@@ -1,18 +1,16 @@
-const browserSync = require('browser-sync').create();
-const compression = require('compression');
-const { rewriteRules } = require('./preview.config.cjs');
+import { create } from 'browser-sync';
+import { rewriteRules } from './middleware.js';
+import compression from 'compression';
 
+const bsServer = create();
 const previewDir = '/preview';
 
-browserSync.init({
-    files: [
-        './dist/**/*.*',
-        './docs/**/*.*'
-    ],
+bsServer.init({
+    files: ['./dist/**/*.*', './docs/**/*.*'],
     ghostMode: {
         clicks: false,
-        forms : false,
-        scroll: false
+        forms: false,
+        scroll: false,
     },
     open: false,
     notify: false,
@@ -25,19 +23,19 @@ browserSync.init({
         middleware: [
             compression(),
             // Redirect root to preview
-            function(req, res, next) {
+            function (req, res, next) {
                 if (req.url === '/') {
                     res.writeHead(301, { Location: previewDir });
                     res.end();
                 }
 
                 return next();
-            }
+            },
         ],
         routes: {
             [previewDir]: './docs/',
             [`${previewDir}/CHANGELOG.md`]: './CHANGELOG.md',
-        }
+        },
     },
     startPath: previewDir,
 });
