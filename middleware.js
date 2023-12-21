@@ -3,7 +3,7 @@ import { rewriteRules } from './preview.config.cjs';
 // Exports
 // =============================================================================
 export const config = {
-    matcher: ['/(index.html)?'],
+    matcher: ['/preview/(index.html)?'],
 };
 
 // Serve virtual /preview/index.html
