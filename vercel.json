@@ -7,11 +7,7 @@
             ]
         }
     ],
-    "redirects": [
-        { "source": "/", "destination": "/preview/" }
-    ],
     "rewrites": [
-        { "source": "/preview/CHANGELOG.md", "destination": "/CHANGELOG.md" },
-        { "source": "/preview/:path*", "destination": "/docs/:path*" }
+        { "source": "/:path*", "destination": "/docs/:path*" }
     ]
 }
