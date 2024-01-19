@@ -1,6 +1,4 @@
-<!-- markdownlint-disable-next-line first-line-heading -->
-
-- [Introduction](introduction)
+- [Introduction](introduction) <!-- markdownlint-disable-line first-line-heading -->
 - [Quick Start](quick-start)
 - [Themes](themes)
 - [Customization](customization)
