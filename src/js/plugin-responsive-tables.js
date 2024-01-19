@@ -11,7 +11,6 @@ export default function (hook, vm) {
         window.$docsify.markdown || {});
       const renderer = (markdown.renderer = markdown.renderer || {});
 
-      markdown.smartypants = markdown.smartypants || true;
       renderer.table =
         renderer.table ||
         function (header, body) {
